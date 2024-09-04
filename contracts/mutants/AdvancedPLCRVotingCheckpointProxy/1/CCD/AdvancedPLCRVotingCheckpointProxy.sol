@@ -1,0 +1,21 @@
+pragma solidity 0.5.8;
+
+import "../../../../Pausable.sol";
+import "./AdvancedPLCRVotingCheckpointStorage.sol";
+import "../../../../storage/modules/ModuleStorage.sol";
+import "../../../../proxy/OwnedUpgradeabilityProxy.sol";
+import "../../../../storage/modules/Checkpoint/Voting/VotingCheckpointStorage.sol";
+
+/**
+ * @title Voting module for governance
+ */
+contract AdvancedPLCRVotingCheckpointProxy is AdvancedPLCRVotingCheckpointStorage, VotingCheckpointStorage, ModuleStorage, Pausable, OwnedUpgradeabilityProxy {
+    /**
+    * @notice Constructor
+    * @param _securityToken Address of the security token
+    * @param _polyAddress Address of the polytoken
+    * @param _implementation representing the address of the new implementation to be set
+    */
+    
+
+}
