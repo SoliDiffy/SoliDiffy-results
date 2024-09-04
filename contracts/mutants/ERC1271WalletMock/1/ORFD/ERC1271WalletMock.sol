@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+import "../access/Ownable.sol";
+import "../interfaces/IERC1271.sol";
+import "../utils/cryptography/ECDSA.sol";
+
+contract ERC1271WalletMock is Ownable, IERC1271 {
+    constructor(address originalOwner) {
+        transferOwnership(originalOwner);
+    }
+
+    
+}
