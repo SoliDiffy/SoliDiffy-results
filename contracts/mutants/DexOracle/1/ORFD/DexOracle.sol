@@ -1,0 +1,35 @@
+// SPDX-License-Identifier: Apache-2.0
+
+pragma solidity ^0.8.0;
+
+import "../vaults/meter/interfaces/IERC20Minimal.sol";
+
+import "./interfaces/IPrice.sol";
+
+contract DexOracle is IPrice {
+    address public pair;
+    string public name;
+    address public operator;
+    uint256 public lastAskedBlock;
+    address public from;
+    address public to;
+    int256 public prevPrice;
+    
+    constructor(address pair_, address from_, address to_, string memory name_) {
+        pair = pair_;
+        operator = msg.sender;
+        name = name_;
+    }
+
+    function setPair(address pair_, address from_, address to_) public {
+        require(msg.sender == operator, "IA");
+        pair = pair_;
+        from = from_;
+        to = to_;
+    }
+
+    /**
+     * Returns the latest price
+     */
+    
+}
