@@ -1,0 +1,212 @@
+{
+    "number_of_changes": 28,
+    "timing": 0.23336052894592285,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 31,
+                            "content": "DeleteVote",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 46,
+                            "content": "_currentVoteId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 54,
+                            "content": "/* emit DeleteVote(_currentVoteId); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 24,
+                            "content": "NewVote",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 39,
+                            "content": "_currentVoteId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 50,
+                            "content": "_pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 58,
+                            "content": "startAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 65,
+                            "content": "_pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 72,
+                            "content": "voteAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 79,
+                            "content": "_pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 88,
+                            "content": "unlockAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 95,
+                            "content": "_pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 96,
+                            "end": 104,
+                            "content": "finishAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 104,
+                            "end": 105,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 112,
+                            "content": "/* emit NewVote(_currentVoteId + 1, _pool.startAt, _pool.voteAt, _pool.unlockAt, _pool.finishAt); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
