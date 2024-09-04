@@ -1,0 +1,234 @@
+{
+    "number_of_changes": 28,
+    "timing": 0.15257024765014648,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 27,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 28,
+                            "content": "initialized",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 43,
+                            "content": "\"Initialized\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 27,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 51,
+                            "content": "/* require(!initialized, \"Initialized\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 40,
+                            "content": "freeAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 104,
+                            "content": "'Such token amount is locked or you have insufficient balance'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 104,
+                            "end": 105,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 112,
+                            "content": "/* require(amount <= freeAmount, 'Such token amount is locked or you have insufficient balance'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "locks",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 29,
+                            "content": "account",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 40,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 92,
+                            "content": "'You can create a lock only once for address'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 100,
+                            "content": "/* require(locks[account].timestamp == 0, 'You can create a lock only once for address'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
