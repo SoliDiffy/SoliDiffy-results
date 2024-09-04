@@ -1,0 +1,366 @@
+{
+    "number_of_changes": 47,
+    "timing": 0.12197685241699219,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 136,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 22,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 29,
+                            "content": "answer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 34,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 60,
+                            "content": "_chainlinkPriceMultiplier",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 136,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 68,
+                            "content": "/* return uint256(answer).mul(_chainlinkPriceMultiplier); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 145,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 26,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 41,
+                            "content": "fallbackOracle",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 45,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 53,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "?",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ":",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 77,
+                            "content": "fallbackOracle",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 85,
+                            "content": "getTwap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 86,
+                            "end": 95,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 145,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 103,
+                            "content": "/* return address(fallbackOracle) == address(0) ? 0 : fallbackOracle.getTwap(timestamp); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 147,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 26,
+                            "content": "_prices",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 36,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 147,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 44,
+                            "content": "/* return _prices[timestamp]; */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 232,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 23,
+                            "content": "sum",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 27,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 53,
+                            "content": "_chainlinkPriceMultiplier",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "/",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 62,
+                            "content": "EPOCH",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 71,
+                            "content": "roundID",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 232,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 79,
+                            "content": "/* return (sum.mul(_chainlinkPriceMultiplier) / EPOCH, roundID); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
