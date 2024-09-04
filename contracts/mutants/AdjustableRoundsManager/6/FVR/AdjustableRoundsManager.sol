@@ -1,0 +1,33 @@
+pragma solidity ^0.4.17;
+
+import "./RoundsManager.sol";
+
+
+contract AdjustableRoundsManager is RoundsManager {
+    uint256 num;
+    bytes32 hash;
+
+    function AdjustableRoundsManager(address _controller) internal RoundsManager(_controller) {}
+
+    function setBlockNum(uint256 _num) public {
+        num = _num;
+    }
+
+    function setBlockHash(bytes32 _hash) public {
+        hash = _hash;
+    }
+
+    function mineBlocks(uint256 _blocks) public {
+        num += _blocks;
+    }
+
+    function blockNum() external view returns (uint256) {
+        return num;
+    }
+
+    function blockHash(uint256 _block) external view returns (bytes32) {
+        require(_block >= blockNum() - 256);
+
+        return hash;
+    }
+}
