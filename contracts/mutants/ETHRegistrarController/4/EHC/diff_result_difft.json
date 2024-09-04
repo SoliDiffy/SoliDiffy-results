@@ -1,0 +1,300 @@
+{
+    "number_of_changes": 36,
+    "timing": 0.21207284927368164,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 51,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "commitments",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 38,
+                            "content": "commitment",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 60,
+                            "content": "MAX_COMMITMENT_AGE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 63,
+                            "end": 66,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 51,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 74,
+                            "content": "/* require(commitments[commitment] + MAX_COMMITMENT_AGE < now); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 58,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "commitments",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 38,
+                            "content": "commitment",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 60,
+                            "content": "MIN_COMMITMENT_AGE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 63,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 67,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 58,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 75,
+                            "content": "/* require(commitments[commitment] + MIN_COMMITMENT_AGE <= now); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "duration",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 53,
+                            "content": "MIN_REGISTRATION_DURATION",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 61,
+                            "content": "/* require(duration >= MIN_REGISTRATION_DURATION); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 33,
+                            "content": "cost",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 41,
+                            "content": "/* require(msg.value >= cost); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
