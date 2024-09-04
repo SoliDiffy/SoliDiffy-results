@@ -1,0 +1,10 @@
+pragma solidity 0.5.14;
+
+contract Constant {
+    enum ActionType { DepositAction, WithdrawAction, BorrowAction, RepayAction }
+    address internal constant ETH_ADDR = 0x000000000000000000000000000000000000000E;
+    uint256 internal constant INT_UNIT = 10 ** uint256(18);
+    address payable internal constant EMERGENCY_ADDR = 0xc04158f7dB6F9c9fFbD5593236a1a3D69F92167c;
+    uint256 internal constant ACCURACY = 10 ** 18;
+    uint256 public constant BLOCKS_PER_YEAR = 2102400;
+}
