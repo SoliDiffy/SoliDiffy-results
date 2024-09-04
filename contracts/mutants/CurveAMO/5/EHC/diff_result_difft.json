@@ -1,0 +1,400 @@
+{
+    "number_of_changes": 49,
+    "timing": 0.20624208450317383,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 144,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 46,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 53,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 60,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 63,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 77,
+                            "content": "owner_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 129,
+                            "content": "\"You are not the owner or the governance timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 129,
+                            "end": 130,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 144,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 137,
+                            "content": "/* require(msg.sender == timelock_address || msg.sender == owner_address, \"You are not the owner or the governance timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 149,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 47,
+                            "content": "custodian_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 84,
+                            "content": "\"You are not the rewards custodian\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 149,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 92,
+                            "content": "/* require(msg.sender == custodian_address, \"You are not the rewards custodian\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 263,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 40,
+                            "content": "\"Convergence not reached\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 263,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 48,
+                            "content": "/* revert(\"Convergence not reached\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 288,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 74,
+                            "content": "\"Didn't find hypothetical point on curve within 256 rounds\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 288,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 82,
+                            "content": "/* revert(\"Didn't find hypothetical point on curve within 256 rounds\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 352,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "collateralBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 39,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 62,
+                            "content": "expected_collat_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 66,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 67,
+                            "end": 84,
+                            "content": "collat_borrow_cap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 86,
+                            "end": 106,
+                            "content": "\"Borrow cap reached\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 106,
+                            "end": 107,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 352,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 114,
+                            "content": "/* require(collateralBalance().add(expected_collat_amount) <= collat_borrow_cap, \"Borrow cap reached\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
