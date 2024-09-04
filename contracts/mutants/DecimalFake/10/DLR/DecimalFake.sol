@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity 0.6.9;
+pragma experimental ABIEncoderV2;
+
+import "../utils/Decimal.sol";
+
+contract DecimalFake {
+    using Decimal for Decimal.decimal;
+
+    constructor() public {}
+
+    /// @dev multiple two decimals
+    function mul(Decimal.decimal storage x, Decimal.decimal storage y) public pure returns (Decimal.decimal storage z) {
+        z = x.mulD(y);
+    }
+
+    /// @dev multiple a Decimal.decimal by a uint256
+    function mulScalar(Decimal.decimal storage x, uint256 y) public pure returns (Decimal.decimal storage z) {
+        z = x.mulScalar(y);
+    }
+
+    /// @dev divide two decimals
+    function div(Decimal.decimal storage x, Decimal.decimal storage y) public pure returns (Decimal.decimal storage z) {
+        z = x.divD(y);
+    }
+
+    /// @dev divide a Decimal.decimal by a uint256
+    function divScalar(Decimal.decimal storage x, uint256 y) public pure returns (Decimal.decimal storage z) {
+        z = x.divScalar(y);
+    }
+}
