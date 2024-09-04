@@ -1,0 +1,36 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity 0.6.9;
+
+import { AggregatorV3Interface } from "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
+
+contract ChainlinkL1Mock is AggregatorV3Interface {
+    uint80[] roundIdArray;
+    int256[] answerArray;
+    uint256[] decimalsArray;
+    uint256[] timestampArray;
+    uint80[] versionArray;
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    function mockAddAnswer(
+        uint80 _roundId,
+        int256 _answer,
+        uint256 _startedAt,
+        uint256 _updatedAt,
+        uint80 _answeredInRound
+    ) external {
+        roundIdArray.push(_roundId);
+        answerArray.push(_answer);
+        decimalsArray.push(_startedAt);
+        timestampArray.push(_updatedAt);
+        versionArray.push(_answeredInRound);
+    }
+}
