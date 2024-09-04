@@ -1,0 +1,57 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.9;
+
+import "../access-control-registry/AccessControlRegistryAdminned.sol";
+import "./Allocator.sol";
+import "./interfaces/IAllocatorWithAirnode.sol";
+
+/// @title Contract that Airnode operators can use to temporarily allocate
+/// subscription slots for Airnodes
+contract AllocatorWithAirnode is
+    RoleDeriver,
+    AccessControlRegistryAdminned,
+    Allocator,
+    IAllocatorWithAirnode
+{
+    /// @param _accessControlRegistry AccessControlRegistry contract address
+    /// @param _adminRoleDescription Admin role description
+    constructor(
+        address _accessControlRegistry,
+        string memory _adminRoleDescription
+    )
+        AccessControlRegistryAdminned(
+            _accessControlRegistry,
+            _adminRoleDescription
+        )
+    {}
+
+    /// @notice Sets a slot with the given parameters
+    /// @param airnode Airnode address
+    /// @param slotIndex Index of the subscription slot to be set
+    /// @param subscriptionId Subscription ID
+    /// @param expirationTimestamp Timestamp at which the slot allocation will
+    /// expire
+    
+
+    /// @notice Returns if the setter of the slot can still set slots
+    /// @param airnode Airnode address
+    /// @param slotIndex Index of the subscription slot that was set
+    /// @return If the setter of the slot can still set slots
+    
+
+    /// @notice Returns if the account has the slot setter role or has the
+    /// respective Airnode address
+    /// @param airnode Airnode address
+    /// @param account Account address
+    
+
+    /// @notice Derives the admin role for the specific Airnode address
+    /// @param airnode Airnode address
+    /// @return adminRole Admin role
+    
+
+    /// @notice Derives the slot setter role for the specific Airnode address
+    /// @param airnode Airnode address
+    /// @return slotSetterRole Slot setter role
+    
+}
