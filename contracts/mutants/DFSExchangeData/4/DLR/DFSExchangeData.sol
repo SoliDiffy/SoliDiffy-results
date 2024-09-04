@@ -1,0 +1,42 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.7.0;
+pragma experimental ABIEncoderV2;
+
+contract DFSExchangeData {
+
+    // first is empty to keep the legacy order in place
+    enum ExchangeType { _, OASIS, KYBER, UNISWAP, ZEROX }
+
+    enum ExchangeActionType { SELL, BUY }
+
+    struct OffchainData {
+        address wrapper;
+        address exchangeAddr;
+        address allowanceTarget;
+        uint256 price;
+        uint256 protocolFee;
+        bytes callData;
+    }
+
+    struct ExchangeData {
+        address srcAddr;
+        address destAddr;
+        uint256 srcAmount;
+        uint256 destAmount;
+        uint256 minPrice;
+        uint256 dfsFeeDivider; // service fee divider
+        address user; // user to check special fee
+        address wrapper;
+        bytes wrapperData;
+        OffchainData offchainData;
+    }
+
+    function packExchangeData(ExchangeData storage _exData) public pure returns(bytes storage) {
+        return abi.encode(_exData);
+    }
+
+    function unpackExchangeData(bytes storage _data) public pure returns(ExchangeData storage _exData) {
+        _exData = abi.decode(_data, (ExchangeData));
+    }
+}
