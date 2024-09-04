@@ -1,0 +1,458 @@
+{
+    "number_of_changes": 59,
+    "timing": 0.20557475090026855,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 30,
+                            "content": "EnumerableSet",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 39,
+                            "content": "contains",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 47,
+                            "content": "_tokens",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 55,
+                            "content": "_token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 108,
+                            "content": "\"DepositPool: _token is already added to the pool\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 116,
+                            "content": "/* require(!EnumerableSet.contains(_tokens, _token), \"DepositPool: _token is already added to the pool\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 123,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "_token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 79,
+                            "content": "\"DepositPool: _token is the zero address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 123,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 87,
+                            "content": "/* require(_token != address(0), \"DepositPool: _token is the zero address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 221,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "_pid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 32,
+                            "content": "poolInfo",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 39,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 82,
+                            "content": "\"DepositPool: Can not find this pool\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 221,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 90,
+                            "content": "/* require(_pid <= poolInfo.length - 1, \"DepositPool: Can not find this pool\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 244,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 27,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 38,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 73,
+                            "content": "\"DepositPool: withdraw: not good\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 244,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 81,
+                            "content": "/* require(user.amount >= _amount, \"DepositPool: withdraw: not good\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 303,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "_index",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 41,
+                            "content": "getTokensLength",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 83,
+                            "content": "\"DepositPool: index out of bounds\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 303,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 91,
+                            "content": "/* require(_index <= getTokensLength() - 1, \"DepositPool: index out of bounds\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
