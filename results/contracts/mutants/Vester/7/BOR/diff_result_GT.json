@@ -1,0 +1,5 @@
+{
+    "number_of_edits": 6,
+    "timing": 5.992035388946533,
+    "edit_script": "<actions>\n  <update-node tree=\"member_expression: amountVested(tokenId) - grants[tokenId].amountRedeemed [2836,2890]\" label=\"amountVested(tokenId) + grants[tokenId].amountRedeemed\" />\n  <update-node tree=\"member_expression: block.timestamp &lt; grants[tokenId].cliffTimestamp [3229,3277]\" label=\"block.timestamp &lt;= grants[tokenId].cliffTimestamp\" />\n  <update-node tree=\"member_expression: ((uint128(block.timestamp) - grants[tokenId].startTimestamp) / grants[tokenId].vestInterval) * grants[tokenId].vestAmount [3464,3585]\" label=\"((uint128(block.timestamp) + grants[tokenId].startTimestamp) + grants[tokenId].vestInterval) * grants[tokenId].vestAmount\" />\n  <update-node tree=\"comparison_operator: == [1136,1138]\" label=\"&lt;=\" />\n  <update-node tree=\"comparison_operator: &gt; [1263,1264]\" label=\"&gt;=\" />\n  <update-node tree=\"comparison_operator: &gt;= [1443,1445]\" label=\"&gt;\" />\n</actions>\n"
+}
