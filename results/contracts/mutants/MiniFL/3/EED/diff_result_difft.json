@@ -1,0 +1,294 @@
+{
+    "number_of_changes": 38,
+    "timing": 0.3926827907562256,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 129,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 8,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 9,
+                            "end": 19,
+                            "content": "LogAddPool",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 32,
+                            "content": "stakingToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 39,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 56,
+                            "content": "_allocPoint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 71,
+                            "content": "_stakingToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 82,
+                            "content": "_rewarder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 129,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 90,
+                            "content": "/* emit LogAddPool(stakingToken.length - 1, _allocPoint, _stakingToken, _rewarder); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 155,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 8,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 9,
+                            "end": 19,
+                            "content": "LogSetPool",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 24,
+                            "content": "_pid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 37,
+                            "content": "_allocPoint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 49,
+                            "content": "_overwrite",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "?",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 61,
+                            "content": "_rewarder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ":",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 72,
+                            "content": "rewarder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 77,
+                            "content": "_pid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 90,
+                            "content": "_overwrite",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 155,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 98,
+                            "content": "/* emit LogSetPool(_pid, _allocPoint, _overwrite ? _rewarder : rewarder[_pid], _overwrite); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 166,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 8,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 9,
+                            "end": 27,
+                            "content": "LogAlpacaPerSecond",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 44,
+                            "content": "_alpacaPerSecond",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 166,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 52,
+                            "content": "/* emit LogAlpacaPerSecond(_alpacaPerSecond); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
