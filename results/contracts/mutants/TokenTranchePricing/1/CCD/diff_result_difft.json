@@ -1,0 +1,1379 @@
+{
+    "number_of_changes": 201,
+    "timing": 0.8382985591888428,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 53,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 25,
+                            "content": "// No invalid steps",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 30,
+                            "content": "TokenTranchePricing",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 35,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 51,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 59,
+                            "content": "public",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 44,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 97,
+                            "content": "// This check and the one inside the loop ensure no tranche can have an amount equal to zero.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 25,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "%",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 47,
+                            "content": "tranche_size",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 50,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 51,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 19,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 35,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "/",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 45,
+                            "end": 57,
+                            "content": "tranche_size",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 54,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 10,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 17,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 33,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 50,
+                            "content": "tranche_size",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 66,
+                            "content": "amount_offset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 55,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 10,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 16,
+                            "content": "start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 32,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 49,
+                            "content": "tranche_size",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 52,
+                            "end": 64,
+                            "content": "start_offset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 49,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 25,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 39,
+                            "content": "amount_offset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 57,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 19,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 34,
+                            "content": "start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 37,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 43,
+                            "content": "start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 49,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 58,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 52,
+                            "content": "// Bail out when entering unnecessary tranches",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 18,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 29,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 40,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 53,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 54,
+                            "end": 62,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 76,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 14,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 21,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 27,
+                            "content": "end",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 14,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 33,
+                            "content": "amount",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 56,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 10,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 14,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 30,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 47,
+                            "content": "tranche_size",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 60,
+                            "content": "end_offset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 14,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 23,
+                            "content": "price",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 39,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 56,
+                            "content": "tranche_size",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 71,
+                            "content": "price_offset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 14,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 23,
+                            "content": "start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 31,
+                            "content": "start",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 28,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 40,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 51,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 54,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 61,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 72,
+                            "content": "tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 86,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 88,
+                            "end": 90,
+                            "content": "||",
+                            "highlight": "keyword"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 81,
+                            "content": "// A tranche with amount zero can never be selected and is therefore useless.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 40,
+                            "content": "// Need to have tuples, length check",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 7,
+                            "content": "for",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 9,
+                            "end": 13,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 38,
+                            "content": "init_tranches",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 45,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "/",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 48,
+                            "end": 60,
+                            "content": "tranche_size",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 65,
+                            "content": "++",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 82,
+                            "content": "// This is preferably checked before deploying contract into any blockchain.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
