@@ -1,0 +1,40 @@
+pragma solidity ^0.4.13;
+
+contract OwnedUpgradeabilityStorage {
+    // Current implementation
+    address internal _implementation;
+
+    // Owner of the contract
+    address private _upgradeabilityOwner;
+
+    /**
+     * @dev Tells the address of the owner
+     * @return the address of the owner
+     */
+    function upgradeabilityOwner() external view returns (address) {
+        return _upgradeabilityOwner;
+    }
+
+    /**
+     * @dev Sets the address of the owner
+     */
+    function setUpgradeabilityOwner(address newUpgradeabilityOwner) public {
+        _upgradeabilityOwner = newUpgradeabilityOwner;
+    }
+
+    /**
+     * @dev Tells the address of the current implementation
+     * @return address of the current implementation
+     */
+    function implementation() external view returns (address) {
+        return _implementation;
+    }
+
+    /**
+     * @dev Tells the proxy type (EIP 897)
+     * @return Proxy type, 2 for forwarding proxy
+     */
+    function proxyType() external pure returns (uint256 proxyTypeId) {
+        return 2;
+    }
+}

@@ -1,0 +1,38 @@
+pragma solidity ^0.5.0;
+
+contract TOMockUniswapPair {
+
+  uint internal price0CumulativeLast;
+  uint internal price1CumulativeLast;
+
+  uint112 internal reserve0;
+  uint112 internal reserve1;
+  uint32 internal blockTimestampLast;
+
+  function setCumulativePrices(
+    uint _price0CumulativeLast,
+    uint _price1CumulativeLast
+  ) external {
+    price0CumulativeLast = _price0CumulativeLast;
+    price1CumulativeLast = _price1CumulativeLast;
+  }
+
+  function getReserves() external view returns (
+    uint112 _reserve0,
+    uint112 _reserve1,
+    uint32 _blockTimestampLast
+  ) {
+    return (reserve0, reserve1, blockTimestampLast);
+  }
+
+  function setReserves(
+    uint112 _reserve0,
+    uint112 _reserve1,
+    uint32 _blockTimestampLast
+  ) external {
+    reserve0 = _reserve0;
+    reserve1 = _reserve1;
+    blockTimestampLast = _blockTimestampLast;
+  }
+
+}

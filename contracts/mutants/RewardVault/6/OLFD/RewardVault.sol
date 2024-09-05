@@ -1,0 +1,43 @@
+/*
+
+    Copyright 2020 DODO ZOO.
+    SPDX-License-Identifier: Apache-2.0
+
+*/
+
+pragma solidity 0.6.9;
+
+import {Ownable} from "../../lib/Ownable.sol";
+import {SafeERC20} from "../../lib/SafeERC20.sol";
+import {SafeMath} from "../../lib/SafeMath.sol";
+import {IERC20} from "../../intf/IERC20.sol";
+
+
+interface IRewardVault {
+    
+     
+    
+    function _TOTAL_REWARD_() external view returns(uint256);
+}
+
+contract RewardVault is Ownable {
+    using SafeERC20 for IERC20;
+    using SafeMath for uint256;
+
+    uint256 public _REWARD_RESERVE_;
+    uint256 public _TOTAL_REWARD_;
+    address public _REWARD_TOKEN_;
+
+    // ============ Event =============
+    event DepositReward(uint256 totalReward, uint256 inputReward, uint256 rewardReserve);
+
+    constructor(address _rewardToken) public {
+        _REWARD_TOKEN_ = _rewardToken;
+    }
+
+    
+
+    
+
+    
+}

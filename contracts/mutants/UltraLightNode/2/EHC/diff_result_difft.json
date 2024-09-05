@@ -1,0 +1,190 @@
+{
+    "number_of_changes": 24,
+    "timing": 0.20328712463378906,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "_endpoint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 36,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 40,
+                            "content": "0x0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 87,
+                            "content": "\"LayerZero: endpoint cannot be zero address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 95,
+                            "content": "/* require(_endpoint != address(0x0), \"LayerZero: endpoint cannot be zero address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 32,
+                            "content": "endpoint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 40,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 47,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 75,
+                            "content": "\"LayerZero: only endpoint\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 83,
+                            "content": "/* require(address(endpoint) == msg.sender, \"LayerZero: only endpoint\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,610 @@
+{
+    "number_of_changes": 76,
+    "timing": 0.11910414695739746,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "fromTimestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 37,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 47,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 74,
+                            "content": "\"CANT_SET_PAST_TIMESTAMP\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 82,
+                            "content": "/* require(fromTimestamp > block.timestamp, \"CANT_SET_PAST_TIMESTAMP\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "targetDenorm",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 42,
+                            "content": "MIN_WEIGHT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 45,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 58,
+                            "content": "targetDenorm",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 61,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 72,
+                            "content": "MAX_WEIGHT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 96,
+                            "content": "\"TARGET_WEIGHT_BOUNDS\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 104,
+                            "content": "/* require(targetDenorm >= MIN_WEIGHT && targetDenorm <= MAX_WEIGHT, \"TARGET_WEIGHT_BOUNDS\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "targetTimestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 47,
+                            "content": "fromTimestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 76,
+                            "content": "\"TIMESTAMP_INCORRECT_DELTA\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(targetTimestamp > fromTimestamp, \"TIMESTAMP_INCORRECT_DELTA\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "targetDenorm",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 42,
+                            "content": "MIN_WEIGHT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 45,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 58,
+                            "content": "targetDenorm",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 61,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 72,
+                            "content": "MAX_WEIGHT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 96,
+                            "content": "\"TARGET_WEIGHT_BOUNDS\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 104,
+                            "content": "/* require(targetDenorm >= MIN_WEIGHT && targetDenorm <= MAX_WEIGHT, \"TARGET_WEIGHT_BOUNDS\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "weightPerSecond",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 54,
+                            "content": "_maxWeightPerSecond",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 79,
+                            "content": "\"MAX_WEIGHT_PER_SECOND\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 87,
+                            "content": "/* require(weightPerSecond <= _maxWeightPerSecond, \"MAX_WEIGHT_PER_SECOND\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 89,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "weightPerSecond",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 54,
+                            "content": "_minWeightPerSecond",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 79,
+                            "content": "\"MIN_WEIGHT_PER_SECOND\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 89,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 87,
+                            "content": "/* require(weightPerSecond >= _minWeightPerSecond, \"MIN_WEIGHT_PER_SECOND\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "targetTimestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 47,
+                            "content": "fromTimestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 76,
+                            "content": "\"TIMESTAMP_INCORRECT_DELTA\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(targetTimestamp > fromTimestamp, \"TIMESTAMP_INCORRECT_DELTA\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "fromTimestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 37,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 47,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 74,
+                            "content": "\"CANT_SET_PAST_TIMESTAMP\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 82,
+                            "content": "/* require(fromTimestamp > block.timestamp, \"CANT_SET_PAST_TIMESTAMP\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

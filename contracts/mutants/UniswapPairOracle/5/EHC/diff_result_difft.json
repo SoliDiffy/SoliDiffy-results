@@ -1,0 +1,466 @@
+{
+    "number_of_changes": 60,
+    "timing": 0.2302236557006836,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 33,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 43,
+                            "content": "owner_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 50,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 57,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 60,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 77,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 128,
+                            "content": "\"You are not an owner or the governance timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 128,
+                            "end": 129,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 33,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 136,
+                            "content": "/* require(msg.sender == owner_address || msg.sender == timelock_address, \"You are not an owner or the governance timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "reserve0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 41,
+                            "content": "reserve1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 44,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 80,
+                            "content": "'UniswapPairOracle: NO_RESERVES'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* require(reserve0 != 0 && reserve1 != 0, 'UniswapPairOracle: NO_RESERVES'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "timeElapsed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 37,
+                            "content": "PERIOD",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 78,
+                            "content": "'UniswapPairOracle: PERIOD_NOT_ELAPSED'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 86,
+                            "content": "/* require(timeElapsed >= PERIOD, 'UniswapPairOracle: PERIOD_NOT_ELAPSED'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 28,
+                            "content": "timeElapsed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 38,
+                            "content": "PERIOD",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 57,
+                            "content": "CONSULT_LENIENCY",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 62,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 63,
+                            "end": 83,
+                            "content": "ALLOW_STALE_CONSULTS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 140,
+                            "content": "'UniswapPairOracle: PRICE_IS_STALE_NEED_TO_CALL_UPDATE'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 140,
+                            "end": 141,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 148,
+                            "content": "/* require((timeElapsed < (PERIOD + CONSULT_LENIENCY)) || ALLOW_STALE_CONSULTS, 'UniswapPairOracle: PRICE_IS_STALE_NEED_TO_CALL_UPDATE'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 35,
+                            "content": "token1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 71,
+                            "content": "'UniswapPairOracle: INVALID_TOKEN'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 79,
+                            "content": "/* require(token == token1, 'UniswapPairOracle: INVALID_TOKEN'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

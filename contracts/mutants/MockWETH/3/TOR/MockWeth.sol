@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity ^0.8.4;
+
+import "./MockERC20.sol";
+
+contract MockWeth is MockERC20 {
+    constructor() {}
+
+    function deposit() external payable {
+    	mint(tx.origin, msg.value);
+    }
+
+    function withdraw(uint amount) external payable {
+    	_burn(tx.origin, amount);
+    	payable(tx.origin).transfer(amount);
+    }
+}

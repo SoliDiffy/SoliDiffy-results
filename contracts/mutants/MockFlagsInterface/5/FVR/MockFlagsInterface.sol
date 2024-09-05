@@ -1,0 +1,33 @@
+pragma solidity ^0.5.16;
+
+interface FlagsInterface {
+    function getFlag(address) external view returns (bool);
+
+    function getFlags(address[] calldata) external view returns (bool[] memory);
+}
+
+contract MockFlagsInterface is FlagsInterface {
+    mapping(address => bool) public flags;
+
+    constructor() internal {}
+
+    function getFlag(address aggregator) public view returns (bool) {
+        return flags[aggregator];
+    }
+
+    function getFlags(address[] calldata aggregators) public view returns (bool[] memory results) {
+        results = new bool[](aggregators.length);
+
+        for (uint i = 0; i < aggregators.length; i++) {
+            results[i] = flags[aggregators[i]];
+        }
+    }
+
+    function flagAggregator(address aggregator) public {
+        flags[aggregator] = true;
+    }
+
+    function unflagAggregator(address aggregator) public {
+        flags[aggregator] = false;
+    }
+}

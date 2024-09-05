@@ -1,0 +1,766 @@
+{
+    "number_of_changes": 98,
+    "timing": 0.1763472557067871,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "coverStatus",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 31,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 45,
+                            "content": "QuotationData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 57,
+                            "content": "CoverStatus",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 70,
+                            "content": "CoverExpired",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 107,
+                            "content": "\"Quotation: cover already expired\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 107,
+                            "end": 108,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 115,
+                            "content": "/* require(coverStatus != uint(QuotationData.CoverStatus.CoverExpired), \"Quotation: cover already expired\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 26,
+                            "content": "expirationDate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 32,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 73,
+                            "content": "\"Quotation: cover is not due to expire\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 81,
+                            "content": "/* require(expirationDate < now, \"Quotation: cover is not due to expire\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 25,
+                            "content": "hasOpenClaim",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 63,
+                            "content": "\"Quotation: cover has an open claim\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 71,
+                            "content": "/* require(!hasOpenClaim, \"Quotation: cover has an open claim\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 28,
+                            "content": "expirationDate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 32,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 44,
+                            "content": "gracePeriod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 48,
+                            "end": 51,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 112,
+                            "content": "\"Quotation: cannot withdraw before grace period expiration\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 112,
+                            "end": 113,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 120,
+                            "content": "/* require(expirationDate.add(gracePeriod) < now, \"Quotation: cannot withdraw before grace period expiration\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 201,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "contractAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 38,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 201,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 49,
+                            "content": "/* require(contractAddress != address(0)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 264,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 24,
+                            "content": "coverAsset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 43,
+                            "content": "underlyingToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 98,
+                            "content": "\"Quotation: Unsupported cover asset for this product\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 98,
+                            "end": 99,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 264,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 106,
+                            "content": "/* require(coverAsset == underlyingToken, \"Quotation: Unsupported cover asset for this product\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 316,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 24,
+                            "content": "coverDetails",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "3",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 33,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 65,
+                            "content": "\"Quotation: Quote has expired\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 316,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 73,
+                            "content": "/* require(coverDetails[3] > now, \"Quotation: Quote has expired\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 318,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 15,
+                            "content": "qd",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "timestampRepeated",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 46,
+                            "content": "coverDetails",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "4",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 83,
+                            "content": "\"Quotation: Quote already used\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 318,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 91,
+                            "content": "/* require(!qd.timestampRepeated(coverDetails[4]), \"Quotation: Quote already used\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 317,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "coverPeriod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "30",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 44,
+                            "content": "coverPeriod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 47,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 48,
+                            "end": 51,
+                            "content": "365",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 92,
+                            "content": "\"Quotation: Cover period out of bounds\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 317,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 100,
+                            "content": "/* require(coverPeriod >= 30 && coverPeriod <= 365, \"Quotation: Cover period out of bounds\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

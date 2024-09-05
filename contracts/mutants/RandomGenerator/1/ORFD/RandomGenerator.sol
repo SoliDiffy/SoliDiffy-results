@@ -1,0 +1,28 @@
+/*
+
+    Copyright 2020 DODO ZOO.
+    SPDX-License-Identifier: Apache-2.0
+
+*/
+
+pragma solidity 0.6.9;
+
+interface IRandomGenerator {
+    function random(uint256 seed) external view returns (uint256);
+}
+
+interface IDODOMidPrice {
+    function getMidPrice() external view returns (uint256 midPrice);
+}
+
+contract RandomGenerator is IRandomGenerator{
+    address[] public pools;
+
+    constructor(address[] memory _pools) public {
+        for (uint256 i = 0; i < _pools.length; i++) {
+            pools.push(_pools[i]);
+        }
+    }
+
+    
+}

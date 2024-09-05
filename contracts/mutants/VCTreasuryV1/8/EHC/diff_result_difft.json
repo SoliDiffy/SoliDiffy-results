@@ -1,0 +1,688 @@
+{
+    "number_of_changes": 88,
+    "timing": 0.21587181091308594,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 39,
+                            "content": "councilMultisig",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 71,
+                            "content": "\"TREASURYV1: !councilMultisig\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 79,
+                            "content": "/* require(msg.sender == councilMultisig, \"TREASURYV1: !councilMultisig\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 122,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 39,
+                            "content": "councilMultisig",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 42,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 46,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 53,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 56,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 65,
+                            "content": "deployer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 111,
+                            "content": "\"TREASURYV1: !(councilMultisig || deployer)\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 111,
+                            "end": 112,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 122,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 119,
+                            "content": "/* require(msg.sender == councilMultisig || msg.sender == deployer, \"TREASURYV1: !(councilMultisig || deployer)\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 127,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 32,
+                            "content": "treasury",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 57,
+                            "content": "\"TREASURYV1: !treasury\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 127,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 65,
+                            "content": "/* require(msg.sender == treasury, \"TREASURYV1: !treasury\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 133,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 39,
+                            "content": "councilMultisig",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 71,
+                            "content": "\"TREASURYV1: !councilMultisig\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 133,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 79,
+                            "content": "/* require(msg.sender == councilMultisig, \"TREASURYV1: !councilMultisig\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 159,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 22,
+                            "content": "currentState",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 36,
+                            "content": "FundStates",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 42,
+                            "content": "setup",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 75,
+                            "content": "\"TREASURYV1: !FundStates.setup\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 159,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 83,
+                            "content": "/* require(currentState == FundStates.setup, \"TREASURYV1: !FundStates.setup\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 162,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 15,
+                            "content": "_user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 36,
+                            "content": "LOOP_LIMIT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 71,
+                            "content": "\"TREASURYV1: length > LOOP_LIMIT\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 162,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 79,
+                            "content": "/* require(_user.length <= LOOP_LIMIT, \"TREASURYV1: length > LOOP_LIMIT\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 32,
+                            "content": "deployer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 57,
+                            "content": "\"TREASURYV1: !deployer\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 65,
+                            "content": "/* require(msg.sender == deployer, \"TREASURYV1: !deployer\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 161,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 15,
+                            "content": "_user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 40,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 71,
+                            "content": "\"TREASURYV1: length mismatch\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 161,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 79,
+                            "content": "/* require(_user.length == _amount.length, \"TREASURYV1: length mismatch\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,242 @@
+{
+    "number_of_changes": 30,
+    "timing": 0.23027682304382324,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "coverStatus",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 31,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 45,
+                            "content": "QuotationData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 57,
+                            "content": "CoverStatus",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 70,
+                            "content": "CoverExpired",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 107,
+                            "content": "\"Quotation: cover already expired\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 107,
+                            "end": 108,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 115,
+                            "content": "/* require(coverStatus != uint(QuotationData.CoverStatus.CoverExpired), \"Quotation: cover already expired\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 26,
+                            "content": "expirationDate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 32,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 73,
+                            "content": "\"Quotation: cover is not due to expire\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 81,
+                            "content": "/* require(expirationDate < now, \"Quotation: cover is not due to expire\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 25,
+                            "content": "hasOpenClaim",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 63,
+                            "content": "\"Quotation: cover has an open claim\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 71,
+                            "content": "/* require(!hasOpenClaim, \"Quotation: cover has an open claim\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

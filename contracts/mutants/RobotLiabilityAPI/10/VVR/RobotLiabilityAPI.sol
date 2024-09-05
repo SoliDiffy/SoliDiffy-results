@@ -1,0 +1,27 @@
+pragma solidity ^0.4.24;
+
+import './LiabilityFactory.sol';
+import './XRT.sol';
+
+contract RobotLiabilityAPI {
+    bytes   internal model;
+    bytes   internal objective;
+    bytes   internal result;
+
+    ERC20   internal token;
+    uint256 internal cost;
+    uint256 internal lighthouseFee;
+    uint256 internal validatorFee;
+
+    bytes32 internal askHash;
+    bytes32 internal bidHash;
+
+    address internal promisor;
+    address public promisee;
+    address public validator;
+
+    bool    public isConfirmed;
+    bool    public isFinalized;
+
+    LiabilityFactory public factory;
+}

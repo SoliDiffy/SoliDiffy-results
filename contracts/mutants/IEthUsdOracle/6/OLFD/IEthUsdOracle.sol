@@ -1,0 +1,46 @@
+// SPDX-License-Identifier: agpl-3.0
+pragma solidity ^0.8.0;
+
+interface IEthUsdOracle {
+    /**
+     * @notice Returns ETH price in USD.
+     * @return Price in USD with 6 decimal digits.
+     */
+    
+
+    /**
+     * @notice Returns token price in USD.
+     * @param symbol. Asset symbol. For ex. "DAI".
+     * @return Price in USD with 6 decimal digits.
+     */
+    
+
+    /**
+     * @notice Returns the asset price in ETH.
+     * @param symbol. Asset symbol. For ex. "DAI".
+     * @return Price in ETH with 8 decimal digits.
+     */
+    
+}
+
+interface IViewEthUsdOracle {
+    /**
+     * @notice Returns ETH price in USD.
+     * @return Price in USD with 6 decimal digits.
+     */
+    
+
+    /**
+     * @notice Returns token price in USD.
+     * @param symbol. Asset symbol. For ex. "DAI".
+     * @return Price in USD with 6 decimal digits.
+     */
+    
+
+    /**
+     * @notice Returns the asset price in ETH.
+     * @param symbol. Asset symbol. For ex. "DAI".
+     * @return Price in ETH with 8 decimal digits.
+     */
+    
+}

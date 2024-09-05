@@ -1,0 +1,70 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.2;
+
+import "@openzeppelin/contracts/governance/Governor.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorSettings.sol";
+import "@openzeppelin/contracts/governance/compatibility/GovernorCompatibilityBravo.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorVotes.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorVotesQuorumFraction.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorTimelockControl.sol";
+
+contract OvnGovernor is Governor, GovernorSettings, GovernorCompatibilityBravo, GovernorVotes, GovernorVotesQuorumFraction, GovernorTimelockControl {
+    constructor(ERC20Votes _token, TimelockController _timelock)
+    Governor("OvnGovernor")
+    GovernorSettings(1 /* 1 block */, 200 /* 2 minute */, 0)
+    GovernorVotes(_token)
+    GovernorVotesQuorumFraction(75)
+    GovernorTimelockControl(_timelock)
+    {}
+
+
+    uint256[] private _proposalsIds;
+
+    function getProposals() public view returns (uint256[] memory){
+        return _proposalsIds;
+    }
+
+
+    
+
+    
+
+    
+
+    function proposeExec(address[] memory targets, uint256[] memory values, bytes[] memory calldatas, string memory description)
+    public
+    returns (uint256)
+    {
+        uint256 id = super.propose(targets, values, calldatas, description);
+        _proposalsIds.push(id);
+        return id;
+    }
+
+    
+
+    
+
+    
+
+    
+
+    function voteSucceeded(uint256 proposalId) public view returns (bool){
+        return super._voteSucceeded(proposalId);
+    }
+
+    function quorumReached(uint256 proposalId) public view returns (bool){
+        return super._quorumReached(proposalId);
+    }
+
+    function queueExec(uint256 proposalId) public {
+        return super.queue(proposalId);
+    }
+
+    function executeExec(uint256 proposalId) public {
+        super.execute(proposalId);
+    }
+
+    
+
+    
+}

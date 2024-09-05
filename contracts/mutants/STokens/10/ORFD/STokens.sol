@@ -1,0 +1,354 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity >= 0.7.0;
+
+import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/math/SafeMathUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/EnumerableSetUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
+import "./interfaces/ISTokens.sol";
+import "./interfaces/IUTokens.sol";
+import "./interfaces/IHolder.sol";
+import "./libraries/FullMath.sol";
+
+contract STokens is ERC20Upgradeable, ISTokens, PausableUpgradeable, AccessControlUpgradeable {
+
+    using SafeMathUpgradeable for uint256;
+    using FullMath for uint256;
+    using EnumerableSetUpgradeable for EnumerableSetUpgradeable.AddressSet;
+
+    // constants defining access control ROLES
+    bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
+
+    // variables pertaining to holder logic for whitelisted addresses & StakeLP
+    // deposit contract address for STokens in a DeFi product
+    EnumerableSetUpgradeable.AddressSet private _whitelistedAddresses;
+    mapping(address => address) private _holderContractAddress;
+    // LP Token contract address which might be different from whitelisted contract
+    mapping(address => address) private _lpContractAddress;
+    // last timestamp when the holder reward calculation was performed for updating reward pool
+    mapping(address => uint256) private _lastHolderRewardTimestamp;
+
+    // variables capturing data of other contracts in the product
+    address private _liquidStakingContract;
+    // address private _stakeLPCoreContract;
+    IUTokens private _uTokens;
+
+    // variables pertaining to moving reward rate logic
+    uint256[] private _rewardRate;
+    uint256[] private _lastMovingRewardTimestamp;
+    uint256 private _valueDivisor;
+    mapping(address => uint256) private _lastUserRewardTimestamp;
+
+    /**
+   * @dev Constructor for initializing the SToken contract.
+   * @param uaddress - address of the UToken contract.
+   * @param pauserAddress - address of the pauser admin.
+   * @param rewardRate - set to rewardRate * 10^-5
+   * @param valueDivisor - valueDivisor set to 10^9.
+   */
+    function initialize(address uaddress, address pauserAddress, uint256 rewardRate, uint256 valueDivisor) public virtual initializer {
+        __ERC20_init("pSTAKE Staked ATOM", "stkATOM");
+        __AccessControl_init();
+        __Pausable_init();
+        _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
+        _setupRole(PAUSER_ROLE, pauserAddress);
+        setUTokensContract(uaddress);
+        _valueDivisor = valueDivisor;
+        require(rewardRate <= _valueDivisor.mul(100), "ST1");
+        _rewardRate.push(rewardRate);
+        _lastMovingRewardTimestamp.push(block.timestamp);
+        _setupDecimals(6);
+    }
+
+    /**
+    * @dev Calculate pending rewards for the provided 'address'. The rate is the moving reward rate.
+    * @param lpContractAddress: contract address
+    */
+    
+
+    /**
+    * @dev Calculate pending rewards for the provided 'address'. The rate is the moving reward rate.
+    * @param whitelistedAddress: contract address
+    */
+    
+
+    /*
+    * @dev set reward rate called by admin
+    * @param rewardRate: reward rate
+    *
+    *
+    * Requirements:
+    *
+    * - `rate` cannot be less than or equal to zero.
+    *
+    */
+    
+
+    /**
+    * @dev get reward rate and value divisor
+    */
+    function getRewardRate() public view virtual returns (uint256[] memory rewardRate, uint256 valueDivisor) {
+        rewardRate = _rewardRate;
+        valueDivisor = _valueDivisor;
+    }
+
+    /**
+     * @dev get rewards till timestamp
+     * @param to: account address
+     */
+    function getLastUserRewardTimestamp(address to) public view virtual returns (uint256 lastUserRewardTimestamp) {
+        lastUserRewardTimestamp = _lastUserRewardTimestamp[to];
+    }
+
+    /**
+     * @dev Mint new stokens for the provided 'address' and 'tokens'
+     * @param to: account address, tokens: number of tokens
+     *
+     * Emits a {MintTokens} event with 'to' set to address and 'tokens' set to amount of tokens.
+     *
+     * Requirements:
+     *
+     * - `amount` cannot be less than zero.
+     *
+     */
+    
+
+    /*
+     * @dev Burn stokens for the provided 'address' and 'tokens'
+     * @param to: account address, tokens: number of tokens
+     *
+     * Emits a {BurnTokens} event with 'to' set to address and 'tokens' set to amount of tokens.
+     *
+     * Requirements:
+     *
+     * - `amount` cannot be less than zero.
+     *
+     */
+    
+
+    /**
+     * @dev Calculate pending rewards from the provided 'principal' & 'lastRewardTimestamp'. The rate is the moving reward rate.
+     * @param principal: principal amount
+     * @param lastRewardTimestamp: timestamp of last reward calculation performed
+     */
+    function _calculatePendingRewards(uint256 principal, uint256 lastRewardTimestamp) internal view returns (uint256 pendingRewards){
+        uint256 _index;
+        uint256 _rewardBlocks;
+        uint256 _simpleInterestOfInterval;
+        uint256 _temp;
+        // return 0 if principal or timeperiod is zero
+        if(principal == 0 || block.timestamp.sub(lastRewardTimestamp) == 0) return 0;
+        // calculate rewards for each interval period between rewardRate changes
+        uint256 _lastMovingRewardLength = _lastMovingRewardTimestamp.length.sub(1);
+        for(_index = _lastMovingRewardLength; _index >= 0;){
+            // logic applies for all indexes of array except last index
+            if(_index < _lastMovingRewardTimestamp.length.sub(1)) {
+                if(_lastMovingRewardTimestamp[_index] > lastRewardTimestamp) {
+                    _rewardBlocks = (_lastMovingRewardTimestamp[_index.add(1)]).sub(_lastMovingRewardTimestamp[_index]);
+                    _temp = principal.mulDiv(_rewardRate[_index], 100);
+                    _simpleInterestOfInterval = _temp.mulDiv(_rewardBlocks, _valueDivisor);
+                    pendingRewards = pendingRewards.add(_simpleInterestOfInterval);
+                }
+                else {
+                    _rewardBlocks = (_lastMovingRewardTimestamp[_index.add(1)]).sub(lastRewardTimestamp);
+                    _temp = principal.mulDiv(_rewardRate[_index], 100);
+                    _simpleInterestOfInterval = _temp.mulDiv(_rewardBlocks, _valueDivisor);
+                    pendingRewards = pendingRewards.add(_simpleInterestOfInterval);
+                    break;
+                }
+            }
+            // logic applies only for the last index of array
+            else {
+                if(_lastMovingRewardTimestamp[_index] > lastRewardTimestamp) {
+                    _rewardBlocks = (block.timestamp).sub(_lastMovingRewardTimestamp[_index]);
+                    _temp = principal.mulDiv(_rewardRate[_index], 100);
+                    _simpleInterestOfInterval = _temp.mulDiv(_rewardBlocks, _valueDivisor);
+                    pendingRewards = pendingRewards.add(_simpleInterestOfInterval);
+                }
+                else {
+                    _rewardBlocks = (block.timestamp).sub(lastRewardTimestamp);
+                    _temp = principal.mulDiv(_rewardRate[_index], 100);
+                    _simpleInterestOfInterval = _temp.mulDiv(_rewardBlocks, _valueDivisor);
+                    pendingRewards = pendingRewards.add(_simpleInterestOfInterval);
+                    break;
+                }
+            }
+
+            if(_index == 0) break;
+            else {
+                _index = _index.sub(1);
+            }
+        }
+        return pendingRewards;
+    }
+
+    /**
+     * @dev Calculate pending rewards for the provided 'address'. The rate is the moving reward rate.
+     * @param to: account address
+     */
+    
+
+    /**
+     * @dev Calculate rewards for the provided 'address'
+     * @param to: account address
+     */
+    function _calculateRewards(address to) internal returns (uint256){
+        // Calculate the rewards pending
+        uint256 _reward = calculatePendingRewards(to);
+
+        // Set the new stakedBlock to the current, 
+        // as per Checks-Effects-Interactions pattern
+        _lastUserRewardTimestamp[to] = block.timestamp;
+
+        // mint uTokens only if reward is greater than zero
+        if(_reward>0) {
+            // Mint new uTokens and send to the callers account
+            _uTokens.mint(to, _reward);
+            emit CalculateRewards(to, _reward, block.timestamp);
+        }
+
+        return _reward;
+    }
+
+    /**
+     * @dev Calculate rewards for the provided 'address'
+     * @param to: account address
+     *
+     * Emits a {TriggeredCalculateRewards} event with 'to' set to address, 'reward' set to amount of tokens and 'timestamp'
+     *
+     */
+    
+
+    /**
+     * @dev Calculate rewards for the provided 'holder address'
+     * @param to: holder address
+     */
+    function _calculateHolderRewards(address to, address from, uint256 amount) internal returns (uint256){
+        // holderContract and lpContract (lp token contract) need to be validated together because
+        // it might not be practical to setup holder to collect reward pool but not StakeLP to distribute reward
+        // since the reward distribution calculation starts the minute reward pool is created
+        require(_whitelistedAddresses.contains(to) && _holderContractAddress[to] != address(0) && _lpContractAddress[to] != address(0), "ST6");
+        uint256 _sTokenSupply = IHolder(_holderContractAddress[to]).getSTokenSupply(to, from, amount);
+
+        // calculate the reward applying the moving reward rate
+        uint256 _newRewards = _calculatePendingRewards(_sTokenSupply, _lastHolderRewardTimestamp[to]);
+
+        // update the last timestamp of reward pool to the current time as per Checks-Effects-Interactions pattern
+        _lastHolderRewardTimestamp[to] = block.timestamp;
+
+        // Mint new uTokens and send to the holder contract account as updated reward pool
+        if(_newRewards > 0) {
+            _uTokens.mint(_holderContractAddress[to], _newRewards);
+            emit CalculateHolderRewards(_holderContractAddress[to], _newRewards, block.timestamp);
+        }
+
+        return _newRewards;
+    }
+
+    /**
+     * @dev Hook that is called before any transfer of tokens. This includes
+     * minting and burning.
+     *
+     * Calling conditions:
+     *
+     * - when `from` and `to` are both non-zero, `amount` of ``from``'s tokens
+     * will be to transferred to `to`.
+     * - when `from` is zero, `amount` tokens will be minted for `to`.
+     * - when `to` is zero, `amount` of ``from``'s tokens will be burned.
+     * - `from` and `to` are never both zero.
+     *
+     */
+    
+
+    /*
+    * @dev Set 'whitelisted address', performed by admin only
+    * @param whitelistedAddress: contract address of the whitelisted party
+    *
+    * Emits a {setWhitelistedAddress} event
+    *
+    */
+    function setWhitelistedAddress(address whitelistedAddress, address holderContractAddress, address lpContractAddress) public virtual returns (bool success){
+        require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "ST8");
+        // lpTokenERC20ContractAddress or sTokenReserveContractAddress can be address(0) but not whitelistedAddress
+        require(whitelistedAddress != address(0), "ST9");
+        // add the whitelistedAddress if it isn't already available
+        if(!_whitelistedAddresses.contains(whitelistedAddress)) _whitelistedAddresses.add(whitelistedAddress);
+        // add the contract addresses to holder mapping variable
+        _holderContractAddress[whitelistedAddress] = holderContractAddress;
+        _lpContractAddress[whitelistedAddress] = lpContractAddress;
+
+        emit SetWhitelistedAddress(whitelistedAddress, holderContractAddress, lpContractAddress, block.timestamp);
+        success = true;
+        return success;
+    }
+
+    /*
+  * @dev remove 'whitelisted address', performed by admin only
+  * @param whitelistedAddress: contract address of the whitelisted party
+  * @param holderContractAddress: holder contract address of the corresponding whitelistedAddress
+  *
+  * Emits a {RemoveWhitelistedAddress} event
+  *
+  */
+    function removeWhitelistedAddress(address whitelistedAddress) public virtual returns (bool success){
+        require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "ST10");
+        require(whitelistedAddress != address(0), "ST11");
+        // remove whitelistedAddress from the list
+        _whitelistedAddresses.remove(whitelistedAddress);
+        address _holderContractAddressLocal = _holderContractAddress[whitelistedAddress];
+        address _lpContractAddressLocal = _lpContractAddress[whitelistedAddress];
+
+        // delete holder contract values
+        delete _holderContractAddress[whitelistedAddress];
+        delete _lpContractAddress[whitelistedAddress];
+
+        emit RemoveWhitelistedAddress(whitelistedAddress, _holderContractAddressLocal, _lpContractAddressLocal, block.timestamp);
+        success = true;
+        return success;
+    }
+
+    /*
+    * @dev Set 'contract address', called from constructor
+    * @param uTokenContract: utoken contract address
+    *
+    * Emits a {SetUTokensContract} event with '_contract' set to the utoken contract address.
+    *
+    */
+    
+
+    /*
+     * @dev Set 'contract address', called from constructor
+     * @param liquidStakingContract: liquidStaking contract address
+     *
+     * Emits a {SetLiquidStakingContract} event with '_contract' set to the liquidStaking contract address.
+     *
+     */
+    
+
+    /**
+      * @dev Triggers stopped state.
+      *
+      * Requirements:
+      *
+      * - The contract must not be paused.
+      */
+    function pause() public virtual returns (bool success) {
+        require(hasRole(PAUSER_ROLE, _msgSender()), "ST14");
+        _pause();
+        return true;
+    }
+
+    /**
+     * @dev Returns to normal state.
+     *
+     * Requirements:
+     *
+     * - The contract must be paused.
+     */
+    function unpause() public virtual returns (bool success) {
+        require(hasRole(PAUSER_ROLE, _msgSender()), "ST15");
+        _unpause();
+        return true;
+    }
+}

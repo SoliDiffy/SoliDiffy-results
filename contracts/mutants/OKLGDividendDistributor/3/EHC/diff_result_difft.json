@@ -1,0 +1,568 @@
+{
+    "number_of_changes": 54,
+    "timing": 0.1767747402191162,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 9,
+                            "end": 22,
+                            "content": "boostedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 44,
+                            "content": "boostedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 47,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 48,
+                            "end": 54,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 58,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 65,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 73,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 75,
+                            "content": "        (boostedAmount == 0 || boostedAmount <= shares[msg.sender].amount),",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 52,
+                            "content": "'you can only unstake if you have some staked'",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 52,
+                            "content": "      'you can only unstake if you have some staked'",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 139,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 12,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 16,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 23,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 139,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 38,
+                            "content": "      shares[msg.sender].amount > 0 &&",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 138,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 138,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 142,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 142,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 9,
+                            "content": "    ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 9,
+                            "content": "    ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 198,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 36,
+                            "content": "'value must be greater than 0'",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 198,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 36,
+                            "content": "      'value must be greater than 0'",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 199,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 199,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 9,
+                            "content": "    ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 201,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 24,
+                            "content": "totalSharesBoosted",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 201,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 29,
+                            "content": "      totalSharesBoosted > 0,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 202,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 57,
+                            "content": "'must be shares deposited to be rewarded dividends'",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 202,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 57,
+                            "content": "      'must be shares deposited to be rewarded dividends'",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 196,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 196,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 197,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 23,
+                            "content": "erc20DirectAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 34,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 40,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 197,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 45,
+                            "content": "      erc20DirectAmount > 0 || msg.value > 0,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

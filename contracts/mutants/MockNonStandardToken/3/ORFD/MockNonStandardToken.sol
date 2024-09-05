@@ -1,0 +1,21 @@
+pragma solidity ^0.8.0;
+
+import { SafeMath } from "@openzeppelin/contracts/utils/math/SafeMath.sol";
+
+import "./MintableERC20.sol";
+
+/**
+ * Mock token contract to simulate tokens that don't
+ * throw/revert when a transfer/transferFrom call fails
+ */
+contract MockNonStandardToken is MintableERC20 {
+    using SafeMath for uint256;
+
+    constructor() ERC20("NonStandardToken", "NonStandardToken") {}
+
+    
+
+    
+
+    
+}

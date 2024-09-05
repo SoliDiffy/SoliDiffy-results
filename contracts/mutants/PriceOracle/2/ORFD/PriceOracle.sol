@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: agpl-3.0
+pragma solidity ^0.6.8;
+
+import {IPriceOracle} from '../../interfaces/IPriceOracle.sol';
+
+contract PriceOracle is IPriceOracle {
+  mapping(address => uint256) prices;
+  uint256 ethPriceUsd;
+
+  event AssetPriceUpdated(address _asset, uint256 _price, uint256 timestamp);
+  event EthPriceUpdated(uint256 _price, uint256 timestamp);
+
+  
+
+  
+
+  function getEthUsdPrice() external view returns (uint256) {
+    return ethPriceUsd;
+  }
+
+  function setEthUsdPrice(uint256 _price) external {
+    ethPriceUsd = _price;
+    emit EthPriceUpdated(_price, block.timestamp);
+  }
+}

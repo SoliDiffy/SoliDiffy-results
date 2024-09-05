@@ -1,0 +1,166 @@
+{
+    "number_of_changes": 20,
+    "timing": 0.3774871826171875,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 39,
+                            "content": "\"Failing on purpose\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 47,
+                            "content": "/* revert(\"Failing on purpose\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 29,
+                            "content": "keccak256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 40,
+                            "content": "inFlightTx",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 44,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 45,
+                            "end": 54,
+                            "content": "keccak256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 67,
+                            "content": "expectedArgs",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 78,
+                            "content": "inFlightTx",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 114,
+                            "content": "\"in-flight tx is not as expected\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 114,
+                            "end": 115,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 122,
+                            "content": "/* require(keccak256(inFlightTx) == keccak256(expectedArgs.inFlightTx), \"in-flight tx is not as expected\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

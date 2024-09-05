@@ -1,0 +1,240 @@
+{
+    "number_of_changes": 29,
+    "timing": 0.2432553768157959,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 34,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "deadline",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 33,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 43,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 72,
+                            "content": "'ImpossibleRouter: EXPIRED'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 34,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 80,
+                            "content": "/* require(deadline >= block.timestamp, 'ImpossibleRouter: EXPIRED'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 55,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 18,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 25,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 33,
+                            "content": "WETH",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 55,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 41,
+                            "content": "/* assert(msg.sender == WETH); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 108,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "WETH",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 31,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 35,
+                            "content": "0x0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 69,
+                            "content": "'ImpossibleRouter: Already set'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 108,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 77,
+                            "content": "/* require(WETH == address(0x0), 'ImpossibleRouter: Already set'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

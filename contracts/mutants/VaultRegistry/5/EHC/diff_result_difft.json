@@ -1,0 +1,460 @@
+{
+    "number_of_changes": 60,
+    "timing": 0.23559284210205078,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 33,
+                            "content": "_vaultQuarantine",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 47,
+                            "content": "isQuarantined",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 51,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 58,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 83,
+                            "content": "\"Vault is quarantined\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 91,
+                            "content": "/* require(!_vaultQuarantine.isQuarantined(msg.sender), \"Vault is quarantined\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "_vaultToId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 30,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 37,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 85,
+                            "content": "\"The call is not from a registered vault\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 93,
+                            "content": "/* require(_vaultToId[msg.sender] > 0, \"The call is not from a registered vault\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_vaults",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 32,
+                            "content": "_vaultId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 85,
+                            "content": "\"The vault ID is already registered\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 93,
+                            "content": "/* require(_vaults[_vaultId] == address(0), \"The vault ID is already registered\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "_vaultId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 68,
+                            "content": "\"Should not register with vault ID 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 76,
+                            "content": "/* require(_vaultId != 0, \"Should not register with vault ID 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 51,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "_vaultAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 40,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 89,
+                            "content": "\"Should not register an empty vault address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 51,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 97,
+                            "content": "/* require(_vaultAddress != address(0), \"Should not register an empty vault address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

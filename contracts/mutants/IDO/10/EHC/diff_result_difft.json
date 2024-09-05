@@ -1,0 +1,1644 @@
+{
+    "number_of_changes": 212,
+    "timing": 0.24962258338928223,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "idoStatus",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 52,
+                            "content": "\"The IDO is not started!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 60,
+                            "content": "/* require(idoStatus, \"The IDO is not started!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "whitelist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 54,
+                            "content": "maxAmountToClaim",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 57,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 71,
+                            "content": "amountToClaim",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 116,
+                            "content": "\"You're not permited to claim this amount!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 116,
+                            "end": 117,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 124,
+                            "content": "/* require(whitelist[msg.sender].maxAmountToClaim >= amountToClaim, \"You're not permited to claim this amount!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 35,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 60,
+                            "content": "amountToSpent",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 92,
+                            "content": "\"You don't have enough money!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 100,
+                            "content": "/* require(token.balanceOf(msg.sender) >= amountToSpent, \"You don't have enough money!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 43,
+                            "content": "idoFinish",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 75,
+                            "content": "\"The IDO is already finished!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 83,
+                            "content": "/* require(block.timestamp < idoFinish, \"The IDO is already finished!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 24,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 38,
+                            "content": "start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 82,
+                            "content": "\"You're already participating in IDO\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 90,
+                            "content": "/* require(pool[msg.sender].start == 0, \"You're already participating in IDO\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "allowedTokens",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 80,
+                            "content": "\"This token is not allowed to participate\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* require(allowedTokens[token], \"This token is not allowed to participate\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "whitelist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 51,
+                            "content": "isWhitelisted",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 77,
+                            "content": "\"You're not whitelisted\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 85,
+                            "content": "/* require(whitelist[msg.sender].isWhitelisted, \"You're not whitelisted\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 24,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 38,
+                            "content": "start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 82,
+                            "content": "\"You're already participating in IDO\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 90,
+                            "content": "/* require(pool[msg.sender].start == 0, \"You're already participating in IDO\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "idoStatus",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 52,
+                            "content": "\"The IDO is not started!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 60,
+                            "content": "/* require(idoStatus, \"The IDO is not started!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 43,
+                            "content": "idoFinish",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 75,
+                            "content": "\"The IDO is already finished!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 83,
+                            "content": "/* require(block.timestamp < idoFinish, \"The IDO is already finished!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 35,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 60,
+                            "content": "amountToSpent",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 92,
+                            "content": "\"You don't have enough money!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 100,
+                            "content": "/* require(token.balanceOf(msg.sender) >= amountToSpent, \"You don't have enough money!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "allowedTokens",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 80,
+                            "content": "\"This token is not allowed to participate\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* require(allowedTokens[token], \"This token is not allowed to participate\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "whitelist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 54,
+                            "content": "maxAmountToClaim",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 57,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 71,
+                            "content": "amountToClaim",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 116,
+                            "content": "\"You're not permited to claim this amount!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 116,
+                            "end": 117,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 124,
+                            "content": "/* require(whitelist[msg.sender].maxAmountToClaim >= amountToClaim, \"You're not permited to claim this amount!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "whitelist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 51,
+                            "content": "isWhitelisted",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 77,
+                            "content": "\"You're not whitelisted\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 85,
+                            "content": "/* require(whitelist[msg.sender].isWhitelisted, \"You're not whitelisted\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 89,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 18,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 28,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 35,
+                            "content": "pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 39,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 63,
+                            "content": "claimedLastTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 67,
+                            "end": 82,
+                            "content": "cooldownToClaim",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 89,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 83,
+                            "content": "            (block.timestamp - pool[msg.sender].claimedLastTime) > cooldownToClaim,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 24,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 38,
+                            "content": "start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 78,
+                            "content": "\"You're not participating in IDO\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 86,
+                            "content": "/* require(pool[msg.sender].start != 0, \"You're not participating in IDO\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 43,
+                            "content": "idoFinish",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 74,
+                            "content": "\"The IDO is not finished yet\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 82,
+                            "content": "/* require(block.timestamp > idoFinish, \"The IDO is not finished yet\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 61,
+                            "content": "\"You are not allowed to claime more at this time\"",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 61,
+                            "content": "            \"You are not allowed to claime more at this time\"",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 91,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 91,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "content": "        ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

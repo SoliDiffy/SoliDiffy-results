@@ -1,0 +1,52 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+import "../utils/TimersUpgradeable.sol";
+import "../proxy/utils/Initializable.sol";
+
+contract TimersTimestampImplUpgradeable is Initializable {
+    function __TimersTimestampImpl_init() public onlyInitializing {
+    }
+
+    function __TimersTimestampImpl_init_unchained() public onlyInitializing {
+    }
+    using TimersUpgradeable for TimersUpgradeable.Timestamp;
+
+    TimersUpgradeable.Timestamp private _timer;
+
+    function getDeadline() external view returns (uint64) {
+        return _timer.getDeadline();
+    }
+
+    function setDeadline(uint64 timestamp) external {
+        _timer.setDeadline(timestamp);
+    }
+
+    function reset() external {
+        _timer.reset();
+    }
+
+    function isUnset() external view returns (bool) {
+        return _timer.isUnset();
+    }
+
+    function isStarted() external view returns (bool) {
+        return _timer.isStarted();
+    }
+
+    function isPending() external view returns (bool) {
+        return _timer.isPending();
+    }
+
+    function isExpired() external view returns (bool) {
+        return _timer.isExpired();
+    }
+
+    /**
+     * @dev This empty reserved space is put in place to allow future versions to add new
+     * variables without shifting down storage in the inheritance chain.
+     * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
+     */
+    uint256[49] private __gap;
+}

@@ -1,0 +1,144 @@
+pragma solidity 0.7.6;
+
+// SPDX-License-Identifier: GPL-3.0-only
+
+import "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+import "../RocketBase.sol";
+import "../../interface/dao/protocol/settings/RocketDAOProtocolSettingsInflationInterface.sol";
+import "../../interface/token/RocketTokenRPLInterface.sol";
+import "../../interface/RocketVaultInterface.sol";
+
+// RPL Governance and utility token
+// Inlfationary with rate determined by DAO
+
+contract RocketTokenRPL is RocketBase, ERC20Burnable, RocketTokenRPLInterface {
+
+    // Libs
+    using SafeMath for uint;
+
+    /**** Properties ***********/
+
+    // How many RPL tokens minted to date (18m from fixed supply)
+    uint256 constant totalInitialSupply = 18000000000000000000000000;
+    // The RPL inflation interval
+    uint256 constant inflationInterval = 1 days;
+    // How many RPL tokens have been swapped for new ones
+    uint256 public totalSwappedRPL = 0;
+
+    // Timestamp of last block inflation was calculated at
+    uint256 private inflationCalcTime = 0;
+
+
+    /**** Contracts ************/
+
+    // The address of our fixed supply RPL ERC20 token contract
+    IERC20 rplFixedSupplyContract = IERC20(address(0));
+
+
+    /**** Events ***********/
+
+    event RPLInflationLog(address sender, uint256 value, uint256 inflationCalcTime);
+    event RPLFixedSupplyBurn(address indexed from, uint256 amount, uint256 time);
+
+
+    // Construct
+    constructor(RocketStorageInterface _rocketStorageAddress, IERC20 _rocketTokenRPLFixedSupplyAddress) RocketBase(_rocketStorageAddress) ERC20("Rocket Pool Protocol", "RPL") {
+        // Version
+        version = 1;
+        // Set the mainnet RPL fixed supply token address
+        rplFixedSupplyContract = IERC20(_rocketTokenRPLFixedSupplyAddress);
+        // Mint the 18m tokens that currently exist and allow them to be sent to people burning existing fixed supply RPL
+        _mint(address(this), totalInitialSupply);
+    }
+
+    /**
+    * Get the last time that inflation was calculated at
+    * @return uint256 Last timestamp since inflation was calculated
+    */
+    
+
+    /**
+    * How many seconds to calculate inflation at
+    * @return uint256 how many seconds to calculate inflation at
+    */
+    
+
+    /**
+    * The current inflation rate per interval (eg 1000133680617113500 = 5% annual)
+    * @return uint256 The current inflation rate per interval
+    */
+    
+
+    /**
+    * The current block to begin inflation at
+    * @return uint256 The current block to begin inflation at
+    */
+    
+
+    /**
+    * The current rewards pool address that receives the inflation
+    * @return address The rewards pool contract address
+    */
+    
+
+
+    /**
+    * Compute interval since last inflation update (on call)
+    * @return uint256 Time intervals since last update
+    */
+    
+
+    function _getInflationIntervalsPassed(uint256 _inflationLastCalcTime) private view returns(uint256) {
+        // Calculate now if inflation has begun
+        if(_inflationLastCalcTime > 0) {
+            return (block.timestamp).sub(_inflationLastCalcTime).div(inflationInterval);
+        }else{
+            return 0;
+        }
+    }
+
+
+    /**
+    * @dev Function to compute how many tokens should be minted
+    * @return A uint256 specifying number of new tokens to mint
+    */
+    
+
+    function _inflationCalculate(uint256 _intervalsSinceLastMint) private view returns (uint256) {
+        // The inflation amount
+        uint256 inflationTokenAmount = 0;
+        // Only update  if last interval has passed and inflation rate is > 0
+        if(_intervalsSinceLastMint > 0) {
+            // Optimisation
+            uint256 inflationRate = getInflationIntervalRate();
+            if(inflationRate > 0) {
+                // Get the total supply now
+                uint256 totalSupplyCurrent = totalSupply();
+                uint256 newTotalSupply = totalSupplyCurrent;
+                // Compute inflation for total inflation intervals elapsed
+                for (uint256 i = 0; i < _intervalsSinceLastMint; i++) {
+                    newTotalSupply = newTotalSupply.mul(inflationRate).div(10**18);
+                }
+                // Return inflation amount
+                inflationTokenAmount = newTotalSupply.sub(totalSupplyCurrent);
+            }
+        }
+        // Done
+        return inflationTokenAmount;
+    }
+
+
+    /**
+    * @dev Mint new tokens if enough time has elapsed since last mint
+    * @return A uint256 specifying number of new tokens that were minted
+    */
+       
+
+   /**
+   * @dev Swap current RPL fixed supply tokens for new RPL 1:1 to the same address from the user calling it
+   * @param _amount The amount of RPL fixed supply tokens to swap
+   */
+    
+}

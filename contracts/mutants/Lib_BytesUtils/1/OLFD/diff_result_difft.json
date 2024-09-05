@@ -1,0 +1,1956 @@
+{
+    "number_of_changes": 254,
+    "timing": 0.3135373592376709,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 82,
+                            "content": "//if we want a zero-length slice let's just return a zero-length array",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 54,
+                    "changes": [
+                        {
+                            "start": 20,
+                            "end": 23,
+                            "content": "let",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "cc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": ":=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 33,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 37,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 41,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 48,
+                            "content": "_bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 59,
+                            "content": "lengthmod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 65,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 66,
+                            "end": 70,
+                            "content": "0x20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 78,
+                            "content": "iszero",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 79,
+                            "end": 88,
+                            "content": "lengthmod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 99,
+                            "content": "_start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 99,
+                            "end": 100,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 31,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 54,
+                            "content": "// Solidity does for memory variables.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 18,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "pure",
+                            "highlight": "keyword"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 78,
+                            "content": "// because when slicing multiples of 32 bytes (lengthmod == 0)",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 80,
+                            "content": "// data we don't care about, but the last `lengthmod` bytes will",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 76,
+                            "content": "// we're done copying, we overwrite the full first word with",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "default",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "case",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 84,
+                            "content": "//allocating the array padded to 32 bytes like the compiler does now",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 34,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 78,
+                            "content": "// The first word of the slice result is potentially a partial",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 49,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "let",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 23,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": ":=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 30,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "mc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 42,
+                            "content": "_length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "mstore",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 32,
+                            "content": "tempBytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 21,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "31",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 39,
+                            "content": "_length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 57,
+                            "content": "\"slice_overflow\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 35,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 78,
+                            "content": "// word read from the original array. To read it, we calculate",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 13,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 13,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 27,
+                            "content": "_bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 16,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 32,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "tempBytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": ":=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 34,
+                            "content": "mload",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 39,
+                            "content": "0x40",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 50,
+                            "content": "// the actual length of the slice.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 24,
+                            "content": "tempBytes",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 23,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "_bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 29,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 39,
+                            "content": "_start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 49,
+                            "content": "_length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 70,
+                            "content": "\"slice_outOfBounds\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 57,
+                    "changes": [
+                        {
+                            "start": 20,
+                            "end": 22,
+                            "content": "cc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": ":=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "cc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 38,
+                            "content": "0x20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 76,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "mstore",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 27,
+                            "content": "0x40",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 32,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 42,
+                            "content": "tempBytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 48,
+                            "content": "0x20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 81,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 27,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 16,
+                            "content": "assembly",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 20,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 67,
+                            "content": "// The multiplication in the next line is necessary",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "mstore",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "mc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 36,
+                            "content": "mload",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "cc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "switch",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 25,
+                            "content": "iszero",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "_length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 51,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "for",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 78,
+                            "content": "// the length of that partial word and start copying that many",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 14,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "_start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 37,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 79,
+                            "content": "// bytes into the array. The first word we copy will start with",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 76,
+                            "content": "//we need to do it because Solidity does not garbage collect",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 58,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "let",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 22,
+                            "content": "mc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": ":=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 33,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 43,
+                            "content": "tempBytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 54,
+                            "content": "lengthmod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 60,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 65,
+                            "content": "0x20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 73,
+                            "content": "iszero",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 74,
+                            "end": 83,
+                            "content": "lengthmod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 19,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 22,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 29,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "mstore",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 32,
+                            "content": "tempBytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "_length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 22,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "_start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 32,
+                            "content": "_length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "_start",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 60,
+                            "content": "\"slice_overflow\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 25,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 13,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 30,
+                            "content": "tempBytes",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 44,
+                            "content": "//update free-memory pointer",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 56,
+                    "changes": [
+                        {
+                            "start": 20,
+                            "end": 22,
+                            "content": "mc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": ":=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "mc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 38,
+                            "content": "0x20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 12,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 18,
+                            "content": "slice",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 12,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 55,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 20,
+                            "content": "lt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "mc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 28,
+                            "content": "end",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 68,
+                            "content": "//zero out the 32 bytes slice we are about to return",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 17,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 16,
+                            "content": "internal",
+                            "highlight": "keyword"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "tempBytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": ":=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 34,
+                            "content": "mload",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 39,
+                            "content": "0x40",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 15,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_length",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 30,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 82,
+                            "content": "// Get a location of some free memory and store it in tempBytes as",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 20,
+                            "end": 85,
+                            "content": "// The multiplication in the next line has the same exact purpose",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 79,
+                            "content": "// land at the beginning of the contents of the new array. When",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 53,
+                    "changes": [
+                        {
+                            "start": 20,
+                            "end": 40,
+                            "content": "// as the one above.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "mstore",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 27,
+                            "content": "0x40",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 32,
+                            "content": "and",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 36,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "mc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "31",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 49,
+                            "content": "not",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 52,
+                            "content": "31",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 42,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "let",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 29,
+                            "content": "lengthmod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": ":=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 36,
+                            "content": "and",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "_length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 48,
+                            "content": "31",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 74,
+                            "content": "// the following copy loop was copying the origin's length",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 80,
+                            "content": "// and then ending prematurely not copying everything it should.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

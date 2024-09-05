@@ -1,0 +1,40 @@
+pragma solidity 0.7.6;
+
+// SPDX-License-Identifier: GPL-3.0-only
+
+import "./RocketDAOProtocolSettings.sol";
+import "../../../../interface/dao/protocol/settings/RocketDAOProtocolSettingsDepositInterface.sol";
+ 
+// Network deposit settings
+
+contract RocketDAOProtocolSettingsDeposit is RocketDAOProtocolSettings, RocketDAOProtocolSettingsDepositInterface {
+
+    // Construct
+    
+
+    // Deposits currently enabled
+    function getDepositEnabled() override external view returns (bool) {
+        return getSettingBool("deposit.enabled");
+    }
+
+    // Deposit assignments currently enabled
+    function getAssignDepositsEnabled() override external view returns (bool) {
+        return getSettingBool("deposit.assign.enabled");
+    }
+
+    // Minimum deposit size
+    function getMinimumDeposit() override external view returns (uint256) {
+        return getSettingUint("deposit.minimum");
+    }
+
+    // The maximum size of the deposit pool
+    function getMaximumDepositPoolSize() override external view returns (uint256) {
+        return getSettingUint("deposit.pool.maximum");
+    }
+
+    // The maximum number of deposit assignments to perform at once
+    function getMaximumDepositAssignments() override external view returns (uint256) {
+        return getSettingUint("deposit.assign.maximum");
+    }
+
+}

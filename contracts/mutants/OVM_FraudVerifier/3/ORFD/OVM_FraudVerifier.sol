@@ -1,0 +1,169 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >0.5.0 <0.8.0;
+pragma experimental ABIEncoderV2;
+
+/* Library Imports */
+import { Lib_OVMCodec } from "../../libraries/codec/Lib_OVMCodec.sol";
+import { Lib_AddressResolver } from "../../libraries/resolver/Lib_AddressResolver.sol";
+
+/* Interface Imports */
+import { iOVM_FraudVerifier } from "../../iOVM/verification/iOVM_FraudVerifier.sol";
+import { iOVM_StateTransitioner } from "../../iOVM/verification/iOVM_StateTransitioner.sol";
+import { iOVM_StateTransitionerFactory } from "../../iOVM/verification/iOVM_StateTransitionerFactory.sol";
+import { iOVM_BondManager } from "../../iOVM/verification/iOVM_BondManager.sol";
+import { iOVM_StateCommitmentChain } from "../../iOVM/chain/iOVM_StateCommitmentChain.sol";
+import { iOVM_CanonicalTransactionChain } from "../../iOVM/chain/iOVM_CanonicalTransactionChain.sol";
+
+/* Contract Imports */
+import { Abs_FraudContributor } from "./Abs_FraudContributor.sol";
+
+
+
+/**
+ * @title OVM_FraudVerifier
+ * @dev The Fraud Verifier contract coordinates the entire fraud proof verification process. 
+ * If the fraud proof was successful it prunes any state batches from State Commitment Chain
+ * which were published after the fraudulent state root.
+ * 
+ * Compiler used: solc
+ * Runtime target: EVM
+ */
+contract OVM_FraudVerifier is Lib_AddressResolver, Abs_FraudContributor, iOVM_FraudVerifier {
+
+    /*******************************************
+     * Contract Variables: Internal Accounting *
+     *******************************************/
+
+    mapping (bytes32 => iOVM_StateTransitioner) internal transitioners;
+
+
+    /***************
+     * Constructor *
+     ***************/
+
+    /**
+     * @param _libAddressManager Address of the Address Manager.
+     */
+    constructor(
+        address _libAddressManager
+    )
+        Lib_AddressResolver(_libAddressManager)
+    {}
+
+
+    /***************************************
+     * Public Functions: Transition Status *
+     ***************************************/
+
+    /**
+     * Retrieves the state transitioner for a given root.
+     * @param _preStateRoot State root to query a transitioner for.
+     * @return _transitioner Corresponding state transitioner contract.
+     */
+    
+
+
+    /****************************************
+     * Public Functions: Fraud Verification *
+     ****************************************/
+
+    /**
+     * Begins the fraud verification process.
+     * @param _preStateRoot State root before the fraudulent transaction.
+     * @param _preStateRootBatchHeader Batch header for the provided pre-state root.
+     * @param _preStateRootProof Inclusion proof for the provided pre-state root.
+     * @param _transaction OVM transaction claimed to be fraudulent.
+     * @param _txChainElement OVM transaction chain element.
+     * @param _transactionBatchHeader Batch header for the provided transaction.
+     * @param _transactionProof Inclusion proof for the provided transaction.
+     */
+    
+
+    /**
+     * Finalizes the fraud verification process.
+     * @param _preStateRoot State root before the fraudulent transaction.
+     * @param _preStateRootBatchHeader Batch header for the provided pre-state root.
+     * @param _preStateRootProof Inclusion proof for the provided pre-state root.
+     * @param _txHash The transaction for the state root
+     * @param _postStateRoot State root after the fraudulent transaction.
+     * @param _postStateRootBatchHeader Batch header for the provided post-state root.
+     * @param _postStateRootProof Inclusion proof for the provided post-state root.
+     */
+    
+
+
+    /************************************
+     * Internal Functions: Verification *
+     ************************************/
+
+    /**
+     * Checks whether a transitioner already exists for a given pre-state root.
+     * @param _preStateRoot Pre-state root to check.
+     * @return _exists Whether or not we already have a transitioner for the root.
+     */
+    function _hasStateTransitioner(
+        bytes32 _preStateRoot,
+        bytes32 _txHash
+    )
+        internal
+        view
+        returns (
+            bool _exists
+        )
+    {
+        return address(getStateTransitioner(_preStateRoot, _txHash)) != address(0);
+    }
+
+    /**
+     * Deploys a new state transitioner.
+     * @param _preStateRoot Pre-state root to initialize the transitioner with.
+     * @param _txHash Hash of the transaction this transitioner will execute.
+     * @param _stateTransitionIndex Index of the transaction in the chain.
+     */
+    function _deployTransitioner(
+        bytes32 _preStateRoot,
+        bytes32 _txHash,
+        uint256 _stateTransitionIndex
+    )
+        internal
+    {
+        transitioners[keccak256(abi.encodePacked(_preStateRoot, _txHash))] = iOVM_StateTransitionerFactory(
+            resolve("OVM_StateTransitionerFactory")
+        ).create(
+            address(libAddressManager),
+            _stateTransitionIndex,
+            _preStateRoot,
+            _txHash
+        );
+    }
+
+    /**
+     * Removes a state transition from the state commitment chain.
+     * @param _postStateRootBatchHeader Header for the post-state root.
+     * @param _preStateRoot Pre-state root hash.
+     */
+    function _cancelStateTransition(
+        Lib_OVMCodec.ChainBatchHeader memory _postStateRootBatchHeader,
+        bytes32 _preStateRoot
+    )
+        internal
+    {
+        iOVM_StateCommitmentChain ovmStateCommitmentChain = iOVM_StateCommitmentChain(resolve("OVM_StateCommitmentChain"));
+        iOVM_BondManager ovmBondManager = iOVM_BondManager(resolve("OVM_BondManager"));
+
+        // Delete the state batch.
+        ovmStateCommitmentChain.deleteStateBatch(
+            _postStateRootBatchHeader
+        );
+
+        // Get the timestamp and publisher for that block.
+        (uint256 timestamp, address publisher) = abi.decode(_postStateRootBatchHeader.extraData, (uint256, address));
+
+        // Slash the bonds at the bond manager.
+        ovmBondManager.finalize(
+            _preStateRoot,
+            publisher,
+            timestamp
+        );
+    }
+}

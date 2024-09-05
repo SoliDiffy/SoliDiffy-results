@@ -1,0 +1,306 @@
+{
+    "number_of_changes": 40,
+    "timing": 0.1817471981048584,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 121,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 46,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 53,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 60,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 63,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 69,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 94,
+                            "content": "\"Not owner or timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 94,
+                            "end": 95,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 121,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 102,
+                            "content": "/* require(msg.sender == timelock_address || msg.sender == owner, \"Not owner or timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 126,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "amos",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 32,
+                            "content": "amo_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 48,
+                            "content": "\"Invalid AMO\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 126,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 56,
+                            "content": "/* require(amos[amo_address], \"Invalid AMO\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 189,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 36,
+                            "content": "collat_borrowed_sum",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 45,
+                            "content": "int256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 68,
+                            "content": "expected_collat_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 73,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 74,
+                            "end": 91,
+                            "content": "collat_borrow_cap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 105,
+                            "content": "\"Borrow cap\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 189,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 113,
+                            "content": "/* require((collat_borrowed_sum + int256(expected_collat_amount)) <= collat_borrow_cap, \"Borrow cap\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

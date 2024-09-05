@@ -1,0 +1,150 @@
+pragma solidity 0.7.6;
+
+// SPDX-License-Identifier: GPL-3.0-only
+
+import "../../RocketBase.sol";
+import "../../../interface/RocketVaultInterface.sol";
+import "../../../interface/dao/node/RocketDAONodeTrustedInterface.sol";
+import "../../../interface/dao/node/RocketDAONodeTrustedActionsInterface.sol";
+import "../../../interface/dao/node/settings/RocketDAONodeTrustedSettingsMembersInterface.sol";
+import "../../../interface/dao/node/settings/RocketDAONodeTrustedSettingsProposalsInterface.sol";
+import "../../../interface/rewards/claims/RocketClaimTrustedNodeInterface.sol";
+import "../../../interface/util/AddressSetStorageInterface.sol";
+
+import "@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
+
+
+// The Trusted Node DAO Actions
+contract RocketDAONodeTrustedActions is RocketBase, RocketDAONodeTrustedActionsInterface {
+
+    using SafeMath for uint;
+
+    // Events
+    event ActionJoined(address indexed nodeAddress, uint256 rplBondAmount, uint256 time);
+    event ActionLeave(address indexed nodeAddress, uint256 rplBondAmount, uint256 time);
+    event ActionKick(address indexed nodeAddress, uint256 rplBondAmount, uint256 time);
+    event ActionChallengeMade(address indexed nodeChallengedAddress, address indexed nodeChallengerAddress, uint256 time);
+    event ActionChallengeDecided(address indexed nodeChallengedAddress, address indexed nodeChallengeDeciderAddress, bool success, uint256 time);
+
+
+    // The namespace for any data stored in the trusted node DAO (do not change)
+    string constant private daoNameSpace = "dao.trustednodes.";
+
+
+    // Construct
+    constructor(RocketStorageInterface _rocketStorageAddress) RocketBase(_rocketStorageAddress) {
+        // Version
+        version = 1;
+    }
+
+    /*** Internal Methods **********************/
+
+    // Add a new member to the DAO
+    function _memberAdd(address _nodeAddress, uint256 _rplBondAmountPaid) private onlyRegisteredNode(_nodeAddress) {
+        // Load contracts
+        RocketClaimTrustedNodeInterface rocketClaimTrustedNode = RocketClaimTrustedNodeInterface(getContractAddress("rocketClaimTrustedNode"));
+        RocketDAONodeTrustedInterface rocketDAONode = RocketDAONodeTrustedInterface(getContractAddress("rocketDAONodeTrusted"));
+        AddressSetStorageInterface addressSetStorage = AddressSetStorageInterface(getContractAddress("addressSetStorage"));
+        // Check current node status
+        require(rocketDAONode.getMemberIsValid(_nodeAddress) != true, "This node is already part of the trusted node DAO");
+        // Flag them as a member now that they have accepted the invitation and record the size of the bond they paid
+        setBool(keccak256(abi.encodePacked(daoNameSpace, "member", _nodeAddress)), true);
+        // Add the bond amount they have paid
+        if(_rplBondAmountPaid > 0) setUint(keccak256(abi.encodePacked(daoNameSpace, "member.bond.rpl", _nodeAddress)), _rplBondAmountPaid);
+        // Record the block number they joined at
+        setUint(keccak256(abi.encodePacked(daoNameSpace, "member.joined.time", _nodeAddress)), block.timestamp);
+         // Add to member index now
+        addressSetStorage.addItem(keccak256(abi.encodePacked(daoNameSpace, "member.index")), _nodeAddress); 
+        // Register for them to receive rewards now
+        rocketClaimTrustedNode.register(_nodeAddress, true);
+    }
+
+    // Remove a member from the DAO
+    function _memberRemove(address _nodeAddress) private onlyTrustedNode(_nodeAddress) {
+        // Load contracts
+        RocketClaimTrustedNodeInterface rocketClaimTrustedNode = RocketClaimTrustedNodeInterface(getContractAddress("rocketClaimTrustedNode"));
+        AddressSetStorageInterface addressSetStorage = AddressSetStorageInterface(getContractAddress("addressSetStorage"));
+        // Deregister them from receiving rewards now
+        rocketClaimTrustedNode.register(_nodeAddress, false);
+        // Remove their membership now
+        deleteBool(keccak256(abi.encodePacked(daoNameSpace, "member", _nodeAddress)));
+        deleteAddress(keccak256(abi.encodePacked(daoNameSpace, "member.address", _nodeAddress)));
+        deleteString(keccak256(abi.encodePacked(daoNameSpace, "member.id", _nodeAddress)));
+        deleteString(keccak256(abi.encodePacked(daoNameSpace, "member.url", _nodeAddress)));
+        deleteUint(keccak256(abi.encodePacked(daoNameSpace, "member.bond.rpl", _nodeAddress)));
+        deleteUint(keccak256(abi.encodePacked(daoNameSpace, "member.joined.time", _nodeAddress)));
+        deleteUint(keccak256(abi.encodePacked(daoNameSpace, "member.challenged.time", _nodeAddress)));
+        // Clean up the invited/leave proposals
+        deleteUint(keccak256(abi.encodePacked(daoNameSpace, "member.executed.time", "invited", _nodeAddress)));
+        deleteUint(keccak256(abi.encodePacked(daoNameSpace, "member.executed.time", "leave", _nodeAddress)));
+         // Remove from member index now
+        addressSetStorage.removeItem(keccak256(abi.encodePacked(daoNameSpace, "member.index")), _nodeAddress); 
+    }
+
+    // A member official joins the DAO with their bond ready, if successful they are added as a member
+    function _memberJoin(address _nodeAddress) private {
+        // Set some intiial contract address
+        address rocketVaultAddress = getContractAddress("rocketVault");
+        address rocketTokenRPLAddress = getContractAddress("rocketTokenRPL");
+        // Load contracts
+        IERC20 rplInflationContract = IERC20(rocketTokenRPLAddress);
+        RocketVaultInterface rocketVault = RocketVaultInterface(rocketVaultAddress);
+        RocketDAONodeTrustedInterface rocketDAONode = RocketDAONodeTrustedInterface(getContractAddress("rocketDAONodeTrusted"));
+        RocketDAONodeTrustedSettingsMembersInterface rocketDAONodeTrustedSettingsMembers = RocketDAONodeTrustedSettingsMembersInterface(getContractAddress("rocketDAONodeTrustedSettingsMembers"));
+        RocketDAONodeTrustedSettingsProposalsInterface rocketDAONodeTrustedSettingsProposals = RocketDAONodeTrustedSettingsProposalsInterface(getContractAddress("rocketDAONodeTrustedSettingsProposals"));
+        // The time that the member was successfully invited to join the DAO
+        uint256 memberInvitedTime = rocketDAONode.getMemberProposalExecutedTime("invited", _nodeAddress);
+        // Have they been invited?
+        require(memberInvitedTime > 0, "This node has not been invited to join");
+        // The current member bond amount in RPL that's required
+        uint256 rplBondAmount = rocketDAONodeTrustedSettingsMembers.getRPLBond();
+        // Has their invite expired?
+        require(memberInvitedTime.add(rocketDAONodeTrustedSettingsProposals.getActionTime()) > block.timestamp, "This node's invitation to join has expired, please apply again");
+        // Verify they have allowed this contract to spend their RPL for the bond
+        require(rplInflationContract.allowance(_nodeAddress, address(this)) >= rplBondAmount, "Not enough allowance given to RocketDAONodeTrusted contract for transfer of RPL bond tokens");
+        // Transfer the tokens to this contract now
+        require(rplInflationContract.transferFrom(_nodeAddress, address(this), rplBondAmount), "Token transfer to RocketDAONodeTrusted contract was not successful");
+        // Allow RocketVault to transfer these tokens to itself now
+        require(rplInflationContract.approve(rocketVaultAddress, rplBondAmount), "Approval for RocketVault to spend RocketDAONodeTrusted RPL bond tokens was not successful");
+        // Let vault know it can move these tokens to itself now and credit the balance to this contract
+        rocketVault.depositToken(getContractName(address(this)), IERC20(rocketTokenRPLAddress), rplBondAmount);
+        // Add them as a member now that they have accepted the invitation and record the size of the bond they paid
+        _memberAdd(_nodeAddress, rplBondAmount);
+        // Log it
+        emit ActionJoined(_nodeAddress, rplBondAmount, block.timestamp);
+    }
+  
+    /*** Action Methods ************************/
+
+    // When a new member has been successfully invited to join, they must call this method to join officially
+    // They will be required to have the RPL bond amount in their account
+    // This method allows us to only allow them to join if they have a working node account and have been officially invited
+    
+
+    // When the DAO has suffered a loss of members due to unforseen blackswan issue and has < the min required amount (3), a regular bonded node can directly join as a member and recover the DAO
+    // They will be required to have the RPL bond amount in their account. This is called directly from RocketDAONodeTrusted.
+    
+    
+    // When a new member has successfully requested to leave with a proposal, they must call this method to leave officially and receive their RPL bond
+    
+
+
+    // A member can be evicted from the DAO by proposal, send their remaining RPL balance to them and remove from the DAO
+    // Is run via the main DAO contract when the proposal passes and is executed
+    
+
+
+    // In the event that the majority/all of members go offline permanently and no more proposals could be passed, a current member or a regular node can 'challenge' a DAO members node to respond
+    // If it does not respond in the given window, it can be removed as a member. The one who removes the member after the challenge isn't met, must be another node other than the proposer to provide some oversight
+    // This should only be used in an emergency situation to recover the DAO. Members that need removing when consensus is still viable, should be done via the 'kick' method.
+    
+
+    
+    // Decides the success of a challenge. If called by the challenged node within the challenge window, the challenge is defeated and the member stays as they have indicated their node is still alive.
+    // If called after the challenge window has passed by anyone except the original challenge initiator, then the challenge has succeeded and the member is removed
+    
+
+
+}

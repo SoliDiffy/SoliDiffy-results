@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.4;
+
+import "../programmable/ITokenUriResolver.sol";
+
+// N:B: Mock contract for testing purposes only
+contract MockTokenUriResolver is ITokenUriResolver {
+
+    mapping(uint256 => string) overrides;
+
+    
+
+    
+
+    function setEditionUri(uint256 _editionId, string memory _uri) public {
+        overrides[_editionId] = _uri;
+    }
+}

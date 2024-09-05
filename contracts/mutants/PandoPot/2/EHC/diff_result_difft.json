@@ -1,0 +1,238 @@
+{
+    "number_of_changes": 32,
+    "timing": 0.2662222385406494,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_reward",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "status",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 47,
+                            "content": "REWARD_STATUS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 57,
+                            "content": "AVAILABLE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 60,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 68,
+                            "content": "_reward",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 75,
+                            "content": "expire",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 78,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 79,
+                            "end": 84,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 94,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 94,
+                            "end": 95,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 96,
+                            "end": 125,
+                            "content": "'Jackpot: reward unavailable'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 125,
+                            "end": 126,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 133,
+                            "content": "/* require(_reward.status == REWARD_STATUS.AVAILABLE && _reward.expire >= block.timestamp, 'Jackpot: reward unavailable'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "_leaderboards",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "ratios",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 53,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 88,
+                            "content": "'Jackpot: leaderboards != ratios'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 96,
+                            "content": "/* require(_leaderboards.length == ratios.length, 'Jackpot: leaderboards != ratios'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

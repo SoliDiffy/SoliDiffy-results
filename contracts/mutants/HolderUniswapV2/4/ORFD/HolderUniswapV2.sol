@@ -1,0 +1,56 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity >=0.7.0;
+
+import "../interfaces/IHolder.sol";
+import "../interfaces/ISTokens.sol";
+import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol";
+import "../libraries/TransferHelper.sol";
+
+contract HolderUniswapV2 is IHolder, Initializable, AccessControlUpgradeable {
+	// variables capturing data of other contracts in the product
+	address public _stakeLPContract;
+	ISTokens public _sTokens;
+
+	/**
+	 * @dev Constructor for initializing the Holder Uniswap contract.
+	 * @param sTokenContract - address of the SToken contract.
+	 * @param stakeLPContract - address of the StakeLPCore contract.
+	 */
+	function initialize(address sTokenContract, address stakeLPContract)
+		public
+		virtual
+		initializer
+	{
+		__AccessControl_init();
+		_setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
+		_sTokens = ISTokens(sTokenContract);
+		_stakeLPContract = stakeLPContract;
+	}
+
+	/**
+	 * @dev get SToken reserve supply of the whitelisted contract
+	 * argument names commented to suppress warnings
+	 */
+	
+
+	/**
+	 * @dev Set 'contract address', called from constructor
+	 * @param sAddress: stoken contract address
+	 *
+	 * Emits a {SetSTokensContract} event with '_contract' set to the stoken contract address.
+	 *
+	 */
+	
+
+	/*
+	 * @dev Set 'contract address', called from constructor
+	 * @param liquidStakingContract: liquidStaking contract address
+	 *
+	 * Emits a {SetLiquidStakingContract} event with '_contract' set to the liquidStaking contract address.
+	 *
+	 */
+	
+
+	
+}

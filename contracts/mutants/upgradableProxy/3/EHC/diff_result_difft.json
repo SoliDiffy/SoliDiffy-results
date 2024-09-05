@@ -1,0 +1,246 @@
+{
+    "number_of_changes": 30,
+    "timing": 0.07384562492370605,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 23,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 35,
+                            "content": "_IMPLEMENTATION_SLOT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 46,
+                            "content": "bytes32",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 54,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 64,
+                            "content": "keccak256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 95,
+                            "content": "\"eip1967.proxy.implementation\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 98,
+                            "end": 99,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 102,
+                            "end": 103,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 23,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 110,
+                            "content": "/* assert(_IMPLEMENTATION_SLOT == bytes32(uint256(keccak256(\"eip1967.proxy.implementation\")) - 1)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 27,
+                            "content": "success",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 35,
+                            "content": "/* require(success); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "isContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 44,
+                            "content": "newImplementation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 103,
+                            "content": "\"UpgradeableProxy: new implementation is not a contract\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 111,
+                            "content": "/* require(isContract(newImplementation), \"UpgradeableProxy: new implementation is not a contract\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

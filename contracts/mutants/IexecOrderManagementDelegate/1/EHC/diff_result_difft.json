@@ -1,0 +1,194 @@
+{
+    "number_of_changes": 28,
+    "timing": 0.19078993797302246,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 26,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 15,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 29,
+                            "content": "_msgSender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 40,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 62,
+                            "content": "_apporderoperation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 67,
+                            "content": "hash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 90,
+                            "content": "toEthTypedStructHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 91,
+                            "end": 113,
+                            "content": "EIP712DOMAIN_SEPARATOR",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 113,
+                            "end": 114,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 114,
+                            "end": 115,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 115,
+                            "end": 122,
+                            "content": "recover",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 122,
+                            "end": 123,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 123,
+                            "end": 141,
+                            "content": "_apporderoperation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 141,
+                            "end": 142,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 142,
+                            "end": 146,
+                            "content": "sign",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 146,
+                            "end": 147,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 147,
+                            "end": 148,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 26,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 155,
+                            "content": "/* require(owner == _msgSender() || owner == _apporderoperation.hash().toEthTypedStructHash(EIP712DOMAIN_SEPARATOR).recover(_apporderoperation.sign)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

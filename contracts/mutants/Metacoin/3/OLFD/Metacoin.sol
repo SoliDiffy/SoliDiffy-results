@@ -1,0 +1,29 @@
+pragma solidity ^0.4.24;
+pragma experimental ABIEncoderV2;
+
+contract Metacoin {
+    mapping (address => uint) public balances;
+
+    event Transfer(address indexed _from, address indexed _to, uint256 _value);
+
+    struct TransferData {
+        address to;
+        uint256 amount;
+    }
+
+    struct NestedTransferData {
+        TransferData transferData;
+        uint32 callback;
+    }
+
+    constructor () public {
+        balances[msg.sender] = 10000;
+    }
+
+    
+
+    
+
+    
+
+}

@@ -1,0 +1,142 @@
+{
+    "number_of_changes": 16,
+    "timing": 0.13605594635009766,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 37,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 35,
+                            "content": "_rateLimitPerSecond",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 61,
+                            "content": "_maxRateLimitPerSecond",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 105,
+                            "content": "\"RateLimited: rateLimitPerSecond too high\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 37,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 113,
+                            "content": "/* require(_rateLimitPerSecond <= _maxRateLimitPerSecond, \"RateLimited: rateLimitPerSecond too high\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 37,
+                            "content": "newRateLimitPerSecond",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 40,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 66,
+                            "content": "MAX_RATE_LIMIT_PER_SECOND",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 110,
+                            "content": "\"RateLimited: rateLimitPerSecond too high\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 110,
+                            "end": 111,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 118,
+                            "content": "/* require(newRateLimitPerSecond <= MAX_RATE_LIMIT_PER_SECOND, \"RateLimited: rateLimitPerSecond too high\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,183 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.6.10 <0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
+
+import "../interfaces/ISwapRouter.sol";
+import "../interfaces/ITrancheIndexV2.sol";
+import "../interfaces/IFundV3.sol";
+import "../interfaces/IPrimaryMarketV3.sol";
+import "../interfaces/IWrappedERC20.sol";
+
+/// @title Tranchess Queen Swap Router
+/// @notice Router for stateless execution of Queen exchange
+contract QueenSwapRouter is ITrancheIndexV2, IPrimaryMarketV3 {
+    using SafeERC20 for IERC20;
+
+    ISwapRouter public immutable swapRouter;
+    IFundV3 public immutable override fund;
+    address private immutable _tokenUnderlying;
+    address private immutable _tokenQ;
+
+    constructor(address swapRouter_, address fund_) public {
+        swapRouter = ISwapRouter(swapRouter_);
+        fund = IFundV3(fund_);
+        _tokenUnderlying = IFundV3(fund_).tokenUnderlying();
+        _tokenQ = IFundV3(fund_).tokenQ();
+    }
+
+    /// @notice Receive unwrapped transfer from the wrapped token.
+    receive() external payable {}
+
+    
+
+    
+
+    /// @dev Unlike normal redeem, a user could send QUEEN before calling this redeem().
+    ///      The contract first measures how much it has received, then ask to transfer
+    ///      the rest from the user.
+    
+
+    
+
+    function _create(
+        address primaryMarket,
+        address recipient,
+        uint256 underlying,
+        uint256 minOutQ,
+        uint256 version
+    ) private returns (uint256 outQ) {
+        IPrimaryMarketV3 pm = IPrimaryMarketV3(primaryMarket);
+        // Get out amount from swap
+        address[] memory path = new address[](2);
+        path[0] = _tokenUnderlying;
+        path[1] = _tokenQ;
+        uint256 swapAmount = swapRouter.getAmountsOut(underlying, path)[1];
+        // Get out amount from primary market
+        uint256 pmAmount = pm.getCreation(underlying);
+
+        if (pmAmount < swapAmount) {
+            // Swap path
+            IERC20(path[0]).safeApprove(address(swapRouter), underlying);
+            uint256[] memory versions = new uint256[](1);
+            versions[0] = version;
+            outQ = swapRouter.swapExactTokensForTokens(
+                underlying,
+                minOutQ,
+                path,
+                recipient,
+                address(0),
+                versions,
+                block.timestamp
+            )[1];
+        } else {
+            // Primary market path
+            IERC20(path[0]).safeApprove(address(pm), underlying);
+            outQ = pm.create(recipient, underlying, minOutQ, version);
+        }
+    }
+
+    function _redeem(
+        address primaryMarket,
+        address recipient,
+        uint256 inQ,
+        uint256 minUnderlying,
+        uint256 version
+    ) private returns (uint256 underlying) {
+        IPrimaryMarketV3 pm = IPrimaryMarketV3(primaryMarket);
+        // Get out amount from swap
+        address[] memory path = new address[](2);
+        path[0] = _tokenQ;
+        path[1] = _tokenUnderlying;
+        uint256 swapAmount = swapRouter.getAmountsOut(inQ, path)[1];
+        // Get out amount from primary market
+        (uint256 pmAmount, ) = pm.getRedemption(inQ);
+
+        if (pmAmount < swapAmount) {
+            // Swap path
+            pm.fund().trancheApprove(TRANCHE_Q, address(swapRouter), inQ, version);
+            uint256[] memory versions = new uint256[](1);
+            versions[0] = version;
+            underlying = swapRouter.swapExactTokensForTokens(
+                inQ,
+                minUnderlying,
+                path,
+                recipient,
+                address(0),
+                versions,
+                block.timestamp
+            )[1];
+        } else {
+            // Primary market path
+            underlying = pm.redeem(recipient, inQ, minUnderlying, version);
+        }
+    }
+
+    // ------------------------ Unsupported Functions --------------------------
+    
+
+    
+
+    
+
+    
+
+    
+
+    function getSplit(uint256) external view override returns (uint256) {
+        revert("Not Supported");
+    }
+
+    function getMerge(uint256) external view override returns (uint256, uint256) {
+        revert("Not Supported");
+    }
+
+    function getMergeForQ(uint256) external view override returns (uint256) {
+        revert("Not Supported");
+    }
+
+    function canBeRemovedFromFund() external view override returns (bool) {
+        revert("Not Supported");
+    }
+
+    function split(
+        address,
+        uint256,
+        uint256
+    ) external override returns (uint256) {
+        revert("Not Supported");
+    }
+
+    function merge(
+        address,
+        uint256,
+        uint256
+    ) external override returns (uint256) {
+        revert("Not Supported");
+    }
+
+    function queueRedemption(
+        address,
+        uint256,
+        uint256,
+        uint256
+    ) external override returns (uint256, uint256) {
+        revert("Not Supported");
+    }
+
+    function claimRedemptions(address, uint256[] calldata) external override returns (uint256) {
+        revert("Not Supported");
+    }
+
+    function claimRedemptionsAndUnwrap(address, uint256[] calldata)
+        external
+        override
+        returns (uint256)
+    {
+        revert("Not Supported");
+    }
+
+    function settle(uint256) external override {
+        revert("Not Supported");
+    }
+}

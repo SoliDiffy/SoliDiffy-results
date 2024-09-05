@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: Apache-2.0.
+pragma solidity ^0.6.12;
+
+import "../interfaces/MainDispatcher.sol";
+
+contract StarkExchange is MainDispatcher {
+    string public constant VERSION = "4.5.0";
+
+    // Salt for a 8 bit unique spread of all relevant selectors. Pre-caclulated.
+    // ---------- The following code was auto-generated. PLEASE DO NOT EDIT. ----------
+    uint256 constant MAGIC_SALT = 1527414;
+    uint256 constant IDX_MAP_0 = 0x2010501100000010050000002511000000220005410030200200200000552010;
+    uint256 constant IDX_MAP_1 = 0x3000030005000050020012003000010604300000002420501003000010000300;
+    uint256 constant IDX_MAP_2 = 0x1003112030002130000200100020000320202001020001001000040200200020;
+    uint256 constant IDX_MAP_3 = 0x2000000050000012000013100002002002032050020002020002050000201003;
+
+    // ---------- End of auto-generated code. ----------
+
+    
+
+    
+
+    
+
+    
+
+    
+}

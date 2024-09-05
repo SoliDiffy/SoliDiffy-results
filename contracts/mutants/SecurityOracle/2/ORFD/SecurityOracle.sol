@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.0;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "./ISecurityOracle.sol";
+
+contract SecurityOracle is ISecurityOracle, Ownable {
+    /// @dev Data of security properties.
+    mapping(string => mapping(string => bytes)) private data;
+
+    
+
+    
+}

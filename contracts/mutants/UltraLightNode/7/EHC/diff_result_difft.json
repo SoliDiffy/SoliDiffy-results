@@ -1,0 +1,654 @@
+{
+    "number_of_changes": 85,
+    "timing": 0.20508813858032227,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "_endpoint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 36,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 40,
+                            "content": "0x0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 87,
+                            "content": "\"LayerZero: endpoint cannot be zero address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 95,
+                            "content": "/* require(_endpoint != address(0x0), \"LayerZero: endpoint cannot be zero address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 32,
+                            "content": "endpoint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 40,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 47,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 75,
+                            "content": "\"LayerZero: only endpoint\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 83,
+                            "content": "/* require(address(endpoint) == msg.sender, \"LayerZero: only endpoint\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 124,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "uaConfig",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 32,
+                            "content": "relayer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 39,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 76,
+                            "content": "\"LayerZero: invalid relayer\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 124,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(uaConfig.relayer == msg.sender, \"LayerZero: invalid relayer\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 133,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 29,
+                            "content": "blockData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 43,
+                            "content": "confirmations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 55,
+                            "content": "uaConfig",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 81,
+                            "content": "inboundBlockConfirmations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 126,
+                            "content": "\"LayerZero: not enough block confirmations\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 126,
+                            "end": 127,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 133,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 134,
+                            "content": "/* require(blockData.confirmations >= uaConfig.inboundBlockConfirmations, \"LayerZero: not enough block confirmations\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "ulnLookup",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 37,
+                            "content": "_srcChainId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 49,
+                            "content": "_packet",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 60,
+                            "content": "ulnAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 104,
+                            "content": "\"LayerZero: _packet.ulnAddress is invalid\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 104,
+                            "end": 105,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 112,
+                            "content": "/* require(ulnLookup[_srcChainId] == _packet.ulnAddress, \"LayerZero: _packet.ulnAddress is invalid\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 144,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_packet",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 34,
+                            "content": "dstAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 37,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 49,
+                            "content": "_dstAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 83,
+                            "content": "\"LayerZero: invalid dst address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 144,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 91,
+                            "content": "/* require(_packet.dstAddress == _dstAddress, \"LayerZero: invalid dst address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "ulnLookup",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "chainId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 37,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 45,
+                            "content": "bytes32",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 85,
+                            "content": "\"LayerZero: chainId does not exist\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 93,
+                            "content": "/* require(ulnLookup[chainId] != bytes32(0), \"LayerZero: chainId does not exist\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

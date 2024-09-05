@@ -1,0 +1,19 @@
+pragma solidity 0.5.11;
+
+
+contract OracleContractMock {
+
+    event PriceUpdated(uint256 ethUsdPrice);
+
+    uint256 public ethUsdPrice; //price in cents
+
+    address owner;
+
+    
+
+    function setPrice(uint256 _newPrice) public {
+        require(msg.sender == owner);
+        ethUsdPrice = _newPrice;
+        emit PriceUpdated(ethUsdPrice);
+    }
+}

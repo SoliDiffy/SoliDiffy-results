@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: agpl-3.0
+pragma solidity ^0.6.8;
+
+import {ILendingRateOracle} from '../../interfaces/ILendingRateOracle.sol';
+import {Ownable} from '@openzeppelin/contracts/access/Ownable.sol';
+
+contract LendingRateOracle is ILendingRateOracle, Ownable {
+  mapping(address => uint256) borrowRates;
+  mapping(address => uint256) liquidityRates;
+
+  
+
+  
+
+  function getMarketLiquidityRate(address _asset) external view returns (uint256) {
+    return liquidityRates[_asset];
+  }
+
+  function setMarketLiquidityRate(address _asset, uint256 _rate) external onlyOwner {
+    liquidityRates[_asset] = _rate;
+  }
+}

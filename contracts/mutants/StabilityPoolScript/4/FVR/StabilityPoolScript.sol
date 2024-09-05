@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity 0.6.11;
+
+import "../Dependencies/CheckContract.sol";
+import "../Interfaces/IStabilityPool.sol";
+
+
+contract StabilityPoolScript is CheckContract {
+    IStabilityPool immutable stabilityPool;
+
+    constructor(IStabilityPool _stabilityPool) internal {
+        checkContract(address(_stabilityPool));
+        stabilityPool = _stabilityPool;
+    }
+
+    function provideToSP(uint _amount, address _frontEndTag) public {
+        stabilityPool.provideToSP(_amount, _frontEndTag);
+    }
+
+    function withdrawFromSP(uint _amount) public {
+        stabilityPool.withdrawFromSP(_amount);
+    }
+
+    function withdrawETHGainToTrove(address _upperHint, address _lowerHint) public {
+        stabilityPool.withdrawETHGainToTrove(_upperHint, _lowerHint);
+    }
+}

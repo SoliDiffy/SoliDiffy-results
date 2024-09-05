@@ -1,0 +1,169 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.6.12;
+pragma experimental ABIEncoderV2;
+
+import {Address} from "@openzeppelin/contracts/utils/Address.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {SafeMath} from "@openzeppelin/contracts/math/SafeMath.sol";
+
+import {VaultAPI, BaseWrapper} from "./BaseWrapper.sol";
+
+contract yToken is IERC20, BaseWrapper {
+    using SafeMath for uint256;
+
+    mapping(address => mapping(address => uint256)) public override allowance;
+
+    constructor(address _token, address _registry) public BaseWrapper(_token, _registry) {}
+
+    function name() external view returns (string memory) {
+        VaultAPI _bestVault = bestVault();
+        return _bestVault.name();
+    }
+
+    function symbol() external view returns (string memory) {
+        VaultAPI _bestVault = bestVault();
+        return _bestVault.symbol();
+    }
+
+    function decimals() external view returns (uint256) {
+        VaultAPI _bestVault = bestVault();
+        return _bestVault.decimals();
+    }
+
+    function totalSupply() external override view returns (uint256 total) {
+        return totalAssets();
+    }
+
+    function balanceOf(address account) external override view returns (uint256 balance) {
+        return totalVaultBalance(account);
+    }
+
+    function _transfer(
+        address sender,
+        address receiver,
+        uint256 amount
+    ) internal {
+        require(receiver != address(0), "ERC20: transfer to the zero address");
+        require(amount == _withdraw(sender, receiver, amount, true)); // `true` means use `bestVault`
+        emit Transfer(sender, receiver, amount);
+    }
+
+    function transfer(address receiver, uint256 amount) public virtual override returns (bool) {
+        _transfer(msg.sender, receiver, amount);
+        return true;
+    }
+
+    function _approve(
+        address owner,
+        address spender,
+        uint256 amount
+    ) internal {
+        require(owner != address(0), "ERC20: approve from the zero address");
+        require(spender != address(0), "ERC20: approve to the zero address");
+
+        allowance[owner][spender] = amount;
+        emit Approval(owner, spender, amount);
+    }
+
+    function approve(address spender, uint256 amount) public override returns (bool) {
+        _approve(msg.sender, spender, amount);
+        return true;
+    }
+
+    function transferFrom(
+        address sender,
+        address receiver,
+        uint256 amount
+    ) public virtual override returns (bool) {
+        _transfer(sender, receiver, amount);
+        _approve(sender, msg.sender, allowance[sender][msg.sender].sub(amount));
+        return true;
+    }
+
+    function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool) {
+        _approve(msg.sender, spender, allowance[msg.sender][spender].add(addedValue));
+        return true;
+    }
+
+    function decreaseAllowance(address spender, uint256 subtractedValue) public virtual returns (bool) {
+        _approve(msg.sender, spender, allowance[msg.sender][spender].sub(subtractedValue));
+        return true;
+    }
+
+    
+
+    
+
+    function _permitAll(
+        address user,
+        VaultAPI[] calldata vaults,
+        bytes[] calldata signatures
+    ) internal {
+        require(vaults.length == signatures.length);
+        // SWC-128-DoS With Block Gas Limit: L108 - L110
+        for (uint256 i = 0; i < vaults.length; i++) {
+            require(vaults[i].permit(user, address(this), uint256(-1), 0, signatures[i]));
+        }
+    }
+
+    function permitAll(VaultAPI[] calldata vaults, bytes[] calldata signatures) public {
+        _permitAll(msg.sender, vaults, signatures);
+    }
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    function revokeAll(VaultAPI[] calldata vaults, bytes[] calldata signatures) external {
+        require(vaults.length == signatures.length);
+        // SWC-128-DoS With Block Gas Limit: L156 - L159
+        for (uint256 i = 0; i < vaults.length; i++) {
+            require(vaults[i].permit(msg.sender, address(this), 0, 0, signatures[i]));
+        }
+    }
+}
+
+interface IWETH {
+    
+
+    
+}
+
+contract yWETH is yToken {
+    using Address for address payable;
+
+    constructor(address _weth, address _registry) public yToken(_weth, _registry) {}
+
+    function depositETH() public payable returns (uint256) {
+        uint256 amount = msg.value;
+        // NOTE: `BaseWrapper.token` is WETH
+        IWETH(address(token)).deposit{value: amount}();
+        // NOTE: Deposit handles approvals
+        // NOTE: Need to use different method to deposit than `yToken`
+        return _deposit(address(this), msg.sender, amount, false); // `false` = pull from `this`
+    }
+
+    function withdrawETH(uint256 amount) external returns (uint256 withdrawn) {
+        // NOTE: Need to use different method to withdraw than `yToken`
+        withdrawn = _withdraw(msg.sender, address(this), amount, true); // `true` = withdraw from `bestVault`
+        // NOTE: `BaseWrapper.token` is WETH
+        // SWC-107-Reentrancy: L187
+        IWETH(address(token)).withdraw(withdrawn);
+        // NOTE: Any unintentionally
+        msg.sender.sendValue(address(this).balance);
+    }
+
+    receive() external payable {
+        if (msg.sender != address(token)) {
+            depositETH();
+        } // else: WETH is sending us back ETH, so don't do anything (to avoid recursion)
+    }
+}

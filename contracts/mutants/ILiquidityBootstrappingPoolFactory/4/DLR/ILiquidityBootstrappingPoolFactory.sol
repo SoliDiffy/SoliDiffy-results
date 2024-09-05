@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pragma solidity ^0.8.4;
+
+interface ILiquidityBootstrappingPoolFactory {
+    function create(
+        string storage name,
+        string storage symbol,
+        address[] storage tokens,
+        uint256[] storage weights,
+        uint256 swapFeePercentage,
+        address owner,
+        bool swapEnabledOnStart
+    ) external returns (address);
+}

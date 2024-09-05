@@ -1,0 +1,49 @@
+pragma solidity ^0.5.16;
+
+import "../BinaryOptionMarket.sol";
+
+contract TestableBinaryOptionMarket is BinaryOptionMarket {
+    constructor(
+        address _owner,
+        address _creator,
+        address _resolver,
+        uint[2] memory _creatorLimits,
+        bytes32 _oracleKey,
+        uint256 _strikePrice,
+        bool _refundsEnabled,
+        uint[3] memory _times,
+        uint[2] memory _bids,
+        uint[3] memory _fees
+    )
+        internal
+        BinaryOptionMarket(
+            _owner,
+            _creator,
+            _resolver,
+            _creatorLimits,
+            _oracleKey,
+            _strikePrice,
+            _refundsEnabled,
+            _times,
+            _bids,
+            _fees
+        )
+    {}
+
+    function updatePrices(
+        uint256 longBids,
+        uint256 shortBids,
+        uint totalDebt
+    ) external {
+        _updatePrices(longBids, shortBids, totalDebt);
+    }
+
+    function setManager(address _manager) external {
+        owner = _manager;
+    }
+
+    function forceClaim(address account) external {
+        options.long.claim(account, prices.long, _exercisableDeposits(deposited));
+        options.short.claim(account, prices.short, _exercisableDeposits(deposited));
+    }
+}

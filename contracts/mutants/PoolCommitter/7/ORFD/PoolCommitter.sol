@@ -1,0 +1,291 @@
+//SPDX-License-Identifier: CC-BY-NC-ND-4.0
+pragma solidity 0.8.7;
+
+import "../interfaces/IPoolCommitter.sol";
+import "../interfaces/ILeveragedPool.sol";
+import "../interfaces/IPoolFactory.sol";
+import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+import "./PoolSwapLibrary.sol";
+
+/// @title This contract is responsible for handling commitment logic
+contract PoolCommitter is IPoolCommitter, Initializable {
+    // #### Globals
+    uint128 public constant LONG_INDEX = 0;
+    uint128 public constant SHORT_INDEX = 1;
+
+    address public leveragedPool;
+    uint128 public updateIntervalId = 1;
+    // Index 0 is the LONG token, index 1 is the SHORT token.
+    // Fetched from the LeveragedPool when leveragedPool is set
+    address[2] public tokens;
+
+    mapping(uint256 => Prices) public priceHistory; // updateIntervalId => tokenPrice
+    mapping(address => Balance) public userAggregateBalance;
+
+    // Update interval ID => TotalCommitment
+    mapping(uint256 => TotalCommitment) public totalPoolCommitments;
+    // Address => Update interval ID => UserCommitment
+    mapping(address => mapping(uint256 => UserCommitment)) public userCommitments;
+    // The last interval ID for which a given user's balance was updated
+    mapping(address => uint256) public lastUpdatedIntervalId;
+    // The most recent update interval in which a user committed
+    mapping(address => uint256[]) public unAggregatedCommitments;
+    // Used to create a dynamic array that is used to copy the new unAggregatedCommitments array into the mapping after updating balance
+    uint256[] private storageArrayPlaceHolder;
+
+    address public factory;
+
+    constructor(address _factory) {
+        require(_factory != address(0), "Factory address cannot be null");
+        factory = _factory;
+    }
+
+    
+
+    /**
+     * @notice Apply commitment data to storage
+     * @param pool The LeveragedPool of this PoolCommitter instance
+     * @param commitType The type of commitment being made
+     * @param amount The amount of tokens being committed
+     * @param fromAggregateBalance If minting, burning, or rebalancing into a delta neutral position,
+     *                             will tokens be taken from user's aggregate balance?
+     * @param userCommit The appropriate update interval's commitment data for the user
+     * @param userCommit The appropriate update interval's commitment data for the entire pool
+     */
+    function applyCommitment(
+        ILeveragedPool pool,
+        CommitType commitType,
+        uint256 amount,
+        bool fromAggregateBalance,
+        UserCommitment storage userCommit,
+        TotalCommitment storage totalCommit
+    ) private {
+        Balance memory balance = userAggregateBalance[msg.sender];
+
+        if (commitType == CommitType.LongMint) {
+            userCommit.longMintAmount += amount;
+            totalCommit.longMintAmount += amount;
+            // If we are minting from balance, this would already have thrown in `commit` if we are minting more than entitled too
+        } else if (commitType == CommitType.LongBurn) {
+            userCommit.longBurnAmount += amount;
+            totalCommit.longBurnAmount += amount;
+            // long burning: pull in long pool tokens from committer
+            if (fromAggregateBalance) {
+                // Burning from user's aggregate balance
+                userCommit.balanceLongBurnAmount += amount;
+                // This require statement is only needed in this branch, as `pool.burnTokens` will revert if burning too many
+                require(userCommit.balanceLongBurnAmount <= balance.longTokens, "Insufficient pool tokens");
+                // Burn from leveragedPool, because that is the official owner of the tokens before they are claimed
+                pool.burnTokens(true, amount, leveragedPool);
+            } else {
+                // Burning from user's wallet
+                pool.burnTokens(true, amount, msg.sender);
+            }
+        } else if (commitType == CommitType.ShortMint) {
+            userCommit.shortMintAmount += amount;
+            totalCommit.shortMintAmount += amount;
+            // If we are minting from balance, this would already have thrown in `commit` if we are minting more than entitled too
+        } else if (commitType == CommitType.ShortBurn) {
+            userCommit.shortBurnAmount += amount;
+            totalCommit.shortBurnAmount += amount;
+            if (fromAggregateBalance) {
+                // Burning from user's aggregate balance
+                userCommit.balanceShortBurnAmount += amount;
+                // This require statement is only needed in this branch, as `pool.burnTokens` will revert if burning too many
+                require(userCommit.balanceShortBurnAmount <= balance.shortTokens, "Insufficient pool tokens");
+                // Burn from leveragedPool, because that is the official owner of the tokens before they are claimed
+                pool.burnTokens(false, amount, leveragedPool);
+            } else {
+                // Burning from user's wallet
+                pool.burnTokens(false, amount, msg.sender);
+            }
+        } else if (commitType == CommitType.LongBurnShortMint) {
+            userCommit.longBurnShortMintAmount += amount;
+            totalCommit.longBurnShortMintAmount += amount;
+            if (fromAggregateBalance) {
+                userCommit.balanceLongBurnMintAmount += amount;
+                require(userCommit.balanceLongBurnMintAmount <= balance.longTokens, "Insufficient pool tokens");
+                pool.burnTokens(true, amount, leveragedPool);
+            } else {
+                pool.burnTokens(true, amount, msg.sender);
+            }
+        } else if (commitType == CommitType.ShortBurnLongMint) {
+            userCommit.shortBurnLongMintAmount += amount;
+            totalCommit.shortBurnLongMintAmount += amount;
+            if (fromAggregateBalance) {
+                userCommit.balanceShortBurnMintAmount += amount;
+                require(userCommit.balanceShortBurnMintAmount <= balance.shortTokens, "Insufficient pool tokens");
+                pool.burnTokens(false, amount, leveragedPool);
+            } else {
+                pool.burnTokens(false, amount, msg.sender);
+            }
+        }
+    }
+
+    /**
+     * @notice Commit to minting/burning long/short tokens after the next price change
+     * @param commitType Type of commit you're doing (Long vs Short, Mint vs Burn)
+     * @param amount Amount of quote tokens you want to commit to minting; OR amount of pool
+     *               tokens you want to burn
+     * @param fromAggregateBalance If minting, burning, or rebalancing into a delta neutral position,
+     *                             will tokens be taken from user's aggregate balance?
+     */
+    // SWC-114-Transaction Order Dependence: L139-L181
+    
+
+    /**
+     * @notice Claim user's balance. This can be done either by the user themself or by somebody else on their behalf.
+     */
+    // SWC-114-Transaction Order Dependence: L187-L201
+    
+
+    function executeGivenCommitments(TotalCommitment memory _commits) internal {
+        ILeveragedPool pool = ILeveragedPool(leveragedPool);
+
+        BalancesAndSupplies memory balancesAndSupplies = BalancesAndSupplies({
+            shortBalance: pool.shortBalance(),
+            longBalance: pool.longBalance(),
+            longTotalSupplyBefore: IERC20(tokens[0]).totalSupply(),
+            shortTotalSupplyBefore: IERC20(tokens[1]).totalSupply()
+        });
+
+        uint256 totalLongBurn = _commits.longBurnAmount + _commits.longBurnShortMintAmount;
+        uint256 totalShortBurn = _commits.shortBurnAmount + _commits.shortBurnLongMintAmount;
+        // Update price before values change
+        priceHistory[updateIntervalId] = Prices({
+            longPrice: PoolSwapLibrary.getPrice(
+                balancesAndSupplies.longBalance,
+                balancesAndSupplies.longTotalSupplyBefore + totalLongBurn
+            ),
+            shortPrice: PoolSwapLibrary.getPrice(
+                balancesAndSupplies.shortBalance,
+                balancesAndSupplies.shortTotalSupplyBefore + totalShortBurn
+            )
+        });
+
+        // Amount of collateral tokens that are generated from the long burn into instant mints
+        uint256 longBurnInstantMintAmount = PoolSwapLibrary.getWithdrawAmountOnBurn(
+            balancesAndSupplies.longTotalSupplyBefore,
+            _commits.longBurnShortMintAmount,
+            balancesAndSupplies.longBalance,
+            totalLongBurn
+        );
+        // Amount of collateral tokens that are generated from the short burn into instant mints
+        uint256 shortBurnInstantMintAmount = PoolSwapLibrary.getWithdrawAmountOnBurn(
+            balancesAndSupplies.shortTotalSupplyBefore,
+            _commits.shortBurnLongMintAmount,
+            balancesAndSupplies.shortBalance,
+            totalShortBurn
+        );
+
+        // Long Mints
+        uint256 longMintAmount = PoolSwapLibrary.getMintAmount(
+            balancesAndSupplies.longTotalSupplyBefore, // long token total supply,
+            _commits.longMintAmount + shortBurnInstantMintAmount, // Add the collateral tokens that will be generated from burning shorts for instant long mint
+            balancesAndSupplies.longBalance, // total quote tokens in the long pull
+            totalLongBurn // total pool tokens commited to be burned
+        );
+
+        if (longMintAmount > 0) {
+            pool.mintTokens(true, longMintAmount, leveragedPool);
+        }
+
+        // Long Burns
+        uint256 longBurnAmount = PoolSwapLibrary.getWithdrawAmountOnBurn(
+            balancesAndSupplies.longTotalSupplyBefore,
+            totalLongBurn,
+            balancesAndSupplies.longBalance,
+            totalLongBurn
+        );
+
+        // Short Mints
+        uint256 shortMintAmount = PoolSwapLibrary.getMintAmount(
+            balancesAndSupplies.shortTotalSupplyBefore, // short token total supply
+            _commits.shortMintAmount + longBurnInstantMintAmount, // Add the collateral tokens that will be generated from burning longs for instant short mint
+            balancesAndSupplies.shortBalance,
+            totalShortBurn
+        );
+
+        if (shortMintAmount > 0) {
+            pool.mintTokens(false, shortMintAmount, leveragedPool);
+        }
+
+        // Short Burns
+        uint256 shortBurnAmount = PoolSwapLibrary.getWithdrawAmountOnBurn(
+            balancesAndSupplies.shortTotalSupplyBefore,
+            totalShortBurn,
+            balancesAndSupplies.shortBalance,
+            totalShortBurn
+        );
+
+        uint256 newLongBalance = balancesAndSupplies.longBalance +
+            _commits.longMintAmount -
+            longBurnAmount +
+            shortBurnInstantMintAmount;
+        uint256 newShortBalance = balancesAndSupplies.shortBalance +
+            _commits.shortMintAmount -
+            shortBurnAmount +
+            longBurnInstantMintAmount;
+
+        // Update the collateral on each side
+        pool.setNewPoolBalances(newLongBalance, newShortBalance);
+    }
+
+    
+
+    function updateBalanceSingleCommitment(UserCommitment memory _commit)
+        internal
+        view
+        returns (
+            uint256 _newLongTokens,
+            uint256 _newShortTokens,
+            uint256 _newSettlementTokens
+        )
+    {
+        PoolSwapLibrary.UpdateData memory updateData = PoolSwapLibrary.UpdateData({
+            longPrice: priceHistory[_commit.updateIntervalId].longPrice,
+            shortPrice: priceHistory[_commit.updateIntervalId].shortPrice,
+            currentUpdateIntervalId: updateIntervalId,
+            updateIntervalId: _commit.updateIntervalId,
+            longMintAmount: _commit.longMintAmount,
+            longBurnAmount: _commit.longBurnAmount,
+            shortMintAmount: _commit.shortMintAmount,
+            shortBurnAmount: _commit.shortBurnAmount,
+            longBurnShortMintAmount: _commit.longBurnShortMintAmount,
+            shortBurnLongMintAmount: _commit.shortBurnLongMintAmount
+        });
+
+        (_newLongTokens, _newShortTokens, _newSettlementTokens) = PoolSwapLibrary.getUpdatedAggregateBalance(
+            updateData
+        );
+    }
+
+    /**
+     * @notice Add the result of a user's most recent commit to their aggregateBalance
+     */
+    
+
+    /**
+     * @notice A copy of updateAggregateBalance that returns the aggregate balance without updating it
+     */
+    
+
+    
+
+    modifier updateBalance() {
+        updateAggregateBalance(msg.sender);
+        _;
+    }
+
+    modifier onlyFactory() {
+        require(msg.sender == factory, "Committer: not factory");
+        _;
+    }
+
+    modifier onlyPool() {
+        require(msg.sender == leveragedPool, "msg.sender not leveragedPool");
+        _;
+    }
+}
