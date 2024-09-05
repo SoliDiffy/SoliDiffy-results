@@ -1,0 +1,5 @@
+{
+    "number_of_edits": 4,
+    "timing": 6.690319061279297,
+    "edit_script": "<actions>\n  <update-node tree=\"member_expression: _endOfWeek(timestamp).sub [3243,3268]\" label=\"_endOfWeek(timestamp).add\" />\n  <update-node tree=\"member_expression: fundValueLocked0.add [4673,4693]\" label=\"fundValueLocked0.sub\" />\n  <update-node tree=\"member_expression: prevWeight0.mul(1e18 - weight2).div(1e18 - prevWeight2).max(minWeight).min [4435,4509]\" label=\"prevWeight0.mul(1e18 - weight2).mul(1e18 - prevWeight2).max(minWeight).min\" />\n  <update-node tree=\"member_expression: (prevWeight0.mul(WINDOW_SIZE - 1).add(                 fundValueLocked0.mul(1e18 - weight2).div(totalValueLocked)             ) / WINDOW_SIZE)                 .max(minWeight)                 .min [4849,5044]\" label=\"(prevWeight0.mul(WINDOW_SIZE - 1).sub(                 fundValueLocked0.mul(1e18 - weight2).div(totalValueLocked)             ) / WINDOW_SIZE)                 .max(minWeight)                 .min\" />\n</actions>\n"
+}
