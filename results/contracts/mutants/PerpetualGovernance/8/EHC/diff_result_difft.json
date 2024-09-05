@@ -1,0 +1,718 @@
+{
+    "number_of_changes": 94,
+    "timing": 0.2719135284423828,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 30,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 27,
+                            "content": "amm",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 39,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 43,
+                            "content": "0x0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 73,
+                            "content": "\"no automated market maker\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 30,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 81,
+                            "content": "/* require(address(amm) != address(0x0), \"no automated market maker\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 48,
+                            "content": "initialMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 70,
+                            "content": "\"require im > 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 78,
+                            "content": "/* require(governance.initialMarginRate > 0, \"require im > 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 42,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 48,
+                            "content": "initialMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 51,
+                            "end": 53,
+                            "content": "10",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 55,
+                            "content": "**",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 57,
+                            "content": "18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 75,
+                            "content": "\"require im < 1\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 42,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 83,
+                            "content": "/* require(governance.initialMarginRate < 10**18, \"require im < 1\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 49,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 46,
+                            "content": "penaltyFundRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 49,
+                            "end": 59,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 81,
+                            "content": "maintenanceMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 101,
+                            "content": "\"require pfr < mm\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 49,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 109,
+                            "content": "/* require(governance.penaltyFundRate < governance.maintenanceMarginRate, \"require pfr < mm\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 52,
+                            "content": "maintenanceMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 65,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 83,
+                            "content": "initialMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 102,
+                            "content": "\"require mm < im\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 102,
+                            "end": 103,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 110,
+                            "content": "/* require(governance.maintenanceMarginRate < governance.initialMarginRate, \"require mm < im\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 53,
+                            "content": "liquidationPenaltyRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 56,
+                            "end": 66,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 88,
+                            "content": "maintenanceMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 108,
+                            "content": "\"require lpr < mm\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 116,
+                            "content": "/* require(governance.liquidationPenaltyRate < governance.maintenanceMarginRate, \"require lpr < mm\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 52,
+                            "content": "maintenanceMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 74,
+                            "content": "\"require mm > 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 82,
+                            "content": "/* require(governance.maintenanceMarginRate > 0, \"require mm > 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 52,
+                            "content": "maintenanceMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 65,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 83,
+                            "content": "initialMarginRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 102,
+                            "content": "\"require mm < im\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 102,
+                            "end": 103,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 110,
+                            "content": "/* require(governance.maintenanceMarginRate < governance.initialMarginRate, \"require mm < im\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

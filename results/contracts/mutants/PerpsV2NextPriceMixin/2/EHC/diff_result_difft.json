@@ -1,0 +1,196 @@
+{
+    "number_of_changes": 25,
+    "timing": 1.1628377437591553,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 42,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "nextPriceOrders",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 35,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 53,
+                            "content": "sizeDelta",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 56,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 83,
+                            "content": "\"previous order exists\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 42,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 91,
+                            "content": "/* require(nextPriceOrders[msg.sender].sizeDelta == 0, \"previous order exists\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "order",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "sizeDelta",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 57,
+                            "content": "\"no previous order\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 65,
+                            "content": "/* require(order.sizeDelta != 0, \"no previous order\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

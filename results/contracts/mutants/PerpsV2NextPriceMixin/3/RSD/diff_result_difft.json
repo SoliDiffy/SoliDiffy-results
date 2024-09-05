@@ -1,0 +1,276 @@
+{
+    "number_of_changes": 35,
+    "timing": 1.4269263744354248,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 230,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 30,
+                            "content": "currentRoundId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 46,
+                            "content": "targetRoundId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 50,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 66,
+                            "content": "currentRoundId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 69,
+                            "end": 82,
+                            "content": "targetRoundId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 85,
+                            "end": 108,
+                            "content": "_nextPriceConfirmWindow",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 109,
+                            "end": 118,
+                            "content": "marketKey",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 118,
+                            "end": 119,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 119,
+                            "end": 120,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 230,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 127,
+                            "content": "/* return (currentRoundId > targetRoundId) && (currentRoundId - targetRoundId > _nextPriceConfirmWindow(marketKey)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 236,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 29,
+                            "content": "IExchangeRates",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 53,
+                            "content": "_exchangeCircuitBreaker",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 69,
+                            "content": "exchangeRates",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 236,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 79,
+                            "content": "/* return IExchangeRates(_exchangeCircuitBreaker().exchangeRates()); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 248,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 24,
+                            "content": "_orderFee",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "params",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 248,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 42,
+                            "content": "/* return _orderFee(params, 0); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

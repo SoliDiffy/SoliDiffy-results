@@ -1,0 +1,230 @@
+{
+    "number_of_changes": 28,
+    "timing": 1.9539570808410645,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "init",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 19,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 20,
+                            "end": 24,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 52,
+                            "content": "'poll: poll is not ready!'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 60,
+                            "content": "/* require(init == true, 'poll: poll is not ready!'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 35,
+                            "content": "endBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 62,
+                            "content": "'poll: poll is finished!'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 70,
+                            "content": "/* require(block.number < endBlock, 'poll: poll is finished!'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 37,
+                            "content": "startBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 64,
+                            "content": "'poll: not in vote time!'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 72,
+                            "content": "/* require(block.number > startBlock, 'poll: not in vote time!'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

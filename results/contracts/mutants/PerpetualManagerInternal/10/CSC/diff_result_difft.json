@@ -1,0 +1,724 @@
+{
+    "number_of_changes": 82,
+    "timing": 1.672971248626709,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 19,
+                            "end": 25,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 19,
+                            "end": 23,
+                            "content": "true",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 22,
+                            "content": "curBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "0",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "true",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 25,
+                            "content": "cashOutAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 56,
+                            "content": "reachMaintenanceMargin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 59,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "1",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "true",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 87,
+                            "content": "// The definition of the margin ratio is `(margin + PnL) / committedAmount`",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 63,
+                            "content": "// where `PnL = commit * (1-entryRate/currentRate)`",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 25,
+                            "content": "cashOutAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 37,
+                            "content": "perpetual",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 53,
+                            "content": "committedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 56,
+                            "end": 65,
+                            "content": "perpetual",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 72,
+                            "content": "margin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 75,
+                            "end": 84,
+                            "content": "newCommit",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 57,
+                            "content": "// So here: `newCashOutAmount = margin + PnL`",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 105,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "cashOutAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 43,
+                            "content": "BASE_PARAMS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 56,
+                            "content": "perpetual",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 72,
+                            "content": "committedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 75,
+                            "end": 92,
+                            "content": "maintenanceMargin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 106,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 38,
+                            "content": "reachMaintenanceMargin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "1",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 100,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "else",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "newCommit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 34,
+                            "content": "perpetual",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 50,
+                            "content": "committedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 62,
+                            "content": "perpetual",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 69,
+                            "content": "margin",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "true",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 30,
+                            "content": "currentHedgeAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 50,
+                            "content": "targetHedgeAmount",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 132,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "true",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 142,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "else",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 18,
+                            "content": "ratio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 27,
+                            "content": "uint64",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 39,
+                            "content": "BASE_PARAMS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 193,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 20,
+                            "content": "feesPaid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 37,
+                            "content": "cashOutAmount",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 184,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "true",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 196,
+                    "changes": [
+                        {
+                            "start": 10,
+                            "end": 14,
+                            "content": "else",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 187,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 197,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 28,
+                            "content": "netCashOutAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 44,
+                            "content": "cashOutAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 55,
+                            "content": "feesPaid",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 198,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 217,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 28,
+                            "content": "totalHedgeAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "0",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 206,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "true",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

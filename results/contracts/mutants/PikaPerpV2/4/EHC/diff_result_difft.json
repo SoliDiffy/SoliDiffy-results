@@ -1,0 +1,500 @@
+{
+    "number_of_changes": 66,
+    "timing": 0.5124180316925049,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 216,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "canUserStake",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 35,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 45,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 51,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 61,
+                            "content": "\"!stake\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 216,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 69,
+                            "content": "/* require(canUserStake || msg.sender == owner, \"!stake\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 222,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 29,
+                            "content": "vault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "staked",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 57,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 63,
+                            "content": "vault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 67,
+                            "content": "cap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 76,
+                            "content": "\"!cap\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 222,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(uint256(vault.staked) + amount <= uint256(vault.cap), \"!cap\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 221,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 35,
+                            "content": "minMargin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 46,
+                            "content": "\"!margin\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 221,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 54,
+                            "content": "/* require(amount >= minMargin, \"!margin\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 254,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 39,
+                            "content": "vault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 58,
+                            "content": "\"!staked\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 254,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 66,
+                            "content": "/* require(shares <= uint256(vault.shares), \"!staked\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 254,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 39,
+                            "content": "vault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 58,
+                            "content": "\"!staked\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 254,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 66,
+                            "content": "/* require(shares <= uint256(vault.shares), \"!staked\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
