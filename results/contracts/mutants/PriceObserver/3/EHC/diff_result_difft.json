@@ -1,0 +1,252 @@
+{
+    "number_of_changes": 31,
+    "timing": 1.3308079242706299,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 21,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 49,
+                            "content": "\"PO: Out of bounds\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 21,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 57,
+                            "content": "/* require(i < length(), \"PO: Out of bounds\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_writer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 34,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 69,
+                            "content": "\"PO: Null address not allowed\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 77,
+                            "content": "/* require(_writer != address(0), \"PO: Null address not allowed\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "writer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 61,
+                            "content": "\"PO: Permission denied\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 69,
+                            "content": "/* require(msg.sender == writer, \"PO: Permission denied\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

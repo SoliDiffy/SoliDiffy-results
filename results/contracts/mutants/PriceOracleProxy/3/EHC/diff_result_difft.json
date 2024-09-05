@@ -1,0 +1,218 @@
+{
+    "number_of_changes": 26,
+    "timing": 0.8653919696807861,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "saiPrice",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 63,
+                            "content": "\"SAI price may only be set once\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 71,
+                            "content": "/* require(saiPrice == 0, \"SAI price may only be set once\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 108,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "price",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "0.1e18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 61,
+                            "content": "\"SAI price must be < 0.1 ETH\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 108,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 69,
+                            "content": "/* require(price < 0.1e18, \"SAI price must be < 0.1 ETH\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 106,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 38,
+                            "content": "guardian",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 77,
+                            "content": "\"only guardian may set the SAI price\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 106,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 85,
+                            "content": "/* require(msg.sender == guardian, \"only guardian may set the SAI price\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
