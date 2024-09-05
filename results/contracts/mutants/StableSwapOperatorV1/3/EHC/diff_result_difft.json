@@ -1,0 +1,210 @@
+{
+    "number_of_changes": 24,
+    "timing": 0.6051161289215088,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 113,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 38,
+                            "content": "_minimumRatioThreshold",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 51,
+                            "content": "0.0001e18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 88,
+                            "content": "\"Min ratio must be at least 0.01%.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 113,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 96,
+                            "content": "/* require(_minimumRatioThreshold >= 0.0001e18, \"Min ratio must be at least 0.01%.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 118,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 38,
+                            "content": "_maximumRatioThreshold",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 51,
+                            "content": "10_000e18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 89,
+                            "content": "\"Max ratio cannot be above 10,000x.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 118,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 97,
+                            "content": "/* require(_maximumRatioThreshold <= 10_000e18, \"Max ratio cannot be above 10,000x.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 152,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 43,
+                            "content": "_3crvBalanceFromDeposit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 58,
+                            "content": "_min3crvOut",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 115,
+                            "content": "\"StableSwapOperatorV1: 3pool deposit slippage too high\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 115,
+                            "end": 116,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 152,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 123,
+                            "content": "/* require(_3crvBalanceFromDeposit >= _min3crvOut, \"StableSwapOperatorV1: 3pool deposit slippage too high\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
