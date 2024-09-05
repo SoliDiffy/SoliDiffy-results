@@ -1,0 +1,2508 @@
+{
+    "number_of_changes": 349,
+    "timing": 0.8744797706604004,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 206,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 110,
+                            "content": "// This can't be called within the _reinvest statement since _reinvest is called within the `work` as well",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 208,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 204,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "_reinvest",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 17,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 43,
+                            "content": "reinvestBountyBps",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 205,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 123,
+                            "content": "// in case of beneficial vault equals to operator vault, call buyback to transfer some buyback amount back to the vault",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 207,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "_buyback",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 19,
+                            "content": "reinvest",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 30,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 39,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 47,
+                            "content": "onlyEOA",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 62,
+                            "content": "onlyReinvestor",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 75,
+                            "content": "nonReentrant",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 203,
+                    "changes": []
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 286,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "baseToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 26,
+                            "content": "safeTransfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 30,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 37,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 61,
+                            "content": "actualBaseTokenBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 278,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "lpToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 33,
+                            "content": "safeTransfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 39,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 48,
+                            "content": "lpToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 58,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 66,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 67,
+                            "end": 71,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 283,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 22,
+                            "content": "_masterChefDeposit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 276,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 6,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 7,
+                            "end": 8,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 9,
+                            "end": 17,
+                            "content": "okStrats",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 23,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 50,
+                            "content": "UnApproveStrategy",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 266,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 21,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 43,
+                            "content": "onlyWhitelistedCaller",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 48,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 62,
+                            "content": "onlyOperator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 75,
+                            "content": "nonReentrant",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 299,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 10,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 29,
+                            "content": "_totalBalanceInUSD",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 40,
+                            "content": "divWadDown",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 52,
+                            "content": "_tokenPrice",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 290,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 17,
+                            "content": "health",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 259,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 274,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 5,
+                            "end": 12,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 18,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 36,
+                            "content": "ext",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 43,
+                            "content": "abi",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "decode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 55,
+                            "content": "data",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 65,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 72,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 300,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 304,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 20,
+                            "content": "liquidate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 28,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 41,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 50,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 63,
+                            "content": "onlyOperator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 76,
+                            "content": "nonReentrant",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 263,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 265,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 9,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 18,
+                            "content": "calldata",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 23,
+                            "content": "data",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 263,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 271,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 23,
+                            "content": "_masterChefWithdraw",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 285,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 62,
+                            "content": "// 5. Return any remaining BaseToken back to the operator.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 279,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "baseToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 26,
+                            "content": "safeTransfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 32,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 56,
+                            "content": "actualBaseTokenBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 294,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 5,
+                            "end": 12,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 24,
+                            "content": "_tokenPrice",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 55,
+                            "content": "_tokenPricelastUpdate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 70,
+                            "content": "priceOracle",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 84,
+                            "content": "getTokenPrice",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 85,
+                            "end": 92,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 102,
+                            "content": "baseToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 102,
+                            "end": 103,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 264,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "debt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 295,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 58,
+                            "content": "// NOTE: last updated price should not be over 30 mins",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 261,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 15,
+                            "content": "work",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 256,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 307,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 306,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 10,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 30,
+                            "content": "NotAllowToLiquidate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 287,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 296,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 6,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 7,
+                            "end": 8,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 8,
+                            "end": 13,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 23,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 44,
+                            "content": "_lpPriceLastUpdate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 51,
+                            "content": "1800",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 54,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 60,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 70,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 73,
+                            "end": 94,
+                            "content": "_tokenPricelastUpdate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 97,
+                            "end": 101,
+                            "content": "1800",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 270,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 33,
+                            "content": "// 2. Withdraw all LP tokens.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 273,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 102,
+                            "content": "// 3. Perform the worker strategy; sending LP tokens + BaseToken; expecting LP tokens + BaseToken.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 282,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 49,
+                            "content": "// 4. Add LP tokens back to the farming pool.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 305,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 51,
+                            "content": "// NOTE: this worker does not allow liquidation",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 280,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "IStrategy",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 19,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 28,
+                            "content": "execute",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 33,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 39,
+                            "content": "debt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 44,
+                            "content": "ext",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 262,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 21,
+                            "content": "/* id */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 268,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "_reinvest",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 29,
+                            "content": "treasuryAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 48,
+                            "content": "treasuryBountyBps",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 72,
+                            "content": "actualBaseTokenBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 93,
+                            "content": "reinvestThreshold",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 293,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 5,
+                            "end": 12,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 31,
+                            "content": "_totalBalanceInUSD",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 40,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 59,
+                            "content": "_lpPriceLastUpdate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 74,
+                            "content": "priceOracle",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 85,
+                            "content": "lpToDollar",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 86,
+                            "end": 100,
+                            "content": "totalLpBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 102,
+                            "end": 109,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 109,
+                            "end": 110,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 110,
+                            "end": 117,
+                            "content": "lpToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 117,
+                            "end": 118,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 118,
+                            "end": 119,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 297,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 12,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 27,
+                            "content": "UnTrustedPrice",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 267,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 18,
+                            "content": "// 1. reinvest",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 292,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 17,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 18,
+                            "end": 26,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 34,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 43,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 298,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 37,
+                            "content": "// TODO: discuss round up or down",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 291,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 20,
+                            "content": "/* id */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 377,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 10,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 15,
+                            "content": "path",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 384,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "reversePath",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 30,
+                            "content": "baseToken",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 374,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 25,
+                            "content": "path",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 31,
+                            "content": "new",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 39,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "2",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 385,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 10,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 22,
+                            "content": "reversePath",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 373,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 18,
+                            "content": "getPath",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 29,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 34,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 43,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 51,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 60,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 69,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 329,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 381,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 26,
+                            "content": "getReversedPath",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 37,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 42,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 51,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 59,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 68,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 77,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 332,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 375,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 8,
+                            "content": "path",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 23,
+                            "content": "baseToken",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 376,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 8,
+                            "content": "path",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 26,
+                            "content": "farmingToken",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 382,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 32,
+                            "content": "reversePath",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 38,
+                            "content": "new",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 46,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "2",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 386,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 383,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "reversePath",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 33,
+                            "content": "farmingToken",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 378,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
