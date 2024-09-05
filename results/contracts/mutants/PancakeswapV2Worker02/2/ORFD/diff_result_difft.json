@@ -1,0 +1,1279 @@
+{
+    "number_of_changes": 174,
+    "timing": 1.0287437438964844,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 206,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 110,
+                            "content": "// This can't be called within the _reinvest statement since _reinvest is called within the `work` as well",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 205,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 123,
+                            "content": "// in case of beneficial vault equals to operator vault, call buyback to transfer some buyback amount back to the vault",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 19,
+                            "content": "reinvest",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 30,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 39,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 47,
+                            "content": "onlyEOA",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 62,
+                            "content": "onlyReinvestor",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 75,
+                            "content": "nonReentrant",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 203,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 208,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 204,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "_reinvest",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 17,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 43,
+                            "content": "reinvestBountyBps",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 207,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "_buyback",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 267,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 60,
+                            "content": "// 1. If a treasury configs are not ready. Not reinvest.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 278,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 280,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "IStrategy",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 19,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 28,
+                            "content": "execute",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 33,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 39,
+                            "content": "debt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 44,
+                            "content": "ext",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 268,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 6,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 7,
+                            "end": 8,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 8,
+                            "end": 23,
+                            "content": "treasuryAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 34,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 40,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 58,
+                            "content": "treasuryBountyBps",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 61,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 266,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 21,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 34,
+                            "content": "onlyOperator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 47,
+                            "content": "nonReentrant",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 270,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 50,
+                            "content": "// 2. Convert this position back to LP tokens.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 265,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 9,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 18,
+                            "content": "calldata",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 23,
+                            "content": "data",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 273,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 5,
+                            "end": 12,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 18,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 36,
+                            "content": "ext",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 43,
+                            "content": "abi",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "decode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 55,
+                            "content": "data",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 65,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 72,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 275,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 277,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 68,
+                            "content": "\"PancakeswapV2Worker02::work:: unable to transfer lp to strat\"",
+                            "highlight": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 274,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 20,
+                            "content": "okStrats",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 26,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 85,
+                            "content": "\"PancakeswapV2Worker02::work:: unapproved work strategy\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 263,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 264,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "debt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 271,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 16,
+                            "content": "_removeShare",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 19,
+                            "content": "id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 272,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 102,
+                            "content": "// 3. Perform the worker strategy; sending LP tokens + BaseToken; expecting LP tokens + BaseToken.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 276,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "lpToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 22,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 28,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "lpToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 47,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 55,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 60,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 262,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "content": "id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 282,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "_addShare",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "content": "id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 283,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 62,
+                            "content": "// 5. Return any remaining BaseToken back to the operator.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 281,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 49,
+                            "content": "// 4. Add LP tokens back to the farming pool.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 279,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "baseToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 26,
+                            "content": "safeTransfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 32,
+                            "content": "strat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 56,
+                            "content": "actualBaseTokenBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 284,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "baseToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 26,
+                            "content": "safeTransfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 30,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 37,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 61,
+                            "content": "actualBaseTokenBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 261,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 15,
+                            "content": "work",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 256,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 285,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 269,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 15,
+                            "content": "_reinvest",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "treasuryAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 50,
+                            "content": "treasuryBountyBps",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 74,
+                            "content": "actualBaseTokenBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 95,
+                            "content": "reinvestThreshold",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,202 @@
+{
+    "number_of_changes": 26,
+    "timing": 0.7711629867553711,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 32,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 15,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "caller",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 46,
+                            "content": "\"not caller\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 32,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 54,
+                            "content": "/* require(msg.sender == caller, \"not caller\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "IERC20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 31,
+                            "content": "stable_token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 42,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 50,
+                            "content": "_sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 54,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 69,
+                            "content": "_stable_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 98,
+                            "content": "\"insufficient stable token\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 98,
+                            "end": 99,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 106,
+                            "content": "/* require(IERC20(stable_token).balanceOf(_sender) >= _stable_amount, \"insufficient stable token\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
