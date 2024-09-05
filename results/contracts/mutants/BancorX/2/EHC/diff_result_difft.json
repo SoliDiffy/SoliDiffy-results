@@ -1,0 +1,184 @@
+{
+    "number_of_changes": 23,
+    "timing": 1.3998560905456543,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 159,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "_minLimit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 42,
+                            "content": "_maxLockLimit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 45,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 55,
+                            "content": "_minLimit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 58,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 75,
+                            "content": "_maxReleaseLimit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 100,
+                            "content": "\"ERR_INVALID_MIN_LIMIT\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 159,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 108,
+                            "content": "/* require(_minLimit <= _maxLockLimit && _minLimit <= _maxReleaseLimit, \"ERR_INVALID_MIN_LIMIT\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 185,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "reporters",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 58,
+                            "content": "\"ERR_ACCESS_DENIED\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 185,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 66,
+                            "content": "/* require(reporters[msg.sender], \"ERR_ACCESS_DENIED\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
