@@ -1,0 +1,214 @@
+{
+    "number_of_changes": 28,
+    "timing": 0.45569634437561035,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 16,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 28,
+                            "content": "getActionHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 48,
+                            "content": "\"FORCED_WITHDRAWAL\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 53,
+                            "content": "abi",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 60,
+                            "content": "encode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 69,
+                            "content": "starkKey",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 78,
+                            "content": "vaultId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 95,
+                            "content": "quantizedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 16,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 104,
+                            "content": "/* return getActionHash(\"FORCED_WITHDRAWAL\", abi.encode(starkKey, vaultId, quantizedAmount)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 35,
+                            "content": "forcedActionRequests",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 60,
+                            "content": "forcedWithdrawActionHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 69,
+                            "content": "starkKey",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 78,
+                            "content": "vaultId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 95,
+                            "content": "quantizedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 104,
+                            "content": "/* return forcedActionRequests[forcedWithdrawActionHash(starkKey, vaultId, quantizedAmount)]; */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

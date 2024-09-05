@@ -1,0 +1,614 @@
+{
+    "number_of_changes": 86,
+    "timing": 0.47570180892944336,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "validator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 38,
+                            "content": "isTradeParty",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 44,
+                            "content": "trade",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 52,
+                            "content": "wallet",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 61,
+                            "content": "/* require(validator.isTradeParty(trade, wallet)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "currencyCt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "trade",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 46,
+                            "content": "currencies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 56,
+                            "content": "conjugate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 59,
+                            "content": "ct",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 62,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 63,
+                            "end": 73,
+                            "content": "currencyId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 76,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 77,
+                            "end": 82,
+                            "content": "trade",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 93,
+                            "content": "currencies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 94,
+                            "end": 103,
+                            "content": "conjugate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 104,
+                            "end": 106,
+                            "content": "id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 106,
+                            "end": 107,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 107,
+                            "end": 108,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 112,
+                            "content": "            || (currencyCt == trade.currencies.conjugate.ct && currencyId == trade.currencies.conjugate.id)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "currencyCt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "payment",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 46,
+                            "content": "currency",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "ct",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 52,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 63,
+                            "content": "currencyId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 66,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 67,
+                            "end": 74,
+                            "content": "payment",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 83,
+                            "content": "currency",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 86,
+                            "content": "id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 94,
+                            "content": "/* require(currencyCt == payment.currency.ct && currencyId == payment.currency.id); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 27,
+                            "content": "currencyCt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 36,
+                            "content": "trade",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 47,
+                            "content": "currencies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 56,
+                            "content": "intended",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 59,
+                            "content": "ct",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 62,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 63,
+                            "end": 73,
+                            "content": "currencyId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 76,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 77,
+                            "end": 82,
+                            "content": "trade",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 93,
+                            "content": "currencies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 94,
+                            "end": 102,
+                            "content": "intended",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 102,
+                            "end": 103,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 103,
+                            "end": 105,
+                            "content": "id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 109,
+                            "content": "/* require((currencyCt == trade.currencies.intended.ct && currencyId == trade.currencies.intended.id)",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "validator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 40,
+                            "content": "isPaymentParty",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 48,
+                            "content": "payment",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 56,
+                            "content": "wallet",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 65,
+                            "content": "/* require(validator.isPaymentParty(payment, wallet)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
