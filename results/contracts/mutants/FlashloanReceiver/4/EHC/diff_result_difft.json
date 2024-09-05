@@ -1,0 +1,424 @@
+{
+    "number_of_changes": 57,
+    "timing": 0.5227293968200684,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 15,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "balanceAfter",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 45,
+                            "content": "balanceBefore",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 49,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 62,
+                            "content": "borrowAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 67,
+                            "content": "sub",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 68,
+                            "end": 79,
+                            "content": "repayAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 82,
+                            "end": 104,
+                            "content": "\"Balance inconsistent\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 104,
+                            "end": 105,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 15,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 112,
+                            "content": "/* require(balanceAfter == balanceBefore.add(borrowAmount).sub(repayAmount), \"Balance inconsistent\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 20,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 24,
+                            "content": "underlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 47,
+                            "content": "CCollateralCapErc20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 54,
+                            "content": "cToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 66,
+                            "content": "underlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 88,
+                            "content": "\"Params not match\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 20,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 96,
+                            "content": "/* require(underlying == CCollateralCapErc20(cToken).underlying(), \"Params not match\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 22,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 19,
+                            "content": "ERC20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "underlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 40,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 47,
+                            "content": "cToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 60,
+                            "content": "repayAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 90,
+                            "content": "\"Transfer fund back failed\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 22,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 98,
+                            "content": "/* require(ERC20(underlying).transfer(cToken, repayAmount), \"Transfer fund back failed\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 21,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 36,
+                            "content": "borrowAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 56,
+                            "content": "\"Params not match\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 21,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 64,
+                            "content": "/* require(amount == borrowAmount, \"Params not match\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
