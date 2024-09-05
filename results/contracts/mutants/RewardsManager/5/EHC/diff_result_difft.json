@@ -1,0 +1,424 @@
+{
+    "number_of_changes": 53,
+    "timing": 0.732393741607666,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 48,
+                            "content": "\"not owner\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 56,
+                            "content": "/* require(msg.sender == owner, \"not owner\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 392,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 62,
+                            "content": "\"RM::withdraw: amount must be > 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 392,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 70,
+                            "content": "/* require(amount > 0, \"RM::withdraw: amount must be > 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 439,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "tokensToApprove",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 38,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 57,
+                            "content": "approvalAmounts",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 64,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 99,
+                            "content": "\"RM::tokenAllow: not same length\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 99,
+                            "end": 100,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 439,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 107,
+                            "content": "/* require(tokensToApprove.length == approvalAmounts.length, \"RM::tokenAllow: not same length\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 460,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "tokens",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 29,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 40,
+                            "content": "amounts",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 47,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 84,
+                            "content": "\"RM::rescueTokens: not same length\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 460,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 92,
+                            "content": "/* require(tokens.length == amounts.length, \"RM::rescueTokens: not same length\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 473,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 36,
+                            "content": "tokenBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 47,
+                            "content": "amounts",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 96,
+                            "content": "\"RM::rescueTokens: contract balance too low\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 473,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 104,
+                            "content": "/* require(tokenBalance >= amounts[i], \"RM::rescueTokens: contract balance too low\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

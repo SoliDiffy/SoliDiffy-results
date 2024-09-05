@@ -1,0 +1,176 @@
+{
+    "number_of_changes": 22,
+    "timing": 0.35047388076782227,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "_value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 34,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 44,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 99,
+                            "content": "\"Inflation interval start time must be in the future\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 99,
+                            "end": 100,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 107,
+                            "content": "/* require(_value > block.timestamp, \"Inflation interval start time must be in the future\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 53,
+                            "content": "getInflationIntervalStartTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 63,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 73,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 106,
+                            "content": "\"Inflation has already started\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 106,
+                            "end": 107,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 114,
+                            "content": "/* require(getInflationIntervalStartTime() > block.timestamp, \"Inflation has already started\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

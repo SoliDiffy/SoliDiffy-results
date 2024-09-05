@@ -1,0 +1,986 @@
+{
+    "number_of_changes": 135,
+    "timing": 1.423712968826294,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "rocketDAONode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 46,
+                            "content": "getMemberIsValid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 59,
+                            "content": "_nodeAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 63,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 68,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 121,
+                            "content": "\"This node is already part of the trusted node DAO\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 121,
+                            "end": 122,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 129,
+                            "content": "/* require(rocketDAONode.getMemberIsValid(_nodeAddress) != true, \"This node is already part of the trusted node DAO\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 105,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 36,
+                            "content": "rplInflationContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 46,
+                            "content": "allowance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 59,
+                            "content": "_nodeAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 68,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 73,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 76,
+                            "end": 78,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 79,
+                            "end": 92,
+                            "content": "rplBondAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 94,
+                            "end": 187,
+                            "content": "\"Not enough allowance given to RocketDAONodeTrusted contract for transfer of RPL bond tokens\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 187,
+                            "end": 188,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 105,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 195,
+                            "content": "/* require(rplInflationContract.allowance(_nodeAddress, address(this)) >= rplBondAmount, \"Not enough allowance given to RocketDAONodeTrusted contract for transfer of RPL bond tokens\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 36,
+                            "content": "rplInflationContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 49,
+                            "content": "transferFrom",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 62,
+                            "content": "_nodeAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 71,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 72,
+                            "end": 76,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 92,
+                            "content": "rplBondAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 163,
+                            "content": "\"Token transfer to RocketDAONodeTrusted contract was not successful\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 163,
+                            "end": 164,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 171,
+                            "content": "/* require(rplInflationContract.transferFrom(_nodeAddress, address(this), rplBondAmount), \"Token transfer to RocketDAONodeTrusted contract was not successful\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "memberInvitedTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 79,
+                            "content": "\"This node has not been invited to join\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 87,
+                            "content": "/* require(memberInvitedTime > 0, \"This node has not been invited to join\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "memberInvitedTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 37,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 75,
+                            "content": "rocketDAONodeTrustedSettingsProposals",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 89,
+                            "content": "getActionTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 95,
+                            "end": 100,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 101,
+                            "end": 110,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 110,
+                            "end": 111,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 112,
+                            "end": 176,
+                            "content": "\"This node's invitation to join has expired, please apply again\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 176,
+                            "end": 177,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 184,
+                            "content": "/* require(memberInvitedTime.add(rocketDAONodeTrustedSettingsProposals.getActionTime()) > block.timestamp, \"This node's invitation to join has expired, please apply again\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 36,
+                            "content": "rplInflationContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "approve",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 63,
+                            "content": "rocketVaultAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 78,
+                            "content": "rplBondAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 172,
+                            "content": "\"Approval for RocketVault to spend RocketDAONodeTrusted RPL bond tokens was not successful\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 172,
+                            "end": 173,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 180,
+                            "content": "/* require(rplInflationContract.approve(rocketVaultAddress, rplBondAmount), \"Approval for RocketVault to spend RocketDAONodeTrusted RPL bond tokens was not successful\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 144,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "leaveAcceptedTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 37,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 75,
+                            "content": "rocketDAONodeTrustedSettingsProposals",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 89,
+                            "content": "getActionTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 95,
+                            "end": 100,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 101,
+                            "end": 110,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 110,
+                            "end": 111,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 112,
+                            "end": 208,
+                            "content": "\"This member has not been approved to leave or request has expired, please apply to leave again\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 208,
+                            "end": 209,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 144,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 216,
+                            "content": "/* require(leaveAcceptedTime.add(rocketDAONodeTrustedSettingsProposals.getActionTime()) > block.timestamp, \"This member has not been approved to leave or request has expired, please apply to leave again\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "rocketDAONode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 44,
+                            "content": "getMemberCount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 49,
+                            "end": 62,
+                            "content": "rocketDAONode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 83,
+                            "content": "getMemberMinRequired",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 130,
+                            "content": "\"Member count will fall below min required\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 130,
+                            "end": 131,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 138,
+                            "content": "/* require(rocketDAONode.getMemberCount() > rocketDAONode.getMemberMinRequired(), \"Member count will fall below min required\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 150,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 41,
+                            "content": "_rplBondRefundAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 44,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 45,
+                            "end": 52,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 56,
+                            "content": "0x0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 126,
+                            "content": "\"Member has not supplied a valid address for their RPL bond refund\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 126,
+                            "end": 127,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 150,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 134,
+                            "content": "/* require(_rplBondRefundAddress != address(0x0), \"Member has not supplied a valid address for their RPL bond refund\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

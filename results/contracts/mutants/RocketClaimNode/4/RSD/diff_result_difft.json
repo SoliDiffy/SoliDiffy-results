@@ -1,0 +1,356 @@
+{
+    "number_of_changes": 36,
+    "timing": 1.0893123149871826,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 27,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 32,
+                            "content": "rocketRewardsPool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 59,
+                            "content": "getClaimingContractEnabled",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 77,
+                            "content": "\"rocketClaimNode\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 27,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 85,
+                            "content": "/* return rocketRewardsPool.getClaimingContractEnabled(\"rocketClaimNode\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 29,
+                            "content": "rocketNodeStaking",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 45,
+                            "content": "getNodeRPLStake",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 58,
+                            "content": "_nodeAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 62,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 63,
+                            "end": 80,
+                            "content": "rocketNodeStaking",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 103,
+                            "content": "getNodeMinimumRPLStake",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 104,
+                            "end": 116,
+                            "content": "_nodeAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 116,
+                            "end": 117,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 117,
+                            "content": "            rocketNodeStaking.getNodeRPLStake(_nodeAddress) >= rocketNodeStaking.getNodeMinimumRPLStake(_nodeAddress)",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 37,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 29,
+                            "content": "rocketRewardsPool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 61,
+                            "content": "getClaimingContractUserCanClaim",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 62,
+                            "end": 79,
+                            "content": "\"rocketClaimNode\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 93,
+                            "content": "_nodeAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 95,
+                            "end": 97,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 37,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 97,
+                            "content": "            rocketRewardsPool.getClaimingContractUserCanClaim(\"rocketClaimNode\", _nodeAddress) &&",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "content": "        ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* return (",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 47,
+                            "end": 53,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "0",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 47,
+                            "end": 62,
+                            "content": "/* return 0; */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 34,
+                            "end": 40,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "0",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 34,
+                            "end": 49,
+                            "content": "/* return 0; */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
