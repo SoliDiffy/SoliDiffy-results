@@ -1,0 +1,220 @@
+{
+    "number_of_changes": 26,
+    "timing": 0.7154552936553955,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "m_state",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 33,
+                            "content": "_state",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 41,
+                            "content": "/* require(m_state == _state); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 22,
+                            "content": "m_state",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 35,
+                            "content": "_newState",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 43,
+                            "content": "/* assert(m_state != _newState); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 54,
+                    "changes": [
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 56,
+                            "content": "State",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 66,
+                            "content": "REFUNDING",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 69,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 70,
+                            "end": 79,
+                            "content": "_newState",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 82,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 83,
+                            "end": 88,
+                            "content": "State",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 98,
+                            "content": "SUCCEEDED",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 99,
+                            "end": 101,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 102,
+                            "end": 111,
+                            "content": "_newState",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 111,
+                            "end": 112,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 54,
+                    "changes": [
+                        {
+                            "start": 44,
+                            "end": 119,
+                            "content": "/* assert(State.REFUNDING == _newState || State.SUCCEEDED == _newState); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
