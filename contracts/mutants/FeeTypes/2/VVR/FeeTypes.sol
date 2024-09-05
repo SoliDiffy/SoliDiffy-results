@@ -1,0 +1,7 @@
+pragma solidity 0.4.24;
+
+
+contract FeeTypes {
+    bytes32 public constant HOME_FEE = keccak256(abi.encodePacked("home-fee"));
+    bytes32 public constant FOREIGN_FEE = keccak256(abi.encodePacked("foreign-fee"));
+}
