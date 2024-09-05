@@ -1,0 +1,246 @@
+{
+    "number_of_changes": 30,
+    "timing": 2.9371209144592285,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 14,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "isOwner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 36,
+                            "content": "isSNova",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 74,
+                            "content": "\"caller is not the owner or sNova\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 14,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 82,
+                            "content": "/* require(isOwner() || isSNova(), \"caller is not the owner or sNova\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 38,
+                            "content": "\"amount 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 46,
+                            "content": "/* require(amount > 0, \"amount 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 40,
+                            "content": "sendAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 53,
+                            "content": "burnAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 91,
+                            "content": "\"Nova::transfer: Burn value invalid\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 99,
+                            "content": "/* require(amount == sendAmount + burnAmount, \"Nova::transfer: Burn value invalid\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
