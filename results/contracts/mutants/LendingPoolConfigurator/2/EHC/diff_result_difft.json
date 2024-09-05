@@ -1,0 +1,304 @@
+{
+    "number_of_changes": 34,
+    "timing": 0.8120720386505127,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 186,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 29,
+                            "content": "addressesProvider",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 42,
+                            "content": "getAaveAdmin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 47,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 48,
+                            "end": 51,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 58,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 66,
+                            "content": "Errors",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 88,
+                            "content": "CALLER_NOT_AAVE_ADMIN",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 186,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 96,
+                            "content": "/* require(addressesProvider.getAaveAdmin() == msg.sender, Errors.CALLER_NOT_AAVE_ADMIN); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 425,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 24,
+                            "content": "availableLiquidity",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 48,
+                            "content": "totalStableDebt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 51,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 56,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 74,
+                            "content": "totalVariableDebt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 77,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 425,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 80,
+                            "content": "      availableLiquidity == 0 && totalStableDebt == 0 && totalVariableDebt == 0,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 426,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 12,
+                            "content": "Errors",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 36,
+                            "content": "RESERVE_LIQUIDITY_NOT_0",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 426,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 36,
+                            "content": "      Errors.RESERVE_LIQUIDITY_NOT_0",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 424,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 424,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 427,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 427,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 9,
+                            "content": "    ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
