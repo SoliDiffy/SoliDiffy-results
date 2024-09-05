@@ -1,0 +1,164 @@
+{
+    "number_of_changes": 20,
+    "timing": 1.1716225147247314,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 130,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "snapshotId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 56,
+                            "content": "\"ERC20Snapshot: id is 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 130,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 64,
+                            "content": "/* require(snapshotId > 0, \"ERC20Snapshot: id is 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 132,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "snapshotId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 48,
+                            "content": "_currentSnapshotId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 56,
+                            "content": "current",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 91,
+                            "content": "\"ERC20Snapshot: nonexistent id\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 132,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 99,
+                            "content": "/* require(snapshotId <= _currentSnapshotId.current(), \"ERC20Snapshot: nonexistent id\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
