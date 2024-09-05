@@ -1,0 +1,238 @@
+{
+    "number_of_changes": 32,
+    "timing": 1.9549851417541504,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 112,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 31,
+                            "content": "AddressUpgradeable",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 42,
+                            "content": "isContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 46,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 53,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 57,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 60,
+                            "content": "tx",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 67,
+                            "content": "origin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 70,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 71,
+                            "end": 74,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 81,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 93,
+                            "content": "\"only EOA\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 112,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 101,
+                            "content": "/* require(!AddressUpgradeable.isContract(msg.sender) && tx.origin == msg.sender, \"only EOA\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 24,
+                            "content": "_blockNumber",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 33,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 40,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 60,
+                            "content": "\"bad _blockNumber\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 68,
+                            "content": "/* require(_blockNumber <= block.number, \"bad _blockNumber\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
