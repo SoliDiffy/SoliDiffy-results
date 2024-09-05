@@ -1,0 +1,472 @@
+{
+    "number_of_changes": 61,
+    "timing": 0.9831099510192871,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 36,
+                            "content": "_minParticipationPct",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 64,
+                            "content": "_minParticipationPct",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 67,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 68,
+                            "end": 76,
+                            "content": "PCT_BASE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 101,
+                            "content": "ERROR_MIN_PARTICIPATION",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 109,
+                            "content": "/* require(_minParticipationPct > 0 && _minParticipationPct <= PCT_BASE, ERROR_MIN_PARTICIPATION); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "_surveyId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 41,
+                            "content": "surveysLength",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 58,
+                            "content": "ERROR_NO_SURVEY",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 66,
+                            "content": "/* require(_surveyId < surveysLength, ERROR_NO_SURVEY); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "survey",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 34,
+                            "content": "votingPower",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 61,
+                            "content": "ERROR_NO_VOTING_POWER",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 69,
+                            "content": "/* require(survey.votingPower > 0, ERROR_NO_VOTING_POWER); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 151,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "canVote",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 33,
+                            "content": "_surveyId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 38,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 45,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 66,
+                            "content": "ERROR_CAN_NOT_VOTE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 151,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 74,
+                            "content": "/* require(canVote(_surveyId, msg.sender), ERROR_CAN_NOT_VOTE); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 183,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "_optionIds",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 33,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "_stakes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 51,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 54,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 65,
+                            "content": "_optionIds",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 72,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 100,
+                            "content": "ERROR_VOTE_WRONG_INPUT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 183,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 108,
+                            "content": "/* require(_optionIds.length == _stakes.length && _optionIds.length > 0, ERROR_VOTE_WRONG_INPUT); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

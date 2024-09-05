@@ -1,0 +1,950 @@
+{
+    "number_of_changes": 107,
+    "timing": 0.9214468002319336,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 25,
+                            "content": "canceled",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 35,
+                            "content": "orderHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 66,
+                            "content": "ERROR_MATCH_ALREADY_CANCELED",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 74,
+                            "content": "/* require(!canceled[orderHash], ERROR_MATCH_ALREADY_CANCELED); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "_order",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 49,
+                            "content": "makerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 87,
+                            "content": "ERROR_MATCH_CANCELLATION_NOT_ALLOWED",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 95,
+                            "content": "/* require(msg.sender == _order.makerAddress, ERROR_MATCH_CANCELLATION_NOT_ALLOWED); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 25,
+                            "content": "canceled",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 31,
+                            "content": "_hash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 64,
+                            "content": "ERROR_MATCH_ORDER_WAS_CANCELED",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 72,
+                            "content": "/* require(!canceled[_hash], ERROR_MATCH_ORDER_WAS_CANCELED); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 43,
+                            "content": "ERROR_MATCH_TAKER_ADDRESS_WRONG",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 43,
+                            "content": "            ERROR_MATCH_TAKER_ADDRESS_WRONG",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "content": "        ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 76,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 22,
+                            "content": "_leftOrder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 35,
+                            "content": "takerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 50,
+                            "content": "_rightOrder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 63,
+                            "content": "makerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 76,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 64,
+                            "content": "            _leftOrder.takerAddress == _rightOrder.makerAddress,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 22,
+                            "content": "_leftOrder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 35,
+                            "content": "takerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 46,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 52,
+                            "content": "||",
+                            "highlight": "keyword"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 52,
+                            "content": "            _leftOrder.takerAddress == address(0) ||",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "_order",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 32,
+                            "content": "senderAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 43,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "||",
+                            "highlight": "keyword"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 49,
+                            "content": "            _order.senderAddress == address(0) ||",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "content": "        ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 44,
+                            "content": "ERROR_MATCH_SENDER_ADDRESS_WRONG",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 44,
+                            "content": "            ERROR_MATCH_SENDER_ADDRESS_WRONG",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "_order",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 32,
+                            "content": "senderAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 39,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 47,
+                            "content": "            _order.senderAddress == msg.sender,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "result",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 58,
+                            "content": "ERROR_MATCH_SIGNATURE_NOT_VERIFIED",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 66,
+                            "content": "/* require(result, ERROR_MATCH_SIGNATURE_NOT_VERIFIED); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "result",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 58,
+                            "content": "ERROR_MATCH_SIGNATURE_NOT_VERIFIED",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 66,
+                            "content": "/* require(result, ERROR_MATCH_SIGNATURE_NOT_VERIFIED); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 132,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "feeToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 34,
+                            "content": "allowance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 41,
+                            "content": "_order",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 54,
+                            "content": "makerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 64,
+                            "content": "registry",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 80,
+                            "content": "getTokenSpender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 84,
+                            "end": 86,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 87,
+                            "end": 91,
+                            "content": "fees",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 128,
+                            "content": "ERROR_MATCH_NOT_ENOUGH_ALLOWED_FEES",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 128,
+                            "end": 129,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 132,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 136,
+                            "content": "/* require(feeToken.allowance(_order.makerAddress, registry.getTokenSpender()) >= fees, ERROR_MATCH_NOT_ENOUGH_ALLOWED_FEES); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
