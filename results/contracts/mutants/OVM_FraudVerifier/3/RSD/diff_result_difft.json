@@ -1,0 +1,252 @@
+{
+    "number_of_changes": 31,
+    "timing": 1.8330795764923096,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 28,
+                            "content": "transitioners",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 38,
+                            "content": "keccak256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 42,
+                            "content": "abi",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 55,
+                            "content": "encodePacked",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 69,
+                            "content": "_preStateRoot",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 78,
+                            "content": "_txHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* return transitioners[keccak256(abi.encodePacked(_preStateRoot, _txHash))]; */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "return",
+                            "highlight": "keyword"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 25,
+                            "content": "/* return; */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 240,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 22,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 43,
+                            "content": "getStateTransitioner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 57,
+                            "content": "_preStateRoot",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 66,
+                            "content": "_txHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 71,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 72,
+                            "end": 79,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 240,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 89,
+                            "content": "/* return address(getStateTransitioner(_preStateRoot, _txHash)) != address(0); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
