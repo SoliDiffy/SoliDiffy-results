@@ -1,0 +1,584 @@
+{
+    "number_of_changes": 71,
+    "timing": 1.7892675399780273,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "hasRole",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 47,
+                            "content": "COLLATERAL_RATIO_PAUSER",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 52,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 59,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 68,
+                            "content": "/* require(hasRole(COLLATERAL_RATIO_PAUSER, msg.sender)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 7,
+                            "end": 14,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 25,
+                            "content": "frax_pools",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 40,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 45,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 87,
+                            "content": "\"Only frax pools can call this function\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 7,
+                            "end": 95,
+                            "content": "/* require(frax_pools[msg.sender] == true, \"Only frax pools can call this function\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 92,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 43,
+                            "content": "owner_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 50,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 57,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 60,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 77,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 80,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 81,
+                            "end": 84,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 91,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 94,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 95,
+                            "end": 113,
+                            "content": "controller_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 113,
+                            "end": 114,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 115,
+                            "end": 178,
+                            "content": "\"You are not the owner, controller, or the governance timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 178,
+                            "end": 179,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 92,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 186,
+                            "content": "/* require(msg.sender == owner_address || msg.sender == timelock_address || msg.sender == controller_address, \"You are not the owner, controller, or the governance timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 98,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 15,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 39,
+                            "content": "owner_address",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 98,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 40,
+                            "content": "            msg.sender == owner_address ",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 71,
+                            "content": "\"You are not the owner, the governance timelock, or a pool\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 76,
+                            "content": "            \"You are not the owner, the governance timelock, or a pool\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 18,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 25,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 45,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 46,
+                            "content": "            || msg.sender == timelock_address ",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 100,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 25,
+                            "content": "frax_pools",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 40,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 45,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 100,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 47,
+                            "content": "            || frax_pools[msg.sender] == true, ",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

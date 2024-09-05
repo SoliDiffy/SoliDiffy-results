@@ -1,0 +1,288 @@
+{
+    "number_of_changes": 37,
+    "timing": 0.8091709613800049,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 42,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 49,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 52,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 69,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 94,
+                            "content": "\"Not owner or timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 94,
+                            "end": 95,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 102,
+                            "content": "/* require(msg.sender == owner || msg.sender == timelock_address, \"Not owner or timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 57,
+                            "content": "rewards_distributor_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 84,
+                            "content": "\"Not rewards distributor\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 92,
+                            "content": "/* require(msg.sender == rewards_distributor_address, \"Not rewards distributor\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 105,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 30,
+                            "content": "bridge_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 70,
+                            "content": "\"Invalid bridge address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 105,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 78,
+                            "content": "/* require(bridge_address != address(0), \"Invalid bridge address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

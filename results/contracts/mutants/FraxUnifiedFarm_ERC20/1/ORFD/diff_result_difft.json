@@ -1,0 +1,835 @@
+{
+    "number_of_changes": 87,
+    "timing": 0.6933157444000244,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 159,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 43,
+                            "content": "//     uint256 total_frax_reserves;",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 136,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "// }",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 127,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 167,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 32,
+                            "content": "frax_per_lp_token",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 27,
+                            "content": "fraxPerLPToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "public",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 41,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 50,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 58,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 67,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 116,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 130,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 55,
+                            "content": "// ============================================",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 135,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 93,
+                            "content": "//     frax_per_lp_token = (total_frax_reserves * 1e18) / stakingToken.totalSupply();",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 143,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "//    // Optimistically assume 50/50 FRAX/3CRV ratio in the metapool to save gas",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 122,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 124,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 39,
+                            "content": "total_frax_reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 56,
+                            "content": "frax_is_token0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "?",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 67,
+                            "content": "reserve0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ":",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 78,
+                            "content": "reserve1",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 145,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "// }",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 85,
+                            "content": "//     (uint256 reserve0, uint256 reserve1, ) = (stakingToken.getReserves());",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 121,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 55,
+                            "content": "// ============================================",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 126,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 29,
+                            "content": "frax_per_lp_token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 52,
+                            "content": "total_frax_reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 59,
+                            "content": "1e18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "/",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 63,
+                            "end": 75,
+                            "content": "stakingToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 87,
+                            "content": "totalSupply",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 156,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 21,
+                            "content": "// Uniswap V2",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 148,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 55,
+                            "content": "// ============================================",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 16,
+                            "content": "// G-UNI",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 157,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 55,
+                            "content": "// ============================================",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 133,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 100,
+                            "content": "//     (, IFeederPool.BassetData memory vaultData) = (stakingToken.getBasset(frax_address));",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 152,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "//    // Optimistically assume 50/50 FRAX/3CRV ratio in the metapool to save gas",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 144,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 92,
+                            "content": "//    frax_per_lp_token = ((frax3crv_held * 1e18) / stakingToken.totalSupply()) / 2;",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 154,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "// }",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 158,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "// {",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 131,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "// {",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 168,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 123,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 20,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 29,
+                            "content": "reserve0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 38,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 47,
+                            "content": "reserve1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 63,
+                            "content": "stakingToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 85,
+                            "content": "getUnderlyingBalances",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 139,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 55,
+                            "content": "// ============================================",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 118,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "frax_per_lp_token",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 149,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "// {",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 161,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 66,
+                            "content": "//     if (frax_is_token0) total_frax_reserves = reserve0;",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 165,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "// }",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "// {",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 79,
+                            "content": "//    uint256 frax3crv_held = stakingToken.totalUnderlyingControlled();",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 164,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 93,
+                            "content": "//     frax_per_lp_token = (total_frax_reserves * 1e18) / stakingToken.totalSupply();",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 150,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 61,
+                            "content": "//    uint256 frax3crv_held = stakingToken.balance();",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 117,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 59,
+                            "content": "// Get the amount of FRAX 'inside' of the lp tokens",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 147,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 25,
+                            "content": "// StakeDAO Vault",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 162,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 51,
+                            "content": "//     else total_frax_reserves = reserve1;",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 129,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 18,
+                            "content": "// mStable",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 138,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 39,
+                            "content": "// StakeDAO sdETH-FraxPut Vault",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 132,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 43,
+                            "content": "//     uint256 total_frax_reserves;",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 134,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 69,
+                            "content": "//     total_frax_reserves = uint256(vaultData.vaultBalance);",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 153,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 92,
+                            "content": "//    frax_per_lp_token = ((frax3crv_held * 1e18) / stakingToken.totalSupply()) / 2;",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

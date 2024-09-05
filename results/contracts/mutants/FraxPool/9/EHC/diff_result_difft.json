@@ -1,0 +1,1134 @@
+{
+    "number_of_changes": 152,
+    "timing": 0.15300464630126953,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 46,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 53,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 60,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 63,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 77,
+                            "content": "owner_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 129,
+                            "content": "\"You are not the owner or the governance timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 129,
+                            "end": 130,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 137,
+                            "content": "/* require(msg.sender == timelock_address || msg.sender == owner_address, \"You are not the owner or the governance timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "redeemPaused",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 37,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 60,
+                            "content": "\"Redeeming is paused\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 68,
+                            "content": "/* require(redeemPaused == false, \"Redeeming is paused\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "mintPaused",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 56,
+                            "content": "\"Minting is paused\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 64,
+                            "content": "/* require(mintPaused == false, \"Minting is paused\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 192,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 33,
+                            "content": "collateral_token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 43,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 51,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 56,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 63,
+                            "content": "sub",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 87,
+                            "content": "unclaimedPoolCollateral",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 92,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 110,
+                            "content": "collateral_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 110,
+                            "end": 111,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 112,
+                            "end": 114,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 115,
+                            "end": 127,
+                            "content": "pool_ceiling",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 127,
+                            "end": 128,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 129,
+                            "end": 163,
+                            "content": "\"[Pool's Closed]: Ceiling reached\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 163,
+                            "end": 164,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 192,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 171,
+                            "content": "/* require((collateral_token.balanceOf(address(this))).sub(unclaimedPoolCollateral).add(collateral_amount) <= pool_ceiling, \"[Pool's Closed]: Ceiling reached\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "FRAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 44,
+                            "content": "global_collateral_ratio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 70,
+                            "content": "COLLATERAL_RATIO_MAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 103,
+                            "content": "\"Collateral ratio must be >= 1\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 111,
+                            "content": "/* require(FRAX.global_collateral_ratio() >= COLLATERAL_RATIO_MAX, \"Collateral ratio must be >= 1\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "FRAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 44,
+                            "content": "global_collateral_ratio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 70,
+                            "content": "COLLATERAL_RATIO_MAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 103,
+                            "content": "\"Collateral ratio must be >= 1\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 111,
+                            "content": "/* require(FRAX.global_collateral_ratio() >= COLLATERAL_RATIO_MAX, \"Collateral ratio must be >= 1\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 192,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 33,
+                            "content": "collateral_token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 43,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 51,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 56,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 63,
+                            "content": "sub",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 87,
+                            "content": "unclaimedPoolCollateral",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 92,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 110,
+                            "content": "collateral_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 110,
+                            "end": 111,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 112,
+                            "end": 114,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 115,
+                            "end": 127,
+                            "content": "pool_ceiling",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 127,
+                            "end": 128,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 129,
+                            "end": 163,
+                            "content": "\"[Pool's Closed]: Ceiling reached\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 163,
+                            "end": 164,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 192,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 171,
+                            "content": "/* require((collateral_token.balanceOf(address(this))).sub(unclaimedPoolCollateral).add(collateral_amount) <= pool_ceiling, \"[Pool's Closed]: Ceiling reached\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "FRAX_out_min",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 47,
+                            "content": "frax_amount_d18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 73,
+                            "content": "\"Slippage limit reached\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 81,
+                            "content": "/* require(FRAX_out_min <= frax_amount_d18, \"Slippage limit reached\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 210,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "FRAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 44,
+                            "content": "global_collateral_ratio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 81,
+                            "content": "\"Collateral ratio must be 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 210,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 89,
+                            "content": "/* require(FRAX.global_collateral_ratio() == 0, \"Collateral ratio must be 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 218,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "FRAX_out_min",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 47,
+                            "content": "frax_amount_d18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 73,
+                            "content": "\"Slippage limit reached\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 218,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 81,
+                            "content": "/* require(FRAX_out_min <= frax_amount_d18, \"Slippage limit reached\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 230,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 39,
+                            "content": "global_collateral_ratio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 62,
+                            "content": "COLLATERAL_RATIO_MAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 65,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 66,
+                            "end": 89,
+                            "content": "global_collateral_ratio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 153,
+                            "content": "\"Collateral ratio needs to be between .000001 and .999999\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 153,
+                            "end": 154,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 230,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 161,
+                            "content": "/* require(global_collateral_ratio < COLLATERAL_RATIO_MAX && global_collateral_ratio > 0, \"Collateral ratio needs to be between .000001 and .999999\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

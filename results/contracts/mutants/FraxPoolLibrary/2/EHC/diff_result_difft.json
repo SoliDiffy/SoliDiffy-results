@@ -1,0 +1,164 @@
+{
+    "number_of_changes": 20,
+    "timing": 0.1692972183227539,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "params",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 57,
+                            "content": "excess_collateral_dollar_value_d18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 98,
+                            "content": "\"No excess collateral to buy back!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 98,
+                            "end": 99,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 106,
+                            "content": "/* require(params.excess_collateral_dollar_value_d18 > 0, \"No excess collateral to buy back!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 36,
+                            "content": "fxs_dollar_value_d18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "params",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 81,
+                            "content": "excess_collateral_dollar_value_d18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 133,
+                            "content": "\"You are trying to buy back more than the excess!\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 133,
+                            "end": 134,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 141,
+                            "content": "/* require(fxs_dollar_value_d18 <= params.excess_collateral_dollar_value_d18, \"You are trying to buy back more than the excess!\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

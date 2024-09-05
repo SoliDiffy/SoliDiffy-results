@@ -1,0 +1,516 @@
+{
+    "number_of_changes": 69,
+    "timing": 0.782081127166748,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 42,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 49,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 52,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 69,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 94,
+                            "content": "\"Not owner or timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 94,
+                            "end": 95,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 102,
+                            "content": "/* require(msg.sender == owner || msg.sender == timelock_address, \"Not owner or timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "valid_chains",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 37,
+                            "content": "chain_id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 55,
+                            "content": "\"Invalid chain\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 63,
+                            "content": "/* require(valid_chains[chain_id], \"Invalid chain\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "chain_id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 55,
+                            "content": "\"Zero chain_id detected\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 63,
+                            "content": "/* require(chain_id != 0, \"Zero chain_id detected\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 197,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "amo_minter",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 31,
+                            "content": "amos",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 39,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 44,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 69,
+                            "content": "\"Contract not an AMO\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 197,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 77,
+                            "content": "/* require(amo_minter.amos(address(this)), \"Contract not an AMO\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 201,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 29,
+                            "content": "valid_chains",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 38,
+                            "content": "chain_id",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 42,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 48,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 52,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 67,
+                            "content": "chainNameToID",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 68,
+                            "end": 78,
+                            "content": "chain_name",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 80,
+                            "end": 82,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 109,
+                            "content": "\"Chain already exists\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 109,
+                            "end": 110,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 201,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 117,
+                            "content": "/* require((valid_chains[chain_id] == false) && (chainNameToID[chain_name] == 0), \"Chain already exists\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,806 @@
+{
+    "number_of_changes": 104,
+    "timing": 2.1215357780456543,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 46,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 53,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 60,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 63,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 77,
+                            "content": "owner_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 129,
+                            "content": "\"You are not the owner or the governance timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 129,
+                            "end": 130,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 137,
+                            "content": "/* require(msg.sender == timelock_address || msg.sender == owner_address, \"You are not the owner or the governance timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 47,
+                            "content": "custodian_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 84,
+                            "content": "\"You are not the rewards custodian\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 92,
+                            "content": "/* require(msg.sender == custodian_address, \"You are not the rewards custodian\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 198,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 32,
+                            "content": "borrowed_balance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 36,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 48,
+                            "content": "frax_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 52,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 61,
+                            "content": "mint_cap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 83,
+                            "content": "\"Borrow cap reached\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 198,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 91,
+                            "content": "/* require(borrowed_balance.add(frax_amount) <= mint_cap, \"Borrow cap reached\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 202,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 21,
+                            "content": "FRAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 45,
+                            "content": "global_collateral_ratio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 56,
+                            "content": "min_cr",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 95,
+                            "content": "\"Collateral ratio is already too low\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 202,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 103,
+                            "content": "/* require (FRAX.global_collateral_ratio() > min_cr, \"Collateral ratio is already too low\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 209,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 23,
+                            "content": "new_cr",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "min_cr",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 86,
+                            "content": "\"Minting would cause collateral ratio to be too low\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 209,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 94,
+                            "content": "/* require (new_cr > min_cr, \"Minting would cause collateral ratio to be too low\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 238,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "crFRAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 27,
+                            "content": "mint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 39,
+                            "content": "FRAX_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 60,
+                            "content": "'Mint failed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 238,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 68,
+                            "content": "/* require(crFRAX.mint(FRAX_amount) == 0, 'Mint failed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 236,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "allow_cream",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 57,
+                            "content": "'Cream strategy is disabled'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 236,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 65,
+                            "content": "/* require(allow_cream, 'Cream strategy is disabled'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 243,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "crFRAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 39,
+                            "content": "redeemUnderlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 51,
+                            "content": "FRAX_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 55,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 84,
+                            "content": "'RedeemUnderlying failed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 243,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 92,
+                            "content": "/* require(crFRAX.redeemUnderlying(FRAX_amount) == 0, 'RedeemUnderlying failed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 248,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "crFRAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 29,
+                            "content": "redeem",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 43,
+                            "content": "crFRAX_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 47,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 66,
+                            "content": "'Redeem failed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 248,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 74,
+                            "content": "/* require(crFRAX.redeem(crFRAX_amount) == 0, 'Redeem failed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
