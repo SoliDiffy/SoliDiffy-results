@@ -1,0 +1,342 @@
+{
+    "number_of_changes": 40,
+    "timing": 0.5714623928070068,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 18,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 20,
+                            "content": "deadline",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 29,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 39,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 67,
+                            "content": "\"WaultSwapRouter: EXPIRED\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 18,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 75,
+                            "content": "/* require(deadline >= block.timestamp, \"WaultSwapRouter: EXPIRED\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 10,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 11,
+                            "end": 14,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 21,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 29,
+                            "content": "WETH",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 37,
+                            "content": "/* assert(msg.sender == WETH); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 30,
+                            "content": "amountBOptimal",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 44,
+                            "content": "amountBMin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 86,
+                            "content": "\"WaultSwapRouter: INSUFFICIENT_B_AMOUNT\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 94,
+                            "content": "/* require(amountBOptimal >= amountBMin, \"WaultSwapRouter: INSUFFICIENT_B_AMOUNT\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 54,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 29,
+                            "content": "amountAOptimal",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 47,
+                            "content": "amountADesired",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 54,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 55,
+                            "content": "/* assert(amountAOptimal <= amountADesired); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 55,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 30,
+                            "content": "amountAOptimal",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 44,
+                            "content": "amountAMin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 86,
+                            "content": "\"WaultSwapRouter: INSUFFICIENT_A_AMOUNT\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 55,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 94,
+                            "content": "/* require(amountAOptimal >= amountAMin, \"WaultSwapRouter: INSUFFICIENT_A_AMOUNT\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
