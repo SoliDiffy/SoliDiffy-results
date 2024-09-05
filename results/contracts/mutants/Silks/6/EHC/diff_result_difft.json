@@ -1,0 +1,610 @@
+{
+    "number_of_changes": 81,
+    "timing": 0.40712666511535645,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 30,
+                            "content": "isPublicSaleActive",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 63,
+                            "content": "\"BASE_COLLECTION/CANNOT_MINT\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 71,
+                            "content": "/* require(isPublicSaleActive(), \"BASE_COLLECTION/CANNOT_MINT\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "isPreSaleActive",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 52,
+                            "content": "onEarlyPurchaseList",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 56,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 63,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 76,
+                            "content": "merkleProof",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 116,
+                            "content": "\"BASE_COLLECTION/CANNOT_MINT_PRESALE\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 116,
+                            "end": 117,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 124,
+                            "content": "/* require(isPreSaleActive() && onEarlyPurchaseList(msg.sender, merkleProof), \"BASE_COLLECTION/CANNOT_MINT_PRESALE\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "price",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "count",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 32,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 38,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 81,
+                            "content": "'BASE_COLLECTION/INSUFFICIENT_ETH_AMOUNT'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 89,
+                            "content": "/* require(price * count <= msg.value, 'BASE_COLLECTION/INSUFFICIENT_ETH_AMOUNT'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 123,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "totalSupply",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 33,
+                            "content": "count",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 47,
+                            "content": "_maxSupply",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 85,
+                            "content": "\"BASE_COLLECTION/EXCEEDS_MAX_SUPPLY\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 123,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 93,
+                            "content": "/* require(totalSupply() + count <= _maxSupply, \"BASE_COLLECTION/EXCEEDS_MAX_SUPPLY\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 131,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 27,
+                            "content": "maxPerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 58,
+                            "content": "totalMintFromAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 61,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 75,
+                            "content": "maxPerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 121,
+                            "content": "\"BASE_COLLECTION/EXCEEDS_INDIVIDUAL_SUPPLY\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 121,
+                            "end": 122,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 131,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 129,
+                            "content": "/* require ((maxPerAddress == 0) || (totalMintFromAddress <= maxPerAddress), \"BASE_COLLECTION/EXCEEDS_INDIVIDUAL_SUPPLY\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 129,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 29,
+                            "content": "_maxTxPerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 45,
+                            "content": "count",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 48,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 49,
+                            "end": 65,
+                            "content": "_maxTxPerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 113,
+                            "content": "\"BASE_COLLECTION/EXCEEDS_MAX_PER_TRANSACTION\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 113,
+                            "end": 114,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 129,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 121,
+                            "content": "/* require((_maxTxPerAddress == 0) || (count <= _maxTxPerAddress), \"BASE_COLLECTION/EXCEEDS_MAX_PER_TRANSACTION\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
