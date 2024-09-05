@@ -1,0 +1,164 @@
+{
+    "number_of_changes": 20,
+    "timing": 0.7369198799133301,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 37,
+                            "content": "timelockProposalTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 58,
+                            "content": "TIME_LOCK_INTERVAL",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 65,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 85,
+                            "content": "\"Can't commit yet\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 93,
+                            "content": "/* require((timelockProposalTime + TIME_LOCK_INTERVAL) < now, \"Can't commit yet\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 27,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 36,
+                            "content": "timelockProposalTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 64,
+                            "content": "\"Didn't proposed yet\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 27,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 72,
+                            "content": "/* require(timelockProposalTime != 0, \"Didn't proposed yet\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
