@@ -1,0 +1,614 @@
+{
+    "number_of_changes": 82,
+    "timing": 0.9762334823608398,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 34,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 61,
+                            "content": "\"FARMBOSSV1: !governance\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 69,
+                            "content": "/* require(msg.sender == governance, \"FARMBOSSV1: !governance\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 34,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 37,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 41,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 48,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 51,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 52,
+                            "end": 70,
+                            "content": "daoCouncilMultisig",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 111,
+                            "content": "\"FARMBOSSV1: !(governance || multisig)\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 111,
+                            "end": 112,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 119,
+                            "content": "/* require(msg.sender == governance || msg.sender == daoCouncilMultisig, \"FARMBOSSV1: !(governance || multisig)\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 114,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 14,
+                            "content": "_new",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 17,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 18,
+                            "end": 21,
+                            "content": "max",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 25,
+                            "content": "div",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "2",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 61,
+                            "content": "\"FARMBOSSV1: >half CRV to take\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 114,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 69,
+                            "content": "/* require(_new <= max.div(2), \"FARMBOSSV1: >half CRV to take\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 113,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 34,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 37,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 41,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 48,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 51,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 52,
+                            "end": 70,
+                            "content": "daoCouncilMultisig",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 111,
+                            "content": "\"FARMBOSSV1: !(governance || multisig)\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 111,
+                            "end": 112,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 113,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 119,
+                            "content": "/* require(msg.sender == governance || msg.sender == daoCouncilMultisig, \"FARMBOSSV1: !(governance || multisig)\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 124,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 34,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 61,
+                            "content": "\"FARMBOSSV1: !governance\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 124,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 69,
+                            "content": "/* require(msg.sender == governance, \"FARMBOSSV1: !governance\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 21,
+                            "content": "_newFarmers",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 28,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 32,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 43,
+                            "content": "_rmFarmers",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 54,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 55,
+                            "end": 65,
+                            "content": "LOOP_LIMIT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 92,
+                            "content": "\"FARMBOSSV1: >LOOP_LIMIT\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 100,
+                            "content": "/* require(_newFarmers.length.add(_rmFarmers.length) <= LOOP_LIMIT, \"FARMBOSSV1: >LOOP_LIMIT\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
