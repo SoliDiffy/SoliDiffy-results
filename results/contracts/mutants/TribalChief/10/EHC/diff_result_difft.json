@@ -1,0 +1,912 @@
+{
+    "number_of_changes": 118,
+    "timing": 1.186051607131958,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 148,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 34,
+                            "content": "newBlockReward",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 61,
+                            "content": "tribalChiefTribePerBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 110,
+                            "content": "\"TribalChief: admin can only lower reward rate\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 110,
+                            "end": 111,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 148,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 118,
+                            "content": "/* require(newBlockReward < tribalChiefTribePerBlock, \"TribalChief: admin can only lower reward rate\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 240,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "allocPoint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 80,
+                            "content": "\"pool must have allocation points to be created\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 240,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* require(allocPoint > 0, \"pool must have allocation points to be created\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 248,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "rewardData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 33,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 62,
+                            "content": "\"must specify rewards\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 248,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 70,
+                            "content": "/* require(rewardData.length != 0, \"must specify rewards\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 253,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 34,
+                            "content": "rewardData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 54,
+                            "content": "rewardMultiplier",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 57,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 70,
+                            "content": "SCALE_FACTOR",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 110,
+                            "content": "\"invalid multiplier for 0 lock length\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 110,
+                            "end": 111,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 253,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 118,
+                            "content": "/* require(rewardData[i].rewardMultiplier == SCALE_FACTOR, \"invalid multiplier for 0 lock length\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 256,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 34,
+                            "content": "rewardData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 54,
+                            "content": "rewardMultiplier",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 57,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 70,
+                            "content": "SCALE_FACTOR",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 120,
+                            "content": "\"invalid multiplier, must be above scale factor\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 120,
+                            "end": 121,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 256,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 128,
+                            "content": "/* require(rewardData[i].rewardMultiplier >= SCALE_FACTOR, \"invalid multiplier, must be above scale factor\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 288,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "totalAllocPoint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 74,
+                            "content": "\"total allocation points cannot be 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 288,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 82,
+                            "content": "/* require(totalAllocPoint > 0, \"total allocation points cannot be 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 386,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "multiplier",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 42,
+                            "content": "SCALE_FACTOR",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 65,
+                            "content": "\"invalid lock length\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 386,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 73,
+                            "content": "/* require(multiplier >= SCALE_FACTOR, \"invalid lock length\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 508,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "depositInfo",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 31,
+                            "content": "pid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 36,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 43,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 51,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 54,
+                            "end": 59,
+                            "content": "index",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 76,
+                            "content": "\"invalid index\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 508,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(depositInfo[pid][msg.sender].length > index, \"invalid index\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 517,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "poolDeposit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 39,
+                            "content": "unlockBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 42,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 48,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 55,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 58,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 63,
+                            "content": "pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 72,
+                            "content": "unlocked",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 75,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 76,
+                            "end": 80,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 82,
+                            "end": 97,
+                            "content": "\"tokens locked\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 97,
+                            "end": 98,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 517,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 105,
+                            "content": "/* require(poolDeposit.unlockBlock <= block.number || pool.unlocked == true, \"tokens locked\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 544,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 31,
+                            "content": "accumulatedTribe",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 56,
+                            "content": "accumulatedTribe",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 63,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 74,
+                            "content": "rewardDebt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 77,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 544,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 87,
+                            "content": "/* assert(accumulatedTribe >= 0 && accumulatedTribe - user.rewardDebt >= 0); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
