@@ -1,0 +1,172 @@
+{
+    "number_of_changes": 21,
+    "timing": 0.854867696762085,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 25,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 40,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 115,
+                            "content": "'PositionManagerFactory::onlyGovernance: Only governance can add actions'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 115,
+                            "end": 116,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 25,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 123,
+                            "content": "/* require(msg.sender == governance, 'PositionManagerFactory::onlyGovernance: Only governance can add actions'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 53,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "actionAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 40,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 113,
+                            "content": "'PositionManagerFactory::pushActionData: Action address cannot be 0'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 113,
+                            "end": 114,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 53,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 121,
+                            "content": "/* require(actionAddress != address(0), 'PositionManagerFactory::pushActionData: Action address cannot be 0'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

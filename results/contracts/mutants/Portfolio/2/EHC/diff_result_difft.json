@@ -1,0 +1,202 @@
+{
+    "number_of_changes": 26,
+    "timing": 0.9599103927612305,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "hasRole",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 42,
+                            "content": "DEFAULT_ADMIN_ROLE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 47,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 54,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 79,
+                            "content": "\"Restricted to admins\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 87,
+                            "content": "/* require(hasRole(DEFAULT_ADMIN_ROLE, msg.sender), \"Restricted to admins\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 31,
+                            "content": "assetWeight",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 37,
+                            "content": "asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 40,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 48,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 75,
+                            "content": "\"weight without asset\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 83,
+                            "content": "/* require(assetWeight.asset != address(0), \"weight without asset\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
