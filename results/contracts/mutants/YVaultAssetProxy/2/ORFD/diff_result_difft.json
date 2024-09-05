@@ -1,0 +1,2140 @@
+{
+    "number_of_changes": 279,
+    "timing": 1.1364350318908691,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 138,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 20,
+                            "content": "_setReserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 45,
+                            "content": "neededShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 128,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 77,
+                            "content": "// If we have enough in local reserves we don't call out for deposits",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 117,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 30,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 40,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 48,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 53,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 73,
+                            "content": "localUnderlying",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 123,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 73,
+                            "content": "// Note - to get a realistic reading and avoid rounding errors we",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 136,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 30,
+                            "content": "vault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 38,
+                            "content": "deposit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 54,
+                            "content": "localUnderlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 63,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 72,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 77,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 137,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 30,
+                            "content": "// We set the reserves",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 127,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "neededShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 38,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 57,
+                            "content": "yearnTotalSupply",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": "/",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 77,
+                            "content": "yearnTotalAssets",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 119,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "localUnderlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 47,
+                            "content": "localShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 50,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 32,
+                            "content": "yearnTotalSupply",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 40,
+                            "content": "vault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 52,
+                            "content": "totalSupply",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "neededShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 122,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 71,
+                            "content": "// Calculate the amount of shares the amount deposited is worth",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 126,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 32,
+                            "content": "yearnTotalAssets",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 40,
+                            "content": "vault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 52,
+                            "content": "totalAssets",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 35,
+                            "content": "// Get the amount deposited",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 135,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 62,
+                            "content": "// Deposit and get the shares that were minted to this",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 132,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 61,
+                            "content": "// And then we short circuit execution and return",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 21,
+                            "content": "-=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "1",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 118,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 58,
+                            "content": "// fixing for the fact there's an extra underlying",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 124,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 72,
+                            "content": "// use the method of the yearn vault instead of '_pricePerShare'",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 9,
+                            "end": 16,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 32,
+                            "content": "localUnderlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 53,
+                            "content": "localShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 69,
+                            "content": "_getReserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 134,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 130,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 34,
+                            "content": "// We set the reserves",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 121,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 131,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 24,
+                            "content": "_setReserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 40,
+                            "content": "localUnderlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 49,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 62,
+                            "content": "localShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 65,
+                            "end": 77,
+                            "content": "neededShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 133,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 32,
+                            "content": "neededShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 40,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 139,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 89,
+                            "content": "// Return the amount of shares the user has produced, and the amount used for it.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 114,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 23,
+                            "content": "//Load reserves",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 129,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "localShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 38,
+                            "content": "neededShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 113,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 21,
+                            "content": "_deposit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 32,
+                            "content": "internal",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 41,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 49,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 58,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 67,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 113,
+                    "changes": []
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 162,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 24,
+                            "content": "_setReserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 40,
+                            "content": "localUnderlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 49,
+                            "content": "needed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 62,
+                            "content": "localShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 65,
+                            "end": 72,
+                            "content": "_shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 173,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 24,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 174,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "1",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 181,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 158,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 74,
+                            "content": "// If we have enough underlying we don't have to actually withdraw",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 178,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 13,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 22,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 35,
+                            "content": "_destination",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 43,
+                            "content": "needed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 180,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 21,
+                            "content": "needed",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 154,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 31,
+                            "content": "_underlyingPerShare",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 48,
+                            "content": "_pricePerShare",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 152,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 59,
+                            "content": "// If we do not have it we load the price per share",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 155,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 157,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 9,
+                            "end": 16,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 32,
+                            "content": "localUnderlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 53,
+                            "content": "localShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 69,
+                            "content": "_getReserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 177,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 96,
+                            "content": "// Transfer the underlying to the destination 'token' is an immutable in WrappedPosition",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 167,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "needed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 172,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "_shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 33,
+                            "content": "localShares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 164,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 57,
+                            "content": "// 'token' is an immutable in WrappedPosition",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 170,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 62,
+                            "content": "// Withdraws shares from the vault with max loss 0.01%",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 156,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 31,
+                            "content": "// We load the reserves",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 149,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "_destination",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 150,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 35,
+                            "content": "_underlyingPerShare",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 147,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 22,
+                            "content": "_withdraw",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 119,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 161,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 57,
+                            "content": "// We set the reserves to be the new reserves",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 165,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 26,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 39,
+                            "content": "_destination",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 47,
+                            "content": "needed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 151,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 6,
+                            "end": 14,
+                            "content": "internal",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 23,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 31,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 40,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 168,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 171,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 30,
+                            "content": "amountReceived",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 38,
+                            "content": "vault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 47,
+                            "content": "withdraw",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 166,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 39,
+                            "content": "// Short circuit and return",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 148,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 153,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 31,
+                            "content": "_underlyingPerShare",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 169,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 75,
+                            "content": "// If we don't have enough local reserves we do the actual withdraw",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 159,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "needed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "_shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 55,
+                            "content": "_underlyingPerShare",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "/",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 61,
+                            "content": "10",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 63,
+                            "content": "**",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 63,
+                            "end": 76,
+                            "content": "vaultDecimals",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "needed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 36,
+                            "content": "localUnderlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 175,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 179,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 42,
+                            "content": "// Return the amount of underlying",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 163,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 65,
+                            "content": "// Then transfer needed underlying to the destination",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 176,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 20,
+                            "content": "_setReserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 21,
+                            "end": 35,
+                            "content": "amountReceived",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 44,
+                            "content": "needed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
