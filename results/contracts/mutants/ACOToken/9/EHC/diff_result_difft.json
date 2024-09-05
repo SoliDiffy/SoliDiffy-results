@@ -1,0 +1,762 @@
+{
+    "number_of_changes": 98,
+    "timing": 0.28264427185058594,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 150,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "_notExpired",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 50,
+                            "content": "\"ACOToken::Expired\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 150,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 58,
+                            "content": "/* require(_notExpired(), \"ACOToken::Expired\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 158,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "_notEntered",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 48,
+                            "content": "\"ACOToken::Reentry\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 158,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 56,
+                            "content": "/* require(_notEntered, \"ACOToken::Reentry\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 189,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "_underlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 43,
+                            "content": "_strikeAsset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 74,
+                            "content": "\"ACOToken::init: Same assets\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 189,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 82,
+                            "content": "/* require(_underlying != _strikeAsset, \"ACOToken::init: Same assets\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 192,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "_isEther",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 37,
+                            "content": "_strikeAsset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 54,
+                            "content": "_strikeAsset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 65,
+                            "content": "isContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 107,
+                            "content": "\"ACOToken::init: Invalid strike asset\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 107,
+                            "end": 108,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 192,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 115,
+                            "content": "/* require(_isEther(_strikeAsset) || _strikeAsset.isContract(), \"ACOToken::init: Invalid strike asset\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "_isEther",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 36,
+                            "content": "_underlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 40,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 52,
+                            "content": "_underlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 63,
+                            "content": "isContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 103,
+                            "content": "\"ACOToken::init: Invalid underlying\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 111,
+                            "content": "/* require(_isEther(_underlying) || _underlying.isContract(), \"ACOToken::init: Invalid underlying\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 185,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "underlying",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 55,
+                            "content": "strikeAsset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 58,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 66,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 70,
+                            "end": 72,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 73,
+                            "end": 84,
+                            "content": "strikePrice",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 87,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 91,
+                            "end": 128,
+                            "content": "\"ACOToken::init: Already initialized\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 128,
+                            "end": 129,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 185,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 136,
+                            "content": "/* require(underlying == address(0) && strikeAsset == address(0) && strikePrice == 0, \"ACOToken::init: Already initialized\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 187,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "_expiryTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 33,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 67,
+                            "content": "\"ACOToken::init: Invalid expiry\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 187,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 75,
+                            "content": "/* require(_expiryTime > now, \"ACOToken::init: Invalid expiry\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 190,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_acoFee",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 30,
+                            "content": "500",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 65,
+                            "content": "\"ACOToken::init: Invalid ACO fee\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 190,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 73,
+                            "content": "/* require(_acoFee <= 500, \"ACOToken::init: Invalid ACO fee\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 188,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "_strikePrice",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 72,
+                            "content": "\"ACOToken::init: Invalid strike price\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 188,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 80,
+                            "content": "/* require(_strikePrice > 0, \"ACOToken::init: Invalid strike price\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
