@@ -1,0 +1,2841 @@
+{
+    "number_of_changes": 384,
+    "timing": 0.4561896324157715,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 86,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 113,
+                            "content": "// Update each reserve AToken implementation, Debt implementation, and prepare incentives configuration input",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "content": "11",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 35,
+                            "content": "129733796296296",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 48,
+                            "content": "//vDebtWETH",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 50,
+                            "content": "0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 55,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "2",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 33,
+                            "content": "92939814814815",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 42,
+                            "content": "//aGUSD",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 33,
+                            "content": "ILendingPoolAddressesProvider",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 34,
+                            "end": 42,
+                            "content": "provider",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 74,
+                            "content": "ILendingPoolAddressesProvider",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 75,
+                            "end": 93,
+                            "content": "ADDRESSES_PROVIDER",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 70,
+                            "content": "//adding the incentives controller proxy to the addresses provider",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "provider",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 30,
+                            "content": "setAddressAsProxy",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 40,
+                            "content": "keccak256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 64,
+                            "content": "'INCENTIVES_CONTROLLER'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 101,
+                            "content": "INCENTIVES_CONTROLLER_IMPL_ADDRESS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 91,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 7,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 58,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "5",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 35,
+                            "content": "5291203703703700",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 48,
+                            "content": "//vDebtUSDC",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 92,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 25,
+                            "content": "tokensCounter",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 33,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "6",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 21,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 43,
+                            "content": "aTokenImplementations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 31,
+                            "content": "IAaveIncentivesController",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 67,
+                            "content": "INCENTIVES_CONTROLLER_PROXY_ADDRESS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 22,
+                            "content": "poolConfigurator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 46,
+                            "content": "updateVariableDebtToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 55,
+                            "content": "reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 87,
+                            "content": "variableDebtImplementations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 110,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 111,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 55,
+                            "content": "// Transfer AAVE funds to the Incentives Controller",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 113,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 16,
+                            "content": "AAVE_TOKEN",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 15,
+                            "content": "DataTypes",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "ReserveData",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 28,
+                            "end": 34,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 46,
+                            "content": "reserveData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "=",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 68,
+                            "content": "//updating the implementation of the incentives controller proxy",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 50,
+                            "content": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "9",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 34,
+                            "content": "105034722222222",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 47,
+                            "content": "//vDebtWBTC",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 51,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 30,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 36,
+                            "content": "new",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "12",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 118,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 60,
+                            "content": "// Enable incentives in aTokens and Variable Debt tokens",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 95,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 7,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 57,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "4",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 35,
+                            "content": "5291203703703700",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "//aUSDC",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 35,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 21,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "8",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 35,
+                            "content": "1995659722222220",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "//aWBTC",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 29,
+                            "content": "aTokenImplementations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 48,
+                            "content": "reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 55,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 53,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 35,
+                            "content": "1706018518518520",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 43,
+                            "content": "//aDAI",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 29,
+                            "content": "'ARRAY_LENGTH_MISMATCH'",
+                            "highlight": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 27,
+                            "content": "// Update aToken impl",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 35,
+                            "content": "IAaveEcosystemReserveController",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 36,
+                            "end": 62,
+                            "content": "ecosystemReserveController",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "=",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 108,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 12,
+                            "content": "assets",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 26,
+                            "content": "tokensCounter",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "++",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 43,
+                            "content": "reserveData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 68,
+                            "content": "variableDebtTokenAddress",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 27,
+                            "content": "assets",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 33,
+                            "content": "new",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": "12",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 121,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 45,
+                            "content": "// Sets the end date for the distribution",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 93,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 23,
+                            "content": "IATokenDetailed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 51,
+                            "content": "variableDebtImplementations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 80,
+                            "content": "UNDERLYING_ASSET_ADDRESS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 83,
+                            "end": 85,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 86,
+                            "end": 94,
+                            "content": "reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 94,
+                            "end": 95,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 97,
+                            "end": 98,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 37,
+                            "content": "IAaveEcosystemReserveController",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 57,
+                            "content": "ECO_RESERVE_ADDRESS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 50,
+                            "content": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "6",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 35,
+                            "content": "3293634259259260",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "//aUSDT",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 81,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 27,
+                            "content": "aTokenImplementations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 34,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 37,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 65,
+                            "content": "variableDebtImplementations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 72,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 75,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 123,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 3,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 34,
+                            "content": "// Update variable debt impl",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 122,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 24,
+                            "content": "incentivesController",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 43,
+                            "content": "setDistributionEnd",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 49,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 59,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 83,
+                            "content": "DISTRIBUTION_DURATION",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 50,
+                            "content": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 50,
+                            "content": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 56,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "3",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 33,
+                            "content": "92939814814815",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 46,
+                            "content": "//vDebtGUSD",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 42,
+                            "content": "'AToken underlying does not match'",
+                            "highlight": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 105,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 12,
+                            "content": "assets",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 26,
+                            "content": "tokensCounter",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "++",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 43,
+                            "content": "reserveData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 57,
+                            "content": "aTokenAddress",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "7",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 35,
+                            "content": "3293634259259260",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 48,
+                            "content": "//vDebtUSDT",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 7,
+                            "content": "for",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 9,
+                            "end": 16,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 36,
+                            "content": "reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 43,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 48,
+                            "content": "++",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "provider",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 23,
+                            "content": "setAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 33,
+                            "content": "keccak256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 57,
+                            "content": "'INCENTIVES_CONTROLLER'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 95,
+                            "content": "INCENTIVES_CONTROLLER_PROXY_ADDRESS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 114,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 41,
+                            "content": "INCENTIVES_CONTROLLER_PROXY_ADDRESS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 28,
+                            "content": "ILendingPoolConfigurator",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 29,
+                            "end": 45,
+                            "content": "poolConfigurator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 72,
+                            "content": "ILendingPoolConfigurator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 90,
+                            "content": "POOL_CONFIGURATOR",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 54,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 35,
+                            "content": "1706018518518520",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 47,
+                            "content": "//vDebtDAI",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 25,
+                            "content": "DISTRIBUTION_AMOUNT",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 32,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 18,
+                            "content": "execute",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 32,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 94,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 46,
+                            "content": "'Debt Token underlying does not match'",
+                            "highlight": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 51,
+                            "content": "// Reserves Order: DAI/GUSD/USDC/USDT/WBTC/WETH",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 63,
+                            "content": "// Configure variable debt token at incentives controller",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 24,
+                            "content": "ILendingPoolData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 37,
+                            "content": "LENDING_POOL",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 53,
+                            "content": "getReserveData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 62,
+                            "content": "reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 119,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 24,
+                            "content": "incentivesController",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 40,
+                            "content": "configureAssets",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 47,
+                            "content": "assets",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 58,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 50,
+                            "content": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 42,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 7,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 100,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 22,
+                            "content": "poolConfigurator",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 35,
+                            "content": "updateAToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 44,
+                            "content": "reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 70,
+                            "content": "aTokenImplementations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 13,
+                            "content": "emissions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "content": "10",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 36,
+                            "content": "2464942129629630",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 44,
+                            "content": "//aETH",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 34,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "6",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 21,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 49,
+                            "content": "variableDebtImplementations",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 29,
+                            "content": "IAaveIncentivesController",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 30,
+                            "end": 50,
+                            "content": "incentivesController",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "=",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 49,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 7,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 89,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 23,
+                            "content": "IATokenDetailed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 45,
+                            "content": "aTokenImplementations",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 74,
+                            "content": "UNDERLYING_ASSET_ADDRESS",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 77,
+                            "end": 79,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 80,
+                            "end": 88,
+                            "content": "reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 112,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 30,
+                            "content": "ecosystemReserveController",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 39,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "payable",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "6",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 29,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 38,
+                            "content": "reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "=",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

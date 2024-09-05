@@ -1,0 +1,244 @@
+{
+    "number_of_changes": 33,
+    "timing": 2.0607550144195557,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 58,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "s",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 37,
+                            "content": "admin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 88,
+                            "content": "\"Prism::setPendingProxyImp: caller must be admin\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 58,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 96,
+                            "content": "/* require(msg.sender == s.admin, \"Prism::setPendingProxyImp: caller must be admin\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "s",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 53,
+                            "content": "pendingImplementation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 56,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "s",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 80,
+                            "content": "pendingImplementation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 83,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 84,
+                            "end": 91,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 94,
+                            "end": 95,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 96,
+                            "end": 158,
+                            "content": "\"Prism::acceptProxyImp: caller must be pending implementation\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 158,
+                            "end": 159,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 166,
+                            "content": "/* require(msg.sender == s.pendingImplementation && s.pendingImplementation != address(0), \"Prism::acceptProxyImp: caller must be pending implementation\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
