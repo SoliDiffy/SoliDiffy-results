@@ -1,0 +1,184 @@
+{
+    "number_of_changes": 23,
+    "timing": 0.7968790531158447,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 131,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 32,
+                            "content": "currentMarketCap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 65,
+                            "content": "lastWeightAdjustmentMarketCap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 69,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 70,
+                            "end": 88,
+                            "content": "marketCapThreshold",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 124,
+                            "content": "\"ERR_MARKET_CAP_BELOW_THRESHOLD\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 124,
+                            "end": 125,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 131,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 132,
+                            "content": "/* require(currentMarketCap > (lastWeightAdjustmentMarketCap.add(marketCapThreshold)), \"ERR_MARKET_CAP_BELOW_THRESHOLD\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 136,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "newWeight",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 42,
+                            "content": "minimumWeight",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 72,
+                            "content": "\"ERR_INVALID_RESERVE_WEIGHT\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 136,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 80,
+                            "content": "/* require(newWeight >= minimumWeight, \"ERR_INVALID_RESERVE_WEIGHT\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
