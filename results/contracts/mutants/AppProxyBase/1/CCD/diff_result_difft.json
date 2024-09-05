@@ -1,0 +1,496 @@
+{
+    "number_of_changes": 62,
+    "timing": 0.4125092029571533,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 20,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 99,
+                            "content": "// The EVM doesn't actually provide a way for us to make sure, but we can force a revert to",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 77,
+                            "content": "// returns ending execution context and halts contract deployment",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 16,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 17,
+                            "content": "setKernel",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 25,
+                            "content": "_kernel",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 25,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 65,
+                            "content": "// If initialize payload is provided, it will be executed",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 15,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "constructor",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "IKernel",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 24,
+                            "end": 31,
+                            "content": "_kernel",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 40,
+                            "content": "bytes32",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 47,
+                            "content": "_appId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 54,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 73,
+                            "content": "_initializePayload",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 75,
+                            "end": 81,
+                            "content": "public",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 15,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 23,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "appCode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 36,
+                            "content": "getAppBase",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 43,
+                            "content": "_appId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 27,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 30,
+                            "content": "isContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 38,
+                            "content": "appCode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 77,
+                            "content": "// Cannot make delegatecall as a delegateproxy.delegatedFwd as it",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 31,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 32,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 22,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "// it.",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 19,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 58,
+                            "content": "// Implicit check that kernel is actually a Kernel",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 30,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 27,
+                            "content": "appCode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 40,
+                            "content": "delegatecall",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 59,
+                            "content": "_initializePayload",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 21,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 98,
+                            "content": "// occur if the kernel is set to 0x0 or a non-code address when we try to call a method on",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 17,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 16,
+                            "content": "setAppId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 23,
+                            "content": "_appId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 26,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 30,
+                            "content": "_initializePayload",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 37,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
