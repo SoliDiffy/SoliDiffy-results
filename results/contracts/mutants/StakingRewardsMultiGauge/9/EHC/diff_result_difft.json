@@ -1,0 +1,708 @@
+{
+    "number_of_changes": 88,
+    "timing": 0.7472684383392334,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 180,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 52,
+                            "content": "\"Not the owner\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 180,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 60,
+                            "content": "/* require(msg.sender == owner, \"Not the owner\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 185,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 56,
+                            "content": "isTokenManagerFor",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 60,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 67,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 89,
+                            "content": "reward_token_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 114,
+                            "content": "\"Not owner or tkn mgr\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 114,
+                            "end": 115,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 185,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 122,
+                            "content": "/* require(msg.sender == owner || isTokenManagerFor(msg.sender, reward_token_address), \"Not owner or tkn mgr\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "migrationsOn",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 36,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 56,
+                            "content": "\"Not in migration\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 64,
+                            "content": "/* require(migrationsOn == true, \"Not in migration\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 196,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "stakingPaused",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 38,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 56,
+                            "content": "\"Staking paused\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 196,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 64,
+                            "content": "/* require(stakingPaused == false, \"Staking paused\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 528,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "valid_migrators",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 48,
+                            "content": "migrator_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 77,
+                            "content": "\"Invalid migrator address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 528,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 85,
+                            "content": "/* require(valid_migrators[migrator_address], \"Invalid migrator address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 604,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 30,
+                            "content": "stakingPaused",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 48,
+                            "content": "\"Staking paused\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 604,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 56,
+                            "content": "/* require(!stakingPaused, \"Staking paused\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 606,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "greylist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 39,
+                            "content": "staker_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 49,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 80,
+                            "content": "\"Address has been greylisted\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 606,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* require(greylist[staker_address] == false, \"Address has been greylisted\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 605,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "liquidity",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 58,
+                            "content": "\"Must stake more than zero\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 605,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 66,
+                            "content": "/* require(liquidity > 0, \"Must stake more than zero\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 607,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "secs",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 37,
+                            "content": "lock_time_min",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 67,
+                            "content": "\"Minimum stake time not met\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 607,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 75,
+                            "content": "/* require(secs >= lock_time_min, \"Minimum stake time not met\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

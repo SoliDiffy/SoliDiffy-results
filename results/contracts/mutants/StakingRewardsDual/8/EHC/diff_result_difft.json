@@ -1,0 +1,654 @@
+{
+    "number_of_changes": 83,
+    "timing": 1.7820987701416016,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 236,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "greylist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 28,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 35,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 45,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 76,
+                            "content": "\"address has been greylisted\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 236,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(greylist[msg.sender] == false, \"address has been greylisted\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 235,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 44,
+                            "content": "\"Cannot stake 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 235,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 52,
+                            "content": "/* require(amount > 0, \"Cannot stake 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 257,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "secs",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 60,
+                            "content": "locked_stake_time_for_max_multiplier",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 100,
+                            "content": "\"You are trying to stake for too long\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 257,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 108,
+                            "content": "/* require(secs <= locked_stake_time_for_max_multiplier, \"You are trying to stake for too long\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 254,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "secs",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 61,
+                            "content": "\"Cannot wait for a negative number\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 254,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 69,
+                            "content": "/* require(secs > 0, \"Cannot wait for a negative number\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 255,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "greylist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 28,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 35,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 45,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 76,
+                            "content": "\"address has been greylisted\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 255,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(greylist[msg.sender] == false, \"address has been greylisted\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 256,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "secs",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 45,
+                            "content": "locked_stake_min_time",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 60,
+                            "content": "StringHelpers",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 70,
+                            "content": "strConcat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 101,
+                            "content": "\"Minimum stake time not met (\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 103,
+                            "end": 128,
+                            "content": "locked_stake_min_time_str",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 128,
+                            "end": 129,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 130,
+                            "end": 133,
+                            "content": "\")\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 133,
+                            "end": 134,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 135,
+                            "end": 136,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 256,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 143,
+                            "content": "/* require(secs >= locked_stake_min_time, StringHelpers.strConcat(\"Minimum stake time not met (\", locked_stake_min_time_str, \")\") ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 253,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 44,
+                            "content": "\"Cannot stake 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 253,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 52,
+                            "content": "/* require(amount > 0, \"Cannot stake 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 284,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 47,
+                            "content": "\"Cannot withdraw 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 284,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 55,
+                            "content": "/* require(amount > 0, \"Cannot withdraw 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

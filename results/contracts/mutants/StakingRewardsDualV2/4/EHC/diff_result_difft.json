@@ -1,0 +1,428 @@
+{
+    "number_of_changes": 57,
+    "timing": 1.165039300918579,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 43,
+                            "content": "owner_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 50,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 57,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 60,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 77,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 129,
+                            "content": "\"You are not the owner or the governance timelock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 129,
+                            "end": 130,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 137,
+                            "content": "/* require(msg.sender == owner_address || msg.sender == timelock_address, \"You are not the owner or the governance timelock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 43,
+                            "content": "owner_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 50,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 57,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 60,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 77,
+                            "content": "timelock_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 80,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 81,
+                            "end": 96,
+                            "content": "valid_migrators",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 97,
+                            "end": 100,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 101,
+                            "end": 107,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 107,
+                            "end": 108,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 109,
+                            "end": 111,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 112,
+                            "end": 116,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 116,
+                            "end": 117,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 118,
+                            "end": 177,
+                            "content": "\"You are not the owner, governance timelock, or a migrator\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 177,
+                            "end": 178,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 125,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 185,
+                            "content": "/* require(msg.sender == owner_address || msg.sender == timelock_address || valid_migrators[msg.sender] == true, \"You are not the owner, governance timelock, or a migrator\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 130,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "migrationsOn",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 36,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 68,
+                            "content": "\"Contract is not in migration\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 130,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 76,
+                            "content": "/* require(migrationsOn == true, \"Contract is not in migration\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 135,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "withdrawalsPaused",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 42,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 68,
+                            "content": "\"Withdrawals are paused\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 135,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 76,
+                            "content": "/* require(withdrawalsPaused == false, \"Withdrawals are paused\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

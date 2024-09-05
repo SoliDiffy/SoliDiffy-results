@@ -1,0 +1,430 @@
+{
+    "number_of_changes": 40,
+    "timing": 2.2129366397857666,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 56,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "startPeriod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 63,
+                            "content": "\"Staking has already started\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 56,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 71,
+                            "content": "/* require(startPeriod == 0, \"Staking has already started\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 34,
+                            "content": "\"Staking period ended\"",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 34,
+                            "content": "            \"Staking period ended\"",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "endPeriod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 39,
+                            "content": "endPeriod",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 47,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 57,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 58,
+                            "content": "            endPeriod == 0 || endPeriod > block.timestamp,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 30,
+                            "content": "1E18",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 66,
+                            "content": "\"Amount must be greater than 1E18\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 74,
+                            "content": "/* require(amount >= 1E18, \"Amount must be greater than 1E18\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 76,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 44,
+                            "content": "\"Amount staked exceeds MaxStake\"",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 76,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 44,
+                            "content": "            \"Amount staked exceeds MaxStake\"",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "totalStaked",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 46,
+                            "content": "stakingMax",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 47,
+                            "content": "            totalStaked + amount <= stakingMax,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "content": "        ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "content": "        ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

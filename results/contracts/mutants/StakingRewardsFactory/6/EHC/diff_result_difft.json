@@ -1,0 +1,622 @@
+{
+    "number_of_changes": 74,
+    "timing": 1.4655158519744873,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 38,
+                            "content": "_stakingRewardsGenesis",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 47,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 57,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 113,
+                            "content": "'StakingRewardsFactory::constructor: genesis too soon'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 113,
+                            "end": 114,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 121,
+                            "content": "/* require(_stakingRewardsGenesis >= block.timestamp, 'StakingRewardsFactory::constructor: genesis too soon'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "info",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 35,
+                            "content": "stakingRewards",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 46,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 100,
+                            "content": "'StakingRewardsFactory::deploy: already deployed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 108,
+                            "content": "/* require(info.stakingRewards == address(0), 'StakingRewardsFactory::deploy: already deployed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "stakingTokens",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 113,
+                            "content": "'StakingRewardsFactory::notifyRewardAmounts: called before any deploys'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 113,
+                            "end": 114,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 121,
+                            "content": "/* require(stakingTokens.length > 0, 'StakingRewardsFactory::notifyRewardAmounts: called before any deploys'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "info",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 35,
+                            "content": "stakingRewards",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 46,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 108,
+                            "content": "'StakingRewardsFactory::notifyRewardAmount: not deployed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 116,
+                            "content": "/* require(info.stakingRewards != address(0), 'StakingRewardsFactory::notifyRewardAmount: not deployed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 56,
+                            "content": "stakingRewardsGenesis",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 112,
+                            "content": "'StakingRewardsFactory::notifyRewardAmount: not ready'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 112,
+                            "end": 113,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 120,
+                            "content": "/* require(block.timestamp >= stakingRewardsGenesis, 'StakingRewardsFactory::notifyRewardAmount: not ready'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "IERC20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 35,
+                            "content": "rewardsToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 45,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 50,
+                            "content": "info",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 65,
+                            "content": "stakingRewards",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 79,
+                            "content": "rewardAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 81,
+                            "content": "                IERC20(rewardsToken).transfer(info.stakingRewards, rewardAmount),",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "content": "            ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 76,
+                            "content": "'StakingRewardsFactory::notifyRewardAmount: transfer failed'",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 76,
+                            "content": "                'StakingRewardsFactory::notifyRewardAmount: transfer failed'",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

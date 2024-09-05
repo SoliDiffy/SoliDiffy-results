@@ -1,0 +1,172 @@
+{
+    "number_of_changes": 21,
+    "timing": 0.9189691543579102,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 124,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "_governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 34,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 87,
+                            "content": "\"StakingPools: governance address cannot be 0x0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 124,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 95,
+                            "content": "/* require(_governance != address(0), \"StakingPools: governance address cannot be 0x0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 138,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 15,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 36,
+                            "content": "governance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 69,
+                            "content": "\"StakingPools: only governance\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 138,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 77,
+                            "content": "/* require(msg.sender == governance, \"StakingPools: only governance\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

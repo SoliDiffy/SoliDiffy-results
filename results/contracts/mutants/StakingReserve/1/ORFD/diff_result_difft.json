@@ -1,0 +1,1100 @@
+{
+    "number_of_changes": 158,
+    "timing": 0.7707598209381104,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 211,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 31,
+                            "content": "notifyRewardAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 39,
+                            "content": "Decimal",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 47,
+                            "content": "decimal",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 48,
+                            "end": 56,
+                            "content": "calldata",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 64,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 66,
+                            "end": 74,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 75,
+                            "end": 83,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 107,
+                            "content": "onlyRewardsDistribution",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 211,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 219,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "IERC20",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 19,
+                            "end": 24,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 36,
+                            "content": "feeTokens",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 216,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 104,
+                            "content": "// Note this is initialized AFTER a new entry is pushed to epochRewardHistory, hence the minus 1",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 217,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "currentEpochIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 50,
+                            "content": "nextEpochIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 56,
+                            "content": "sub",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 218,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 11,
+                            "content": "for",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 20,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 37,
+                            "content": "feeTokens",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 44,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "i",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 49,
+                            "content": "++",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 222,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "feeMap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 24,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 35,
+                            "content": "Decimal",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 40,
+                            "content": "zero",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 223,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 225,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 57,
+                            "content": "// update totalEffectiveStakeMap for coming epoch",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 229,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 49,
+                            "content": "updatedTotalEffectiveStakeBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 55,
+                            "content": "toInt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 58,
+                            "end": 60,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 98,
+                            "content": "\"Unstake more than locked balance\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 98,
+                            "end": 99,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 231,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 32,
+                            "content": "totalPendingStakeBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 48,
+                            "content": "SignedDecimal",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 53,
+                            "content": "zero",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 220,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 27,
+                            "content": "FeeInEpoch",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 35,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 41,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "feeMap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 56,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 64,
+                            "content": "toUint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 85,
+                            "content": "currentEpochIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 221,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 30,
+                            "content": "epochRewardHistory",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 48,
+                            "content": "currentEpochIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 56,
+                            "content": "feeMap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 64,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 70,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 81,
+                            "content": "feeMap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 82,
+                            "end": 87,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 214,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 26,
+                            "content": "epochRewardHistory",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 31,
+                            "content": "push",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 43,
+                            "content": "EpochReward",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 51,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 226,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 21,
+                            "content": "SignedDecimal",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 35,
+                            "content": "signedDecimal",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 76,
+                            "content": "updatedTotalEffectiveStakeBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 103,
+                            "content": "totalPendingStakeBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 104,
+                            "end": 108,
+                            "content": "addD",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 232,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 212,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 46,
+                            "content": "// record reward to epochRewardHistory",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 227,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 38,
+                            "content": "totalBalanceBeforeEndEpoch",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 228,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 213,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "Decimal",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "decimal",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 57,
+                            "content": "totalBalanceBeforeEndEpoch",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 75,
+                            "content": "getTotalBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 230,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 30,
+                            "content": "totalEffectiveStakeMap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 46,
+                            "content": "nextEpochIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 86,
+                            "content": "updatedTotalEffectiveStakeBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 90,
+                            "content": "abs",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,400 @@
+{
+    "number_of_changes": 49,
+    "timing": 0.8239803314208984,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 46,
+                            "content": "_operatorAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 54,
+                            "content": "/* require(msg.sender == _operatorAddress); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 38,
+                            "content": "commissionRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 42,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 64,
+                            "content": "COMMISSION_RATE_SCALE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 97,
+                            "content": "\"Commission rate exceeds scale\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 97,
+                            "end": 98,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 105,
+                            "content": "/* require(uint256(commissionRate) <= COMMISSION_RATE_SCALE, \"Commission rate exceeds scale\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "newAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 73,
+                            "content": "\"Address can't be zero address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 81,
+                            "content": "/* require(newAddress != address(0), \"Address can't be zero address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 41,
+                            "content": "newCommissionRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 45,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 67,
+                            "content": "COMMISSION_RATE_SCALE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 100,
+                            "content": "\"Commission rate exceeds scale\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 108,
+                            "content": "/* require(uint256(newCommissionRate) <= COMMISSION_RATE_SCALE, \"Commission rate exceeds scale\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 95,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 20,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 26,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 38,
+                            "content": "ether",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 95,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 46,
+                            "content": "/* require (msg.value <= 32 ether); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

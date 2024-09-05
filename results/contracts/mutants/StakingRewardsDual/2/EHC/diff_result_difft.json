@@ -1,0 +1,170 @@
+{
+    "number_of_changes": 21,
+    "timing": 1.0964500904083252,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 235,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 44,
+                            "content": "\"Cannot stake 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 235,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 52,
+                            "content": "/* require(amount > 0, \"Cannot stake 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 236,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "greylist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 28,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 35,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 45,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 76,
+                            "content": "\"address has been greylisted\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 236,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(greylist[msg.sender] == false, \"address has been greylisted\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
