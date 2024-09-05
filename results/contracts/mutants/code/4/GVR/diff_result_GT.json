@@ -1,0 +1,5 @@
+{
+    "number_of_edits": 4,
+    "timing": 5.446939706802368,
+    "edit_script": "<actions>\n  <update-node tree=\"member_expression: vestingMembers[_address].totalSum == 0 || block.number &lt;= vestingMembers[_address].start [7827,7915]\" label=\"vestingMembers[_address].totalSum == 0 || block.difficulty &lt;= vestingMembers[_address].start\" />\n  <update-node tree=\"member_expression: block.number &gt;= vestingMembers[_address].end [7963,8007]\" label=\"block.difficulty &gt;= vestingMembers[_address].end\" />\n  <update-node tree=\"member_expression: vestingMembers[_address].totalSum         .mul(block.number - vestingMembers[_address].start)         .div(vestingMembers[_address].end - vestingMembers[_address].start)         .sub [8132,8314]\" label=\"vestingMembers[_address].totalSum         .mul(block.difficulty - vestingMembers[_address].start)         .div(vestingMembers[_address].end - vestingMembers[_address].start)         .sub\" />\n  <update-node tree=\"member_expression: block.number &gt;= vestingMembers[_address].end [8940,8984]\" label=\"block.difficulty &gt;= vestingMembers[_address].end\" />\n</actions>\n"
+}
