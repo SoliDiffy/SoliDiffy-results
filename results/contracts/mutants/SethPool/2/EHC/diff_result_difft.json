@@ -1,0 +1,182 @@
+{
+    "number_of_changes": 23,
+    "timing": 0.4588630199432373,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 22,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 23,
+                            "end": 43,
+                            "content": "get_lp_token_balance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 86,
+                            "content": "\"withdraw_from_curve: too large amount\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 94,
+                            "content": "/* require(_amount <= get_lp_token_balance(), \"withdraw_from_curve: too large amount\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 30,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 32,
+                            "content": "pool_deposit",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "balance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 59,
+                            "content": "\"money is 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 30,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 67,
+                            "content": "/* require(address(pool_deposit).balance > 0, \"money is 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

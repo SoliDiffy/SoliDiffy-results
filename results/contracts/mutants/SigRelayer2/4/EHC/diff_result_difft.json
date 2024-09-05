@@ -1,0 +1,312 @@
+{
+    "number_of_changes": 38,
+    "timing": 1.4736745357513428,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 13,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 29,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 37,
+                            "content": "/* require(msg.sender == owner); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 5,
+                            "end": 12,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 16,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 19,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "expiry",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 47,
+                            "content": "\"signature expired\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 5,
+                            "end": 55,
+                            "content": "/* require(now <= expiry, \"signature expired\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 5,
+                            "end": 12,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 22,
+                            "content": "signatory",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 57,
+                            "content": "\"invalid signature\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 5,
+                            "end": 65,
+                            "content": "/* require(signatory != address(0), \"invalid signature\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 5,
+                            "end": 12,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 13,
+                            "end": 22,
+                            "content": "signatory",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 57,
+                            "content": "\"invalid signature\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 5,
+                            "end": 65,
+                            "content": "/* require(signatory != address(0), \"invalid signature\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
