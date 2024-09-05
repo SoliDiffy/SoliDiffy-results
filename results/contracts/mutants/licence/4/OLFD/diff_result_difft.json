@@ -1,0 +1,1537 @@
+{
+    "number_of_changes": 220,
+    "timing": 0.8879280090332031,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 28,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 17,
+                            "content": "load",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 25,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 31,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 41,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 49,
+                            "content": "payable",
+                            "highlight": "keyword"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 28,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 29,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 32,
+                            "content": "updateLicenceAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 37,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 47,
+                            "content": "external",
+                            "highlight": "keyword"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 29,
+                    "changes": []
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 191,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 28,
+                            "content": "_licenceAmountScaled",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 41,
+                            "content": "_newAmount",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 192,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 33,
+                            "content": "UpdatedLicenceAmount",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 44,
+                            "content": "_newAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 190,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 20,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 31,
+                            "content": "_newAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 45,
+                            "content": "_newAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 48,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 49,
+                            "end": 65,
+                            "content": "MAX_AMOUNT_SCALE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 96,
+                            "content": "\"licence amount out of range\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 189,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 32,
+                            "content": "updateLicenceAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 37,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 48,
+                            "content": "_newAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 58,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 66,
+                            "content": "onlyDAO",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 189,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 193,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 204,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 22,
+                            "content": "loadAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 32,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 36,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 53,
+                            "content": "MAX_AMOUNT_SCALE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 58,
+                            "content": "div",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 79,
+                            "content": "_licenceAmountScaled",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 82,
+                            "end": 98,
+                            "content": "MAX_AMOUNT_SCALE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 98,
+                            "end": 99,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 220,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 14,
+                            "content": "else",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 216,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 41,
+                            "content": "TransferredToTokenHolder",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 45,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 52,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 66,
+                            "content": "_tokenHolder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 74,
+                            "content": "_asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 89,
+                            "content": "licenceAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 201,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "_asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 21,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 41,
+                            "content": "_tknContractAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 217,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 213,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "_cryptoFloat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 37,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 48,
+                            "content": "loadAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 208,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 29,
+                            "content": "ERC20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "_asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 50,
+                            "content": "transferFrom",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 54,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 61,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 75,
+                            "content": "_tokenHolder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 90,
+                            "content": "licenceAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 162,
+                            "content": "\"ERC20 licenceAmount transfer from external account was unsuccessful\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 162,
+                            "end": 163,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 209,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 29,
+                            "content": "ERC20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "_asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 50,
+                            "content": "transferFrom",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 54,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 61,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 75,
+                            "content": "_cryptoFloat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 87,
+                            "content": "loadAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 151,
+                            "content": "\"ERC20 token transfer from external account was unsuccessful\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 151,
+                            "end": 152,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 202,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "ERC20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "_asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 46,
+                            "content": "transferFrom",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 50,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 57,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 71,
+                            "content": "_cryptoFloat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 83,
+                            "content": "loadAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 86,
+                            "end": 139,
+                            "content": "\"TKN transfer from external account was unsuccessful\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 139,
+                            "end": 140,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 205,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 30,
+                            "content": "licenceAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 40,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 44,
+                            "content": "sub",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 55,
+                            "content": "loadAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 199,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 23,
+                            "content": "loadAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 207,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "content": "if",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "_asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 210,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 18,
+                            "content": "else",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 214,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 219,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 37,
+                            "content": "TransferredToCryptoFloat",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 41,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 48,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 62,
+                            "content": "_cryptoFloat",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 70,
+                            "content": "_asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 82,
+                            "content": "loadAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 211,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 27,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 33,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 79,
+                            "content": "\"ETH sent is not equal to amount\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 212,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "_tokenHolder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 37,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 51,
+                            "content": "licenceAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 44,
+                            "content": "// If TKN then no licence to be paid",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 198,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 17,
+                            "content": "load",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 25,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "_asset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 38,
+                            "content": "uint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 46,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 56,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 64,
+                            "content": "payable",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 194,
+                    "changes": []
+                }
+            }
+        ]
+    ]
+}
