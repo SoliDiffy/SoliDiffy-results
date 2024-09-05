@@ -1,0 +1,798 @@
+{
+    "number_of_changes": 94,
+    "timing": 0.7256410121917725,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 93,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 11,
+                            "end": 18,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 34,
+                            "content": "holdefiContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 38,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 39,
+                            "end": 46,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 70,
+                            "content": "'Should be set once'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 93,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 78,
+                            "content": "/* require (address(holdefiContract) == address(0),'Should be set once'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 135,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 11,
+                            "end": 24,
+                            "content": "newBorrowRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 41,
+                            "content": "maxBorrowRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 72,
+                            "content": "'Rate should be less than max'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 135,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 80,
+                            "content": "/* require (newBorrowRate <= maxBorrowRate,'Rate should be less than max'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 10,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "deltaTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 42,
+                            "content": "secondsPerTenDays",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 88,
+                            "content": "'Increasing rate is not allowed at this time'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 96,
+                            "content": "/* require (deltaTime >= secondsPerTenDays,'Increasing rate is not allowed at this time'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 142,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 10,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 25,
+                            "content": "newBorrowRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 40,
+                            "content": "maxIncrease",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 89,
+                            "content": "'Rate should be increased less than max allowed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 142,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 97,
+                            "content": "/* require (newBorrowRate <= maxIncrease,'Rate should be increased less than max allowed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 156,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 11,
+                            "end": 32,
+                            "content": "newSuppliersShareRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 57,
+                            "content": "minSuppliersShareRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 60,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 82,
+                            "content": "newSuppliersShareRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 85,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 86,
+                            "end": 98,
+                            "content": "ratesDecimal",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 98,
+                            "end": 99,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 99,
+                            "end": 132,
+                            "content": "'Rate should be in allowed range'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 132,
+                            "end": 133,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 156,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 140,
+                            "content": "/* require (newSuppliersShareRate >= minSuppliersShareRate && newSuppliersShareRate <= ratesDecimal,'Rate should be in allowed range'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 163,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 10,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 33,
+                            "content": "newSuppliersShareRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 48,
+                            "content": "maxDecrease",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 97,
+                            "content": "'Rate should be decreased less than max allowed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 97,
+                            "end": 98,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 163,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 105,
+                            "content": "/* require (newSuppliersShareRate >= maxDecrease,'Rate should be decreased less than max allowed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 161,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 10,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "deltaTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 42,
+                            "content": "secondsPerTenDays",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 88,
+                            "content": "'Decreasing rate is not allowed at this time'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 161,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 96,
+                            "content": "/* require (deltaTime >= secondsPerTenDays,'Decreasing rate is not allowed at this time'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 178,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 5,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 6,
+                            "end": 24,
+                            "content": "suppliersShareRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 49,
+                            "content": "minSuppliersShareRate",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 178,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 49,
+                            "content": "\t\t\t&& suppliersShareRate >= minSuppliersShareRate",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 180,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 4,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 5,
+                            "end": 38,
+                            "content": "'Rate should be in allowed range'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 180,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 43,
+                            "content": "\t\t\t, 'Rate should be in allowed range'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 176,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 23,
+                            "content": "marketAssets",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "market",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 40,
+                            "content": "isActive",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 57,
+                            "content": "\"Market exists\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 176,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 65,
+                            "content": "/* require(!marketAssets[market].isActive, \"Market exists\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 179,
+                    "changes": [
+                        {
+                            "start": 3,
+                            "end": 5,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 6,
+                            "end": 24,
+                            "content": "suppliersShareRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 40,
+                            "content": "ratesDecimal",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 179,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 40,
+                            "content": "\t\t\t&& suppliersShareRate <= ratesDecimal",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 177,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 11,
+                            "end": 21,
+                            "content": "borrowRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 38,
+                            "content": "maxBorrowRate",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 177,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 41,
+                            "content": "/* require (borrowRate <= maxBorrowRate",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
