@@ -1,0 +1,710 @@
+{
+    "number_of_changes": 83,
+    "timing": 0.30997300148010254,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "bytes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 30,
+                            "content": "imghash_",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 38,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 73,
+                            "content": "\"Image hash cannot be empty\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 85,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 81,
+                            "content": "/* require(bytes(imghash_).length != 0, \"Image hash cannot be empty\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 81,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 27,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 36,
+                            "content": "users",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 40,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 47,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 61,
+                            "content": "lastPurchase",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 87,
+                            "content": "minTimeBetweenPurchases",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 81,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 88,
+                            "content": "            block.timestamp >= users[msg.sender].lastPurchase + minTimeBetweenPurchases,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 79,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "paymentReceived",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 56,
+                            "content": "\"Money expected...\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 79,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 64,
+                            "content": "/* require(paymentReceived > 0, \"Money expected...\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 40,
+                            "content": "\"You must wait between buys\"",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 40,
+                            "content": "            \"You must wait between buys\"",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "content": "        ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "isBlocksAreaValid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "areaLoc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 64,
+                            "content": "\"BlocksArea invalid\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 84,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 72,
+                            "content": "/* require(isBlocksAreaValid(areaLoc), \"BlocksArea invalid\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 31,
+                            "content": "paymentReceived",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 58,
+                            "content": "currentPriceOfBlocksArea",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 86,
+                            "content": "\"Price increase too small\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 94,
+                            "content": "/* require(paymentReceived > currentPriceOfBlocksArea, \"Price increase too small\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 92,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 38,
+                            "content": "priceIncreasePerBlock_",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 76,
+                            "content": "\"Price incr per block too small\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 92,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 84,
+                            "content": "/* require(priceIncreasePerBlock_ > 0, \"Price incr per block too small\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "isBlocksAreaValid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "areaLoc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 64,
+                            "content": "\"BlocksArea invalid\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 72,
+                            "content": "/* require(isBlocksAreaValid(areaLoc), \"BlocksArea invalid\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "isBlocksAreaValid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "areaLoc",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 64,
+                            "content": "\"BlocksArea invalid\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 160,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 72,
+                            "content": "/* require(isBlocksAreaValid(areaLoc), \"BlocksArea invalid\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
