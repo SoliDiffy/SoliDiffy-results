@@ -1,0 +1,548 @@
+{
+    "number_of_changes": 74,
+    "timing": 1.0355169773101807,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "IERC20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 30,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 37,
+                            "content": "_synth",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 49,
+                            "content": "synthsByKey",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 53,
+                            "content": "key",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 67,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 68,
+                            "end": 73,
+                            "content": "payer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 75,
+                            "end": 77,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 78,
+                            "end": 84,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 86,
+                            "end": 106,
+                            "content": "\"Not enough balance\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 106,
+                            "end": 107,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 114,
+                            "content": "/* require(IERC20(address(_synth(synthsByKey[key]))).balanceOf(payer) >= amount, \"Not enough balance\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 213,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "interestIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 52,
+                            "content": "\"Loan is closed\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 213,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 60,
+                            "content": "/* require(interestIndex != 0, \"Loan is closed\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 209,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 20,
+                            "content": "loan",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 36,
+                            "content": "lastInteraction",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 40,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 60,
+                            "content": "getInteractionDelay",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 68,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 73,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 75,
+                            "end": 76,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 77,
+                            "end": 79,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 80,
+                            "end": 85,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 86,
+                            "end": 95,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 97,
+                            "end": 118,
+                            "content": "\"Recently interacted\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 118,
+                            "end": 119,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 209,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 126,
+                            "content": "/* require(loan.lastInteraction.add(getInteractionDelay(address(this))) <= block.timestamp, \"Recently interacted\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 221,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 37,
+                            "content": "_synthNamesInResolver",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 44,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 47,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 48,
+                            "end": 58,
+                            "content": "_synthKeys",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 65,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 90,
+                            "content": "\"Array length mismatch\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 221,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 98,
+                            "content": "/* require(_synthNamesInResolver.length == _synthKeys.length, \"Array length mismatch\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 248,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "canOpenLoans",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 45,
+                            "content": "\"Open disabled\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 248,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 53,
+                            "content": "/* require(canOpenLoans, \"Open disabled\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
