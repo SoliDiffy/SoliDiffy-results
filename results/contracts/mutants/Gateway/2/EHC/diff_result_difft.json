@@ -1,0 +1,194 @@
+{
+    "number_of_changes": 25,
+    "timing": 2.141704559326172,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 117,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "coverType",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 34,
+                            "content": "CoverType",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 62,
+                            "content": "SIGNED_QUOTE_CONTRACT_COVER",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 95,
+                            "content": "\"Cover: Unsupported cover type\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 117,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 103,
+                            "content": "/* require(coverType == CoverType.SIGNED_QUOTE_CONTRACT_COVER, \"Cover: Unsupported cover type\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 118,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 22,
+                            "content": "sumAssured",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "%",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "10",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "**",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 44,
+                            "content": "assetDecimals",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 55,
+                            "content": "coverAsset",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 59,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 108,
+                            "content": "\"Cover: Only whole unit sumAssured supported\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 118,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 116,
+                            "content": "/* require(sumAssured % 10 ** assetDecimals(coverAsset) == 0, \"Cover: Only whole unit sumAssured supported\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
