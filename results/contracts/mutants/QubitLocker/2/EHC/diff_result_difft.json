@@ -1,0 +1,200 @@
+{
+    "number_of_changes": 26,
+    "timing": 0.25722289085388184,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 130,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 57,
+                            "content": "\"QubitLocker: invalid amount\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 130,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 65,
+                            "content": "/* require(amount > 0, \"QubitLocker: invalid amount\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 133,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 40,
+                            "content": "expiry",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 43,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "expiry",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 53,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 54,
+                            "end": 59,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 69,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 72,
+                            "end": 85,
+                            "content": "LOCK_UNIT_MAX",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 116,
+                            "content": "\"QubitLocker: invalid expiry\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 116,
+                            "end": 117,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 133,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 124,
+                            "content": "/* require(block.timestamp < expiry && expiry <= block.timestamp + LOCK_UNIT_MAX, \"QubitLocker: invalid expiry\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

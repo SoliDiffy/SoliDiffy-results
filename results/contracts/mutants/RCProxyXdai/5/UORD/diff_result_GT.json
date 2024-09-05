@@ -1,0 +1,5 @@
+{
+    "number_of_edits": 9,
+    "timing": 10.44260048866272,
+    "edit_script": "<actions>\n  <update-node tree=\"member_expression: !deposits[_nonce].confirmed &amp;&amp; deposits[_nonce].confirmations &gt;= (validatorCount.div(2)).add [10047,10139]\" label=\"deposits[_nonce].confirmed &amp;&amp; deposits[_nonce].confirmations &gt;= (validatorCount.div(2)).add\" />\n  <update-node tree=\"member_expression: !upgradedNfts[_tokenId].set [7855,7882]\" label=\"upgradedNfts[_tokenId].set\" />\n  <move-tree tree=\"identifier: hasConfirmedDeposit [9772,9791]\" parent=\"array_access [9772,9799]\" at=\"0\" />\n  <update-node tree=\"member_expression: !deposits[_nonce].executed [10510,10536]\" label=\"deposits[_nonce].executed\" />\n  <move-tree tree=\"identifier: isValidator [5195,5206]\" parent=\"array_access [5195,5225]\" at=\"0\" />\n  <delete-node tree=\"!: ! [5194,5195]\" />\n  <delete-node tree=\"unary_expression [5194,5206]\" />\n  <delete-node tree=\"!: ! [9771,9772]\" />\n  <delete-node tree=\"unary_expression [9771,9791]\" />\n</actions>\n"
+}
