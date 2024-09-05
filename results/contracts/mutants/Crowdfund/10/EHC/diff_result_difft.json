@@ -1,0 +1,764 @@
+{
+    "number_of_changes": 94,
+    "timing": 0.4760744571685791,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 22,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 23,
+                            "end": 31,
+                            "content": "startsAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 38,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 48,
+                            "content": "endsAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 101,
+                            "content": "\"time must be greater than start but less than end\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 109,
+                            "content": "/* require(now >= startsAt && now <= endsAt, \"time must be greater than start but less than end\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 28,
+                            "content": "endsAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 54,
+                            "content": "getCrowdFundAllocation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 59,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 131,
+                            "content": "\"current time must be greater than 0 or there must be 0 tokens left\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 131,
+                            "end": 132,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 139,
+                            "content": "/* require(now > endsAt || getCrowdFundAllocation() == 0, \"current time must be greater than 0 or there must be 0 tokens left\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "endsAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 71,
+                            "content": "\"crowdfund end time must be greater than 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 79,
+                            "content": "/* require(endsAt > 0, \"crowdfund end time must be greater than 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 22,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 23,
+                            "end": 31,
+                            "content": "startsAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 80,
+                            "content": "\"time must be less than or equal to start time\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* require(now <= startsAt, \"time must be less than or equal to start time\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 29,
+                            "content": "whitelist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 42,
+                            "content": "_beneficiary",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 74,
+                            "content": "\"address must be whitelisted\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 82,
+                            "content": "/* require(whitelist[_beneficiary], \"address must be whitelisted\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 128,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_epochs",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "_prices",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 48,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 51,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 52,
+                            "end": 59,
+                            "content": "_prices",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 66,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 69,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 70,
+                            "end": 72,
+                            "content": "10",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 127,
+                            "content": "\"array lengths must be equal and at most 10 elements\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 127,
+                            "end": 128,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 128,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 135,
+                            "content": "/* require(_epochs.length == _prices.length && _prices.length <= 10, \"array lengths must be equal and at most 10 elements\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 32,
+                            "content": "totalAmountOfDays",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 46,
+                            "content": "_totalDays",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 140,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 54,
+                            "content": "/* assert(totalAmountOfDays == _totalDays); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 153,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "isActivated",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 36,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 153,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 44,
+                            "content": "/* require(isActivated == false); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 157,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 157,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "/* revert(); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 161,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 23,
+                            "content": "startsAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 30,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 40,
+                            "content": "endsAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 51,
+                            "content": "startsAt",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 161,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 59,
+                            "content": "/* assert(startsAt >= now && endsAt > startsAt); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
