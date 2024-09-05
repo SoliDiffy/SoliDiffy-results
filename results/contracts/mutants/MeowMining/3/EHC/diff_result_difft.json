@@ -1,0 +1,250 @@
+{
+    "number_of_changes": 31,
+    "timing": 1.048999309539795,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 15,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "devaddr",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 68,
+                            "content": "\"MeowMining::setDev:: Forbidden.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 76,
+                            "content": "/* require(msg.sender == devaddr, \"MeowMining::setDev:: Forbidden.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 24,
+                            "content": "isPoolExist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 36,
+                            "content": "_stakeToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 84,
+                            "content": "\"MeowMining::addPool:: stakeToken duplicate.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 92,
+                            "content": "/* require(!isPoolExist[_stakeToken], \"MeowMining::addPool:: stakeToken duplicate.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "_stakeToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 34,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 80,
+                            "content": "\"MeowMining::addPool:: not ZERO address.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 88,
+                            "content": "/* require(_stakeToken != address(0), \"MeowMining::addPool:: not ZERO address.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

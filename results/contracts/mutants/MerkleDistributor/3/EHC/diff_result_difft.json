@@ -1,0 +1,308 @@
+{
+    "number_of_changes": 41,
+    "timing": 1.1910326480865479,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 22,
+                            "content": "isClaimed",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 28,
+                            "content": "index",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 80,
+                            "content": "'MerkleDistributor::claim:: drop already claimed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 88,
+                            "content": "/* require(!isClaimed(index), 'MerkleDistributor::claim:: drop already claimed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "MerkleProof",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "verify",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 31,
+                            "end": 42,
+                            "content": "merkleProof",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 54,
+                            "content": "merkleRoot",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 60,
+                            "content": "node",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 105,
+                            "content": "'MerkleDistributor::claim:: invalid proof'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 113,
+                            "content": "/* require(MerkleProof.verify(merkleProof, merkleRoot, node), 'MerkleDistributor::claim:: invalid proof'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "IERC20",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 24,
+                            "content": "token",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 34,
+                            "content": "transfer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 42,
+                            "content": "account",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 97,
+                            "content": "'MerkleDistributor::claim:: transfer failed'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 97,
+                            "end": 98,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 105,
+                            "content": "/* require(IERC20(token).transfer(account, amount), 'MerkleDistributor::claim:: transfer failed'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

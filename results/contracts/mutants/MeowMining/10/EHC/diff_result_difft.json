@@ -1,0 +1,932 @@
+{
+    "number_of_changes": 118,
+    "timing": 1.4350166320800781,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 15,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "devaddr",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 68,
+                            "content": "\"MeowMining::setDev:: Forbidden.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 76,
+                            "content": "/* require(msg.sender == devaddr, \"MeowMining::setDev:: Forbidden.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 24,
+                            "content": "isPoolExist",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 36,
+                            "content": "_stakeToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 84,
+                            "content": "\"MeowMining::addPool:: stakeToken duplicate.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 92,
+                            "content": "/* require(!isPoolExist[_stakeToken], \"MeowMining::addPool:: stakeToken duplicate.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "_stakeToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 34,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 80,
+                            "content": "\"MeowMining::addPool:: not ZERO address.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 88,
+                            "content": "/* require(_stakeToken != address(0), \"MeowMining::addPool:: not ZERO address.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 22,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 37,
+                            "content": "canManualMint",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 96,
+                            "content": "\"MeowMining::manualMint:: manual mint limit exceeded.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 104,
+                            "content": "/* require(_amount <= (canManualMint()), \"MeowMining::manualMint:: manual mint limit exceeded.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 197,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 14,
+                            "content": "updatePool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 19,
+                            "content": "_pid",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 197,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 14,
+                            "content": "updatePool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 19,
+                            "content": "_pid",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 195,
+                    "changes": [
+                        {
+                            "start": 37,
+                            "end": 44,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 49,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 58,
+                            "content": "fundedBy",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 61,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 65,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 72,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 106,
+                            "content": "\"MeowMining::deposit:: bad sof.\"",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 195,
+                    "changes": [
+                        {
+                            "start": 37,
+                            "end": 114,
+                            "content": "/* require(user.fundedBy == msg.sender, \"MeowMining::deposit:: bad sof.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 196,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 27,
+                            "content": "stakeToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 38,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 86,
+                            "content": "\"MeowMining::deposit:: not accept deposit.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 196,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 94,
+                            "content": "/* require(pool.stakeToken != address(0), \"MeowMining::deposit:: not accept deposit.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 227,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 23,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 34,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 70,
+                            "content": "\"MeowMining::withdraw:: not good.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 227,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 78,
+                            "content": "/* require(user.amount >= _amount, \"MeowMining::withdraw:: not good.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 226,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 25,
+                            "content": "fundedBy",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 32,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 39,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 78,
+                            "content": "\"MeowMining::withdraw:: only funder.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 226,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 86,
+                            "content": "/* require(user.fundedBy == msg.sender, \"MeowMining::withdraw:: only funder.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 251,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 16,
+                            "content": "user",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 23,
+                            "content": "amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 72,
+                            "content": "\"MeowMining::harvest:: nothing to harvest.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 251,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 80,
+                            "content": "/* require(user.amount > 0, \"MeowMining::harvest:: nothing to harvest.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 256,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "preAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 29,
+                            "content": "meow",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 39,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 47,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 52,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 96,
+                            "content": "\"MeowMining::harvest:: not enough Meow.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 256,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 104,
+                            "content": "/* require(preAmount <= meow.balanceOf(address(this)), \"MeowMining::harvest:: not enough Meow.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
