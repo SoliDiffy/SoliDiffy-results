@@ -1,0 +1,388 @@
+{
+    "number_of_changes": 45,
+    "timing": 0.7848305702209473,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 37,
+                            "content": "ERROR_INVALID_VERSION",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 37,
+                            "content": "                ERROR_INVALID_VERSION",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "lastVersion",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 43,
+                            "content": "contractAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 46,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 62,
+                            "content": "contractAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 65,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 66,
+                            "end": 85,
+                            "content": "_newSemanticVersion",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 86,
+                            "end": 87,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 91,
+                            "end": 102,
+                            "content": "lastVersion",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 102,
+                            "end": 103,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 103,
+                            "end": 118,
+                            "content": "semanticVersion",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 118,
+                            "end": 119,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 119,
+                            "end": 120,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 120,
+                            "end": 121,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 121,
+                            "end": 122,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 122,
+                            "content": "                lastVersion.contractAddress == contractAddress || _newSemanticVersion[0] > lastVersion.semanticVersion[0],",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "isValidBump",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 46,
+                            "content": "lastSematicVersion",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 67,
+                            "content": "_newSemanticVersion",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 88,
+                            "content": "ERROR_INVALID_BUMP",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 96,
+                            "content": "/* require(isValidBump(lastSematicVersion, _newSemanticVersion), ERROR_INVALID_BUMP); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 13,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "content": "            ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "_versionId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 44,
+                            "content": "_versionId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 47,
+                            "end": 64,
+                            "content": "versionsNextIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 90,
+                            "content": "ERROR_INEXISTENT_VERSION",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 98,
+                            "content": "/* require(_versionId > 0 && _versionId < versionsNextIndex, ERROR_INEXISTENT_VERSION); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,246 @@
+{
+    "number_of_changes": 30,
+    "timing": 0.09857654571533203,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 32,
+                            "content": "frax_price_oracle",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 40,
+                            "content": "consult",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 62,
+                            "content": "frax_contract_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 80,
+                            "content": "CONSULT_FRAX_DEC",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* return frax_price_oracle.consult(frax_contract_address, CONSULT_FRAX_DEC); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 25,
+                            "content": "twap_price",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 32,
+                            "content": "/* return twap_price; */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 33,
+                            "content": "weth_collat_oracle",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 41,
+                            "content": "consult",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 54,
+                            "content": "weth_address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 71,
+                            "content": "CONSULT_FXS_DEC",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 76,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 77,
+                            "end": 91,
+                            "content": "fxs_weth_price",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 93,
+                            "end": 96,
+                            "content": "div",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 97,
+                            "end": 100,
+                            "content": "1e6",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 109,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 108,
+                            "content": "/* return weth_collat_oracle.consult(weth_address, CONSULT_FXS_DEC).mul(fxs_weth_price).div(1e6); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
