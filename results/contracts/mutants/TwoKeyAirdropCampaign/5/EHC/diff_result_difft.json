@@ -1,0 +1,370 @@
+{
+    "number_of_changes": 44,
+    "timing": 1.6798806190490723,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 57,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 21,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 31,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 52,
+                            "content": "campaignStartTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 55,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 56,
+                            "end": 61,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 71,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 74,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 75,
+                            "end": 90,
+                            "content": "campaignEndTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 57,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 98,
+                            "content": "/* require(block.timestamp >= campaignStartTime && block.timestamp <= campaignEndTime); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 35,
+                            "content": "numberOfConversions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 60,
+                            "content": "maxNumberOfConversions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 68,
+                            "content": "/* require(numberOfConversions < maxNumberOfConversions); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 40,
+                            "content": "contractor",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 48,
+                            "content": "/* require(msg.sender == contractor); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "isActivated",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 35,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 43,
+                            "content": "/* require(isActivated == true); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 27,
+                            "content": "balance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 50,
+                            "content": "numberOfConversions",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 72,
+                            "content": "CONVERSION_FEE_2KEY",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 75,
+                            "end": 90,
+                            "content": "inventoryAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 107,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 98,
+                            "content": "/* require(balance == numberOfConversions * CONVERSION_FEE_2KEY + inventoryAmount); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
