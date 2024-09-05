@@ -1,0 +1,520 @@
+{
+    "number_of_changes": 63,
+    "timing": 1.4085566997528076,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 21,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 10,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 11,
+                            "end": 32,
+                            "content": "\"DO_NOT_DEPOSIT_COIN\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 21,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 40,
+                            "content": "/* revert(\"DO_NOT_DEPOSIT_COIN\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 35,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 22,
+                            "content": "realAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 33,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 51,
+                            "content": "\"illegal amount\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 35,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 59,
+                            "content": "/* require(realAmount >= _amount, \"illegal amount\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 21,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 24,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 30,
+                            "content": "10000",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 43,
+                            "content": "\"too small\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 51,
+                            "content": "/* require(_amount >= 10000, \"too small\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 36,
+                            "content": "\"ZERO_SHARE\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 44,
+                            "content": "/* require(shares > 0, \"ZERO_SHARE\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 36,
+                            "content": "\"ZERO_SHARE\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 44,
+                            "content": "/* require(shares > 0, \"ZERO_SHARE\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 22,
+                            "content": "_toVault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 37,
+                            "content": "IController",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 48,
+                            "content": "controller",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 63,
+                            "content": "dyTokenVaults",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 71,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 72,
+                            "end": 76,
+                            "content": "this",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 103,
+                            "content": "\"mismatch dToken vault\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 111,
+                            "content": "/* require(_toVault == IController(controller).dyTokenVaults(address(this)), \"mismatch dToken vault\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "_shares",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 42,
+                            "content": "\"shares need > 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 50,
+                            "content": "/* require(_shares > 0, \"shares need > 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
