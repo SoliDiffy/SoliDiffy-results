@@ -1,0 +1,490 @@
+{
+    "number_of_changes": 61,
+    "timing": 2.1208078861236572,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 44,
+                            "content": "isPoolObservationsEnough",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 53,
+                            "content": "callData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 58,
+                            "content": "pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 91,
+                            "content": "\"Pool observations not enough\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 99,
+                            "content": "/* require(isPoolObservationsEnough(callData.pool), \"Pool observations not enough\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "amountOut",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 41,
+                            "content": "minBuyAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 69,
+                            "content": "'buy amount less than min'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 77,
+                            "content": "/* require(amountOut >= minBuyAmount, 'buy amount less than min'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "sellAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 46,
+                            "content": "callData",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 57,
+                            "content": "zeroForOne",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": "?",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 67,
+                            "content": "amount0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ":",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 77,
+                            "content": "amount1",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 97,
+                            "content": "'Cannot sell all'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 97,
+                            "end": 98,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 105,
+                            "content": "/* require(sellAmount == uint256(callData.zeroForOne ? amount0 : amount1), 'Cannot sell all'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "buyAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 41,
+                            "content": "minBuyAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 69,
+                            "content": "'buy amount less than min'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 77,
+                            "content": "/* require(buyAmount >= minBuyAmount, 'buy amount less than min'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 44,
+                            "content": "isPoolObservationsEnough",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 49,
+                            "content": "pool",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 82,
+                            "content": "\"Pool observations not enough\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 82,
+                            "end": 83,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 90,
+                            "content": "/* require(isPoolObservationsEnough(pool), \"Pool observations not enough\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 33,
+                            "content": "amountOutReceived",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 46,
+                            "content": "buyAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 67,
+                            "content": "'Cannot buy enough'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 75,
+                            "content": "/* require(amountOutReceived == buyAmount, 'Cannot buy enough'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,442 @@
+{
+    "number_of_changes": 57,
+    "timing": 1.229905605316162,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 31,
+                            "content": "getAmountOut",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 42,
+                            "content": "sellAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 58,
+                            "content": "token0Reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 74,
+                            "content": "token1Reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 82,
+                            "content": "/* return getAmountOut(sellAmount, token0Reserves, token1Reserves); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 19,
+                            "end": 31,
+                            "content": "getAmountOut",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 42,
+                            "content": "sellAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 58,
+                            "content": "token1Reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 74,
+                            "content": "token0Reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 82,
+                            "content": "/* return getAmountOut(sellAmount, token1Reserves, token0Reserves); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 22,
+                            "content": "token0Reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 26,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "10",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "**",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 41,
+                            "content": "decimals",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 46,
+                            "content": "div",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 61,
+                            "content": "token1Reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 66,
+                            "content": "        token0Reserves.mul(10 ** decimals).div(token1Reserves); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 23,
+                            "content": "desToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 41,
+                            "content": "IUniswapV2Pair",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 46,
+                            "content": "pair",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 54,
+                            "content": "token0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": "?",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 61,
+                            "content": "/* return desToken == IUniswapV2Pair(pair).token0() ?",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 98,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 22,
+                            "content": "token1Reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 26,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "10",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "**",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 41,
+                            "content": "decimals",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 46,
+                            "content": "div",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 61,
+                            "content": "token0Reserves",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ":",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 98,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 64,
+                            "content": "        token1Reserves.mul(10 ** decimals).div(token0Reserves) :",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
