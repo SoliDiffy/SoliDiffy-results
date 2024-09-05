@@ -1,0 +1,292 @@
+{
+    "number_of_changes": 38,
+    "timing": 0.4980740547180176,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 15,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "tx",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 35,
+                            "content": "origin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 70,
+                            "content": "\"StronkAlpaca::onlyEOA:: not eoa\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 78,
+                            "content": "/* require(msg.sender == tx.origin, \"StronkAlpaca::onlyEOA:: not eoa\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 46,
+                            "content": "hodlableStartBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 118,
+                            "content": "\"StronkAlpaca::prepareHodl: block.number not reach hodlableStartBlock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 118,
+                            "end": 119,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 126,
+                            "content": "/* require(block.number >= hodlableStartBlock, \"StronkAlpaca::prepareHodl: block.number not reach hodlableStartBlock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "_userRelayerMap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 31,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 38,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 42,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 50,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 114,
+                            "content": "\"StronkAlpaca::prepareHodl: user has already prepared hodl\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 114,
+                            "end": 115,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 122,
+                            "content": "/* require(_userRelayerMap[msg.sender] == address(0), \"StronkAlpaca::prepareHodl: user has already prepared hodl\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

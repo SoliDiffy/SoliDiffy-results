@@ -1,0 +1,922 @@
+{
+    "number_of_changes": 115,
+    "timing": 1.5643126964569092,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 15,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": "tx",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 35,
+                            "content": "origin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 70,
+                            "content": "\"StronkAlpaca::onlyEOA:: not eoa\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 78,
+                            "content": "/* require(msg.sender == tx.origin, \"StronkAlpaca::onlyEOA:: not eoa\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 46,
+                            "content": "hodlableStartBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 118,
+                            "content": "\"StronkAlpaca::prepareHodl: block.number not reach hodlableStartBlock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 118,
+                            "end": 119,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 69,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 126,
+                            "content": "/* require(block.number >= hodlableStartBlock, \"StronkAlpaca::prepareHodl: block.number not reach hodlableStartBlock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "_userRelayerMap",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 31,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 38,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 42,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 50,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 114,
+                            "content": "\"StronkAlpaca::prepareHodl: user has already prepared hodl\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 114,
+                            "end": 115,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 68,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 122,
+                            "content": "/* require(_userRelayerMap[msg.sender] == address(0), \"StronkAlpaca::prepareHodl: user has already prepared hodl\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 43,
+                            "content": "hodlableEndBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 111,
+                            "content": "\"StronkAlpaca::prepareHodl: block.number exceeds hodlableEndBlock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 111,
+                            "end": 112,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 119,
+                            "content": "/* require(block.number < hodlableEndBlock, \"StronkAlpaca::prepareHodl: block.number exceeds hodlableEndBlock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 24,
+                            "content": "IAlpacaToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 43,
+                            "content": "alpacaTokenAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 51,
+                            "content": "lockOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 55,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 62,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 141,
+                            "content": "\"StronkAlpaca::preparehodl: user's lockAlpaca must be greater than zero\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 141,
+                            "end": 142,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 149,
+                            "content": "/* require(IAlpacaToken(alpacaTokenAddress).lockOf(msg.sender) > 0, \"StronkAlpaca::preparehodl: user's lockAlpaca must be greater than zero\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 26,
+                            "content": "relayerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 94,
+                            "content": "\"StronkAlpaca::hodl: user has not preapare hodl yet\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 94,
+                            "end": 95,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 102,
+                            "content": "/* require(relayerAddress != address(0), \"StronkAlpaca::hodl: user has not preapare hodl yet\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 26,
+                            "content": "relayerAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 94,
+                            "content": "\"StronkAlpaca::hodl: user has not preapare hodl yet\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 94,
+                            "end": 95,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 102,
+                            "content": "/* require(relayerAddress != address(0), \"StronkAlpaca::hodl: user has not preapare hodl yet\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 96,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 9,
+                            "content": "    ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 95,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 85,
+                            "content": "\"StronkAlpaca::unhodl: block.number have not reach alpacaToken.endReleaseBlock\"",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 95,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 85,
+                            "content": "      \"StronkAlpaca::unhodl: block.number have not reach alpacaToken.endReleaseBlock\"",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 24,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 39,
+                            "content": "lockEndBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 105,
+                            "content": "\"StronkAlpaca::unhodl: block.number have not reach lockEndBlock\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 113,
+                            "content": "/* require(block.number > lockEndBlock, \"StronkAlpaca::unhodl: block.number have not reach lockEndBlock\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 93,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 93,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 94,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 11,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "number",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 33,
+                            "content": "IAlpacaToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 52,
+                            "content": "alpacaTokenAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 69,
+                            "content": "endReleaseBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 94,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 72,
+                            "content": "      block.number > IAlpacaToken(alpacaTokenAddress).endReleaseBlock(),",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
