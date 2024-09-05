@@ -1,0 +1,232 @@
+{
+    "number_of_changes": 28,
+    "timing": 1.5943841934204102,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 20,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "_decimals",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 49,
+                            "content": "\"invalid decimals\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 20,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 57,
+                            "content": "/* require(_decimals > 0, \"invalid decimals\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 19,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 28,
+                            "content": "_totalSupply",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 36,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 45,
+                            "content": "decimals",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 48,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 66,
+                            "content": "\"erc20 inited\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 19,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 74,
+                            "content": "/* require(_totalSupply == 0 && decimals == 0, \"erc20 inited\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 32,
+                            "content": "currentAllowance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 51,
+                            "content": "subtractedValue",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 92,
+                            "content": "\"ERC20: decreased allowance below zero\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 50,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 100,
+                            "content": "/* require(currentAllowance >= subtractedValue, \"ERC20: decreased allowance below zero\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

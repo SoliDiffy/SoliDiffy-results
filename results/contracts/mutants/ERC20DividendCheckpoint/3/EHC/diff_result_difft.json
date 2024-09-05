@@ -1,0 +1,218 @@
+{
+    "number_of_changes": 26,
+    "timing": 1.323779582977295,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 155,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "_excluded",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 58,
+                            "content": "EXCLUDED_ADDRESS_LIMIT",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 89,
+                            "content": "\"Too many addresses excluded\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 155,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 97,
+                            "content": "/* require(_excluded.length <= EXCLUDED_ADDRESS_LIMIT, \"Too many addresses excluded\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 156,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_expiry",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 35,
+                            "content": "_maturity",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 61,
+                            "content": "\"Expiry before maturity\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 156,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 69,
+                            "content": "/* require(_expiry > _maturity, \"Expiry before maturity\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 158,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "_expiry",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "now",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 47,
+                            "content": "\"Expiry in past\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 158,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 55,
+                            "content": "/* require(_expiry > now, \"Expiry in past\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

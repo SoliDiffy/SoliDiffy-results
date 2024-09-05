@@ -1,0 +1,182 @@
+{
+    "number_of_changes": 23,
+    "timing": 0.7901949882507324,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "getManager",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 31,
+                            "content": "addr",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 39,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 46,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 65,
+                            "content": "\"Not the manager\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 73,
+                            "content": "/* require(getManager(addr) == msg.sender, \"Not the manager\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 76,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 34,
+                            "content": "isERC165Interface",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 49,
+                            "content": "_interfaceHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 80,
+                            "content": "\"Must not be an ERC165 hash\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 76,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* require(!isERC165Interface(_interfaceHash), \"Must not be an ERC165 hash\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
