@@ -1,0 +1,330 @@
+{
+    "number_of_changes": 35,
+    "timing": 1.3645250797271729,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "pendingDeposits",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 36,
+                            "content": "ownerKey",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 45,
+                            "content": "assetId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 47,
+                            "end": 54,
+                            "content": "vaultId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 58,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 74,
+                            "content": "quantizedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 75,
+                            "content": "            pendingDeposits[ownerKey][assetId][vaultId] >= quantizedAmount,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 34,
+                            "content": "\"DEPOSIT_INSUFFICIENT\"",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 34,
+                            "content": "            \"DEPOSIT_INSUFFICIENT\"",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 42,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 42,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 9,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "content": "        ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "withdrawal",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 45,
+                            "content": "quantizedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 68,
+                            "content": "\"WITHDRAWAL_OVERFLOW\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 76,
+                            "content": "/* require(withdrawal >= quantizedAmount, \"WITHDRAWAL_OVERFLOW\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 27,
+                            "content": "assetId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 38,
+                            "content": "assetId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": "&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 49,
+                            "content": "MASK_250",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 69,
+                            "content": "\"INVALID_ASSET_ID\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 83,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 77,
+                            "content": "/* require(assetId == assetId & MASK_250, \"INVALID_ASSET_ID\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

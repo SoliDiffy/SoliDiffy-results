@@ -1,0 +1,696 @@
+{
+    "number_of_changes": 89,
+    "timing": 1.1641387939453125,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 172,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 24,
+                            "content": "isNotAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 28,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 35,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 61,
+                            "content": "isNotAuthorizedSigner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 62,
+                            "end": 65,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 72,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 91,
+                            "content": "\"Account exists\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 172,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 99,
+                            "content": "/* require(isNotAccount(msg.sender) && isNotAuthorizedSigner(msg.sender), \"Account exists\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 184,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "isAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 25,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 52,
+                            "content": "\"Unknown account\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 184,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 60,
+                            "content": "/* require(isAccount(msg.sender), \"Unknown account\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 206,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 13,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 13,
+                            "end": 14,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 14,
+                            "end": 20,
+                            "content": "signer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 23,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 24,
+                            "end": 37,
+                            "content": "walletAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 58,
+                            "content": "\"Invalid signature\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 206,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 66,
+                            "content": "/* require(signer == walletAddress, \"Invalid signature\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "isAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 25,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 52,
+                            "content": "\"Unknown account\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 203,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 60,
+                            "content": "/* require(isAccount(msg.sender), \"Unknown account\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 218,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 29,
+                            "content": "dataEncryptionKey",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 39,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 42,
+                            "content": "33",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 78,
+                            "content": "\"data encryption key length <= 32\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 218,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 86,
+                            "content": "/* require(dataEncryptionKey.length >= 33, \"data encryption key length <= 32\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 229,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "isAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 25,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 52,
+                            "content": "\"Unknown account\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 229,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 60,
+                            "content": "/* require(isAccount(msg.sender), \"Unknown account\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 241,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 21,
+                            "content": "isAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 25,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 32,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 51,
+                            "content": "\"Not an account\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 241,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 59,
+                            "content": "/* require(isAccount(msg.sender), \"Not an account\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 242,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 24,
+                            "content": "isNotAccount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "signer",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 70,
+                            "content": "\"Cannot authorize account as signer\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 242,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 78,
+                            "content": "/* require(isNotAccount(signer), \"Cannot authorize account as signer\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
