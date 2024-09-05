@@ -1,0 +1,324 @@
+{
+    "number_of_changes": 43,
+    "timing": 0.7860317230224609,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 179,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 8,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 9,
+                            "end": 15,
+                            "content": "Locked",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "_of",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 28,
+                            "content": "_reason",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 50,
+                            "content": "lockedUntil",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 179,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 58,
+                            "content": "/* emit Locked(_of, _reason, _amount, lockedUntil); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 216,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 8,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 9,
+                            "end": 15,
+                            "content": "Locked",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 33,
+                            "content": "\"CLA\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 42,
+                            "content": "_amount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 50,
+                            "content": "locked",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 51,
+                            "end": 54,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 61,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 68,
+                            "content": "\"CLA\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 78,
+                            "content": "validity",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 216,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 86,
+                            "content": "/* emit Locked(msg.sender, \"CLA\", _amount, locked[msg.sender][\"CLA\"].validity); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 303,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 10,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 11,
+                            "end": 19,
+                            "content": "Unlocked",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 23,
+                            "content": "_of",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 30,
+                            "content": "\"CLA\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 50,
+                            "content": "withdrawableTokens",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 303,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 58,
+                            "content": "/* emit Unlocked(_of, \"CLA\", withdrawableTokens); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

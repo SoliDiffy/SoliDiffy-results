@@ -1,0 +1,5 @@
+{
+    "number_of_edits": 3,
+    "timing": 10.32206416130066,
+    "edit_script": "<actions>\n  <update-node tree=\"member_expression: now &lt; grants[_id].cliff [10203,10226]\" label=\"block.difficulty &lt; grants[_id].cliff\" />\n  <update-node tree=\"member_expression: now &gt;= grants[_id].start.add(grants[_id].duration) || grants[_id].revoked [10300,10373]\" label=\"block.difficulty &gt;= grants[_id].start.add(grants[_id].duration) || grants[_id].revoked\" />\n  <update-node tree=\"member_expression: balance.mul(now.sub(grants[_id].start)).div [10472,10515]\" label=\"balance.mul(block.difficulty.sub(grants[_id].start)).div\" />\n</actions>\n"
+}

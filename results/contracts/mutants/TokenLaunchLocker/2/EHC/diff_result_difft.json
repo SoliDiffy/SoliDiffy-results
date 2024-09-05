@@ -1,0 +1,280 @@
+{
+    "number_of_changes": 33,
+    "timing": 0.5762062072753906,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 41,
+                            "content": "_delegationAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 42,
+                            "end": 54,
+                            "content": "delegationId",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 58,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 92,
+                            "content": "\"Delegation was already added\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 100,
+                            "content": "/* require(_delegationAmount[delegationId] == 0, \"Delegation was already added\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 198,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 198,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 19,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 199,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 33,
+                            "content": "_totalDelegatedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 40,
+                            "content": "holder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 47,
+                            "content": "month",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 50,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 55,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 56,
+                            "end": 77,
+                            "content": "_totalDelegatedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 77,
+                            "end": 78,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 78,
+                            "end": 84,
+                            "content": "holder",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 86,
+                            "end": 91,
+                            "content": "month",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 94,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 95,
+                            "end": 100,
+                            "content": "month",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 199,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 101,
+                            "content": "            _totalDelegatedAmount[holder].month == 0 || _totalDelegatedAmount[holder].month <= month,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 55,
+                            "content": "\"Cannot add to total delegated in the past\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 200,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 60,
+                            "content": "            \"Cannot add to total delegated in the past\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
