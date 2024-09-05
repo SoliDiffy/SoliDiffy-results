@@ -1,0 +1,1066 @@
+{
+    "number_of_changes": 145,
+    "timing": 1.225358009338379,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "z",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "-",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "y",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 57,
+                            "content": "'ds-math-sub-underflow'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 65,
+                            "content": "/* require((z = x - y) <= x, 'ds-math-sub-underflow'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "y",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 20,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "z",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "*",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "y",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "/",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": "y",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 44,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 70,
+                            "content": "'ds-math-mul-overflow'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 78,
+                            "content": "/* require(y == 0 || (z = x * y) / y == x, 'ds-math-mul-overflow'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 32,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "z",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "y",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "x",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 56,
+                            "content": "'ds-math-add-overflow'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 32,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 64,
+                            "content": "/* require((z = x + y) >= x, 'ds-math-add-overflow'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "b",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 20,
+                            "end": 21,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 35,
+                            "content": "errorMessage",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 43,
+                            "content": "/* require(b > 0, errorMessage); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "_owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 36,
+                            "content": "_msgSender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "||",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 54,
+                            "content": "_poolManager",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 57,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 68,
+                            "content": "_msgSender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 106,
+                            "content": "\"Ownable: caller is not the owner\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 106,
+                            "end": 107,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 114,
+                            "content": "/* require(_owner == _msgSender() || _poolManager == _msgSender(), \"Ownable: caller is not the owner\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "newOwner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 27,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 35,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 80,
+                            "content": "\"Ownable: new owner is the zero address\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 88,
+                            "content": "/* require(newOwner != address(0), \"Ownable: new owner is the zero address\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 172,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "userTier",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 38,
+                            "content": "minRevoToHold",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 72,
+                            "content": "\"User must belong to a tier\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 172,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 80,
+                            "content": "/* require(userTier.minRevoToHold > 0, \"User must belong to a tier\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 175,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 27,
+                            "content": "_revoAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 30,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 31,
+                            "end": 36,
+                            "content": "pools",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 37,
+                            "end": 47,
+                            "content": "_poolIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 63,
+                            "content": "maxRevoStaking",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 104,
+                            "content": "\"Please stake less than the max amount\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 104,
+                            "end": 105,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 175,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 112,
+                            "content": "/* require(_revoAmount <= pools[_poolIndex].maxRevoStaking, \"Please stake less than the max amount\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 166,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "stakes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 33,
+                            "content": "_poolIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 42,
+                            "content": "_wallet",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 56,
+                            "content": "stakedAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 59,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 64,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 66,
+                            "end": 72,
+                            "content": "stakes",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 83,
+                            "content": "_poolIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 85,
+                            "end": 92,
+                            "content": "_wallet",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 94,
+                            "end": 107,
+                            "content": "withdrawStake",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 107,
+                            "end": 108,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 109,
+                            "end": 129,
+                            "content": "\"Stake already done\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 129,
+                            "end": 130,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 166,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 137,
+                            "content": "/* require(stakes[_poolIndex][_wallet].stakedAmount == 0 && !stakes[_poolIndex][_wallet].withdrawStake, \"Stake already done\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 169,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 17,
+                            "content": "!",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 17,
+                            "end": 22,
+                            "content": "pools",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 33,
+                            "content": "_poolIndex",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 45,
+                            "content": "terminated",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 60,
+                            "content": "\"Pool closed\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 169,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 68,
+                            "content": "/* require(!pools[_poolIndex].terminated, \"Pool closed\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

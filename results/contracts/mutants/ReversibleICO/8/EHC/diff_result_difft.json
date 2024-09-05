@@ -1,0 +1,776 @@
+{
+    "number_of_changes": 95,
+    "timing": 0.8053820133209229,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 245,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 38,
+                            "content": "_commitPhaseStartBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 62,
+                            "content": "getCurrentBlockNumber",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 106,
+                            "content": "\"Start block cannot be set in the past.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 106,
+                            "end": 107,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 245,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 114,
+                            "content": "/* require(_commitPhaseStartBlock > getCurrentBlockNumber(), \"Start block cannot be set in the past.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 245,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 38,
+                            "content": "_commitPhaseStartBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 62,
+                            "content": "getCurrentBlockNumber",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 106,
+                            "content": "\"Start block cannot be set in the past.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 106,
+                            "end": 107,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 245,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 114,
+                            "content": "/* require(_commitPhaseStartBlock > getCurrentBlockNumber(), \"Start block cannot be set in the past.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 319,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 43,
+                            "content": "minContribution",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 108,
+                            "content": "'To contribute, call the commit() function and send ETH along.'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 319,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 116,
+                            "content": "/* require(msg.value < minContribution, 'To contribute, call the commit() function and send ETH along.'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 344,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 26,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 42,
+                            "content": "tokenAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 81,
+                            "content": "\"Invalid token contract sent tokens.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 344,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 89,
+                            "content": "/* require(msg.sender == tokenAddress, \"Invalid token contract sent tokens.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 368,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 44,
+                            "content": "minContribution",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 93,
+                            "content": "\"Value sent is less than minimum contribution.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 368,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 101,
+                            "content": "/* require(msg.value >= minContribution, \"Value sent is less than minimum contribution.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 428,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "_addresses",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 33,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 73,
+                            "content": "\"No addresses given to whitelist.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 428,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 81,
+                            "content": "/* require(_addresses.length > 0, \"No addresses given to whitelist.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 471,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "_ethAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 50,
+                            "content": "availableForWithdraw",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 105,
+                            "content": "\"Requested amount too high, not enough ETH unlocked.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 471,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 113,
+                            "content": "/* require(_ethAmount <= availableForWithdraw, \"Requested amount too high, not enough ETH unlocked.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 471,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "_ethAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 50,
+                            "content": "availableForWithdraw",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 105,
+                            "content": "\"Requested amount too high, not enough ETH unlocked.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 471,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 113,
+                            "content": "/* require(_ethAmount <= availableForWithdraw, \"Requested amount too high, not enough ETH unlocked.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 557,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 37,
+                            "content": "getCurrentBlockNumber",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 42,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 43,
+                            "end": 54,
+                            "content": "freezeStart",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 58,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 64,
+                            "content": "18000",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 140,
+                            "content": "'Let it cool.. Wait at least ~3 days (18000 blk) before moving anything.'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 140,
+                            "end": 141,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 557,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 148,
+                            "content": "/* require(getCurrentBlockNumber() == freezeStart.add(18000), 'Let it cool.. Wait at least ~3 days (18000 blk) before moving anything.'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 678,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 14,
+                            "end": 15,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 15,
+                            "end": 37,
+                            "content": "\"No price data found.\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 678,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 45,
+                            "content": "/* revert(\"No price data found.\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

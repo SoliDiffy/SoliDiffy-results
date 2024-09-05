@@ -1,0 +1,154 @@
+{
+    "number_of_changes": 18,
+    "timing": 1.1394286155700684,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 15,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 36,
+                            "content": "deadline",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 65,
+                            "content": "\"ReturnFalseERC20: Expired\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 73,
+                            "content": "/* require(block.timestamp < deadline, \"ReturnFalseERC20: Expired\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 26,
+                            "content": "recoveredAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 35,
+                            "content": "owner",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 68,
+                            "content": "\"ReturnFalseERC20: Invalid Sig\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 76,
+                            "content": "/* require(recoveredAddress == owner, \"ReturnFalseERC20: Invalid Sig\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

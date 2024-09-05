@@ -1,0 +1,620 @@
+{
+    "number_of_changes": 80,
+    "timing": 1.823718786239624,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 43,
+                            "content": "totalEscrowedAccountBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 44,
+                            "end": 60,
+                            "content": "addressToMigrate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 96,
+                            "content": "\"Address escrow balance is 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 104,
+                            "content": "/* require(totalEscrowedAccountBalance[addressToMigrate] > 0, \"Address escrow balance is 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 44,
+                            "content": "totalBalancePendingMigration",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 61,
+                            "content": "addressToMigrate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 97,
+                            "content": "\"No escrow migration pending\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 97,
+                            "end": 98,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 66,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 105,
+                            "content": "/* require(totalBalancePendingMigration[addressToMigrate] > 0, \"No escrow migration pending\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "accounts",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 48,
+                            "content": "escrowAmounts",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 55,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 100,
+                            "content": "\"Account and escrowAmounts Length mismatch\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 108,
+                            "content": "/* require(accounts.length == escrowAmounts.length, \"Account and escrowAmounts Length mismatch\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 128,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 48,
+                            "content": "totalBalancePendingMigration",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 65,
+                            "content": "addressToMigrate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 101,
+                            "content": "\"No escrow migration pending\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 128,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 109,
+                            "content": "/* require(totalBalancePendingMigration[addressToMigrate] > 0, \"No escrow migration pending\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 127,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 19,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 20,
+                            "end": 47,
+                            "content": "totalEscrowedAccountBalance",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 64,
+                            "content": "addressToMigrate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 71,
+                            "end": 100,
+                            "content": "\"Address escrow balance is 0\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 127,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 108,
+                            "content": "/* require(totalEscrowedAccountBalance[addressToMigrate] > 0, \"Address escrow balance is 0\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 155,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "accounts",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 49,
+                            "content": "vestedBalances",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 56,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 109,
+                            "content": "\"Number of accounts and vestedBalances don't match\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 109,
+                            "end": 110,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 155,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 117,
+                            "content": "/* require(accounts.length == vestedBalances.length, \"Number of accounts and vestedBalances don't match\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 154,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 24,
+                            "content": "accounts",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 25,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 31,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 34,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 35,
+                            "end": 49,
+                            "content": "escrowBalances",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 56,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 103,
+                            "content": "\"Number of accounts and balances don't match\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 103,
+                            "end": 104,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 154,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 111,
+                            "content": "/* require(accounts.length == escrowBalances.length, \"Number of accounts and balances don't match\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
