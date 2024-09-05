@@ -1,0 +1,888 @@
+{
+    "number_of_changes": 97,
+    "timing": 0.8955647945404053,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "admin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 21,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 28,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 37,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 74,
+                            "content": "'BigOwner: caller is not the admin'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 43,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 82,
+                            "content": "/* require(admin[msg.sender] == true, 'BigOwner: caller is not the admin'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "admin_",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 25,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 28,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "2",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 31,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 85,
+                            "content": "'BigOwner: initial admin should more then 1 address.'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 93,
+                            "content": "/* require(admin_.length >= 2, 'BigOwner: initial admin should more then 1 address.'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 75,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 9,
+                            "content": "    ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 33,
+                            "content": "pendingAdminHashSubmitBlock",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "+",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 49,
+                            "content": "PANDING_BLOCK",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 50,
+                            "end": 52,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 53,
+                            "end": 67,
+                            "content": "getBlockNumber",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 73,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 70,
+                            "content": "      pendingAdminHashSubmitBlock + PANDING_BLOCK >= getBlockNumber(),",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "txHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 21,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 38,
+                            "content": "pendingAdminHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 101,
+                            "content": "'BigOwner::acceptAdmin: Argument not match pendingAdminHash.'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 109,
+                            "content": "/* require(txHash == pendingAdminHash, 'BigOwner::acceptAdmin: Argument not match pendingAdminHash.'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 74,
+                            "content": "\"BigOwner::acceptAdmin: PendingAdmin hasn't surpassed pending time.\"",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 74,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 74,
+                            "content": "      \"BigOwner::acceptAdmin: PendingAdmin hasn't surpassed pending time.\"",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 15,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 25,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 26,
+                            "end": 39,
+                            "content": "pendingAdmin_",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 95,
+                            "content": "'BigOwner::acceptAdmin: Call must come from newAdmin.'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 103,
+                            "content": "/* require(msg.sender == pendingAdmin_, 'BigOwner::acceptAdmin: Call must come from newAdmin.'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 89,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 10,
+                            "content": "assert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 11,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 11,
+                            "end": 18,
+                            "content": "isFound",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 89,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 26,
+                            "content": "/* assert(isFound); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 9,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 10,
+                            "end": 16,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 19,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 20,
+                            "end": 45,
+                            "content": "pendingAdminHashSubmitter",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 103,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 46,
+                            "content": "      msg.sender != pendingAdminHashSubmitter,",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 6,
+                            "end": 89,
+                            "content": "'BigOwner::approvePendingAdmin: Call must not come from pendingAdminHashSubmitter.'",
+                            "highlight": "string"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 89,
+                            "content": "      'BigOwner::approvePendingAdmin: Call must not come from pendingAdminHashSubmitter.'",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "txHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 21,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 38,
+                            "content": "pendingAdminHash",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 112,
+                            "content": "'BigOwner::approvePendingAdmin: Argument not match to pendingAdminHash.'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 112,
+                            "end": 113,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 120,
+                            "content": "/* require(txHash == pendingAdminHash, 'BigOwner::approvePendingAdmin: Argument not match to pendingAdminHash.'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 102,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 15,
+                            "content": "/* require(",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 105,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 105,
+                    "changes": [
+                        {
+                            "start": 0,
+                            "end": 9,
+                            "content": "    ); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "admin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 31,
+                            "content": "pendingAdmin_",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 32,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 41,
+                            "content": "false",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 42,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 105,
+                            "content": "'BigOwner::setPendingAdmin: pendingAdmin should not be admin.'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 116,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 113,
+                            "content": "/* require(admin[pendingAdmin_] == false, 'BigOwner::setPendingAdmin: pendingAdmin should not be admin.'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 17,
+                            "content": "admin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 17,
+                            "end": 18,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 37,
+                            "content": "pendingRemoveAdmin_",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 41,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 46,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 112,
+                            "content": "'BigOwner::setPendingAdmin: pendingRemoveAdmin should be admin.'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 112,
+                            "end": 113,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 115,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 120,
+                            "content": "/* require(admin[pendingRemoveAdmin_] == true, 'BigOwner::setPendingAdmin: pendingRemoveAdmin should be admin.'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
