@@ -1,0 +1,971 @@
+{
+    "number_of_changes": 129,
+    "timing": 0.7693605422973633,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 76,
+                            "content": "// Get the last time inflation was calculated if it has even started",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 62,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 140,
+                            "content": "// If inflation has just begun but not been calculated previously, use the start block as the last calculated point if it has passed",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 63,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 32,
+                            "content": "inflationCalcTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 35,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 40,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 59,
+                            "content": "inflationStartTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 67,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 77,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": "?",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 98,
+                            "content": "inflationStartTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 99,
+                            "end": 100,
+                            "content": ":",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 101,
+                            "end": 118,
+                            "content": "inflationCalcTime",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 33,
+                            "content": "getInflationCalcTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 44,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 51,
+                            "content": "public",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 52,
+                            "end": 56,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 57,
+                            "end": 64,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 72,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 59,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 61,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 16,
+                            "end": 34,
+                            "content": "inflationStartTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 66,
+                            "content": "getInflationIntervalStartTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 67,
+                            "end": 68,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 64,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 32,
+                            "content": "inflationInterval",
+                            "highlight": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 72,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 70,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 37,
+                            "content": "getInflationIntervalTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 48,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 57,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 58,
+                            "end": 62,
+                            "content": "pure",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 63,
+                            "end": 70,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 70,
+                            "end": 71,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 71,
+                            "end": 78,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 65,
+                    "changes": []
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 82,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 79,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 47,
+                            "content": "// Inflation rate controlled by the DAO",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 78,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 37,
+                            "content": "getInflationIntervalRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 48,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 55,
+                            "content": "public",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 56,
+                            "end": 60,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 68,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 69,
+                            "end": 76,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 78,
+                            "end": 79,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 71,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 80,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 51,
+                            "content": "RocketDAOProtocolSettingsInflationInterface",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 52,
+                            "end": 72,
+                            "content": "daoSettingsInflation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 118,
+                            "content": "RocketDAOProtocolSettingsInflationInterface",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 118,
+                            "end": 119,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 119,
+                            "end": 137,
+                            "content": "getContractAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 137,
+                            "end": 138,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 138,
+                            "end": 174,
+                            "content": "\"rocketDAOProtocolSettingsInflation\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 174,
+                            "end": 175,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 175,
+                            "end": 176,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 81,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 35,
+                            "content": "daoSettingsInflation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 60,
+                            "content": "getInflationIntervalRate",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 61,
+                            "end": 62,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 92,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 42,
+                            "content": "getInflationIntervalStartTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 43,
+                            "end": 44,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 53,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 60,
+                            "content": "public",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 61,
+                            "end": 65,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 66,
+                            "end": 73,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 74,
+                            "end": 81,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 82,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 83,
+                            "end": 84,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 77,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 89,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 58,
+                            "content": "// Inflation rate start time controlled by the DAO",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 90,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 51,
+                            "content": "RocketDAOProtocolSettingsInflationInterface",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 52,
+                            "end": 72,
+                            "content": "daoSettingsInflation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 75,
+                            "end": 118,
+                            "content": "RocketDAOProtocolSettingsInflationInterface",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 118,
+                            "end": 119,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 119,
+                            "end": 137,
+                            "content": "getContractAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 137,
+                            "end": 138,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 138,
+                            "end": 174,
+                            "content": "\"rocketDAOProtocolSettingsInflation\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 174,
+                            "end": 175,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 175,
+                            "end": 176,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 91,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 35,
+                            "content": "daoSettingsInflation",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 65,
+                            "content": "getInflationIntervalStartTime",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 66,
+                            "end": 67,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 98,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 47,
+                            "content": "getInflationRewardsContractAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 58,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 67,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 68,
+                            "end": 72,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 73,
+                            "end": 80,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 81,
+                            "end": 88,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 83,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 99,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 59,
+                            "content": "// Inflation rate start block controlled by the DAO",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 100,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 33,
+                            "content": "getContractAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 33,
+                            "end": 34,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 34,
+                            "end": 53,
+                            "content": "\"rocketRewardsPool\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 53,
+                            "end": 54,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 101,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

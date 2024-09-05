@@ -1,0 +1,866 @@
+{
+    "number_of_changes": 120,
+    "timing": 0.842595100402832,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 58,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 37,
+                            "content": "// Emit ether deposited event",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 44,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 27,
+                            "content": "balanceOfToken",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 34,
+                            "content": "string",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 41,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 42,
+                            "end": 62,
+                            "content": "_networkContractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 63,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 70,
+                            "content": "IERC20",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 71,
+                            "end": 84,
+                            "content": "_tokenAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 84,
+                            "end": 85,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 86,
+                            "end": 94,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 95,
+                            "end": 103,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 104,
+                            "end": 108,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 109,
+                            "end": 116,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 117,
+                            "end": 118,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 118,
+                            "end": 125,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 125,
+                            "end": 126,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 127,
+                            "end": 128,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 41,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 51,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 25,
+                            "content": "depositEther",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 36,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 45,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 53,
+                            "content": "payable",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 54,
+                            "end": 79,
+                            "content": "onlyLatestNetworkContract",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 45,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 39,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 25,
+                            "content": "// Return balance",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 55,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "string",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 21,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 22,
+                            "end": 34,
+                            "content": "contractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 52,
+                            "content": "getContractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 53,
+                            "end": 56,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 63,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 53,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 19,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 19,
+                            "end": 20,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 20,
+                            "end": 25,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 72,
+                            "content": "\"No valid amount of ETH given to deposit\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 59,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 12,
+                            "content": "emit",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 27,
+                            "content": "EtherDeposited",
+                            "highlight": "type"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 40,
+                            "content": "contractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 45,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 51,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 58,
+                            "content": "block",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 58,
+                            "end": 59,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 68,
+                            "content": "timestamp",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 69,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 38,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 12,
+                            "content": "function",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 13,
+                            "end": 22,
+                            "content": "balanceOf",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 29,
+                            "content": "string",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "memory",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 37,
+                            "end": 57,
+                            "content": "_networkContractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 58,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 67,
+                            "content": "override",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 68,
+                            "end": 76,
+                            "content": "external",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 77,
+                            "end": 81,
+                            "content": "view",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 82,
+                            "end": 89,
+                            "content": "returns",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 91,
+                            "end": 98,
+                            "content": "uint256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 98,
+                            "end": 99,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": "{",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 38,
+                    "changes": []
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 28,
+                            "content": "tokenBalances",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 38,
+                            "content": "keccak256",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 39,
+                            "end": 42,
+                            "content": "abi",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 55,
+                            "content": "encodePacked",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 56,
+                            "end": 76,
+                            "content": "_networkContractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 78,
+                            "end": 91,
+                            "content": "_tokenAddress",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 47,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 52,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 24,
+                            "content": "// Valid amount?",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 60,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 40,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 14,
+                            "content": "return",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 15,
+                            "end": 28,
+                            "content": "etherBalances",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 28,
+                            "end": 29,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 49,
+                            "content": "_networkContractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 25,
+                            "content": "// Return balance",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 57,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 21,
+                            "content": "etherBalances",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 21,
+                            "end": 22,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 22,
+                            "end": 34,
+                            "content": "contractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "=",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 38,
+                            "end": 51,
+                            "content": "etherBalances",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 51,
+                            "end": 52,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 52,
+                            "end": 64,
+                            "content": "contractName",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 66,
+                            "end": 69,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 69,
+                            "end": 70,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 70,
+                            "end": 73,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 74,
+                            "end": 79,
+                            "content": "value",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 79,
+                            "end": 80,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 5,
+                            "content": "}",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 54,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 27,
+                            "content": "// Get contract key",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 56,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 34,
+                            "content": "// Update contract balance",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

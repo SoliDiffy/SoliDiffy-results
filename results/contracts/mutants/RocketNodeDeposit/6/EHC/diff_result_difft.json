@@ -1,0 +1,522 @@
+{
+    "number_of_changes": 67,
+    "timing": 0.8939850330352783,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "nodeFee",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 26,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 27,
+                            "end": 42,
+                            "content": "_minimumNodeFee",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 95,
+                            "content": "\"Minimum node fee exceeds current network node fee\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 48,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 103,
+                            "content": "/* require(nodeFee >= _minimumNodeFee, \"Minimum node fee exceeds current network node fee\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 45,
+                            "content": "rocketDAOProtocolSettingsNode",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 63,
+                            "content": "getDepositEnabled",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 63,
+                            "end": 64,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 64,
+                            "end": 65,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 65,
+                            "end": 66,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 67,
+                            "end": 105,
+                            "content": "\"Node deposits are currently disabled\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 105,
+                            "end": 106,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 45,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 113,
+                            "content": "/* require(rocketDAOProtocolSettingsNode.getDepositEnabled(), \"Node deposits are currently disabled\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 56,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 18,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 18,
+                            "end": 19,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 19,
+                            "end": 48,
+                            "content": "\"Invalid node deposit amount\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 56,
+                    "changes": [
+                        {
+                            "start": 12,
+                            "end": 56,
+                            "content": "/* revert(\"Invalid node deposit amount\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 44,
+                            "content": "rocketDaoNodeTrusted",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 76,
+                            "content": "getMemberUnbondedValidatorCount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 77,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 77,
+                            "end": 80,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 87,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 87,
+                            "end": 88,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 89,
+                            "end": 90,
+                            "content": "<",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 91,
+                            "end": 126,
+                            "content": "rocketDaoNodeTrustedSettingsMembers",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 126,
+                            "end": 127,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 127,
+                            "end": 149,
+                            "content": "getMinipoolUnbondedMax",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 149,
+                            "end": 150,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 150,
+                            "end": 151,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 151,
+                            "end": 152,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 153,
+                            "end": 228,
+                            "content": "\"Trusted node member would exceed the amount of unbonded minipools allowed\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 228,
+                            "end": 229,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 65,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 236,
+                            "content": "/* require(rocketDaoNodeTrusted.getMemberUnbondedValidatorCount(msg.sender) < rocketDaoNodeTrustedSettingsMembers.getMinipoolUnbondedMax(), \"Trusted node member would exceed the amount of unbonded minipools allowed\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 22,
+                            "content": "revert",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 22,
+                            "end": 23,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 91,
+                            "content": "\"Only members of the trusted node DAO may create unbonded minipools\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 91,
+                            "end": 92,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 71,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 99,
+                            "content": "/* revert(\"Only members of the trusted node DAO may create unbonded minipools\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 31,
+                            "content": "nodeFee",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 32,
+                            "end": 33,
+                            "content": ">",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 40,
+                            "content": "maxFee",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 44,
+                            "content": "mul",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 45,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 45,
+                            "end": 80,
+                            "content": "rocketDaoNodeTrustedSettingsMembers",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 80,
+                            "end": 81,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 81,
+                            "end": 106,
+                            "content": "getMinipoolUnbondedMinFee",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 106,
+                            "end": 107,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 107,
+                            "end": 108,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 108,
+                            "end": 109,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 109,
+                            "end": 110,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 110,
+                            "end": 113,
+                            "content": "div",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 113,
+                            "end": 114,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 116,
+                            "end": 121,
+                            "content": "ether",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 121,
+                            "end": 122,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 122,
+                            "end": 123,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 124,
+                            "end": 197,
+                            "content": "\"Current commission rate is not high enough to create unbonded minipools\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 197,
+                            "end": 198,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 67,
+                    "changes": [
+                        {
+                            "start": 16,
+                            "end": 205,
+                            "content": "/* require(nodeFee > maxFee.mul(rocketDaoNodeTrustedSettingsMembers.getMinipoolUnbondedMinFee()).div(1 ether), \"Current commission rate is not high enough to create unbonded minipools\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
