@@ -1,0 +1,536 @@
+{
+    "number_of_changes": 69,
+    "timing": 1.2755248546600342,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 26,
+                            "content": "_fastGasOracle",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 29,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "address",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 40,
+                            "end": 41,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 97,
+                            "content": "'V2QueueKeep3rJob::set-fas-gas-oracle:not-zero-address'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 97,
+                            "end": 98,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 77,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 105,
+                            "content": "/* require(_fastGasOracle != address(0), 'V2QueueKeep3rJob::set-fas-gas-oracle:not-zero-address'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 29,
+                            "content": "_rewardMultiplier",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 32,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 33,
+                            "end": 54,
+                            "content": "MAX_REWARD_MULTIPLIER",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 120,
+                            "content": "'V2QueueKeep3rJob::set-reward-multiplier:multiplier-exceeds-max'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 120,
+                            "end": 121,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 97,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 128,
+                            "content": "/* require(_rewardMultiplier <= MAX_REWARD_MULTIPLIER, 'V2QueueKeep3rJob::set-reward-multiplier:multiplier-exceeds-max'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "_strategies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 45,
+                            "content": "_strategies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 52,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 100,
+                            "content": "'V2QueueKeep3rJob::add-queue:lengths-mismatch'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 100,
+                            "end": 101,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 120,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 108,
+                            "content": "/* require(_strategies.length == _strategies.length, 'V2QueueKeep3rJob::add-queue:lengths-mismatch'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 119,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "queueStrategies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 34,
+                            "content": "_queue",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 45,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 96,
+                            "content": "'V2QueueKeep3rJob::add-queue:queue-already-set'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 96,
+                            "end": 97,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 119,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 104,
+                            "content": "/* require(queueStrategies[_queue].length == 0, 'V2QueueKeep3rJob::add-queue:queue-already-set'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 27,
+                            "content": "queueStrategies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 28,
+                            "end": 34,
+                            "content": "_queue",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 34,
+                            "end": 35,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 42,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 43,
+                            "end": 45,
+                            "content": "!=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 46,
+                            "end": 47,
+                            "content": "0",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 93,
+                            "content": "'V2QueueKeep3rJob::edit-queue:queue-not-set'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 93,
+                            "end": 94,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 141,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 101,
+                            "content": "/* require(queueStrategies[_queue].length != 0, 'V2QueueKeep3rJob::edit-queue:queue-not-set'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            },
+            {
+                "lhs": {
+                    "line_number": 142,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 23,
+                            "content": "_strategies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 24,
+                            "end": 30,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 45,
+                            "content": "_strategies",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 46,
+                            "end": 52,
+                            "content": "length",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 101,
+                            "content": "'V2QueueKeep3rJob::edit-queue:lengths-mismatch'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 101,
+                            "end": 102,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 142,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 109,
+                            "content": "/* require(_strategies.length == _strategies.length, 'V2QueueKeep3rJob::edit-queue:lengths-mismatch'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}

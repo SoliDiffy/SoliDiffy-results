@@ -1,0 +1,410 @@
+{
+    "number_of_changes": 54,
+    "timing": 0.4564969539642334,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 30,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "hasRole",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 42,
+                            "content": "DEFAULT_ADMIN_ROLE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 47,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 48,
+                            "end": 54,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 55,
+                            "end": 56,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 57,
+                            "end": 95,
+                            "content": "\"MTRV1: Caller is not a default admin\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 95,
+                            "end": 96,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 30,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 103,
+                            "content": "/* require(hasRole(DEFAULT_ADMIN_ROLE, msg.sender), \"MTRV1: Caller is not a default admin\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 26,
+                            "content": "_msgSender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 26,
+                            "end": 27,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 27,
+                            "end": 28,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 39,
+                            "content": "factory",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 40,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 41,
+                            "end": 71,
+                            "content": "\"MTRV1: Caller is not factory\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 36,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 79,
+                            "content": "/* require(_msgSender() == factory, \"MTRV1: Caller is not factory\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "hasRole",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 35,
+                            "content": "BURNER_ROLE",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 36,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 47,
+                            "content": "_msgSender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 49,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 49,
+                            "end": 50,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 50,
+                            "end": 51,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 90,
+                            "content": "\"MTRV1: must have burner role to burn\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 90,
+                            "end": 91,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 41,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 98,
+                            "content": "/* require(hasRole(BURNER_ROLE, _msgSender()), \"MTRV1: must have burner role to burn\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 29,
+                            "content": "IVaultFactory",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 30,
+                            "end": 37,
+                            "content": "factory",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 37,
+                            "end": 38,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 39,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 39,
+                            "end": 47,
+                            "content": "getVault",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 48,
+                            "end": 56,
+                            "content": "vaultId_",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 57,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 59,
+                            "end": 61,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 62,
+                            "end": 72,
+                            "content": "_msgSender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 72,
+                            "end": 73,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 73,
+                            "end": 74,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 76,
+                            "end": 104,
+                            "content": "\"MTRV1: Caller is not vault\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 104,
+                            "end": 105,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 46,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 112,
+                            "content": "/* require(IVaultFactory(factory).getVault(vaultId_)  == _msgSender(), \"MTRV1: Caller is not vault\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
