@@ -1,0 +1,332 @@
+{
+    "number_of_changes": 41,
+    "timing": 0.7619950771331787,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 30,
+                            "content": "_miningMinGulpAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 31,
+                            "end": 33,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 34,
+                            "end": 54,
+                            "content": "_miningMaxGulpAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 54,
+                            "end": 55,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 56,
+                            "end": 71,
+                            "content": "\"invalid range\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 71,
+                            "end": 72,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 87,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 79,
+                            "content": "/* require(_miningMinGulpAmount <= _miningMaxGulpAmount, \"invalid range\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 9,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 9,
+                            "end": 10,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 10,
+                            "end": 34,
+                            "content": "_collateralizationMargin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 35,
+                            "end": 37,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 38,
+                            "end": 61,
+                            "content": "_collateralizationRatio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 62,
+                            "end": 64,
+                            "content": "&&",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 65,
+                            "end": 88,
+                            "content": "_collateralizationRatio",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 88,
+                            "end": 89,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 89,
+                            "end": 92,
+                            "content": "add",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 92,
+                            "end": 93,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 93,
+                            "end": 117,
+                            "content": "_collateralizationMargin",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 117,
+                            "end": 118,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 119,
+                            "end": 121,
+                            "content": "<=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 122,
+                            "end": 153,
+                            "content": "MAXIMUM_COLLATERALIZATION_RATIO",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 153,
+                            "end": 154,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 155,
+                            "end": 170,
+                            "content": "\"invalid ratio\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 170,
+                            "end": 171,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 104,
+                    "changes": [
+                        {
+                            "start": 2,
+                            "end": 178,
+                            "content": "/* require(_collateralizationMargin <= _collateralizationRatio && _collateralizationRatio.add(_collateralizationMargin) <= MAXIMUM_COLLATERALIZATION_RATIO, \"invalid ratio\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 205,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 28,
+                            "content": "_liquidityAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 42,
+                            "content": "_minAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 85,
+                            "content": "\"cannot maintain collateralization ratio\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 205,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 93,
+                            "content": "/* require(_liquidityAmount >= _minAmount, \"cannot maintain collateralization ratio\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 213,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 11,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 11,
+                            "end": 12,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 12,
+                            "end": 28,
+                            "content": "_liquidityAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 31,
+                            "content": ">=",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 32,
+                            "end": 42,
+                            "content": "_minAmount",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 42,
+                            "end": 43,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 44,
+                            "end": 85,
+                            "content": "\"cannot maintain collateralization ratio\"",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 85,
+                            "end": 86,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 213,
+                    "changes": [
+                        {
+                            "start": 4,
+                            "end": 93,
+                            "content": "/* require(_liquidityAmount >= _minAmount, \"cannot maintain collateralization ratio\"); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
