@@ -1,0 +1,190 @@
+{
+    "number_of_changes": 24,
+    "timing": 1.730447769165039,
+    "diff_chunks": [
+        [
+            {
+                "lhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 23,
+                            "content": "hasRole",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 23,
+                            "end": 24,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 24,
+                            "end": 47,
+                            "content": "COLLATERAL_RATIO_PAUSER",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 48,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 49,
+                            "end": 52,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 52,
+                            "end": 53,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 53,
+                            "end": 59,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 59,
+                            "end": 60,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 60,
+                            "end": 61,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 88,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 68,
+                            "content": "/* require(hasRole(COLLATERAL_RATIO_PAUSER, msg.sender)); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "lhs": {
+                    "line_number": 94,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 15,
+                            "content": "require",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 15,
+                            "end": 16,
+                            "content": "(",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 16,
+                            "end": 25,
+                            "content": "arthPools",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 25,
+                            "end": 26,
+                            "content": "[",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 26,
+                            "end": 29,
+                            "content": "msg",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 29,
+                            "end": 30,
+                            "content": ".",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 30,
+                            "end": 36,
+                            "content": "sender",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 36,
+                            "end": 37,
+                            "content": "]",
+                            "highlight": "delimiter"
+                        },
+                        {
+                            "start": 38,
+                            "end": 40,
+                            "content": "==",
+                            "highlight": "keyword"
+                        },
+                        {
+                            "start": 41,
+                            "end": 45,
+                            "content": "true",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 45,
+                            "end": 46,
+                            "content": ",",
+                            "highlight": "normal"
+                        },
+                        {
+                            "start": 47,
+                            "end": 74,
+                            "content": "'ARTHController: FORBIDDEN'",
+                            "highlight": "string"
+                        },
+                        {
+                            "start": 74,
+                            "end": 75,
+                            "content": ")",
+                            "highlight": "delimiter"
+                        }
+                    ]
+                },
+                "rhs": {
+                    "line_number": 94,
+                    "changes": [
+                        {
+                            "start": 8,
+                            "end": 82,
+                            "content": "/* require(arthPools[msg.sender] == true, 'ARTHController: FORBIDDEN'); */",
+                            "highlight": "comment"
+                        }
+                    ]
+                }
+            }
+        ]
+    ]
+}
