@@ -3,6 +3,6 @@
 Clone the results using the following command:
 
 ```sh
-git config --global http.postBuffer 524288000  # 500MB
-git clone git@github.com:mojtaba-eshghie/SoliDiffy.git
+git config --global http.postBuffer 524288000 
+git clone git@github.com:SoliDiffy/SoliDiffy-results
 ```
