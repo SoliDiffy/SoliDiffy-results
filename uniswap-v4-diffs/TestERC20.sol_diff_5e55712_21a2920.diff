@@ -1,0 +1,13 @@
+diff --git a/contracts/test/TestERC20.sol b/contracts/test/TestERC20.sol
+index 6c647606..c76ff25a 100644
+--- a/contracts/test/TestERC20.sol
++++ b/contracts/test/TestERC20.sol
+@@ -44,7 +44,7 @@ contract TestERC20 is IERC20Minimal {
+         uint256 allowanceBefore = allowance[sender][msg.sender];
+         require(allowanceBefore >= amount, 'allowance insufficient');
+ 
+-        allowance[sender][msg.sender] = allowanceBefore - amount;
++        if (allowanceBefore != type(uint256).max) allowance[sender][msg.sender] = allowanceBefore - amount;
+ 
+         uint256 balanceRecipient = balanceOf[recipient];
+         require(balanceRecipient + amount >= balanceRecipient, 'overflow balance recipient');

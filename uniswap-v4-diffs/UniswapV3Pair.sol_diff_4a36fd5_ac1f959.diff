@@ -1,0 +1,25 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 9b642498..239ff0ef 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -6,7 +6,8 @@ import './libraries/FullMath.sol';
+ import './libraries/TransferHelper.sol';
+ 
+ import './libraries/FeeMath.sol';
+-import './libraries/CheapSafeMath.sol';
++import './libraries/SafeMath.sol';
++import './libraries/SignedSafeMath.sol';
+ 
+ import './libraries/SafeCast.sol';
+ import './libraries/LiquidityMath.sol';
+@@ -30,8 +31,8 @@ import './interfaces/callback/IUniswapV3FlashCallback.sol';
+ import './NoDelegateCall.sol';
+ 
+ contract UniswapV3Pair is IUniswapV3Pair, NoDelegateCall {
+-    using CheapSafeMath for uint256;
+-    using CheapSafeMath for int256;
++    using SafeMath for uint256;
++    using SignedSafeMath for int256;
+     using SafeCast for uint256;
+     using SafeCast for int256;
+     using LiquidityMath for uint128;

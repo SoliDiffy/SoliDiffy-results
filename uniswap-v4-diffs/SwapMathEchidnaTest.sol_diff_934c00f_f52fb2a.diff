@@ -1,0 +1,13 @@
+diff --git a/contracts/test/SwapMathEchidnaTest.sol b/contracts/test/SwapMathEchidnaTest.sol
+index 80ea5bc4..55211120 100644
+--- a/contracts/test/SwapMathEchidnaTest.sol
++++ b/contracts/test/SwapMathEchidnaTest.sol
+@@ -21,8 +21,6 @@ contract SwapMathEchidnaTest {
+     ) external pure {
+         requirePriceWithinBounds(priceRaw);
+         requirePriceWithinBounds(priceTargetRaw);
+-        require(feePips < 1e6);
+-
+         if (zeroForOne) {
+             if (priceRaw < priceTargetRaw) {
+                 (priceTargetRaw, priceRaw) = (priceRaw, priceTargetRaw);

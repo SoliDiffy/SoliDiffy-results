@@ -1,0 +1,13 @@
+diff --git a/src/interfaces/IProtocolFees.sol b/src/interfaces/IProtocolFees.sol
+index 3f299c34..ffa93379 100644
+--- a/src/interfaces/IProtocolFees.sol
++++ b/src/interfaces/IProtocolFees.sol
+@@ -15,7 +15,7 @@ interface IProtocolFees {
+     /// @notice Thrown when collectProtocolFees or setProtocolFee is not called by the controller.
+     error InvalidCaller();
+ 
+-    event ProtocolFeeControllerUpdated(address indexed protocolFeeController);
++    event ProtocolFeeControllerUpdated(address protocolFeeController);
+ 
+     event ProtocolFeeUpdated(PoolId indexed id, uint24 protocolFee);
+ 

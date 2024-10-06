@@ -1,0 +1,23 @@
+diff --git a/src/test/PoolSwapTest.sol b/src/test/PoolSwapTest.sol
+index e561751e..56c61e62 100644
+--- a/src/test/PoolSwapTest.sol
++++ b/src/test/PoolSwapTest.sol
+@@ -12,8 +12,6 @@ import {PoolKey} from "../types/PoolKey.sol";
+ contract PoolSwapTest is ILockCallback {
+     using CurrencyLibrary for Currency;
+ 
+-    error NoSwapOccurred();
+-
+     IPoolManager public immutable manager;
+ 
+     constructor(IPoolManager _manager) {
+@@ -54,9 +52,6 @@ contract PoolSwapTest is ILockCallback {
+ 
+         BalanceDelta delta = manager.swap(data.key, data.params, data.hookData);
+ 
+-        // Make sure youve added liquidity to the test pool!
+-        if (BalanceDelta.unwrap(delta) == 0) revert NoSwapOccurred();
+-
+         if (data.params.zeroForOne) {
+             if (delta.amount0() > 0) {
+                 if (data.testSettings.settleUsingTransfer) {

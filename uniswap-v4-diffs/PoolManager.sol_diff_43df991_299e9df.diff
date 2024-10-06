@@ -1,0 +1,42 @@
+diff --git a/contracts/PoolManager.sol b/contracts/PoolManager.sol
+index 8f83b132..69db0b01 100644
+--- a/contracts/PoolManager.sol
++++ b/contracts/PoolManager.sol
+@@ -5,7 +5,6 @@ import {Hooks} from './libraries/Hooks.sol';
+ import {Pool} from './libraries/Pool.sol';
+ import {Tick} from './libraries/Tick.sol';
+ import {SafeCast} from './libraries/SafeCast.sol';
+-import {Position} from './libraries/Position.sol';
+ import {TransferHelper} from './libraries/TransferHelper.sol';
+ 
+ import {IERC20Minimal} from './interfaces/external/IERC20Minimal.sol';
+@@ -22,7 +21,6 @@ contract PoolManager is IPoolManager, NoDelegateCall, ERC1155, IERC1155Receiver
+     using SafeCast for *;
+     using Pool for *;
+     using Hooks for IHooks;
+-    using Position for mapping(bytes32 => Position.Info);
+     using TransferHelper for IERC20Minimal;
+ 
+     /// @inheritdoc IPoolManager
+@@ -52,20 +50,10 @@ contract PoolManager is IPoolManager, NoDelegateCall, ERC1155, IERC1155Receiver
+     }
+ 
+     /// @inheritdoc IPoolManager
+-    function getLiquidity(IPoolManager.PoolKey calldata key) external view override returns (uint128 liquidity) {
++    function getLiquidity(IPoolManager.PoolKey memory key) external view override returns (uint128 liquidity) {
+         return _getPool(key).liquidity;
+     }
+ 
+-    /// @inheritdoc IPoolManager
+-    function getLiquidity(
+-        IPoolManager.PoolKey calldata key,
+-        address owner,
+-        int24 tickLower,
+-        int24 tickUpper
+-    ) external view override returns (uint128 liquidity) {
+-        return _getPool(key).positions.get(owner, tickLower, tickUpper).liquidity;
+-    }
+-
+     /// @inheritdoc IPoolManager
+     function initialize(IPoolManager.PoolKey memory key, uint160 sqrtPriceX96) external override returns (int24 tick) {
+         // see TickBitmap.sol for overflow conditions that can arise from tick spacing being too large

@@ -1,0 +1,47 @@
+diff --git a/contracts/libraries/SqrtPriceMath.sol b/contracts/libraries/SqrtPriceMath.sol
+index 197aeca9..5108af12 100644
+--- a/contracts/libraries/SqrtPriceMath.sol
++++ b/contracts/libraries/SqrtPriceMath.sol
+@@ -3,13 +3,13 @@ pragma solidity >=0.5.0;
+ 
+ import './FeeMath.sol';
+ import './FullMath.sol';
+-import './LowGasSafeMath.sol';
++import './CheapSafeMath.sol';
+ 
+ import './SafeCast.sol';
+ import './FixedPoint96.sol';
+ 
+ library SqrtPriceMath {
+-    using LowGasSafeMath for uint256;
++    using CheapSafeMath for uint256;
+     using SafeCast for uint256;
+ 
+     // calculate liquidity * sqrt(P) / (liquidity +- x * sqrt(P))
+@@ -41,7 +41,7 @@ library SqrtPriceMath {
+         uint256 denominator1 = add ? (numerator1 / sqrtPX96).add(amount) : (numerator1 / sqrtPX96).sub(amount);
+         require(denominator1 != 0, 'OUT');
+ 
+-        return LowGasSafeMath.divRoundingUp(numerator1, denominator1).toUint160();
++        return FeeMath.divRoundingUp(numerator1, denominator1).toUint160();
+     }
+ 
+     // calculate sqrt(P) +- y / liquidity
+@@ -62,7 +62,7 @@ library SqrtPriceMath {
+                 )
+                 : (
+                     amount <= type(uint160).max
+-                        ? LowGasSafeMath.divRoundingUp(amount << FixedPoint96.RESOLUTION, liquidity)
++                        ? FeeMath.divRoundingUp(amount << FixedPoint96.RESOLUTION, liquidity)
+                         : FullMath.mulDivRoundingUp(amount, FixedPoint96.Q96, liquidity)
+                 );
+ 
+@@ -116,7 +116,7 @@ library SqrtPriceMath {
+ 
+         return
+             roundUp
+-                ? LowGasSafeMath.divRoundingUp(FullMath.mulDivRoundingUp(numerator1, numerator2, sqrtPX96), sqrtQX96)
++                ? FeeMath.divRoundingUp(FullMath.mulDivRoundingUp(numerator1, numerator2, sqrtPX96), sqrtQX96)
+                 : FullMath.mulDiv(numerator1, numerator2, sqrtPX96) / sqrtQX96;
+     }
+ 

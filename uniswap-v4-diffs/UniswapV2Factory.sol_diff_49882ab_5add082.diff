@@ -1,0 +1,24 @@
+diff --git a/contracts/UniswapV2Factory.sol b/contracts/UniswapV2Factory.sol
+index f7111af4..d0cdcccd 100644
+--- a/contracts/UniswapV2Factory.sol
++++ b/contracts/UniswapV2Factory.sol
+@@ -20,16 +20,16 @@ contract UniswapV2Factory is IUniswapV2Factory {
+         factoryOwner = _factoryOwner;
+     }
+ 
+-    function sortTokens(address tokenA, address tokenB) public pure returns (address token0, address token1) {
++    function sortTokens(address tokenA, address tokenB) public pure returns (address, address) {
+         return tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
+     }
+ 
+-    function getExchange(address tokenA, address tokenB) external view returns (address exchange) {
++    function getExchange(address tokenA, address tokenB) external view returns (address) {
+         (address token0, address token1) = sortTokens(tokenA, tokenB);
+         return _getExchange[token0][token1];
+     }
+ 
+-    function getTokens(address exchange) external view returns (address token0, address token1) {
++    function getTokens(address exchange) external view returns (address, address) {
+         return (_getTokens[exchange][0], _getTokens[exchange][1]);
+     }
+ 

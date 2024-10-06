@@ -1,0 +1,38 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index 22d4db36..02ff21ab 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -1,5 +1,5 @@
+ // SPDX-License-Identifier: BUSL-1.1
+-pragma solidity 0.8.26;
++pragma solidity ^0.8.24;
+ 
+ import {Hooks} from "./libraries/Hooks.sol";
+ import {Pool} from "./libraries/Pool.sol";
+@@ -169,7 +169,6 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+             })
+         );
+ 
+-        // fee delta and principal delta are both accrued to the caller
+         callerDelta = principalDelta + feesAccrued;
+ 
+         // event is emitted before the afterModifyLiquidity call to ensure events are always emitted in order
+@@ -324,16 +323,13 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+     function _accountDelta(Currency currency, int128 delta, address target) internal {
+         if (delta == 0) return;
+ 
+-        int256 current = currency.getDelta(target);
+-        int256 next = current + delta;
++        (int256 previous, int256 next) = currency.applyDelta(target, delta);
+ 
+         if (next == 0) {
+             NonZeroDeltaCount.decrement();
+-        } else if (current == 0) {
++        } else if (previous == 0) {
+             NonZeroDeltaCount.increment();
+         }
+-
+-        currency.setDelta(target, next);
+     }
+ 
+     /// @notice Accounts the deltas of 2 currencies to a target address

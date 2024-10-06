@@ -1,0 +1,24 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index cffbd1db..da129ef2 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -334,9 +334,6 @@ contract UniswapV3Pair is IUniswapV3Pair {
+                 })
+             );
+ 
+-        assert(amount0Int >= 0);
+-        assert(amount1Int >= 0);
+-
+         amount0 = uint256(amount0Int);
+         amount1 = uint256(amount1Int);
+ 
+@@ -368,9 +365,6 @@ contract UniswapV3Pair is IUniswapV3Pair {
+                 })
+             );
+ 
+-        assert(amount0Int <= 0);
+-        assert(amount1Int <= 0);
+-
+         amount0 = uint256(-amount0Int);
+         amount1 = uint256(-amount1Int);
+ 

@@ -1,0 +1,20 @@
+diff --git a/src/libraries/SwapMath.sol b/src/libraries/SwapMath.sol
+index 1be042dc..9d54c47c 100644
+--- a/src/libraries/SwapMath.sol
++++ b/src/libraries/SwapMath.sol
+@@ -1,5 +1,5 @@
+ // SPDX-License-Identifier: GPL-2.0-or-later
+-pragma solidity ^0.8.20;
++pragma solidity ^0.8.0;
+ 
+ import {FullMath} from "./FullMath.sol";
+ import {SqrtPriceMath} from "./SqrtPriceMath.sol";
+@@ -20,7 +20,7 @@ library SwapMath {
+         pure
+         returns (uint160 sqrtPriceTargetX96)
+     {
+-        assembly ("memory-safe") {
++        assembly {
+             // a flag to toggle between sqrtPriceNextX96 and sqrtPriceLimitX96
+             // when zeroForOne == true, nextOrLimit reduces to sqrtPriceNextX96 >= sqrtPriceLimitX96
+             // sqrtPriceTargetX96 = max(sqrtPriceNextX96, sqrtPriceLimitX96)

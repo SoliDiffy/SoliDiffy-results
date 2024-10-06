@@ -1,0 +1,13 @@
+diff --git a/contracts/libraries/TickMath.sol b/contracts/libraries/TickMath.sol
+index c15ff3c2..511470da 100644
+--- a/contracts/libraries/TickMath.sol
++++ b/contracts/libraries/TickMath.sol
+@@ -45,6 +45,8 @@ library TickMath {
+             'TickMath::getTickAtRatio: invalid ratio'
+         );
+ 
++        if (ratio >= 0x1000000000000000000000000000000000000000000000000) return 887272;
++
+         uint256 r = ratio;
+         uint256 msb = 0;
+ 

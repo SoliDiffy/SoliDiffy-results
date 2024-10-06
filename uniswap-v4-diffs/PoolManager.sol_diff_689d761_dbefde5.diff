@@ -1,0 +1,13 @@
+diff --git a/contracts/PoolManager.sol b/contracts/PoolManager.sol
+index 612b74cc..df0e4677 100644
+--- a/contracts/PoolManager.sol
++++ b/contracts/PoolManager.sol
+@@ -147,7 +147,7 @@ contract PoolManager is IPoolManager, NoDelegateCall {
+         _accountPoolBalanceDelta(key, delta);
+ 
+         if (key.hooks.shouldCallAfterModifyPosition()) {
+-            key.hooks.afterModifyPosition(msg.sender, key, params, delta);
++            key.hooks.afterModifyPosition(msg.sender, key, params);
+         }
+     }
+ 

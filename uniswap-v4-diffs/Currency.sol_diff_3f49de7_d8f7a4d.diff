@@ -1,0 +1,12 @@
+diff --git a/src/types/Currency.sol b/src/types/Currency.sol
+index 4bffe0da..53ee8550 100644
+--- a/src/types/Currency.sol
++++ b/src/types/Currency.sol
+@@ -33,7 +33,6 @@ library CurrencyLibrary {
+     /// @notice Thrown when an ERC20 transfer fails
+     error ERC20TransferFailed();
+ 
+-    /// @notice A constant to represent the native currency
+     Currency public constant NATIVE = Currency.wrap(address(0));
+ 
+     function transfer(Currency currency, address to, uint256 amount) internal {

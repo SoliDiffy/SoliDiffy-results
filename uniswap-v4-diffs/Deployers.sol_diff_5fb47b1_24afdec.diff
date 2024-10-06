@@ -1,0 +1,55 @@
+diff --git a/test/utils/Deployers.sol b/test/utils/Deployers.sol
+index 2974bf28..5537e9cb 100644
+--- a/test/utils/Deployers.sol
++++ b/test/utils/Deployers.sol
+@@ -37,20 +37,17 @@ contract Deployers {
+         }
+     }
+ 
+-    function createAndInitPool(PoolManager manager, IHooks hooks, uint24 fee, uint160 sqrtPriceX96)
++    function createPool(PoolManager manager, IHooks hooks, uint24 fee, uint160 sqrtPriceX96)
+         public
+         returns (PoolKey memory key, PoolId id)
+     {
+-        (key, id) = createAndInitPool(manager, hooks, fee, sqrtPriceX96, ZERO_BYTES);
++        (key, id) = createPool(manager, hooks, fee, sqrtPriceX96, ZERO_BYTES);
+     }
+ 
+-    function createAndInitPool(
+-        PoolManager manager,
+-        IHooks hooks,
+-        uint24 fee,
+-        uint160 sqrtPriceX96,
+-        bytes memory initData
+-    ) private returns (PoolKey memory key, PoolId id) {
++    function createPool(PoolManager manager, IHooks hooks, uint24 fee, uint160 sqrtPriceX96, bytes memory initData)
++        private
++        returns (PoolKey memory key, PoolId id)
++    {
+         MockERC20[] memory tokens = deployTokens(2, 2 ** 255);
+         (Currency currency0, Currency currency1) = SortTokens.sort(tokens[0], tokens[1]);
+         key = PoolKey(currency0, currency1, fee, fee.isDynamicFee() ? int24(60) : int24(fee / 100 * 2), hooks);
+@@ -64,19 +61,19 @@ contract Deployers {
+         key = PoolKey(currency0, currency1, fee, fee.isDynamicFee() ? int24(60) : int24(fee / 100 * 2), hooks);
+     }
+ 
+-    function createAndInitFreshPool(IHooks hooks, uint24 fee, uint160 sqrtPriceX96)
++    function createFreshPool(IHooks hooks, uint24 fee, uint160 sqrtPriceX96)
+         internal
+         returns (PoolManager manager, PoolKey memory key, PoolId id)
+     {
+-        (manager, key, id) = createAndInitFreshPool(hooks, fee, sqrtPriceX96, ZERO_BYTES);
++        (manager, key, id) = createFreshPool(hooks, fee, sqrtPriceX96, ZERO_BYTES);
+     }
+ 
+-    function createAndInitFreshPool(IHooks hooks, uint24 fee, uint160 sqrtPriceX96, bytes memory initData)
++    function createFreshPool(IHooks hooks, uint24 fee, uint160 sqrtPriceX96, bytes memory initData)
+         internal
+         returns (PoolManager manager, PoolKey memory key, PoolId id)
+     {
+         manager = createFreshManager();
+-        (key, id) = createAndInitPool(manager, hooks, fee, sqrtPriceX96, initData);
++        (key, id) = createPool(manager, hooks, fee, sqrtPriceX96, initData);
+         return (manager, key, id);
+     }
+ 

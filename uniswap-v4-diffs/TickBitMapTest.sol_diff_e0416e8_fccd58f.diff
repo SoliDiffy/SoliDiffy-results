@@ -1,0 +1,16 @@
+diff --git a/contracts/test/TickBitMapTest.sol b/contracts/test/TickBitMapTest.sol
+index d8119765..1babdde0 100644
+--- a/contracts/test/TickBitMapTest.sol
++++ b/contracts/test/TickBitMapTest.sol
+@@ -5,9 +5,9 @@ import '../libraries/TickBitMap.sol';
+ 
+ // a library for dealing with a bitmap of all ticks
+ contract TickBitMapTest {
+-    using TickBitMap for mapping(int16 => uint256);
++    using TickBitMap for mapping(uint256 => uint256);
+ 
+-    mapping(int16 => uint256) public bitmap;
++    mapping(uint256 => uint256) public bitmap;
+ 
+     function isInitialized(int24 tick) external view returns (bool) {
+         return bitmap.isInitialized(tick);

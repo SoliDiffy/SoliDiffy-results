@@ -1,0 +1,33 @@
+diff --git a/src/libraries/Pool.sol b/src/libraries/Pool.sol
+index 7a5c03ab..69b80586 100644
+--- a/src/libraries/Pool.sol
++++ b/src/libraries/Pool.sol
+@@ -110,13 +110,14 @@ library Pool {
+     }
+ 
+     function setProtocolFee(State storage self, uint24 protocolFee) internal {
+-        self.checkPoolInitialized();
++        if (self.isNotInitialized()) PoolNotInitialized.selector.revertWith();
++
+         self.slot0 = self.slot0.setProtocolFee(protocolFee);
+     }
+ 
+     /// @notice Only dynamic fee pools may update the lp fee.
+     function setLPFee(State storage self, uint24 lpFee) internal {
+-        self.checkPoolInitialized();
++        if (self.isNotInitialized()) PoolNotInitialized.selector.revertWith();
+         self.slot0 = self.slot0.setLpFee(lpFee);
+     }
+ 
+@@ -571,9 +572,8 @@ library Pool {
+         }
+     }
+ 
+-    /// @notice Reverts if the given pool has not been initialized
+-    function checkPoolInitialized(State storage self) internal view {
+-        if (self.slot0.sqrtPriceX96() == 0) PoolNotInitialized.selector.revertWith();
++    function isNotInitialized(State storage self) internal view returns (bool) {
++        return self.slot0.sqrtPriceX96() == 0;
+     }
+ 
+     /// @notice Clears tick data

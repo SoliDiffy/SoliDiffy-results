@@ -1,0 +1,14 @@
+diff --git a/contracts/interfaces/IHooks.sol b/contracts/interfaces/IHooks.sol
+index 3259d319..3a1b5b46 100644
+--- a/contracts/interfaces/IHooks.sol
++++ b/contracts/interfaces/IHooks.sol
+@@ -29,8 +29,7 @@ interface IHooks {
+     function afterModifyPosition(
+         address sender,
+         IPoolManager.PoolKey calldata key,
+-        IPoolManager.ModifyPositionParams calldata params,
+-        IPoolManager.BalanceDelta calldata delta
++        IPoolManager.ModifyPositionParams calldata params
+     ) external;
+ 
+     function beforeSwap(

@@ -1,0 +1,20 @@
+diff --git a/contracts/test/ERC20.sol b/contracts/test/ERC20.sol
+index be151bb3..a2c369a7 100644
+--- a/contracts/test/ERC20.sol
++++ b/contracts/test/ERC20.sol
+@@ -1,4 +1,4 @@
+-pragma solidity >=0.6.0;
++pragma solidity =0.5.16;
+ 
+ import '../UniswapV2ERC20.sol';
+ 
+@@ -6,4 +6,9 @@ contract ERC20 is UniswapV2ERC20 {
+     constructor(uint _totalSupply) public {
+         _mint(msg.sender, _totalSupply);
+     }
++
++    // for tests, allow updating the name and symbol
++    function updateSymbol(string calldata symbol_) external {
++        symbol = symbol_;
++    }
+ }

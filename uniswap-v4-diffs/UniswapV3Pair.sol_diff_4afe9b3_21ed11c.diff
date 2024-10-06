@@ -1,0 +1,24 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 9e6b3079..2162f5f6 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -1,6 +1,4 @@
+-// SPDX-License-Identifier: GPL-3.0-or-later
+-
+-pragma solidity >=0.6.8;
++pragma solidity =0.6.6;
+ pragma experimental ABIEncoderV2;
+ 
+ import '@uniswap/lib/contracts/libraries/TransferHelper.sol';
+@@ -23,8 +21,9 @@ contract UniswapV3Pair is IUniswapV3Pair {
+     using FixedPoint for FixedPoint.uq144x112;
+ 
+     uint112 public constant override MINIMUM_LIQUIDITY = uint112(10**3);
+-    int16 public constant MAX_TICK = type(int16).max;
+-    int16 public constant MIN_TICK = type(int16).min;
++    // TODO: upgrade solidity so we can use type(int16).max and .min 
++    int16 public constant MAX_TICK = int16(uint16(-1));
++    int16 public constant MIN_TICK = MAX_TICK + 1;
+ 
+     address public immutable override factory;
+     address public immutable override token0;

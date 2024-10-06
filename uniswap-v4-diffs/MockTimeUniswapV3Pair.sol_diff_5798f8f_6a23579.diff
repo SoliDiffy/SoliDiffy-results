@@ -1,0 +1,15 @@
+diff --git a/contracts/test/MockTimeUniswapV3Pair.sol b/contracts/test/MockTimeUniswapV3Pair.sol
+index 546bbfa7..5758d5e2 100644
+--- a/contracts/test/MockTimeUniswapV3Pair.sol
++++ b/contracts/test/MockTimeUniswapV3Pair.sol
+@@ -12,8 +12,8 @@ contract MockTimeUniswapV3Pair is UniswapV3Pair {
+         address factory,
+         address tokenA,
+         address tokenB,
+-        uint24 fee
+-    ) public UniswapV3Pair(factory, tokenA, tokenB, fee) {}
++        uint8 feeOption
++    ) public UniswapV3Pair(factory, tokenA, tokenB, feeOption) {}
+ 
+     function setTime(uint64 _time) external {
+         time = _time;

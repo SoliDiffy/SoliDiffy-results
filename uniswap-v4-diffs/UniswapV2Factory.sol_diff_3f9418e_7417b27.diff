@@ -1,0 +1,14 @@
+diff --git a/contracts/UniswapV2Factory.sol b/contracts/UniswapV2Factory.sol
+index cb7ebe14..5e892e9a 100644
+--- a/contracts/UniswapV2Factory.sol
++++ b/contracts/UniswapV2Factory.sol
+@@ -12,8 +12,8 @@ contract UniswapV2Factory is IUniswapV2Factory {
+         address token1;
+     }
+ 
+-    bytes public exchangeBytecode;
+     uint256 public chainId;
++    bytes public exchangeBytecode;
+     uint256 public exchangeCount;
+     mapping (address => Pair) private exchangeToPair;
+     mapping (address => mapping(address => address)) private token0ToToken1ToExchange;

@@ -1,0 +1,108 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index d936a16f..816be27b 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -6,17 +6,15 @@ pragma experimental ABIEncoderV2;
+ import '@uniswap/lib/contracts/libraries/TransferHelper.sol';
+ import '@uniswap/lib/contracts/libraries/FixedPoint.sol';
+ import '@uniswap/lib/contracts/libraries/Babylonian.sol';
+-import '@openzeppelin/contracts/math/SafeMath.sol';
+ 
+ import './interfaces/IUniswapV3Pair.sol';
+ import { Aggregate, AggregateFunctions } from './libraries/AggregateFeeVote.sol';
+ import { Position, PositionFunctions } from './libraries/Position.sol';
++import './libraries/SafeMath.sol';
+ import './libraries/SafeMath112.sol';
+ import './interfaces/IUniswapV3Factory.sol';
+ import './interfaces/IUniswapV3Callee.sol';
+ import './libraries/FixedPointExtra.sol';
+-import './libraries/TickMath.sol';
+-import './libraries/PriceMath.sol';
+ 
+ contract UniswapV3Pair is IUniswapV3Pair {
+     using SafeMath for uint;
+@@ -177,7 +175,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+             // this is a lie—one of them should be near infinite—but I think an innocuous lie since that one is never checked
+             return (0, 0);
+         }
+-        FixedPoint.uq112x112 memory price = TickMath.getPrice(tick);
++        FixedPoint.uq112x112 memory price = getTickPrice(tick);
+         return getBalancesAtPrice(liquidity, price);
+     }
+ 
+@@ -185,7 +183,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         require(virtualSupply == 0, "UniswapV3: ALREADY_INITIALIZED");
+         require(feeVote >= MIN_FEEVOTE && feeVote <= MAX_FEEVOTE, "UniswapV3: INVALID_FEE_VOTE");
+         FixedPoint.uq112x112 memory price = FixedPoint.encode(amount1).div(amount0);
+-        require(price._x > TickMath.getPrice(startingTick)._x && price._x < TickMath.getPrice(startingTick + 1)._x);
++        require(price._x > getTickPrice(startingTick)._x && price._x < getTickPrice(startingTick + 1)._x);
+         bool feeOn = _mintFee(0, 0);
+         liquidity = uint112(Babylonian.sqrt(uint256(amount0).mul(uint256(amount1))).sub(MINIMUM_LIQUIDITY));
+         positions[keccak256(abi.encodePacked(address(0), MIN_TICK, MAX_TICK))] = Position({
+@@ -310,7 +308,15 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         emit SetPosition(msg.sender, liquidityDelta, lowerTick, upperTick, feeVote);
+     }
+ 
++    function getTradeToRatio(uint112 y0, uint112 x0, FixedPoint.uq112x112 memory price, uint112 _lpFee) internal pure returns (uint112) {
++        // todo: clean up this monstrosity, which won't even compile because the stack is too deep
++        // simplification of https://www.wolframalpha.com/input/?i=solve+%28x0+-+x0*%281-g%29*y%2F%28y0+%2B+%281-g%29*y%29%29%2F%28y0+%2B+y%29+%3D+p+for+y
++        // uint112 numerator = price.sqrt().mul112(uint112(Babylonian.sqrt(y0))).mul112(uint112(Babylonian.sqrt(price.mul112(y0).mul112(_lpFee).mul112(_lpFee).div(1000000).add(price.mul112(4 * x0).mul112(1000000 - _lpFee)).decode()))).decode();
++        // uint112 denominator = price.mul112(1000000 - _lpFee).div(1000000).mul112(2).decode();
+ 
++        // this is just a dummy expression that uses all the variables to silence the linter
++        return price.mul112(y0 + x0 + _lpFee).decode();
++    }
+ 
+     // TODO: implement swap1for0, or integrate it into this
+     function swap0for1(uint amountIn, address to, bytes calldata data) external lock {
+@@ -322,10 +328,10 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         uint112 amountOut = 0;
+         Aggregate memory _aggregateFeeVote = aggregateFeeVote;
+         while (amountInLeft > 0) {
+-            FixedPoint.uq112x112 memory price = TickMath.getPrice(_currentTick);
++            FixedPoint.uq112x112 memory price = getTickPrice(_currentTick);
+             // compute how much would need to be traded to get to the next tick down
+-            { // scope
+-            uint112 maxAmount = PriceMath.getTradeToRatio(_reserve0, _reserve1, aggregateFeeVote.averageFee(), price);
++            {
++            uint112 maxAmount = getTradeToRatio(_reserve0, _reserve1, price, _aggregateFeeVote.averageFee());
+             uint112 amountInStep = (amountInLeft > maxAmount) ? maxAmount : amountInLeft;
+             // execute the sell of amountToTrade
+             uint112 adjustedAmountToTrade = amountInStep * (1000000 - _aggregateFeeVote.averageFee()) / 1000000;
+@@ -370,4 +376,35 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         _update(_oldReserve0, _oldReserve1, _reserve0, _reserve1);
+         emit Swap(msg.sender, false, amountIn, amountOut, to);
+     }
++
++    function getTickPrice(int16 index) public pure returns (FixedPoint.uq112x112 memory) {
++        // returns a UQ112x112 representing the price of token0 in terms of token1, at the tick with that index
++
++        if (index == 0) {
++            return FixedPoint.encode(1);
++        }
++
++        uint16 absIndex = index > 0 ? uint16(index) : uint16(-index);
++
++        // compute 1.01^abs(index)
++        // TODO: improve and fix this math, which is currently totally wrong
++        // adapted from https://ethereum.stackexchange.com/questions/10425/is-there-any-efficient-way-to-compute-the-exponentiation-of-a-fraction-and-an-in
++        FixedPoint.uq112x112 memory price = FixedPoint.encode(0);
++        FixedPoint.uq112x112 memory N = FixedPoint.encode(1);
++        uint112 B = 1;
++        uint112 q = 100;
++        uint precision = 50;
++        for (uint i = 0; i < precision; ++i){
++            price.add(N.div(B).div(q));
++            N  = N.mul112(uint112(absIndex - uint112(i)));
++            B = B * uint112(i+1);
++            q = q * 100;
++        }
++
++        if (index < 0) {
++            return price.reciprocal();
++        }
++
++        return price;
++    }
+ }
+\ No newline at end of file

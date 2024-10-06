@@ -1,0 +1,22 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index e18fd7e7..f0de6835 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -44,7 +44,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+     address public immutable override factory;
+     address public immutable override token0;
+     address public immutable override token1;
+-    uint24 public immutable override fee;
++    uint16 public immutable override fee;
+ 
+     // TODO figure out the best way to pack state variables
+     address public override feeTo;
+@@ -168,7 +168,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         address _factory,
+         address _token0,
+         address _token1,
+-        uint24 _fee
++        uint16 _fee
+     ) public {
+         factory = _factory;
+         token0 = _token0;

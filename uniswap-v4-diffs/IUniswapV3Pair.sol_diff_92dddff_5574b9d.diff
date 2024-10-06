@@ -1,0 +1,22 @@
+diff --git a/contracts/interfaces/IUniswapV3Pair.sol b/contracts/interfaces/IUniswapV3Pair.sol
+index df3a6e1f..3275a955 100644
+--- a/contracts/interfaces/IUniswapV3Pair.sol
++++ b/contracts/interfaces/IUniswapV3Pair.sol
+@@ -7,13 +7,13 @@ interface IUniswapV3Pair is IUniswapV3ERC20 {
+     event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);
+     event Swap(
+         address indexed sender,
+-        bool tokenIn,
+-        uint amountIn,
+-        uint amountOut,
++        uint amount0In,
++        uint amount1In,
++        uint amount0Out,
++        uint amount1Out,
+         address indexed to
+     );
+     event Give(address indexed from, uint liquidity);
+-    event Shift(uint16 tick);
+ 
+     function MINIMUM_LIQUIDITY() external pure returns (uint);
+     function factory() external view returns (address);

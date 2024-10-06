@@ -1,0 +1,13 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 708227b9..288ef14d 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -249,7 +249,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+             );
+         }
+ 
+-        return (price0CumulativeLast, price1CumulativeLast);
++        return (FixedPoint.uq144x112(price0CumulativeLast._x), FixedPoint.uq144x112(price1CumulativeLast._x));
+     }
+ 
+     function getValueAtPrice(FixedPoint.uq112x112 memory price, int256 liquidity) public pure returns (int256, int256) {

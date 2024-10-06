@@ -1,0 +1,42 @@
+diff --git a/contracts/UniswapERC20.sol b/contracts/UniswapERC20.sol
+index a0f808f6..3258ee7c 100644
+--- a/contracts/UniswapERC20.sol
++++ b/contracts/UniswapERC20.sol
+@@ -150,7 +150,7 @@ contract UniswapERC20 is ERC20 {
+       accumulator: tokenAData.accumulator // TODO: accumulate
+     });
+ 
+-    dataForToken[_tokenB] = TokenData({
++    dataForToken[_tokenA] = TokenData({
+       reserve: uint128(newReserveB),
+       accumulator: tokenBData.accumulator // TODO: accumulate
+     });
+@@ -166,10 +166,6 @@ contract UniswapERC20 is ERC20 {
+     require(amount > 0);
+     address _tokenA = tokenA;
+     address _tokenB = tokenB;
+-
+-    TokenData memory tokenAData = dataForToken[_tokenA];
+-    TokenData memory tokenBData = dataForToken[_tokenB];
+-
+     uint256 reserveA = IERC20(_tokenA).balanceOf(address(this));
+     uint256 reserveB = IERC20(_tokenB).balanceOf(address(this));
+     uint256 _totalSupply = totalSupply;
+@@ -179,17 +175,6 @@ contract UniswapERC20 is ERC20 {
+     totalSupply = _totalSupply.sub(amount);
+     require(IERC20(_tokenA).transfer(msg.sender, tokenAAmount));
+     require(IERC20(_tokenB).transfer(msg.sender, tokenBAmount));
+-
+-    dataForToken[_tokenA] = TokenData({
+-      reserve: uint128(reserveA - tokenAAmount),
+-      accumulator: tokenAData.accumulator // TODO: accumulate
+-    });
+-
+-    dataForToken[_tokenB] = TokenData({
+-      reserve: uint128(reserveB - tokenBAmount),
+-      accumulator: tokenBData.accumulator // TODO: accumulate
+-    });
+-
+     emit RemoveLiquidity(msg.sender, tokenAAmount, tokenBAmount);
+     emit Transfer(msg.sender, address(0), amount);
+     return (tokenAAmount, tokenBAmount);

@@ -1,0 +1,13 @@
+diff --git a/src/libraries/Pool.sol b/src/libraries/Pool.sol
+index feb73a60..5deb01e2 100644
+--- a/src/libraries/Pool.sol
++++ b/src/libraries/Pool.sol
+@@ -151,7 +151,7 @@ library Pool {
+     /// @dev PoolManager checks that the pool is initialized before calling
+     /// @param params the position details and the change to the position's liquidity to effect
+     /// @return result the deltas of the token balances of the pool
+-    function modifyLiquidity(State storage self, ModifyPositionParams memory params)
++    function modifyPosition(State storage self, ModifyPositionParams memory params)
+         internal
+         returns (BalanceDelta result)
+     {

@@ -1,0 +1,13 @@
+diff --git a/contracts/libraries/Tick.sol b/contracts/libraries/Tick.sol
+index 58c84278..5a6ba77d 100644
+--- a/contracts/libraries/Tick.sol
++++ b/contracts/libraries/Tick.sol
+@@ -34,7 +34,7 @@ library Tick {
+         minTick = (SqrtTickMath.MIN_TICK / tickSpacing) * tickSpacing;
+         maxTick = (SqrtTickMath.MAX_TICK / tickSpacing) * tickSpacing;
+         uint24 numTicks = uint24((maxTick - minTick) / tickSpacing) + 1;
+-        maxLiquidityPerTick = type(uint128).max / numTicks;
++        maxLiquidityPerTick = uint128(-1) / numTicks;
+     }
+ 
+     function getFeeGrowthInside(

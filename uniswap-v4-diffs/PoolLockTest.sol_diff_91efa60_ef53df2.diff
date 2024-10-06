@@ -1,0 +1,24 @@
+diff --git a/contracts/test/PoolLockTest.sol b/contracts/test/PoolLockTest.sol
+index 5f2babe6..52a5c4f9 100644
+--- a/contracts/test/PoolLockTest.sol
++++ b/contracts/test/PoolLockTest.sol
+@@ -6,7 +6,7 @@ import {IPoolManager} from "../interfaces/IPoolManager.sol";
+ import {ILockCallback} from "../interfaces/callback/ILockCallback.sol";
+ 
+ contract PoolLockTest is ILockCallback {
+-    event LockAcquired(uint256 id);
++    event LockAcquired();
+ 
+     IPoolManager manager;
+ 
+@@ -19,8 +19,8 @@ contract PoolLockTest is ILockCallback {
+     }
+ 
+     /// @notice Called by the pool manager on `msg.sender` when a lock is acquired
+-    function lockAcquired(uint256 id, bytes calldata) external override returns (bytes memory) {
+-        emit LockAcquired(id);
++    function lockAcquired(bytes calldata) external override returns (bytes memory) {
++        emit LockAcquired();
+         return "";
+     }
+ }

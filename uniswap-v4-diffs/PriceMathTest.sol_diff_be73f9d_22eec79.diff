@@ -1,0 +1,26 @@
+diff --git a/contracts/test/PriceMathTest.sol b/contracts/test/PriceMathTest.sol
+index 3793ef45..2f8ad14d 100644
+--- a/contracts/test/PriceMathTest.sol
++++ b/contracts/test/PriceMathTest.sol
+@@ -19,7 +19,7 @@ contract PriceMathTest {
+         FixedPoint.uq112x112 memory price,
+         uint256 liquidity,
+         bool roundUp
+-    ) external pure returns (uint112 reserve0, uint112 reserve1) {
++    ) public pure returns (uint112 amount0, uint112 amount1) {
+         return PriceMath.getVirtualReservesAtPrice(price, liquidity, roundUp);
+     }
+ 
+@@ -27,10 +27,10 @@ contract PriceMathTest {
+         uint112 reserve0,
+         uint112 reserve1,
+         uint112 liquidity,
+-        FixedPoint.uq112x112 memory priceTarget, // always reserve1/reserve0
++        FixedPoint.uq112x112 memory priceTarget,
+         uint16 lpFee,
+         bool zeroForOne
+-    ) external pure returns (uint112 amountIn, uint112 amountOut) {
++    ) public pure returns (uint112 amountIn, uint112 amountOut) {
+         return PriceMath.getInputToRatio(reserve0, reserve1, liquidity, priceTarget, lpFee, zeroForOne);
+     }
+ 

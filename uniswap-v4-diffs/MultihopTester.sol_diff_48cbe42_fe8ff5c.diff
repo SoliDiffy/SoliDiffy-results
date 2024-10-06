@@ -1,0 +1,21 @@
+diff --git a/contracts/test/MultihopTester.sol b/contracts/test/MultihopTester.sol
+index 43553164..29d069ce 100644
+--- a/contracts/test/MultihopTester.sol
++++ b/contracts/test/MultihopTester.sol
+@@ -47,14 +47,14 @@ contract MultihopTester is ISwapCallback {
+         );
+     }
+ 
+-    event SwapCallback(int256 amount0Delta, int256 amount1Delta);
++    event ISwapCallback(int256 amount0Delta, int256 amount1Delta);
+ 
+     function swapCallback(
+         int256 amount0Delta,
+         int256 amount1Delta,
+         bytes calldata data
+     ) public override {
+-        emit SwapCallback(amount0Delta, amount1Delta);
++        emit ISwapCallback(amount0Delta, amount1Delta);
+ 
+         (address[] memory pools, address payer) = abi.decode(data, (address[], address));
+ 

@@ -1,0 +1,13 @@
+diff --git a/contracts/test/PoolTakeTest.sol b/contracts/test/PoolTakeTest.sol
+index c344c9b0..06ceb07c 100644
+--- a/contracts/test/PoolTakeTest.sol
++++ b/contracts/test/PoolTakeTest.sol
+@@ -35,7 +35,7 @@ contract PoolTakeTest is ILockCallback {
+         }
+     }
+ 
+-    function lockAcquired(uint256, bytes calldata rawData) external returns (bytes memory) {
++    function lockAcquired(bytes calldata rawData) external returns (bytes memory) {
+         require(msg.sender == address(manager));
+ 
+         CallbackData memory data = abi.decode(rawData, (CallbackData));

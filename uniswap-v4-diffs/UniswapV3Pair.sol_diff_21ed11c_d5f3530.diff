@@ -1,0 +1,15 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 2162f5f6..755a5f72 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -235,7 +235,9 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         // before moving on, withdraw any collected fees
+         FixedPoint.uq112x112 memory currentPrice = FixedPoint.encode(reserve1).div(reserve0);
+         int112 feeLiquidity = adjustedExistingLiquidity - int112(_position.lastAdjustedLiquidity);
+-        (int112 amount0, int112 amount1) = getBalancesAtPrice(-1 * feeLiquidity, currentPrice);
++        (int112 amount0, int112 amount1) = getBalancesAtPrice(feeLiquidity, currentPrice);
++        amount0 *= -1;
++        amount1 *= -1;
+ 
+         if (currentTick < lowerTick) {
+             amount0 += 0;

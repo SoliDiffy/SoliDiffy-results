@@ -1,0 +1,13 @@
+diff --git a/test/libraries/Pool.t.sol b/test/libraries/Pool.t.sol
+index 9117b3bb..6293aca3 100644
+--- a/test/libraries/Pool.t.sol
++++ b/test/libraries/Pool.t.sol
+@@ -169,7 +169,7 @@ contract PoolTest is Test, GasSnapshot {
+     }
+ 
+     function test_fuzz_tickSpacingToMaxLiquidityPerTick(int24 tickSpacing) public pure {
+-        tickSpacing = int24(bound(tickSpacing, TickMath.MIN_TICK_SPACING, TickMath.MAX_TICK_SPACING));
++        vm.assume(tickSpacing > 0);
+         // v3 math
+         int24 minTick = (TickMath.MIN_TICK / tickSpacing) * tickSpacing;
+         int24 maxTick = (TickMath.MAX_TICK / tickSpacing) * tickSpacing;

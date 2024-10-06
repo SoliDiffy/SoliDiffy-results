@@ -1,0 +1,22 @@
+diff --git a/contracts/UniswapERC20.sol b/contracts/UniswapERC20.sol
+index 2f58455b..bab2c37c 100644
+--- a/contracts/UniswapERC20.sol
++++ b/contracts/UniswapERC20.sol
+@@ -27,13 +27,13 @@ contract UniswapERC20 is ERC20 {
+ 
+   mapping (address => TokenData) public dataForToken;
+ 
+-  bool private reentrancyLock = false;
++  bool private rentrancyLock = false;
+ 
+   modifier nonReentrant() {
+-    require(!reentrancyLock);
+-    reentrancyLock = true;
++    require(!rentrancyLock);
++    rentrancyLock = true;
+     _;
+-    reentrancyLock = false;
++    rentrancyLock = false;
+   }
+ 
+ 

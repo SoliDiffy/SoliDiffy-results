@@ -1,0 +1,43 @@
+diff --git a/contracts/UniswapV2Factory.sol b/contracts/UniswapV2Factory.sol
+index 13c0725e..e7219b83 100644
+--- a/contracts/UniswapV2Factory.sol
++++ b/contracts/UniswapV2Factory.sol
+@@ -10,15 +10,11 @@ contract UniswapV2Factory is IUniswapV2Factory {
+     mapping (address => address[2]) private _getTokens;
+     address[] public exchanges;
+ 
+-    address public feeAddress;
+-    bool public feeOn;
+-
+     event ExchangeCreated(address indexed token0, address indexed token1, address exchange, uint exchangeNumber);
+ 
+-    constructor(bytes memory _exchangeBytecode, address _feeAddress) public {
++    constructor(bytes memory _exchangeBytecode) public {
+         require(_exchangeBytecode.length >= 32, "UniswapV2Factory: SHORT_BYTECODE");
+         exchangeBytecode = _exchangeBytecode;
+-        feeAddress = _feeAddress;
+     }
+ 
+     function sortTokens(address tokenA, address tokenB) public pure returns (address, address) {
+@@ -49,20 +45,10 @@ contract UniswapV2Factory is IUniswapV2Factory {
+         assembly { // solium-disable-line security/no-inline-assembly
+             exchange := create2(0, add(exchangeBytecodeMemory, 32), mload(exchangeBytecodeMemory), salt)
+         }
+-        UniswapV2(exchange).initialize(token0, token1, feeAddress);
++        UniswapV2(exchange).initialize(token0, token1);
+ 
+         _getExchange[token0][token1] = exchange;
+         _getTokens[exchange] = [token0, token1];
+         emit ExchangeCreated(token0, token1, exchange, exchanges.push(exchange));
+     }
+-
+-    function setFeeAddress(address _feeAddress) public {
+-        require(msg.sender == feeAddress, "UniswapV2Factory: FORBIDDEN");
+-        feeAddress = _feeAddress;
+-    }
+-
+-    function turnFeeOn() public {
+-        require(msg.sender == feeAddress, "UniswapV2Factory: FORBIDDEN");
+-        feeOn = true;
+-    }
+ }

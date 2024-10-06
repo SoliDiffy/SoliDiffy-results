@@ -1,0 +1,19 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 3359c2f8..74fc37f4 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -6,6 +6,7 @@ import '@uniswap/lib/contracts/libraries/FixedPoint.sol';
+ import '@uniswap/lib/contracts/libraries/Babylonian.sol';
+ 
+ import './interfaces/IUniswapV3Pair.sol';
++import './libraries/Math.sol';
+ import './libraries/SafeMath.sol';
+ import './libraries/SafeMath112.sol';
+ import './interfaces/IUniswapV3Factory.sol';
+@@ -394,4 +395,4 @@ contract UniswapV3Pair is IUniswapV3Pair {
+ 
+         return price;
+     }
+-}
+\ No newline at end of file
++}

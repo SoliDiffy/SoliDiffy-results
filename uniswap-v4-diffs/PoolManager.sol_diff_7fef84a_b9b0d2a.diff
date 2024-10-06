@@ -1,0 +1,27 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index ec33a632..2b8ffde2 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -127,10 +127,10 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, Claims {
+         }
+ 
+         PoolId id = key.toId();
+-        (, uint24 protocolFees) = _fetchProtocolFees(key);
++
+         uint24 swapFee = key.fee.isDynamicFee() ? _fetchDynamicSwapFee(key) : key.fee.getStaticFee();
+ 
+-        tick = pools[id].initialize(sqrtPriceX96, protocolFees, _fetchHookFees(key), swapFee);
++        tick = pools[id].initialize(sqrtPriceX96, _fetchProtocolFees(key), _fetchHookFees(key), swapFee);
+ 
+         if (key.hooks.shouldCallAfterInitialize()) {
+             if (
+@@ -389,8 +389,7 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, Claims {
+     }
+ 
+     function setProtocolFees(PoolKey memory key) external {
+-        (bool success, uint24 newProtocolFees) = _fetchProtocolFees(key);
+-        if (!success) revert ProtocolFeeControllerCallFailedOrInvalidResult();
++        uint24 newProtocolFees = _fetchProtocolFees(key);
+         PoolId id = key.toId();
+         pools[id].setProtocolFees(newProtocolFees);
+         emit ProtocolFeeUpdated(id, newProtocolFees);

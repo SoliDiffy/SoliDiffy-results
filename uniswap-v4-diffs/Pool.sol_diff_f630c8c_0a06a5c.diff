@@ -1,0 +1,13 @@
+diff --git a/contracts/libraries/Pool.sol b/contracts/libraries/Pool.sol
+index 85a9f454..ed8e912e 100644
+--- a/contracts/libraries/Pool.sol
++++ b/contracts/libraries/Pool.sol
+@@ -381,7 +381,7 @@ library Pool {
+         if (params.amountSpecified == 0) revert SwapAmountCannotBeZero();
+ 
+         Slot0 memory slot0Start = self.slot0;
+-        if (slot0Start.sqrtPriceX96 == 0) revert PoolNotInitialized();
++        if (self.slot0.sqrtPriceX96 == 0) revert PoolNotInitialized();
+         if (params.zeroForOne) {
+             if (params.sqrtPriceLimitX96 >= slot0Start.sqrtPriceX96) {
+                 revert PriceLimitAlreadyExceeded(slot0Start.sqrtPriceX96, params.sqrtPriceLimitX96);

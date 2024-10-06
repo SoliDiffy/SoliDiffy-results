@@ -1,0 +1,21 @@
+diff --git a/contracts/UniswapV2Factory.sol b/contracts/UniswapV2Factory.sol
+index c86db4e9..3b89129b 100644
+--- a/contracts/UniswapV2Factory.sol
++++ b/contracts/UniswapV2Factory.sol
+@@ -57,12 +57,14 @@ contract UniswapV2Factory is IUniswapV2Factory {
+         require(token0ToToken1ToExchange[pair.token0][pair.token1] == address(0), "UniswapV2Factory: EXCHANGE_EXISTS");
+ 
+         bytes memory exchangeBytecodeMemory = exchangeBytecode;
+-        bytes32 salt = keccak256(abi.encodePacked(pair.token0, pair.token1, chainId));
++        uint256 exchangeBytecodeLength = exchangeBytecode.length;
++        bytes32 salt = keccak256(abi.encodePacked(pair.token0, pair.token1, chainId)); // TODO include chainId?
++        // TODO constructor args?
+         assembly {
+             exchange := create2(
+                 0,
+                 add(exchangeBytecodeMemory, 0x20),
+-                mload(exchangeBytecodeMemory),
++                exchangeBytecodeLength,
+                 salt
+             )
+         }

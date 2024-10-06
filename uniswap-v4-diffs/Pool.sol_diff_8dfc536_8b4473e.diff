@@ -1,0 +1,54 @@
+diff --git a/src/libraries/Pool.sol b/src/libraries/Pool.sol
+index 0ea9c95c..89e97d34 100644
+--- a/src/libraries/Pool.sol
++++ b/src/libraries/Pool.sol
+@@ -149,6 +149,8 @@ library Pool {
+         uint128 liquidityGrossAfterLower;
+         bool flippedUpper;
+         uint128 liquidityGrossAfterUpper;
++        uint256 feeGrowthInside0X128;
++        uint256 feeGrowthInside1X128;
+     }
+ 
+     /// @notice Effect changes to a position in a pool
+@@ -165,6 +167,8 @@ library Pool {
+         int24 tickUpper = params.tickUpper;
+         checkTicks(tickLower, tickUpper);
+ 
++        uint256 feesOwed0;
++        uint256 feesOwed1;
+         {
+             ModifyLiquidityState memory state;
+ 
+@@ -193,17 +197,11 @@ library Pool {
+                 }
+             }
+ 
+-            {
+-                (uint256 feeGrowthInside0X128, uint256 feeGrowthInside1X128) =
+-                    getFeeGrowthInside(self, tickLower, tickUpper);
++            (state.feeGrowthInside0X128, state.feeGrowthInside1X128) = getFeeGrowthInside(self, tickLower, tickUpper);
+ 
+-                Position.Info storage position = self.positions.get(params.owner, tickLower, tickUpper, params.salt);
+-                (uint256 feesOwed0, uint256 feesOwed1) =
+-                    position.update(liquidityDelta, feeGrowthInside0X128, feeGrowthInside1X128);
+-
+-                // Fees earned from LPing are added to the user's currency delta.
+-                feeDelta = toBalanceDelta(feesOwed0.toInt128(), feesOwed1.toInt128());
+-            }
++            Position.Info storage position = self.positions.get(params.owner, tickLower, tickUpper, params.salt);
++            (feesOwed0, feesOwed1) =
++                position.update(liquidityDelta, state.feeGrowthInside0X128, state.feeGrowthInside1X128);
+ 
+             // clear any tick data that is no longer needed
+             if (liquidityDelta < 0) {
+@@ -248,6 +246,9 @@ library Pool {
+                 );
+             }
+         }
++
++        // Fees earned from LPing are added to the user's currency delta.
++        feeDelta = toBalanceDelta(feesOwed0.toInt128(), feesOwed1.toInt128());
+     }
+ 
+     struct SwapCache {

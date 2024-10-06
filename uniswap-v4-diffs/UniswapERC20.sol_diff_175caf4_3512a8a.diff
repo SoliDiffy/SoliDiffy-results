@@ -1,0 +1,14 @@
+diff --git a/contracts/UniswapERC20.sol b/contracts/UniswapERC20.sol
+index 63f94de9..2f58455b 100644
+--- a/contracts/UniswapERC20.sol
++++ b/contracts/UniswapERC20.sol
+@@ -47,7 +47,8 @@ contract UniswapERC20 is ERC20 {
+ 
+   function () external {}
+ 
+-  function getInputPrice(uint256 inputAmount, uint256 inputReserve, uint256 outputReserve) internal pure returns (uint256) {
++
++  function getInputPrice(uint256 inputAmount, uint256 inputReserve, uint256 outputReserve) public pure returns (uint256) {
+     require(inputReserve > 0 && outputReserve > 0, 'INVALID_VALUE');
+     uint256 inputAmountWithFee = inputAmount.mul(997);
+     uint256 numerator = inputAmountWithFee.mul(outputReserve);

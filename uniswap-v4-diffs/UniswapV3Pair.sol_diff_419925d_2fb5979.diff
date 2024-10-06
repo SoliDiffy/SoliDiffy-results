@@ -1,0 +1,40 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 42809a13..aac2a336 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -8,7 +8,7 @@ import '@uniswap/lib/contracts/libraries/FixedPoint.sol';
+ import '@uniswap/lib/contracts/libraries/Babylonian.sol';
+ 
+ import './interfaces/IUniswapV3Pair.sol';
+-import { Aggregate, AggregateFunctions } from './libraries/AggregateFeeVote.sol';
++import { Aggregate, AggregateFeeVote } from './libraries/AggregateFeeVote.sol';
+ import './libraries/SafeMath.sol';
+ import './libraries/SafeMath112.sol';
+ import './interfaces/IUniswapV3Factory.sol';
+@@ -19,7 +19,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+     using SafeMath for uint;
+     using SafeMath112 for uint112;
+     using SafeMath112 for int112;
+-    using AggregateFunctions for Aggregate;
++    using AggregateFeeVote for Aggregate;
+     using FixedPoint for FixedPoint.uq112x112;
+     using FixedPointExtra for FixedPoint.uq112x112;
+     using FixedPoint for FixedPoint.uq144x112;
+@@ -228,11 +228,14 @@ contract UniswapV3Pair is IUniswapV3Pair {
+             lastAdjustedLiquidity: liquidity,
+             feeVote: feeVote
+         });
+-        virtualSupply = liquidity + MINIMUM_LIQUIDITY;
++        uint112 totalLiquidity = liquidity + MINIMUM_LIQUIDITY;
++        virtualSupply = totalLiquidity;
+         
+         // update fee
+-        totalFeeVote = feeVote * liquidity;
+-        lpFee = feeVote;
++        updateFee(Aggregate({
++            numerator: int112(feeVote * totalLiquidity),
++            denominator: int112(totalLiquidity)
++        }));
+ 
+         uint112 _reserve0 = amount0;
+         uint112 _reserve1 = amount1;

@@ -1,0 +1,21 @@
+diff --git a/src/test/PoolTestBase.sol b/src/test/PoolTestBase.sol
+index 020934ba..bbab3bef 100644
+--- a/src/test/PoolTestBase.sol
++++ b/src/test/PoolTestBase.sol
+@@ -39,7 +39,7 @@ abstract contract PoolTestBase is ILockCallback {
+         }
+     }
+ 
+-    function _fetchBalances(Currency currency, address user, address deltaHolder)
++    function _fetchBalances(Currency currency, address user)
+         internal
+         view
+         returns (uint256 userBalance, uint256 poolBalance, uint256 reserves, int256 delta)
+@@ -47,6 +47,6 @@ abstract contract PoolTestBase is ILockCallback {
+         userBalance = currency.balanceOf(user);
+         poolBalance = currency.balanceOf(address(manager));
+         reserves = manager.reservesOf(currency);
+-        delta = manager.currencyDelta(deltaHolder, currency);
++        delta = manager.currencyDelta(address(this), currency);
+     }
+ }

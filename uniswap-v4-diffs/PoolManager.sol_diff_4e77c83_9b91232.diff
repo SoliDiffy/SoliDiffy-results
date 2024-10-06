@@ -1,0 +1,87 @@
+diff --git a/contracts/PoolManager.sol b/contracts/PoolManager.sol
+index 359fbada..44882183 100644
+--- a/contracts/PoolManager.sol
++++ b/contracts/PoolManager.sol
+@@ -120,10 +120,9 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC1155, IERC1155Rec
+         }
+ 
+         PoolId id = key.toId();
+-
+-        uint24 swapFee = key.fee.isDynamicFee() ? _fetchDynamicSwapFee(key) : key.fee.getStaticFee();
+-
+-        tick = pools[id].initialize(sqrtPriceX96, _fetchProtocolFees(key), _fetchHookFees(key), swapFee);
++        uint24 protocolFees = _fetchProtocolFees(key);
++        uint24 hookFees = _fetchHookFees(key);
++        tick = pools[id].initialize(sqrtPriceX96, protocolFees, hookFees);
+ 
+         if (key.hooks.shouldCallAfterInitialize()) {
+             if (
+@@ -134,7 +133,6 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC1155, IERC1155Rec
+             }
+         }
+ 
+-        // On intitalize we emit the key's fee, which tells us all fee settings a pool can have: either a static swap fee or dynamic swap fee and if the hook has enabled swap or withdraw fees.
+         emit Initialize(id, key.currency0, key.currency1, key.fee, key.tickSpacing, key.hooks);
+     }
+ 
+@@ -253,14 +251,23 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC1155, IERC1155Rec
+             }
+         }
+ 
+-        PoolId id = key.toId();
++        // Set the total swap fee, either through the hook or as the static fee set an initialization.
++        uint24 totalSwapFee;
++        if (key.fee.isDynamicFee()) {
++            totalSwapFee = IDynamicFeeManager(address(key.hooks)).getFee(msg.sender, key, params, hookData);
++            if (totalSwapFee >= 1000000) revert FeeTooLarge();
++        } else {
++            // clear the top 4 bits since they may be flagged for hook fees
++            totalSwapFee = key.fee.getStaticFee();
++        }
+ 
+         uint256 feeForProtocol;
+         uint256 feeForHook;
+-        uint24 swapFee;
+         Pool.SwapState memory state;
+-        (delta, feeForProtocol, feeForHook, swapFee, state) = pools[id].swap(
++        PoolId id = key.toId();
++        (delta, feeForProtocol, feeForHook, state) = pools[id].swap(
+             Pool.SwapParams({
++                fee: totalSwapFee,
+                 tickSpacing: key.tickSpacing,
+                 zeroForOne: params.zeroForOne,
+                 amountSpecified: params.amountSpecified,
+@@ -287,7 +294,14 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC1155, IERC1155Rec
+         }
+ 
+         emit Swap(
+-            id, msg.sender, delta.amount0(), delta.amount1(), state.sqrtPriceX96, state.liquidity, state.tick, swapFee
++            id,
++            msg.sender,
++            delta.amount0(),
++            delta.amount1(),
++            state.sqrtPriceX96,
++            state.liquidity,
++            state.tick,
++            totalSwapFee
+         );
+     }
+ 
+@@ -374,17 +388,6 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC1155, IERC1155Rec
+         emit HookFeeUpdated(id, newHookFees);
+     }
+ 
+-    function updateDynamicSwapFee(PoolKey memory key) external {
+-        if (key.fee.isDynamicFee()) {
+-            uint24 newDynamicSwapFee = _fetchDynamicSwapFee(key);
+-            PoolId id = key.toId();
+-            pools[id].setSwapFee(newDynamicSwapFee);
+-            emit DynamicSwapFeeUpdated(id, newDynamicSwapFee);
+-        } else {
+-            revert FeeNotDynamic();
+-        }
+-    }
+-
+     function extsload(bytes32 slot) external view returns (bytes32 value) {
+         /// @solidity memory-safe-assembly
+         assembly {

@@ -1,0 +1,20 @@
+diff --git a/contracts/test/UniswapV3PairEchidnaTest.sol b/contracts/test/UniswapV3PairEchidnaTest.sol
+index 1a6a11df..d6e9238b 100644
+--- a/contracts/test/UniswapV3PairEchidnaTest.sol
++++ b/contracts/test/UniswapV3PairEchidnaTest.sol
+@@ -1,5 +1,5 @@
+ // SPDX-License-Identifier: GPL-3.0-or-later
+-pragma solidity =0.7.6;
++pragma solidity =0.6.12;
+ 
+ import '@uniswap/lib/contracts/libraries/FullMath.sol';
+ 
+@@ -23,7 +23,7 @@ contract UniswapV3PairEchidnaTest {
+     UniswapV3Pair pair;
+     TestUniswapV3Callee payer;
+ 
+-    constructor() {
++    constructor() public {
+         payer = new TestUniswapV3Callee();
+         factory = new UniswapV3Factory(address(this));
+         initializeTokens();

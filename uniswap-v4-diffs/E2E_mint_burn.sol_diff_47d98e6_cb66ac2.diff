@@ -1,0 +1,28 @@
+diff --git a/audits/tob/contracts/crytic/echidna/E2E_mint_burn.sol b/audits/tob/contracts/crytic/echidna/E2E_mint_burn.sol
+index 4cd3b032..e33d6a22 100644
+--- a/audits/tob/contracts/crytic/echidna/E2E_mint_burn.sol
++++ b/audits/tob/contracts/crytic/echidna/E2E_mint_burn.sol
+@@ -382,11 +382,18 @@ contract E2E_mint_burn {
+ 
+     function test_mint(uint128 _amount) public {
+         if (!inited) _init(_amount);
+-        (int24 _tL, int24 _tU) =
+-            forgePosition(_amount, poolParams.tickSpacing, poolParams.tickCount, poolParams.maxTick);
+-
+-        (UniswapMinter.MinterStats memory bfre, UniswapMinter.MinterStats memory aftr) =
+-            minter.doMint(_tL, _tU, _amount);
++        (int24 _tL, int24 _tU) = forgePosition(
++            _amount,
++            poolParams.tickSpacing,
++            poolParams.tickCount,
++            poolParams.maxTick
++        );
++
++        (UniswapMinter.MinterStats memory bfre, UniswapMinter.MinterStats memory aftr) = minter.doMint(
++            _tL,
++            _tU,
++            _amount
++        );
+         storeUsedTicks(_tL, _tU);
+ 
+         check_mint_invariants(_tL, _tU, bfre, aftr);

@@ -1,0 +1,13 @@
+diff --git a/contracts/PoolManager.sol b/contracts/PoolManager.sol
+index 8e70e121..e4098340 100644
+--- a/contracts/PoolManager.sol
++++ b/contracts/PoolManager.sol
+@@ -239,7 +239,7 @@ contract PoolManager is IPoolManager, NoDelegateCall, ERC1155, IERC1155Receiver
+         _accountPoolBalanceDelta(key, delta);
+ 
+         if (key.hooks.shouldCallAfterDonate()) {
+-            key.hooks.afterDonate(msg.sender, key, amount0, amount1);
++            key.hooks.beforeDonate(msg.sender, key, amount0, amount1);
+         }
+     }
+ 

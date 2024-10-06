@@ -1,0 +1,12 @@
+diff --git a/contracts/test/ERC20.sol b/contracts/test/ERC20.sol
+index ada4d74c..4fda721a 100644
+--- a/contracts/test/ERC20.sol
++++ b/contracts/test/ERC20.sol
+@@ -4,6 +4,6 @@ import "../UniswapV2ERC20.sol";
+ 
+ contract ERC20 is UniswapV2ERC20 {
+     constructor(uint _totalSupply) public {
+-        _mint(msg.sender, _totalSupply);
++        if (_totalSupply > 0) _mint(msg.sender, _totalSupply);
+     }
+ }

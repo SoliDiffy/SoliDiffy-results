@@ -1,0 +1,13 @@
+diff --git a/src/libraries/StateLibrary.sol b/src/libraries/StateLibrary.sol
+index 397ad276..14d3ff21 100644
+--- a/src/libraries/StateLibrary.sol
++++ b/src/libraries/StateLibrary.sol
+@@ -337,7 +337,7 @@ library StateLibrary {
+         return keccak256(abi.encodePacked(int256(tick), ticksMappingSlot));
+     }
+ 
+-    function _getPositionInfoSlot(PoolId poolId, bytes32 positionId) internal pure returns (bytes32) {
++    function _getPositionInfoSlot(PoolId poolId, bytes32 positionId) internal pure returns (bytes32 slot) {
+         // slot key of Pool.State value: `pools[poolId]`
+         bytes32 stateSlot = _getPoolStateSlot(poolId);
+ 

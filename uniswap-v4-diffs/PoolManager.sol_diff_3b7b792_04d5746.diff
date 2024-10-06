@@ -1,0 +1,47 @@
+diff --git a/contracts/PoolManager.sol b/contracts/PoolManager.sol
+index 35c98352..629af04a 100644
+--- a/contracts/PoolManager.sol
++++ b/contracts/PoolManager.sol
+@@ -47,6 +47,10 @@ contract PoolManager is IPoolManager, Owned, NoDelegateCall, ERC1155, IERC1155Re
+         controllerGasLimit = _controllerGasLimit;
+     }
+ 
++    function getPoolId(PoolKey calldata key) external pure returns (bytes32) {
++        return key.toId();
++    }
++
+     function _getPool(PoolKey memory key) private view returns (Pool.State storage) {
+         return pools[key.toId()];
+     }
+@@ -96,7 +100,7 @@ contract PoolManager is IPoolManager, Owned, NoDelegateCall, ERC1155, IERC1155Re
+         }
+ 
+         bytes32 id = key.toId();
+-        tick = pools[id].initialize(sqrtPriceX96, fetchPoolProtocolFee(key));
++        tick = pools[id].initialize(sqrtPriceX96, fetchPoolProtocolFee(id));
+ 
+         if (key.hooks.shouldCallAfterInitialize()) {
+             if (key.hooks.afterInitialize(msg.sender, key, sqrtPriceX96, tick) != IHooks.afterInitialize.selector) {
+@@ -384,16 +388,16 @@ contract PoolManager is IPoolManager, Owned, NoDelegateCall, ERC1155, IERC1155Re
+         emit ProtocolFeeControllerUpdated(address(controller));
+     }
+ 
+-    function setPoolProtocolFee(PoolKey memory key) external {
+-        uint8 newProtocolFee = fetchPoolProtocolFee(key);
++    function setPoolProtocolFee(bytes32 id) external {
++        uint8 newProtocolFee = fetchPoolProtocolFee(id);
+ 
+-        _getPool(key).setProtocolFee(newProtocolFee);
+-        emit PoolProtocolFeeUpdated(key.toId(), newProtocolFee);
++        pools[id].setProtocolFee(newProtocolFee);
++        emit PoolProtocolFeeUpdated(id, newProtocolFee);
+     }
+ 
+-    function fetchPoolProtocolFee(PoolKey memory key) internal view returns (uint8 protocolFee) {
++    function fetchPoolProtocolFee(bytes32 id) internal view returns (uint8 protocolFee) {
+         if (address(protocolFeeController) != address(0)) {
+-            try protocolFeeController.protocolFeeForPool{gas: controllerGasLimit}(key) returns (
++            try protocolFeeController.protocolFeeForPool{gas: controllerGasLimit}(id) returns (
+                 uint8 updatedProtocolFee
+             ) {
+                 protocolFee = updatedProtocolFee;

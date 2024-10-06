@@ -1,0 +1,21 @@
+diff --git a/contracts/UniswapV2.sol b/contracts/UniswapV2.sol
+index f35c25ab..329d537e 100644
+--- a/contracts/UniswapV2.sol
++++ b/contracts/UniswapV2.sol
+@@ -26,12 +26,12 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0), SafeTran
+     TokenData private reservesCumulativeOverflows;
+     uint256 private blockNumberLast;
+ 
+-    bool private notEntered = true;
++    bool private locked;
+     modifier lock() {
+-        require(notEntered, "UniswapV2: LOCKED");
+-        notEntered = false;
++        require(!locked, "UniswapV2: LOCKED");
++        locked = true;
+         _;
+-        notEntered = true;
++        locked = false;
+     }
+ 
+     event LiquidityMinted(

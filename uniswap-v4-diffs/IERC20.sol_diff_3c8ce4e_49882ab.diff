@@ -1,0 +1,12 @@
+diff --git a/contracts/interfaces/IERC20.sol b/contracts/interfaces/IERC20.sol
+index d44aa927..ce52ffcb 100644
+--- a/contracts/interfaces/IERC20.sol
++++ b/contracts/interfaces/IERC20.sol
+@@ -10,6 +10,7 @@ interface IERC20 {
+     function totalSupply() external view returns (uint);
+     function balanceOf(address owner) external view returns (uint);
+     function allowance(address owner, address spender) external view returns (uint);
++
+     function DOMAIN_SEPARATOR() external view returns (bytes32);
+     function PERMIT_TYPEHASH() external pure returns (bytes32);
+     function nonces(address owner) external view returns (uint);

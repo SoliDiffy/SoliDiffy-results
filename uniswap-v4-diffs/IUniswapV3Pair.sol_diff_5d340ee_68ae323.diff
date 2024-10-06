@@ -1,0 +1,16 @@
+diff --git a/contracts/interfaces/IUniswapV3Pair.sol b/contracts/interfaces/IUniswapV3Pair.sol
+index 7e59413e..10af784a 100644
+--- a/contracts/interfaces/IUniswapV3Pair.sol
++++ b/contracts/interfaces/IUniswapV3Pair.sol
+@@ -83,10 +83,9 @@ interface IUniswapV3Pair {
+     function swap(
+         bool zeroForOne,
+         int256 amountSpecified,
+-        uint160 sqrtPriceLimit,
+         address recipient,
+         bytes calldata data
+-    ) external;
++    ) external returns (uint256 amountCalculated);
+ 
+     function setFeeTo(address) external;
+ 

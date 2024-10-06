@@ -1,0 +1,118 @@
+diff --git a/contracts/test/SqrtPriceMathTest.sol b/contracts/test/SqrtPriceMathTest.sol
+index bb20e7f9..13b81438 100644
+--- a/contracts/test/SqrtPriceMathTest.sol
++++ b/contracts/test/SqrtPriceMathTest.sol
+@@ -1,32 +1,35 @@
+ // SPDX-License-Identifier: UNLICENSED
+ pragma solidity =0.8.19;
+ 
+-import {SqrtPriceMath} from "../libraries/SqrtPriceMath.sol";
++import {SqrtPriceMath} from '../libraries/SqrtPriceMath.sol';
+ 
+ contract SqrtPriceMathTest {
+-    function getNextSqrtPriceFromInput(uint160 sqrtP, uint128 liquidity, uint256 amountIn, bool zeroForOne)
+-        external
+-        pure
+-        returns (uint160 sqrtQ)
+-    {
++    function getNextSqrtPriceFromInput(
++        uint160 sqrtP,
++        uint128 liquidity,
++        uint256 amountIn,
++        bool zeroForOne
++    ) external pure returns (uint160 sqrtQ) {
+         return SqrtPriceMath.getNextSqrtPriceFromInput(sqrtP, liquidity, amountIn, zeroForOne);
+     }
+ 
+-    function getGasCostOfGetNextSqrtPriceFromInput(uint160 sqrtP, uint128 liquidity, uint256 amountIn, bool zeroForOne)
+-        external
+-        view
+-        returns (uint256)
+-    {
++    function getGasCostOfGetNextSqrtPriceFromInput(
++        uint160 sqrtP,
++        uint128 liquidity,
++        uint256 amountIn,
++        bool zeroForOne
++    ) external view returns (uint256) {
+         uint256 gasBefore = gasleft();
+         SqrtPriceMath.getNextSqrtPriceFromInput(sqrtP, liquidity, amountIn, zeroForOne);
+         return gasBefore - gasleft();
+     }
+ 
+-    function getNextSqrtPriceFromOutput(uint160 sqrtP, uint128 liquidity, uint256 amountOut, bool zeroForOne)
+-        external
+-        pure
+-        returns (uint160 sqrtQ)
+-    {
++    function getNextSqrtPriceFromOutput(
++        uint160 sqrtP,
++        uint128 liquidity,
++        uint256 amountOut,
++        bool zeroForOne
++    ) external pure returns (uint160 sqrtQ) {
+         return SqrtPriceMath.getNextSqrtPriceFromOutput(sqrtP, liquidity, amountOut, zeroForOne);
+     }
+ 
+@@ -41,37 +44,41 @@ contract SqrtPriceMathTest {
+         return gasBefore - gasleft();
+     }
+ 
+-    function getAmount0Delta(uint160 sqrtLower, uint160 sqrtUpper, uint128 liquidity, bool roundUp)
+-        external
+-        pure
+-        returns (uint256 amount0)
+-    {
++    function getAmount0Delta(
++        uint160 sqrtLower,
++        uint160 sqrtUpper,
++        uint128 liquidity,
++        bool roundUp
++    ) external pure returns (uint256 amount0) {
+         return SqrtPriceMath.getAmount0Delta(sqrtLower, sqrtUpper, liquidity, roundUp);
+     }
+ 
+-    function getAmount1Delta(uint160 sqrtLower, uint160 sqrtUpper, uint128 liquidity, bool roundUp)
+-        external
+-        pure
+-        returns (uint256 amount1)
+-    {
++    function getAmount1Delta(
++        uint160 sqrtLower,
++        uint160 sqrtUpper,
++        uint128 liquidity,
++        bool roundUp
++    ) external pure returns (uint256 amount1) {
+         return SqrtPriceMath.getAmount1Delta(sqrtLower, sqrtUpper, liquidity, roundUp);
+     }
+ 
+-    function getGasCostOfGetAmount0Delta(uint160 sqrtLower, uint160 sqrtUpper, uint128 liquidity, bool roundUp)
+-        external
+-        view
+-        returns (uint256)
+-    {
++    function getGasCostOfGetAmount0Delta(
++        uint160 sqrtLower,
++        uint160 sqrtUpper,
++        uint128 liquidity,
++        bool roundUp
++    ) external view returns (uint256) {
+         uint256 gasBefore = gasleft();
+         SqrtPriceMath.getAmount0Delta(sqrtLower, sqrtUpper, liquidity, roundUp);
+         return gasBefore - gasleft();
+     }
+ 
+-    function getGasCostOfGetAmount1Delta(uint160 sqrtLower, uint160 sqrtUpper, uint128 liquidity, bool roundUp)
+-        external
+-        view
+-        returns (uint256)
+-    {
++    function getGasCostOfGetAmount1Delta(
++        uint160 sqrtLower,
++        uint160 sqrtUpper,
++        uint128 liquidity,
++        bool roundUp
++    ) external view returns (uint256) {
+         uint256 gasBefore = gasleft();
+         SqrtPriceMath.getAmount1Delta(sqrtLower, sqrtUpper, liquidity, roundUp);
+         return gasBefore - gasleft();

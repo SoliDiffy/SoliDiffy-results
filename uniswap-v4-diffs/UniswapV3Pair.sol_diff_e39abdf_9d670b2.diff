@@ -1,0 +1,14 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 353df13a..64e5c65e 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -444,8 +444,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+                 params.liquidityDelta
+             );
+ 
+-            // downcasting is safe because of gross liquidity checks in the _updatePosition call
+-            slot1.liquidityCurrent = uint128(slot1.liquidityCurrent.addi(params.liquidityDelta));
++            slot1.liquidityCurrent = slot1.liquidityCurrent.addi(params.liquidityDelta).toUint128();
+         } else {
+             // the current price is above the passed range, so liquidity can only become in range by crossing from right
+             // to left, at which point we need _more_ token1 (it's becoming more valuable) so the user must provide it

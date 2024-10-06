@@ -1,0 +1,13 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index 6366f87b..f41411e7 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -175,7 +175,7 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+ 
+         key.hooks.beforeModifyLiquidity(key, params, hookData);
+ 
+-        delta = pools[id].modifyLiquidity(
++        delta = pools[id].modifyPosition(
+             Pool.ModifyPositionParams({
+                 owner: msg.sender,
+                 tickLower: params.tickLower,

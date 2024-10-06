@@ -1,0 +1,26 @@
+diff --git a/src/ERC6909.sol b/src/ERC6909.sol
+index 4504fe9d..b553e88b 100644
+--- a/src/ERC6909.sol
++++ b/src/ERC6909.sol
+@@ -1,5 +1,5 @@
+ // SPDX-License-Identifier: MIT
+-pragma solidity >=0.8.0;
++pragma solidity ^0.8.0;
+ 
+ import {IERC6909Claims} from "./interfaces/external/IERC6909Claims.sol";
+ 
+@@ -22,11 +22,11 @@ abstract contract ERC6909 is IERC6909Claims {
+                              ERC6909 STORAGE
+     //////////////////////////////////////////////////////////////*/
+ 
+-    mapping(address owner => mapping(address operator => bool isOperator)) public isOperator;
++    mapping(address => mapping(address => bool)) public isOperator;
+ 
+-    mapping(address owner => mapping(uint256 id => uint256 balance)) public balanceOf;
++    mapping(address => mapping(uint256 => uint256)) public balanceOf;
+ 
+-    mapping(address owner => mapping(address spender => mapping(uint256 id => uint256 amount))) public allowance;
++    mapping(address => mapping(address => mapping(uint256 => uint256))) public allowance;
+ 
+     /*//////////////////////////////////////////////////////////////
+                               ERC6909 LOGIC

@@ -1,0 +1,10 @@
+diff --git a/contracts/interfaces/IUniswapV3Pair.sol b/contracts/interfaces/IUniswapV3Pair.sol
+index ed77752d..4c460f4e 100644
+--- a/contracts/interfaces/IUniswapV3Pair.sol
++++ b/contracts/interfaces/IUniswapV3Pair.sol
+@@ -24,4 +24,5 @@ interface IUniswapV3Pair {
+     function initialAdd(uint112 amount0, uint112 amount1, int16 startingTick) external returns (uint112 liquidity);
+     function add(uint112 liquidity, int16 lowerTick, int16 upperTick) external;
+     function remove(uint112 liquidity, int16 lowerTick, int16 upperTick) external;
++    function sync(int16 lowerTick, int16 upperTick) external;
+ }

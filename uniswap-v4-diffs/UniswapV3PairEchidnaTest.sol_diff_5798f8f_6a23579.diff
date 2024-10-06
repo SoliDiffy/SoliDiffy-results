@@ -1,0 +1,13 @@
+diff --git a/contracts/test/UniswapV3PairEchidnaTest.sol b/contracts/test/UniswapV3PairEchidnaTest.sol
+index e5dcfc67..c2b77238 100644
+--- a/contracts/test/UniswapV3PairEchidnaTest.sol
++++ b/contracts/test/UniswapV3PairEchidnaTest.sol
+@@ -35,7 +35,7 @@ contract UniswapV3PairEchidnaTest {
+         (token0, token1) = (address(tokenA) < address(tokenB) ? (tokenA, tokenB) : (tokenB, tokenA));
+     }
+ 
+-    function createNewPair(uint24 fee) private {
++    function createNewPair(uint16 fee) private {
+         pair = UniswapV3Pair(factory.createPair(address(token0), address(token1), fee));
+     }
+ 

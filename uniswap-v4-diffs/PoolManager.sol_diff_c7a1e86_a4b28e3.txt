@@ -1,0 +1,24 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index 60eb7699..f1005595 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -253,7 +253,8 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+         noDelegateCall
+         returns (BalanceDelta delta)
+     {
+-        Pool.State storage pool = _getPool(key.toId());
++        PoolId poolId = key.toId();
++        Pool.State storage pool = _getPool(poolId);
+         pool.checkPoolInitialized();
+ 
+         key.hooks.beforeDonate(key, amount0, amount1, hookData);
+@@ -262,6 +263,9 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+ 
+         _accountPoolBalanceDelta(key, delta, msg.sender);
+ 
++        // event is emitted before the afterDonate call to ensure events are always emitted in order
++        emit Donate(poolId, msg.sender, amount0, amount1);
++
+         key.hooks.afterDonate(key, amount0, amount1, hookData);
+     }
+ 

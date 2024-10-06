@@ -1,0 +1,37 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index e6c900ad..d1214ec2 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -177,7 +177,9 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC6909Claims {
+         PoolId id = key.toId();
+         _checkPoolInitialized(id);
+ 
+-        key.hooks.beforeModifyLiquidity(key, params, hookData);
++        if (!key.hooks.beforeModifyLiquidity(key, params, hookData)) {
++            return BalanceDeltaLibrary.MAXIMUM_DELTA;
++        }
+ 
+         delta = pools[id].modifyPosition(
+             Pool.ModifyPositionParams({
+@@ -207,7 +209,9 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC6909Claims {
+         PoolId id = key.toId();
+         _checkPoolInitialized(id);
+ 
+-        key.hooks.beforeSwap(key, params, hookData);
++        if (!key.hooks.beforeSwap(key, params, hookData)) {
++            return BalanceDeltaLibrary.MAXIMUM_DELTA;
++        }
+ 
+         uint256 feeForProtocol;
+         uint24 swapFee;
+@@ -248,7 +252,9 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC6909Claims {
+         PoolId id = key.toId();
+         _checkPoolInitialized(id);
+ 
+-        key.hooks.beforeDonate(key, amount0, amount1, hookData);
++        if (!key.hooks.beforeDonate(key, amount0, amount1, hookData)) {
++            return BalanceDeltaLibrary.MAXIMUM_DELTA;
++        }
+ 
+         delta = pools[id].donate(amount0, amount1);
+ 

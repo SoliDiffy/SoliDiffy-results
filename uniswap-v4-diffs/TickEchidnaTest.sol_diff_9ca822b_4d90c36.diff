@@ -1,0 +1,12 @@
+diff --git a/contracts/test/TickEchidnaTest.sol b/contracts/test/TickEchidnaTest.sol
+index 82921022..1853bdaf 100644
+--- a/contracts/test/TickEchidnaTest.sol
++++ b/contracts/test/TickEchidnaTest.sol
+@@ -17,6 +17,6 @@ contract TickEchidnaTest {
+ 
+         uint256 numTicks = uint256((maxTick - minTick) / tickSpacing) + 1;
+         // max liquidity at every tick is less than the cap
+-        assert(uint256(maxLiquidityPerTick) * numTicks <= uint128(-1));
++        assert(uint256(maxLiquidityPerTick) * numTicks <= type(uint128).max);
+     }
+ }

@@ -1,0 +1,24 @@
+diff --git a/contracts/UniswapV2Factory.sol b/contracts/UniswapV2Factory.sol
+index 7bd418fd..b0861e48 100644
+--- a/contracts/UniswapV2Factory.sol
++++ b/contracts/UniswapV2Factory.sol
+@@ -6,7 +6,7 @@ import "./interfaces/IUniswapV2.sol";
+ contract UniswapV2Factory is IUniswapV2Factory {
+     bytes public exchangeBytecode;
+     address public factoryOwner;
+-    address public feeTo;
++    address public feeRecipient;
+ 
+     mapping (address => mapping(address => address)) private _getExchange;
+     address[] public exchanges;
+@@ -53,8 +53,8 @@ contract UniswapV2Factory is IUniswapV2Factory {
+         factoryOwner = _factoryOwner;
+     }
+ 
+-    function setFeeTo(address _feeTo) external {
++    function setFeeRecipient(address _feeRecipient) external {
+         require(msg.sender == factoryOwner, "UniswapV2Factory: FORBIDDEN");
+-        feeTo = _feeTo;
++        feeRecipient = _feeRecipient;
+     }
+ }

@@ -1,0 +1,13 @@
+diff --git a/contracts/UniswapERC20.sol b/contracts/UniswapERC20.sol
+index f49e4c3d..63f94de9 100644
+--- a/contracts/UniswapERC20.sol
++++ b/contracts/UniswapERC20.sol
+@@ -163,7 +163,7 @@ contract UniswapERC20 is ERC20 {
+       accumulator: tokenBData.accumulator // TODO: accumulate
+     });
+ 
+-    emit RemoveLiquidity(recipient, tokenAAmount, tokenBAmount);
++    emit RemoveLiquidity(msg.sender, tokenAAmount, tokenBAmount);
+     emit Transfer(msg.sender, address(0), amount);
+     return (tokenAAmount, tokenBAmount);
+   }

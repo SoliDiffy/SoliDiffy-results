@@ -1,0 +1,14 @@
+diff --git a/contracts/UniswapV2ERC20.sol b/contracts/UniswapV2ERC20.sol
+index 2c13728c..9ddab439 100644
+--- a/contracts/UniswapV2ERC20.sol
++++ b/contracts/UniswapV2ERC20.sol
+@@ -7,8 +7,7 @@ contract UniswapV2ERC20 is IUniswapV2ERC20 {
+     using SafeMath for uint;
+ 
+     string public constant override name = 'Uniswap V2';
+-    string public override symbol = 'UNI-V2';
+-
++    string public constant override symbol = 'UNI-V2';
+     uint8 public constant override decimals = 18;
+     uint  public override totalSupply;
+     mapping(address => uint) public override balanceOf;

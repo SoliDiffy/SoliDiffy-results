@@ -1,0 +1,14 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index d6712013..2fdea9fd 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -536,7 +536,8 @@ contract UniswapV3Pair is IUniswapV3Pair {
+                     step.sqrtPriceNext,
+                     state.liquidityCurrent,
+                     state.amountSpecifiedRemaining,
+-                    fee
++                    fee,
++                    params.zeroForOne
+                 );
+ 
+                 // decrement (increment) remaining input (negative output) amount

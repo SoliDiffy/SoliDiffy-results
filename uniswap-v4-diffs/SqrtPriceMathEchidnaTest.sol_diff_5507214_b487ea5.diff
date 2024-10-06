@@ -1,0 +1,12 @@
+diff --git a/contracts/test/SqrtPriceMathEchidnaTest.sol b/contracts/test/SqrtPriceMathEchidnaTest.sol
+index 93649d44..c2a05dfb 100644
+--- a/contracts/test/SqrtPriceMathEchidnaTest.sol
++++ b/contracts/test/SqrtPriceMathEchidnaTest.sol
+@@ -13,7 +13,6 @@ contract SqrtPriceMathEchidnaTest {
+         uint256 y,
+         uint256 z
+     ) external pure {
+-        require(z > 0);
+         uint256 notRoundedUp = FullMath.mulDiv(x, y, z);
+         uint256 roundedUp = SqrtPriceMath.mulDivRoundingUp(x, y, z);
+         assert(roundedUp >= notRoundedUp);

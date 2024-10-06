@@ -1,0 +1,24 @@
+diff --git a/contracts/UniswapV3Pool.sol b/contracts/UniswapV3Pool.sol
+index afc842f1..8728f085 100644
+--- a/contracts/UniswapV3Pool.sol
++++ b/contracts/UniswapV3Pool.sol
+@@ -140,12 +140,17 @@ contract UniswapV3Pool is IUniswapV3Pool, NoDelegateCall {
+ 
+     /// @dev Get the pool's balance of token0
+     function balance0() private view returns (uint256) {
+-        return IERC20Minimal(token0).balanceOf(address(this));
++        return balanceOfToken(token0);
+     }
+ 
+     /// @dev Get the pool's balance of token1
+     function balance1() private view returns (uint256) {
+-        return IERC20Minimal(token1).balanceOf(address(this));
++        return balanceOfToken(token1);
++    }
++
++    /// @dev Get the balance of the token address. Saves bytecode.
++    function balanceOfToken(address token) private view returns (uint256) {
++        return IERC20Minimal(token).balanceOf(address(this));
+     }
+ 
+     /// @inheritdoc IUniswapV3PoolDerivedState

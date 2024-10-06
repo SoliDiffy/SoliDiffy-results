@@ -1,0 +1,13 @@
+diff --git a/contracts/interfaces/IPoolManager.sol b/contracts/interfaces/IPoolManager.sol
+index 3901e740..e72905df 100644
+--- a/contracts/interfaces/IPoolManager.sol
++++ b/contracts/interfaces/IPoolManager.sol
+@@ -75,7 +75,7 @@ interface IPoolManager is IERC1155 {
+         int24 tick
+     );
+ 
+-    event ProtocolFeeUpdated(bytes32 indexed poolKey, uint8 protocolFee);
++    event PoolProtocolFeeUpdated(bytes32 poolId, uint8 protocolFee);
+ 
+     event ProtocolFeeControllerUpdated(address protocolFeeController);
+ 

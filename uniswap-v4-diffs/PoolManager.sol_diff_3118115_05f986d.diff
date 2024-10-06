@@ -1,0 +1,83 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index e419cfbf..673be570 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -156,13 +156,12 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+         bytes calldata hookData
+     ) external override onlyWhenUnlocked returns (BalanceDelta callerDelta, BalanceDelta feesAccrued) {
+         PoolId id = key.toId();
+-        Pool.State storage pool = _getPool(id);
+-        pool.checkPoolInitialized();
++        _checkPoolInitialized(id);
+ 
+         key.hooks.beforeModifyLiquidity(key, params, hookData);
+ 
+         BalanceDelta principalDelta;
+-        (principalDelta, feesAccrued) = pool.modifyLiquidity(
++        (principalDelta, feesAccrued) = _pools[id].modifyLiquidity(
+             Pool.ModifyLiquidityParams({
+                 owner: msg.sender,
+                 tickLower: params.tickLower,
+@@ -194,9 +193,9 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+         returns (BalanceDelta swapDelta)
+     {
+         if (params.amountSpecified == 0) SwapAmountCannotBeZero.selector.revertWith();
++
+         PoolId id = key.toId();
+-        Pool.State storage pool = _getPool(id);
+-        pool.checkPoolInitialized();
++        _checkPoolInitialized(id);
+ 
+         BeforeSwapDelta beforeSwapDelta;
+         {
+@@ -206,7 +205,6 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+ 
+             // execute swap, account protocol fees, and emit swap event
+             swapDelta = _swap(
+-                pool,
+                 id,
+                 Pool.SwapParams({
+                     tickSpacing: key.tickSpacing,
+@@ -229,11 +227,9 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+     }
+ 
+     /// @notice Internal swap function to execute a swap, take protocol fees on input token, and emit the swap event
+-    function _swap(Pool.State storage pool, PoolId id, Pool.SwapParams memory params, Currency inputCurrency)
+-        internal
+-        returns (BalanceDelta)
+-    {
+-        (BalanceDelta delta, uint256 feeForProtocol, uint24 swapFee, Pool.SwapState memory state) = pool.swap(params);
++    function _swap(PoolId id, Pool.SwapParams memory params, Currency inputCurrency) internal returns (BalanceDelta) {
++        (BalanceDelta delta, uint256 feeForProtocol, uint24 swapFee, Pool.SwapState memory state) =
++            _pools[id].swap(params);
+ 
+         // The fee is on the input currency.
+         if (feeForProtocol > 0) _updateProtocolFees(inputCurrency, feeForProtocol);
+@@ -252,12 +248,12 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+         onlyWhenUnlocked
+         returns (BalanceDelta delta)
+     {
+-        Pool.State storage pool = _getPool(key.toId());
+-        pool.checkPoolInitialized();
++        PoolId id = key.toId();
++        _checkPoolInitialized(id);
+ 
+         key.hooks.beforeDonate(key, amount0, amount1, hookData);
+ 
+-        delta = pool.donate(amount0, amount1);
++        delta = _pools[id].donate(amount0, amount1);
+ 
+         _accountPoolBalanceDelta(key, delta, msg.sender);
+ 
+@@ -334,6 +330,11 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+         _accountDelta(key.currency1, delta.amount1(), target);
+     }
+ 
++    /// @notice Checks if a given pool has been initialized
++    function _checkPoolInitialized(PoolId id) internal view {
++        if (_pools[id].isNotInitialized()) PoolNotInitialized.selector.revertWith();
++    }
++
+     /// @notice implementation of the _getPool function defined in ProtocolFees
+     function _getPool(PoolId id) internal view override returns (Pool.State storage) {
+         return _pools[id];

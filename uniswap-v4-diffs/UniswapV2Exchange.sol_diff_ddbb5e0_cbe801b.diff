@@ -1,0 +1,22 @@
+diff --git a/contracts/UniswapV2Exchange.sol b/contracts/UniswapV2Exchange.sol
+index e6652961..cd70ad31 100644
+--- a/contracts/UniswapV2Exchange.sol
++++ b/contracts/UniswapV2Exchange.sol
+@@ -15,12 +15,13 @@ contract UniswapV2Exchange is IUniswapV2Exchange, UniswapV2ERC20 {
+     address public token0;
+     address public token1;
+ 
+-    uint112 private reserve0;        // accessible via getReserves()
+-    uint112 private reserve1;        // accessible via getReserves()
+-    uint32  private blockNumberLast; // accessible via getReserves()
++    uint112 private reserve0;
++    uint112 private reserve1;
++    uint32  private blockNumberLast;
+     uint    public  price0CumulativeLast;
+     uint    public  price1CumulativeLast;
+-    uint    public invariantLast;
++
++    uint private invariantLast;
+ 
+     event Mint(address indexed sender, uint amount0, uint amount1);
+     event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);

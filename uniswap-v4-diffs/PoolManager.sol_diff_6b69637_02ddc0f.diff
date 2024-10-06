@@ -1,0 +1,12 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index 90a8cd00..2b2e7f0b 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -271,7 +271,6 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+         if (currency.isNative()) {
+             paid = msg.value;
+         } else {
+-            if (msg.value > 0) revert NonZeroNativeValue();
+             uint256 reservesBefore = reservesOf[currency];
+             reservesOf[currency] = currency.balanceOfSelf();
+             paid = reservesOf[currency] - reservesBefore;

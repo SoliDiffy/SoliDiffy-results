@@ -1,0 +1,13 @@
+diff --git a/contracts/PoolManager.sol b/contracts/PoolManager.sol
+index 13457a0d..35c98352 100644
+--- a/contracts/PoolManager.sol
++++ b/contracts/PoolManager.sol
+@@ -388,7 +388,7 @@ contract PoolManager is IPoolManager, Owned, NoDelegateCall, ERC1155, IERC1155Re
+         uint8 newProtocolFee = fetchPoolProtocolFee(key);
+ 
+         _getPool(key).setProtocolFee(newProtocolFee);
+-        emit ProtocolFeeUpdated(key.toId(), newProtocolFee);
++        emit PoolProtocolFeeUpdated(key.toId(), newProtocolFee);
+     }
+ 
+     function fetchPoolProtocolFee(PoolKey memory key) internal view returns (uint8 protocolFee) {

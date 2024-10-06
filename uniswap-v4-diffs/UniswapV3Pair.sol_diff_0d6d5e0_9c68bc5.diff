@@ -1,0 +1,34 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 6d7dab1c..e9f7afc5 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -335,13 +335,10 @@ contract UniswapV3Pair is IUniswapV3Pair, TickMath1r01 {
+                 // check if this condition has accrued any untracked fees and credit them to the caller
+                 if (position.liquidity > 0) {
+                     if (feeGrowthInside0._x > position.feeGrowthInside0Last._x) {
+-                        amount0 = -FullMath
+-                            .mulDiv(
++                        amount0 = -FullMath.mulDiv(
+                             feeGrowthInside0._x - position.feeGrowthInside0Last._x,
+-                            position
+-                                .liquidity,
+-                            FixedPoint128
+-                                .Q128
++                            position.liquidity,
++                            FixedPoint128.Q128
+                         )
+                             .toInt256();
+                     }
+@@ -349,10 +346,8 @@ contract UniswapV3Pair is IUniswapV3Pair, TickMath1r01 {
+                         amount1 = -FullMath
+                             .mulDiv(
+                             feeGrowthInside1._x - position.feeGrowthInside1Last._x,
+-                            position
+-                                .liquidity,
+-                            FixedPoint128
+-                                .Q128
++                            position.liquidity,
++                            FixedPoint128.Q128
+                         )
+                             .toInt256();
+                     }

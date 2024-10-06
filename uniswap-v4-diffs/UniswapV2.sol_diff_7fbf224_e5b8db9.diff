@@ -1,0 +1,33 @@
+diff --git a/contracts/UniswapV2.sol b/contracts/UniswapV2.sol
+index fd5b54f1..2e95e2e5 100644
+--- a/contracts/UniswapV2.sol
++++ b/contracts/UniswapV2.sol
+@@ -1,7 +1,6 @@
+ // TODO overflow counter, review, fee
+ pragma solidity 0.5.12;
+ 
+-import "./interfaces/IUniswapV2.sol";
+ import "./interfaces/IERC20.sol";
+ 
+ import "./libraries/Math.sol";
+@@ -9,7 +8,7 @@ import "./libraries/SafeMath.sol";
+ 
+ import "./token/ERC20.sol";
+ 
+-contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
++contract UniswapV2 is ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+     using Math for uint256;
+     using SafeMath for uint256;
+ 
+@@ -141,10 +140,7 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+         emit LiquidityMinted(msg.sender, recipient, amountToken0, amountToken1);
+     }
+ 
+-    function burnLiquidity(
+-        uint256 amount,
+-        address recipient
+-    ) public lock returns (uint256 amountToken0, uint256 amountToken1) {
++    function burnLiquidity(uint256 amount, address recipient) public lock returns (uint256 amountToken0, uint256 amountToken1) {
+         require(amount > 0, "UniswapV2: ZERO_AMOUNT");
+ 
+         amountToken0 = amount.mul(tokenData[token0].reserve).div(totalSupply);

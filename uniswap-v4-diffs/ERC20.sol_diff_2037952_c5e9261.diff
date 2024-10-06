@@ -1,0 +1,17 @@
+diff --git a/contracts/ERC20.sol b/contracts/ERC20.sol
+index 4c01d01f..97da5e47 100644
+--- a/contracts/ERC20.sol
++++ b/contracts/ERC20.sol
+@@ -28,10 +28,8 @@ contract ERC20 is IERC20 {
+         if (_totalSupply > 0) {
+             _mint(msg.sender, _totalSupply);
+         }
+-        uint chainId;
+-        assembly { // solium-disable-line security/no-inline-assembly
+-            chainId := chainid()
+-        }
++        uint chainId = 1; // hardcode as 1 until ethereum-waffle support istanbul-specific EVM opcodes
++        // assembly { chainId := chainid() }  // solium-disable-line security/no-inline-assembly
+         DOMAIN_SEPARATOR = keccak256(abi.encode(
+ 			keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
+ 			keccak256(bytes(name)),

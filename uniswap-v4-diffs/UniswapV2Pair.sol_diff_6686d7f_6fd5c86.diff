@@ -1,0 +1,18 @@
+diff --git a/contracts/UniswapV2Pair.sol b/contracts/UniswapV2Pair.sol
+index 9837ba0d..b577ef3a 100644
+--- a/contracts/UniswapV2Pair.sol
++++ b/contracts/UniswapV2Pair.sol
+@@ -51,12 +51,10 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
+     }
+ 
+     // called once by the factory at time of deployment
+-    function initialize(address _token0, address _token1, string calldata name_, string calldata symbol_) external {
++    function initialize(address _token0, address _token1) external {
+         require(msg.sender == factory, 'UniswapV2: FORBIDDEN'); // sufficient check
+         token0 = _token0;
+         token1 = _token1;
+-        name = name_;
+-        symbol = symbol_;
+     }
+ 
+     // update reserves and, on the first call per block, price accumulators

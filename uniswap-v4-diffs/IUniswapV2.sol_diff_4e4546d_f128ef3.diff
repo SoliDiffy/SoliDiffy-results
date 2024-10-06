@@ -1,0 +1,55 @@
+diff --git a/contracts/interfaces/IUniswapV2.sol b/contracts/interfaces/IUniswapV2.sol
+index f480f9c8..7ac3558a 100644
+--- a/contracts/interfaces/IUniswapV2.sol
++++ b/contracts/interfaces/IUniswapV2.sol
+@@ -1,10 +1,34 @@
+-pragma solidity 0.5.14;
++pragma solidity 0.5.13;
+ 
+ interface IUniswapV2 {
+-    event ReservesUpdated(uint112 reserve0, uint112 reserve1);
+-    event LiquidityMinted(address indexed sender, uint amount0, uint amount1);
+-    event LiquidityBurned(address indexed sender, address indexed recipient, uint amount0, uint amount1);
+-    event Swap(address indexed sender, address indexed recipient, address indexed input, uint amount0, uint amount1);
++    event LiquidityMinted(
++        address indexed sender,
++        address indexed recipient,
++        uint amount0,
++        uint amount1,
++        uint128 reserve0,
++        uint128 reserve1,
++        uint liquidity
++    );
++    event LiquidityBurned(
++        address indexed sender,
++        address indexed recipient,
++        uint amount0,
++        uint amount1,
++        uint128 reserve0,
++        uint128 reserve1,
++        uint liquidity
++    );
++    event Swap(
++        address indexed sender,
++        address indexed recipient,
++        uint amount0,
++        uint amount1,
++        uint128 reserve0,
++        uint128 reserve1,
++        address input
++    );
++    event FeeLiquidityMinted(uint liquidity);
+ 
+     function factory() external view returns (address);
+     function token0() external view returns (address);
+@@ -13,8 +37,8 @@ interface IUniswapV2 {
+     function reserve0() external view returns (uint112);
+     function reserve1() external view returns (uint112);
+     function blockNumberLast() external view returns (uint32);
+-    function price0CumulativeLast() external view returns (uint);
+-    function price1CumulativeLast() external view returns (uint);
++    function priceCumulative0Last() external view returns (uint);
++    function priceCumulative1Last() external view returns (uint);
+ 
+     function getInputPrice(uint inputAmount, uint inputReserve, uint outputReserve) external pure returns (uint);
+ 

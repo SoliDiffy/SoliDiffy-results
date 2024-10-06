@@ -1,0 +1,13 @@
+diff --git a/contracts/libraries/TickBitmap.sol b/contracts/libraries/TickBitmap.sol
+index 5b105b2b..e377def0 100644
+--- a/contracts/libraries/TickBitmap.sol
++++ b/contracts/libraries/TickBitmap.sol
+@@ -1,7 +1,7 @@
+ // SPDX-License-Identifier: UNLICENSED
+ pragma solidity >=0.5.0;
+ 
+-import './BitMath.sol';
++import '@uniswap/lib/contracts/libraries/BitMath.sol';
+ 
+ // a library for dealing with a bitmap of all ticks initialized states, represented as mapping(int16 => uint256)
+ // the mapping uses int16 for keys since ticks are represented as int24 and there are 256 (2^8) bits per word

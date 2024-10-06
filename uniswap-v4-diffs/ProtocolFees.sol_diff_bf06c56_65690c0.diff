@@ -1,0 +1,13 @@
+diff --git a/src/ProtocolFees.sol b/src/ProtocolFees.sol
+index 605b33d4..d73d6003 100644
+--- a/src/ProtocolFees.sol
++++ b/src/ProtocolFees.sol
+@@ -69,7 +69,7 @@ abstract contract ProtocolFees is IProtocolFees, Owned {
+             if (gasleft() < controllerGasLimit) ProtocolFeeCannotBeFetched.selector.revertWith();
+ 
+             (bool _success, bytes memory _data) = address(protocolFeeController).call{gas: controllerGasLimit}(
+-                abi.encodeCall(IProtocolFeeController.protocolFeeForPool, (key))
++                abi.encodeWithSelector(IProtocolFeeController.protocolFeeForPool.selector, key)
+             );
+             // Ensure that the return data fits within a word
+             if (!_success || _data.length > 32) return (false, 0);

@@ -1,0 +1,14 @@
+diff --git a/contracts/test/ERC20.sol b/contracts/test/ERC20.sol
+index 343e1a36..be151bb3 100644
+--- a/contracts/test/ERC20.sol
++++ b/contracts/test/ERC20.sol
+@@ -6,9 +6,4 @@ contract ERC20 is UniswapV2ERC20 {
+     constructor(uint _totalSupply) public {
+         _mint(msg.sender, _totalSupply);
+     }
+-
+-    // for tests, allow updating the name and symbol
+-    function updateSymbol(string calldata symbol_) external {
+-        symbol = symbol_;
+-    }
+ }

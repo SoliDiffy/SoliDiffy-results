@@ -1,0 +1,13 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index c904444a..73cb0d08 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -107,7 +107,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+     }
+ 
+     // sum the virtual supply across all fee votes to get the total
+-    function getVirtualSupply() public override view returns (uint112 virtualSupply) {
++    function getVirtualSupply() public view returns (uint112 virtualSupply) {
+         for (uint8 i = 0; i < NUM_FEE_OPTIONS; i++) {
+             virtualSupply += virtualSupplies[i];
+         }

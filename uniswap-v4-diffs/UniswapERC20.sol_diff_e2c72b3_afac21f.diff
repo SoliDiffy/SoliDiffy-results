@@ -1,0 +1,80 @@
+diff --git a/contracts/UniswapERC20.sol b/contracts/UniswapERC20.sol
+index d0c91f46..b01da411 100644
+--- a/contracts/UniswapERC20.sol
++++ b/contracts/UniswapERC20.sol
+@@ -1,6 +1,5 @@
+ pragma solidity ^0.5.11;
+ import './ERC20.sol';
+-import './Math.sol';
+ import './interfaces/IERC20.sol';
+ 
+ contract UniswapERC20 is ERC20 {
+@@ -94,7 +93,11 @@ contract UniswapERC20 is ERC20 {
+       return amountBought;
+   }
+ 
+-  function addLiquidity() public nonReentrant returns (uint256) {
++  function min(uint256 a, uint256 b) internal pure returns (uint256) {
++      return a < b ? a : b;
++  }
++
++  function addLiquidity(address recipient) public nonReentrant returns (uint256) {
+     uint256 _totalSupply = totalSupply;
+ 
+     address _tokenA = tokenA;
+@@ -103,11 +106,14 @@ contract UniswapERC20 is ERC20 {
+     TokenData memory tokenAData = dataForToken[_tokenA];
+     TokenData memory tokenBData = dataForToken[_tokenB];
+ 
++    uint256 oldReserveA = uint256(tokenAData.reserve);
++    uint256 oldReserveB = uint256(tokenBData.reserve);
++
+     uint256 newReserveA = IERC20(_tokenA).balanceOf(address(this));
+     uint256 newReserveB = IERC20(_tokenB).balanceOf(address(this));
+ 
+-    uint256 amountA = newReserveA - tokenAData.reserve;
+-    uint256 amountB = newReserveB - tokenBData.reserve;
++    uint256 amountA = newReserveA - oldReserveA;
++    uint256 amountB = newReserveB - oldReserveB;
+ 
+     require(amountA > 0, "INVALID_AMOUNT_A");
+     require(amountB > 0, "INVALID_AMOUNT_B");
+@@ -115,11 +121,15 @@ contract UniswapERC20 is ERC20 {
+     uint256 liquidityMinted;
+ 
+     if (_totalSupply > 0) {
+-      liquidityMinted = Math.min((amountA.mul(_totalSupply).div(tokenAData.reserve)), (amountB.mul(_totalSupply).div(tokenBData.reserve)));
++      require(oldReserveA > 0, "INVALID_TOKEN_A_RESERVE");
++      require(oldReserveB > 0, "INVALID_TOKEN_B_RESERVE");
++      // TODO: take the geometric mean instead of the min?? equivalently sqrt(newK / oldK) * _totalSupply
++      liquidityMinted = min((amountA.mul(_totalSupply) / oldReserveA), (amountB.mul(_totalSupply) / oldReserveB));
+     } else {
+-      liquidityMinted = Math.sqrt(amountA.mul(amountB));
++      // TODO: figure out how to set this safely (arithmetic or geometric mean?)
++      liquidityMinted = amountA;
+     }
+-    balanceOf[msg.sender] = balanceOf[msg.sender].add(liquidityMinted);
++    balanceOf[recipient] = balanceOf[recipient].add(liquidityMinted);
+     totalSupply = _totalSupply.add(liquidityMinted);
+ 
+     dataForToken[_tokenA] = TokenData({
+@@ -139,7 +149,7 @@ contract UniswapERC20 is ERC20 {
+   }
+ 
+ 
+-  function removeLiquidity(uint256 amount) public nonReentrant returns (uint256, uint256) {
++  function removeLiquidity(uint256 amount, address recipient) public nonReentrant returns (uint256, uint256) {
+     require(amount > 0);
+     address _tokenA = tokenA;
+     address _tokenB = tokenB;
+@@ -154,8 +164,8 @@ contract UniswapERC20 is ERC20 {
+     uint256 tokenBAmount = amount.mul(reserveB) / _totalSupply;
+     balanceOf[msg.sender] = balanceOf[msg.sender].sub(amount);
+     totalSupply = _totalSupply.sub(amount);
+-    require(IERC20(_tokenA).transfer(msg.sender, tokenAAmount));
+-    require(IERC20(_tokenB).transfer(msg.sender, tokenBAmount));
++    require(IERC20(_tokenA).transfer(recipient, tokenAAmount));
++    require(IERC20(_tokenB).transfer(recipient, tokenBAmount));
+ 
+     dataForToken[_tokenA] = TokenData({
+       reserve: uint128(reserveA - tokenAAmount),

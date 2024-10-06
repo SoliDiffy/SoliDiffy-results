@@ -1,0 +1,31 @@
+diff --git a/src/libraries/LPFeeLibrary.sol b/src/libraries/LPFeeLibrary.sol
+index a25ce93d..83c7cfe8 100644
+--- a/src/libraries/LPFeeLibrary.sol
++++ b/src/libraries/LPFeeLibrary.sol
+@@ -34,11 +34,11 @@ library LPFeeLibrary {
+         if (!self.isValid()) revert FeeTooLarge();
+     }
+ 
+-    function getInitialLPFee(uint24 self) internal pure returns (uint24) {
++    function getInitialLPFee(uint24 self) internal pure returns (uint24 lpFee) {
+         // the initial fee for a dynamic fee pool is 0
+         if (self.isDynamicFee()) return 0;
+-        self.validate();
+-        return self;
++        lpFee = self & FEE_MASK;
++        lpFee.validate();
+     }
+ 
+     /// @notice returns true if the fee has the override flag set (top bit of the uint24)
+@@ -52,8 +52,9 @@ library LPFeeLibrary {
+     }
+ 
+     /// @notice Removes the override flag and validates the fee (reverts if the fee is too large)
+-    function removeOverrideAndValidate(uint24 self) internal pure returns (uint24 fee) {
+-        fee = self.removeOverrideFlag();
++    function removeOverrideAndValidate(uint24 self) internal pure returns (uint24) {
++        uint24 fee = self.removeOverrideFlag();
+         fee.validate();
++        return fee;
+     }
+ }

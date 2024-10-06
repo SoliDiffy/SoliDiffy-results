@@ -1,0 +1,29 @@
+diff --git a/contracts/UniswapV2.sol b/contracts/UniswapV2.sol
+index 9e7b093d..c0923eb6 100644
+--- a/contracts/UniswapV2.sol
++++ b/contracts/UniswapV2.sol
+@@ -61,7 +61,6 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0), SafeTran
+ 
+     constructor() public {
+         factory = msg.sender;
+-        blockNumberLast = uint32(block.number % 2**32);
+     }
+ 
+     function initialize(address _token0, address _token1) external {
+@@ -127,7 +126,6 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0), SafeTran
+         uint liquidity = balanceOf[address(this)];
+         uint balance0 = IERC20(token0).balanceOf(address(this));
+         uint balance1 = IERC20(token1).balanceOf(address(this));
+-        require(balance0 >= reserve0 && balance0 >= reserve1, "UniswapV2: INSUFFICIENT_BALANCE");
+ 
+         mintFees();
+         amount0 = liquidity.mul(balance0) / totalSupply; // intentionally using balances not reserves
+@@ -137,7 +135,7 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0), SafeTran
+         safeTransfer(token1, recipient, amount1);
+         _burn(address(this), liquidity);
+ 
+-        update(IERC20(token0).balanceOf(address(this)), IERC20(token1).balanceOf(address(this)));
++        update(balance0, balance1);
+         invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
+         emit LiquidityBurned(msg.sender, recipient, amount0, amount1, reserve0, reserve1, liquidity);
+     }

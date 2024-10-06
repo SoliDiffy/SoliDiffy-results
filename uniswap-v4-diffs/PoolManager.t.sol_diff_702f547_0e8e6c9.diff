@@ -1,0 +1,19 @@
+diff --git a/test/PoolManager.t.sol b/test/PoolManager.t.sol
+index e73484c7..a69852e7 100644
+--- a/test/PoolManager.t.sol
++++ b/test/PoolManager.t.sol
+@@ -1064,12 +1064,12 @@ contract PoolManagerTest is Test, Deployers, GasSnapshot {
+ 
+     Action[] actions;
+ 
+-    function test_lock_cannotBeCalledTwiceByCaller() public {
++    function test_lock_cannotBeCalledTwiceByLocker() public {
+         actions = [Action.NESTED_SELF_LOCK];
+         nestedActionRouter.lock(abi.encode(actions));
+     }
+ 
+-    function test_lock_cannotBeCalledTwiceByDifferentCallers() public {
++    function test_lock_cannotBeCalledTwiceByDifferentLockers() public {
+         actions = [Action.NESTED_EXECUTOR_LOCK];
+         nestedActionRouter.lock(abi.encode(actions));
+     }

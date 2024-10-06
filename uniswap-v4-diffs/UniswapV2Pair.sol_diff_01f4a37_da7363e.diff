@@ -1,0 +1,16 @@
+diff --git a/contracts/UniswapV2Pair.sol b/contracts/UniswapV2Pair.sol
+index 6e5c5689..eb850e83 100644
+--- a/contracts/UniswapV2Pair.sol
++++ b/contracts/UniswapV2Pair.sol
+@@ -52,11 +52,6 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
+         token1 = token1_;
+     }
+ 
+-    function initializeSymbol(string calldata symbol_) external {
+-        require(msg.sender == factory, 'UniswapV2: FORBIDDEN'); // sufficient check
+-        symbol = symbol_;
+-    }
+-
+     // update reserves and, on the first call per block, price accumulators
+     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
+         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');

@@ -1,0 +1,39 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 2630f3a0..04d61d5f 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -131,12 +131,6 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         return uint32(block.timestamp); // truncation is desired
+     }
+ 
+-    function checkTicks(int24 tickLower, int24 tickUpper) internal view {
+-        require(tickLower < tickUpper, 'TLU');
+-        require(tickLower >= minTick, 'TLM');
+-        require(tickUpper <= maxTick, 'TUM');
+-    }
+-
+     function setFeeTo(address feeTo_) external override {
+         require(msg.sender == IUniswapV3Factory(factory).owner(), 'OO');
+         emit FeeToChanged(feeTo, feeTo_);
+@@ -264,7 +258,9 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         uint256 amount0Requested,
+         uint256 amount1Requested
+     ) external override lockNoPriceMovement returns (uint256 amount0, uint256 amount1) {
+-        checkTicks(tickLower, tickUpper);
++        require(tickLower < tickUpper, 'TLU');
++        require(tickLower >= minTick, 'TLM');
++        require(tickUpper <= maxTick, 'TUM');
+ 
+         Position.Info storage position = positions.getPosition(msg.sender, tickLower, tickUpper);
+ 
+@@ -366,7 +362,9 @@ contract UniswapV3Pair is IUniswapV3Pair {
+ 
+     // effect some changes to a position
+     function _setPosition(SetPositionParams memory params) private returns (int256 amount0, int256 amount1) {
+-        checkTicks(params.tickLower, params.tickUpper);
++        require(params.tickLower < params.tickUpper, 'TLU');
++        require(params.tickLower >= minTick, 'TLM');
++        require(params.tickUpper <= maxTick, 'TUM');
+ 
+         int24 tick = tickCurrent();
+ 

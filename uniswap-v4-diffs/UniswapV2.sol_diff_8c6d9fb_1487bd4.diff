@@ -1,0 +1,14 @@
+diff --git a/contracts/UniswapV2.sol b/contracts/UniswapV2.sol
+index eedbf1f9..d8ba69c5 100644
+--- a/contracts/UniswapV2.sol
++++ b/contracts/UniswapV2.sol
+@@ -167,7 +167,8 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+ 
+     // mint fees without having to wait for {mint,burn}Liquidity
+     function sort() external lock {
+-        if (IUniswapV2Factory(factory).feeOn()) {
++        bool feeOn = IUniswapV2Factory(factory).feeOn();
++        if (feeOn) {
+             mintFeeLiquidity();
+             invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
+         }

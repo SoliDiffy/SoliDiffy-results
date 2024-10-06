@@ -1,0 +1,13 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index ff8fa35a..3d0ed5be 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -356,7 +356,7 @@ contract UniswapV3Pair is IUniswapV3Pair, NoDelegateCall {
+         int24 tickUpper,
+         uint128 amount,
+         bytes calldata data
+-    ) external override lock {
++    ) external lock override {
+         (int256 amount0Int, int256 amount1Int) =
+             _setPosition(
+                 SetPositionParams({

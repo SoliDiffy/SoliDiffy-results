@@ -1,0 +1,93 @@
+diff --git a/src/libraries/Pool.sol b/src/libraries/Pool.sol
+index ea5f6af0..d61f1752 100644
+--- a/src/libraries/Pool.sol
++++ b/src/libraries/Pool.sol
+@@ -9,7 +9,7 @@ import {FixedPoint128} from "./FixedPoint128.sol";
+ import {TickMath} from "./TickMath.sol";
+ import {SqrtPriceMath} from "./SqrtPriceMath.sol";
+ import {SwapMath} from "./SwapMath.sol";
+-import {BalanceDelta, toBalanceDelta, BalanceDeltaLibrary} from "../types/BalanceDelta.sol";
++import {BalanceDelta, toBalanceDelta} from "../types/BalanceDelta.sol";
+ import {ProtocolFeeLibrary} from "./ProtocolFeeLibrary.sol";
+ import {LiquidityMath} from "./LiquidityMath.sol";
+ import {LPFeeLibrary} from "./LPFeeLibrary.sol";
+@@ -48,6 +48,9 @@ library Pool {
+     /// @notice Thrown when trying to interact with a non-initialized pool
+     error PoolNotInitialized();
+ 
++    /// @notice Thrown when trying to swap amount of 0
++    error SwapAmountCannotBeZero();
++
+     /// @notice Thrown when sqrtPriceLimitX96 on a swap has already exceeded its limit
+     /// @param sqrtPriceCurrentX96 The invalid, already surpassed sqrtPriceLimitX96
+     /// @param sqrtPriceLimitX96 The surpassed price limit
+@@ -304,15 +307,33 @@ library Pool {
+         internal
+         returns (BalanceDelta result, uint256 feeForProtocol, uint24 swapFee, SwapState memory state)
+     {
++        if (params.amountSpecified == 0) revert SwapAmountCannotBeZero();
++
+         Slot0 memory slot0Start = self.slot0;
+         bool zeroForOne = params.zeroForOne;
+-        bool exactInput = params.amountSpecified < 0;
++        if (zeroForOne) {
++            if (params.sqrtPriceLimitX96 >= slot0Start.sqrtPriceX96) {
++                revert PriceLimitAlreadyExceeded(slot0Start.sqrtPriceX96, params.sqrtPriceLimitX96);
++            }
++            if (params.sqrtPriceLimitX96 <= TickMath.MIN_SQRT_RATIO) {
++                revert PriceLimitOutOfBounds(params.sqrtPriceLimitX96);
++            }
++        } else {
++            if (params.sqrtPriceLimitX96 <= slot0Start.sqrtPriceX96) {
++                revert PriceLimitAlreadyExceeded(slot0Start.sqrtPriceX96, params.sqrtPriceLimitX96);
++            }
++            if (params.sqrtPriceLimitX96 >= TickMath.MAX_SQRT_RATIO) {
++                revert PriceLimitOutOfBounds(params.sqrtPriceLimitX96);
++            }
++        }
+ 
+         SwapCache memory cache = SwapCache({
+             liquidityStart: self.liquidity,
+             protocolFee: zeroForOne ? slot0Start.protocolFee.getZeroForOneFee() : slot0Start.protocolFee.getOneForZeroFee()
+         });
+ 
++        bool exactInput = params.amountSpecified < 0;
++
+         state.amountSpecifiedRemaining = params.amountSpecified;
+         state.amountCalculated = 0;
+         state.sqrtPriceX96 = slot0Start.sqrtPriceX96;
+@@ -320,6 +341,7 @@ library Pool {
+         state.feeGrowthGlobalX128 = zeroForOne ? self.feeGrowthGlobal0X128 : self.feeGrowthGlobal1X128;
+         state.liquidity = cache.liquidityStart;
+ 
++        StepComputations memory step;
+         swapFee =
+             cache.protocolFee == 0 ? slot0Start.lpFee : uint24(cache.protocolFee).calculateSwapFee(slot0Start.lpFee);
+ 
+@@ -327,26 +349,6 @@ library Pool {
+             revert InvalidFeeForExactOut();
+         }
+ 
+-        if (params.amountSpecified == 0) return (BalanceDeltaLibrary.ZERO_DELTA, 0, swapFee, state);
+-
+-        if (zeroForOne) {
+-            if (params.sqrtPriceLimitX96 >= slot0Start.sqrtPriceX96) {
+-                revert PriceLimitAlreadyExceeded(slot0Start.sqrtPriceX96, params.sqrtPriceLimitX96);
+-            }
+-            if (params.sqrtPriceLimitX96 <= TickMath.MIN_SQRT_RATIO) {
+-                revert PriceLimitOutOfBounds(params.sqrtPriceLimitX96);
+-            }
+-        } else {
+-            if (params.sqrtPriceLimitX96 <= slot0Start.sqrtPriceX96) {
+-                revert PriceLimitAlreadyExceeded(slot0Start.sqrtPriceX96, params.sqrtPriceLimitX96);
+-            }
+-            if (params.sqrtPriceLimitX96 >= TickMath.MAX_SQRT_RATIO) {
+-                revert PriceLimitOutOfBounds(params.sqrtPriceLimitX96);
+-            }
+-        }
+-
+-        StepComputations memory step;
+-
+         // continue swapping as long as we haven't used the entire input/output and haven't reached the price limit
+         while (state.amountSpecifiedRemaining != 0 && state.sqrtPriceX96 != params.sqrtPriceLimitX96) {
+             step.sqrtPriceStartX96 = state.sqrtPriceX96;

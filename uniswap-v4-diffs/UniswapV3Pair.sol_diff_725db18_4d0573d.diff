@@ -1,0 +1,23 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 25d2ad62..1a8db38b 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -42,14 +42,14 @@ contract UniswapV3Pair is IUniswapV3Pair {
+     // ideally this would be a constant array, but constant arrays are not supported in solidity
+     function FEE_OPTIONS(uint8 i) public pure override returns (uint16) {
+         if (i < 3) {
+-            if (i == 0) return 6;
+-            if (i == 1) return 12;
++            if (i == 0) return 5;
++            if (i == 1) return 10;
+             return 30;
+         }
+         if (i == 3) return 60;
+-        if (i == 4) return 120;
++        if (i == 4) return 100;
+         assert(i == 5);
+-        return 240;
++        return 200;
+     }
+ 
+     address public immutable override factory;

@@ -1,0 +1,18 @@
+diff --git a/src/test/SkipCallsTestHook.sol b/src/test/SkipCallsTestHook.sol
+index 93269d31..cc42cdeb 100644
+--- a/src/test/SkipCallsTestHook.sol
++++ b/src/test/SkipCallsTestHook.sol
+@@ -101,11 +101,11 @@ contract SkipCallsTestHook is BaseTestHooks, Test {
+     function beforeSwap(address, PoolKey calldata key, IPoolManager.SwapParams calldata params, bytes calldata hookData)
+         external
+         override
+-        returns (bytes4, BeforeSwapDelta, uint24)
++        returns (bytes4, BeforeSwapDelta)
+     {
+         counter++;
+         _swap(key, params, hookData);
+-        return (IHooks.beforeSwap.selector, BeforeSwapDeltaLibrary.ZERO_DELTA, 0);
++        return (IHooks.beforeSwap.selector, BeforeSwapDeltaLibrary.ZERO_DELTA);
+     }
+ 
+     function afterSwap(

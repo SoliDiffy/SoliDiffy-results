@@ -1,0 +1,18 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 99288698..98cc3391 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -518,10 +518,9 @@ contract UniswapV3Pair is IUniswapV3Pair {
+ 
+             (state.sqrtPriceX96, step.amountIn, step.amountOut, step.feeAmount) = SwapMath.computeSwapStep(
+                 state.sqrtPriceX96,
+-                (
+-                    zeroForOne
+-                        ? step.sqrtPriceNextX96 < params.sqrtPriceLimitX96
+-                        : step.sqrtPriceNextX96 > params.sqrtPriceLimitX96
++                (zeroForOne
++                    ? step.sqrtPriceNextX96 < params.sqrtPriceLimitX96
++                    : step.sqrtPriceNextX96 > params.sqrtPriceLimitX96
+                 )
+                     ? params.sqrtPriceLimitX96
+                     : step.sqrtPriceNextX96,

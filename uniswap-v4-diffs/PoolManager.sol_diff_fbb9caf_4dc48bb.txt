@@ -1,0 +1,23 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index 034ff167..4eb5b232 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -277,7 +277,7 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+     }
+ 
+     /// @inheritdoc IPoolManager
+-    function sync(Currency currency) external {
++    function sync(Currency currency) external onlyWhenUnlocked {
+         CurrencyReserves.requireNotSynced();
+         // address(0) is used for the native currency
+         if (currency.isAddressZero()) return;
+@@ -382,4 +382,9 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
+     function _getPool(PoolId id) internal view override returns (Pool.State storage) {
+         return _pools[id];
+     }
++
++    /// @notice Implementation of the _isUnlocked function defined in ProtocolFees
++    function _isUnlocked() internal view override returns (bool) {
++        return Lock.isUnlocked();
++    }
+ }

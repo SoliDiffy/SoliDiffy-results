@@ -1,0 +1,14 @@
+diff --git a/src/interfaces/IPoolManager.sol b/src/interfaces/IPoolManager.sol
+index e9b974bf..76fc65a7 100644
+--- a/src/interfaces/IPoolManager.sol
++++ b/src/interfaces/IPoolManager.sol
+@@ -18,9 +18,6 @@ interface IPoolManager is IFees, IClaims {
+     /// @notice Thrown when a currency is not netted out after a lock
+     error CurrencyNotSettled();
+ 
+-    /// @notice Thrown when trying to interact with a non-initialized pool
+-    error PoolNotInitialized();
+-
+     /// @notice Thrown when a function is called by an address that is not the current locker
+     /// @param locker The current locker
+     error LockedBy(address locker);

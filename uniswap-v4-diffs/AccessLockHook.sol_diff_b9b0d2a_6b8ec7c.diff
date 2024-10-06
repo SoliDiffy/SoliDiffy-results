@@ -1,0 +1,23 @@
+diff --git a/src/test/AccessLockHook.sol b/src/test/AccessLockHook.sol
+index 33a6e475..35fb6065 100644
+--- a/src/test/AccessLockHook.sol
++++ b/src/test/AccessLockHook.sol
+@@ -199,15 +199,14 @@ contract AccessLockHook3 is Test, ILockCallback, BaseTestHooks {
+         bytes calldata /* hookData **/
+     ) external override returns (bytes4) {
+         assertEq(address(manager.getCurrentHook()), address(this));
+-        manager.lock(address(this), abi.encode(true));
++        manager.lock(abi.encode(true));
+         assertEq(address(manager.getCurrentHook()), address(this));
+-        manager.lock(address(this), abi.encode(false));
++        manager.lock(abi.encode(false));
+         assertEq(address(manager.getCurrentHook()), address(this));
+         return IHooks.beforeModifyPosition.selector;
+     }
+ 
+-    function lockAcquired(address caller, bytes memory data) external returns (bytes memory) {
+-        require(caller == address(this));
++    function lockAcquired(bytes memory data) external returns (bytes memory) {
+         assertEq(manager.getLockLength(), 2);
+         assertEq(address(manager.getCurrentHook()), address(0));
+ 

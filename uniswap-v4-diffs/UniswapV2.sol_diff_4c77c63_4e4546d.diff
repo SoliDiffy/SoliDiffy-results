@@ -1,0 +1,101 @@
+diff --git a/contracts/UniswapV2.sol b/contracts/UniswapV2.sol
+index c28a325a..9a8a7944 100644
+--- a/contracts/UniswapV2.sol
++++ b/contracts/UniswapV2.sol
+@@ -1,7 +1,6 @@
+ pragma solidity 0.5.14;
+ 
+ import "./interfaces/IUniswapV2.sol";
+-import "./interfaces/IUniswapV2Factory.sol";
+ import "./ERC20.sol";
+ import "./libraries/UQ112x112.sol";
+ import "./libraries/Math.sol";
+@@ -13,7 +12,6 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+     address public factory;
+     address public token0;
+     address public token1;
+-    address public feeAddress;
+ 
+     uint112 public reserve0;
+     uint112 public reserve1;
+@@ -23,7 +21,6 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+ 
+     uint private invariantLast;
+     bool private notEntered = true;
+-    bool private feeOn;
+ 
+     event ReservesUpdated(uint112 reserve0, uint112 reserve1);
+     event LiquidityMinted(address indexed sender, uint amount0, uint amount1);
+@@ -42,11 +39,10 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+         blockNumberLast = uint32(block.number % 2**32);
+     }
+ 
+-    function initialize(address _token0, address _token1, address _feeAddress) external {
++    function initialize(address _token0, address _token1) external {
+         require(msg.sender == factory && token0 == address(0) && token1 == address(0), "UniswapV2: FORBIDDEN");
+         token0 = _token0;
+         token1 = _token1;
+-        feeAddress = _feeAddress;
+     }
+ 
+     function safeTransfer(address token, address to, uint value) private {
+@@ -83,17 +79,14 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+ 
+     // mint liquidity equivalent to 20% of accumulated fees
+     function mintFeeLiquidity() private {
+-        if (feeOn) {
+-            uint invariant = Math.sqrt(uint(reserve0).mul(reserve1));
+-            if (invariant > invariantLast) {
+-                uint numerator = totalSupply.mul(invariant.sub(invariantLast));
+-                uint denominator = uint256(4).mul(invariant).add(invariantLast);
+-                uint liquidity = numerator / denominator;
+-                if (liquidity > 0) _mint(feeAddress, liquidity);
++        uint invariant = Math.sqrt(uint(reserve0).mul(reserve1));
++        if (invariant > invariantLast) {
++            uint numerator = totalSupply.mul(invariant.sub(invariantLast));
++            uint denominator = uint256(4).mul(invariant).add(invariantLast);
++            uint liquidity = numerator / denominator;
++            if (liquidity > 0) {
++                _mint(factory, liquidity); // factory is a placeholder
+             }
+-        } else if (IUniswapV2Factory(factory).feeOn()) {
+-            feeOn = true;
+-            invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
+         }
+     }
+ 
+@@ -112,7 +105,7 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+         _mint(recipient, liquidity);
+ 
+         update(balance0, balance1);
+-        if (feeOn) invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
++        invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
+         emit LiquidityMinted(msg.sender, amount0, amount1);
+     }
+ 
+@@ -120,7 +113,7 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+         uint liquidity = balanceOf[address(this)];
+         uint balance0 = IERC20(token0).balanceOf(address(this));
+         uint balance1 = IERC20(token1).balanceOf(address(this));
+-        require(balance0 >= reserve0 && balance1 >= reserve1, "UniswapV2: INSUFFICIENT_BALANCES");
++        require(balance0 >= reserve0 && balance0 >= reserve1, "UniswapV2: INSUFFICIENT_BALANCES");
+ 
+         mintFeeLiquidity();
+         amount0 = liquidity.mul(balance0) / totalSupply; // intentionally using balances not reserves
+@@ -131,7 +124,7 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+         _burn(address(this), liquidity);
+ 
+         update(IERC20(token0).balanceOf(address(this)), IERC20(token1).balanceOf(address(this)));
+-        if (feeOn) invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
++        invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
+         emit LiquidityBurned(msg.sender, recipient, amount0, amount1);
+     }
+ 
+@@ -168,6 +161,6 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0) {
+ 
+     function sweep() external lock {
+         mintFeeLiquidity();
+-        if (feeOn) invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
++        invariantLast = Math.sqrt(uint(reserve0).mul(reserve1));
+     }
+ }

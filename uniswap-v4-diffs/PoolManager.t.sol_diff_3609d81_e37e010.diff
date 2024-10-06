@@ -1,0 +1,13 @@
+diff --git a/test/PoolManager.t.sol b/test/PoolManager.t.sol
+index 36b40b9e..4f2bb227 100644
+--- a/test/PoolManager.t.sol
++++ b/test/PoolManager.t.sol
+@@ -934,7 +934,7 @@ contract PoolManagerTest is Test, Deployers, GasSnapshot {
+ 
+     function test_settle_revertsSendingNativeWithToken() public noIsolate {
+         manager.sync(key.currency0);
+-        vm.expectRevert(IPoolManager.NonzeroNativeValue.selector);
++        vm.expectRevert(IPoolManager.NonZeroNativeValue.selector);
+         settleRouter.settle{value: 1}();
+     }
+ 

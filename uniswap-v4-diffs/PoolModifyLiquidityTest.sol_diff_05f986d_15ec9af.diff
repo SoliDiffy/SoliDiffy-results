@@ -1,0 +1,12 @@
+diff --git a/src/test/PoolModifyLiquidityTest.sol b/src/test/PoolModifyLiquidityTest.sol
+index 2349d3e3..79fac3c4 100644
+--- a/src/test/PoolModifyLiquidityTest.sol
++++ b/src/test/PoolModifyLiquidityTest.sol
+@@ -14,6 +14,7 @@ import {CurrencySettler} from "../../test/utils/CurrencySettler.sol";
+ import {StateLibrary} from "../libraries/StateLibrary.sol";
+ 
+ contract PoolModifyLiquidityTest is PoolTestBase {
++    using CurrencyLibrary for Currency;
+     using CurrencySettler for Currency;
+     using Hooks for IHooks;
+     using LPFeeLibrary for uint24;

@@ -1,0 +1,22 @@
+diff --git a/src/PoolManager.sol b/src/PoolManager.sol
+index d1214ec2..21b2fab1 100644
+--- a/src/PoolManager.sol
++++ b/src/PoolManager.sol
+@@ -129,13 +129,14 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC6909Claims {
+     }
+ 
+     /// @inheritdoc IPoolManager
+-    function lock(bytes calldata data) external payable override returns (bytes memory result) {
++    function lock(address lockTarget, bytes calldata data) external payable override returns (bytes memory result) {
++        // Get the lock caller because thats an EOA and is not user-controlable
+         if (Locker.isLocked()) revert AlreadyLocked();
+ 
+-        Locker.setLocker(msg.sender);
++        Locker.setLocker(lockTarget);
+ 
+         // the caller does everything in this callback, including paying what they owe via calls to settle
+-        result = ILockCallback(msg.sender).lockAcquired(data);
++        result = ILockCallback(lockTarget).lockAcquired(msg.sender, data);
+ 
+         if (NonZeroDeltaCount.read() != 0) revert CurrencyNotSettled();
+         Locker.clearLocker();

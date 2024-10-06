@@ -1,0 +1,13 @@
+diff --git a/src/libraries/CurrencySettleTake.sol b/src/libraries/CurrencySettleTake.sol
+index 8fcc957a..9bf80ada 100644
+--- a/src/libraries/CurrencySettleTake.sol
++++ b/src/libraries/CurrencySettleTake.sol
+@@ -22,7 +22,7 @@ library CurrencySettleTake {
+         } else if (currency.isNative()) {
+             manager.settle{value: amount}(currency);
+         } else {
+-            manager.sync(currency);
++            // TODO: call sync when transient reserves is merged
+             IERC20Minimal(Currency.unwrap(currency)).transferFrom(payer, address(manager), amount);
+             manager.settle(currency);
+         }

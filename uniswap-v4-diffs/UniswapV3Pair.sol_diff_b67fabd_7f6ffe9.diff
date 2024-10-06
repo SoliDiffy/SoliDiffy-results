@@ -1,0 +1,45 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 3d0ed5be..b0e4da19 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -220,6 +220,7 @@ contract UniswapV3Pair is IUniswapV3Pair, NoDelegateCall {
+     // effect some changes to a position
+     function _setPosition(SetPositionParams memory params)
+         private
++        lock
+         noDelegateCall
+         returns (int256 amount0, int256 amount1)
+     {
+@@ -349,14 +350,14 @@ contract UniswapV3Pair is IUniswapV3Pair, NoDelegateCall {
+         }
+     }
+ 
+-    // noDelegateCall is applied indirectly via _setPosition
++    // lock and noDelegateCall are applied indirectly via _setPosition
+     function mint(
+         address recipient,
+         int24 tickLower,
+         int24 tickUpper,
+         uint128 amount,
+         bytes calldata data
+-    ) external lock override {
++    ) external override {
+         (int256 amount0Int, int256 amount1Int) =
+             _setPosition(
+                 SetPositionParams({
+@@ -409,13 +410,13 @@ contract UniswapV3Pair is IUniswapV3Pair, NoDelegateCall {
+         emit Collect(msg.sender, tickLower, tickUpper, recipient, amount0, amount1);
+     }
+ 
+-    // noDelegateCall is applied indirectly via _setPosition
++    // lock and noDelegateCall are applied indirectly via _setPosition
+     function burn(
+         address recipient,
+         int24 tickLower,
+         int24 tickUpper,
+         uint128 amount
+-    ) external override lock returns (uint256 amount0, uint256 amount1) {
++    ) external override returns (uint256 amount0, uint256 amount1) {
+         (int256 amount0Int, int256 amount1Int) =
+             _setPosition(
+                 SetPositionParams({

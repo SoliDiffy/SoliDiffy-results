@@ -1,0 +1,29 @@
+diff --git a/src/libraries/CurrencyDelta.sol b/src/libraries/CurrencyDelta.sol
+index 164f8ed4..32002e4d 100644
+--- a/src/libraries/CurrencyDelta.sol
++++ b/src/libraries/CurrencyDelta.sol
+@@ -1,5 +1,5 @@
+ // SPDX-License-Identifier: BUSL-1.1
+-pragma solidity ^0.8.20;
++pragma solidity ^0.8.24;
+ 
+ import {Currency} from "../types/Currency.sol";
+ 
+@@ -19,7 +19,7 @@ library CurrencyDelta {
+     function setDelta(Currency currency, address caller, int256 delta) internal {
+         bytes32 hashSlot = _computeSlot(caller, currency);
+ 
+-        assembly ("memory-safe") {
++        assembly {
+             tstore(hashSlot, delta)
+         }
+     }
+@@ -28,7 +28,7 @@ library CurrencyDelta {
+     function getDelta(Currency currency, address caller) internal view returns (int256 delta) {
+         bytes32 hashSlot = _computeSlot(caller, currency);
+ 
+-        assembly ("memory-safe") {
++        assembly {
+             delta := tload(hashSlot)
+         }
+     }

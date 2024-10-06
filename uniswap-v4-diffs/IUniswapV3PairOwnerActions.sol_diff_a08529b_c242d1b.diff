@@ -1,0 +1,19 @@
+diff --git a/contracts/interfaces/IUniswapV3PairOwnerActions.sol b/contracts/interfaces/IUniswapV3PairOwnerActions.sol
+new file mode 100644
+index 00000000..d30ff152
+--- /dev/null
++++ b/contracts/interfaces/IUniswapV3PairOwnerActions.sol
+@@ -0,0 +1,13 @@
++// SPDX-License-Identifier: UNLICENSED
++pragma solidity >=0.5.0;
++
++interface IUniswapV3PairOwnerActions {
++    function setFeeProtocol(uint8) external;
++
++    // allows factory owner to collect protocol fees
++    function collectProtocol(
++        address recipient,
++        uint256 amount0Requested,
++        uint256 amount1Requested
++    ) external returns (uint256 amount0, uint256 amount1);
++}

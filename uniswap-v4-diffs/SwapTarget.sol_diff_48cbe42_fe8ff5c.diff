@@ -1,0 +1,22 @@
+diff --git a/contracts/test/SwapTarget.sol b/contracts/test/SwapTarget.sol
+index 658ce2d5..e51533f0 100644
+--- a/contracts/test/SwapTarget.sol
++++ b/contracts/test/SwapTarget.sol
+@@ -67,7 +67,7 @@ contract SwapTarget is IMintCallback, ISwapCallback, IFlashCallback {
+         IPool(pool).swap(recipient, false, type(int256).max, sqrtPriceX96, abi.encode(msg.sender));
+     }
+ 
+-    event SwapCallback(int256 amount0Delta, int256 amount1Delta);
++    event ISwapCallback(int256 amount0Delta, int256 amount1Delta);
+ 
+     function swapCallback(
+         int256 amount0Delta,
+@@ -76,7 +76,7 @@ contract SwapTarget is IMintCallback, ISwapCallback, IFlashCallback {
+     ) external override {
+         address sender = abi.decode(data, (address));
+ 
+-        emit SwapCallback(amount0Delta, amount1Delta);
++        emit ISwapCallback(amount0Delta, amount1Delta);
+ 
+         if (amount0Delta > 0) {
+             IERC20Minimal(IPool(msg.sender).token0()).transferFrom(sender, msg.sender, uint256(amount0Delta));

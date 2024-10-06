@@ -1,0 +1,14 @@
+diff --git a/src/libraries/StateLibrary.sol b/src/libraries/StateLibrary.sol
+index 8e91f3f2..45c596f7 100644
+--- a/src/libraries/StateLibrary.sol
++++ b/src/libraries/StateLibrary.sol
+@@ -253,7 +253,8 @@ library StateLibrary {
+         // positionKey = keccak256(abi.encodePacked(owner, tickLower, tickUpper, salt))
+         bytes32 positionKey;
+ 
+-        assembly ("memory-safe") {
++        /// @solidity memory-safe-assembly
++        assembly {
+             mstore(0x26, salt) // [0x26, 0x46)
+             mstore(0x06, tickUpper) // [0x23, 0x26)
+             mstore(0x03, tickLower) // [0x20, 0x23)

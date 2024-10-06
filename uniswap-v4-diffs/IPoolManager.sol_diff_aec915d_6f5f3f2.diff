@@ -1,0 +1,16 @@
+diff --git a/src/interfaces/IPoolManager.sol b/src/interfaces/IPoolManager.sol
+index 3d918fa5..7e679b63 100644
+--- a/src/interfaces/IPoolManager.sol
++++ b/src/interfaces/IPoolManager.sol
+@@ -137,9 +137,10 @@ interface IPoolManager is IFees, IERC6909Claims {
+     function currencyDelta(address locker, Currency currency) external view returns (int256);
+ 
+     /// @notice All operations go through this function
++    /// @param lockTarget The address to call the callback on
+     /// @param data Any data to pass to the callback, via `ILockCallback(msg.sender).lockAcquired(data)`
+     /// @return The data returned by the call to `ILockCallback(msg.sender).lockAcquired(data)`
+-    function lock(bytes calldata data) external payable returns (bytes memory);
++    function lock(address lockTarget, bytes calldata data) external payable returns (bytes memory);
+ 
+     struct ModifyLiquidityParams {
+         // the lower and upper tick of the position

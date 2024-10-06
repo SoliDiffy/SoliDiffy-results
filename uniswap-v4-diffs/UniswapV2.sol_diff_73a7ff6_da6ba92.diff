@@ -1,0 +1,15 @@
+diff --git a/contracts/UniswapV2.sol b/contracts/UniswapV2.sol
+index e0e7bc20..0983d7c6 100644
+--- a/contracts/UniswapV2.sol
++++ b/contracts/UniswapV2.sol
+@@ -30,8 +30,8 @@ contract UniswapV2 is IUniswapV2, ERC20("Uniswap V2", "UNI-V2", 18, 0), SafeTran
+ 
+     TokenData private reserves;
+ 
+-    OracleData public oracleDataToken0;
+-    OracleData public oracleDataToken1;
++    OracleData private oracleDataToken0;
++    OracleData private oracleDataToken1;
+ 
+     bool private notEntered = true;
+     modifier lock() {

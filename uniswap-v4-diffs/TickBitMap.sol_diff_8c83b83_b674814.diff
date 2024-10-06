@@ -1,0 +1,13 @@
+diff --git a/contracts/libraries/TickBitMap.sol b/contracts/libraries/TickBitMap.sol
+index 3662ee75..92fa57a0 100644
+--- a/contracts/libraries/TickBitMap.sol
++++ b/contracts/libraries/TickBitMap.sol
+@@ -79,7 +79,7 @@ library TickBitMap {
+         bool initialized;
+         next = tick;
+         if (lte) {
+-            while (next >= TickMath.MIN_TICK && !initialized) {
++            while (next > TickMath.MIN_TICK && !initialized) {
+                 (next, initialized) = nextInitializedTickWithinOneWord(self, next, true);
+                 if (!initialized) next--;
+             }

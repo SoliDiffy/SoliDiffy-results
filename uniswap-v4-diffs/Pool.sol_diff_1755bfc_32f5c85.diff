@@ -1,0 +1,13 @@
+diff --git a/src/libraries/Pool.sol b/src/libraries/Pool.sol
+index 0be7ddd9..0dfa9b36 100644
+--- a/src/libraries/Pool.sol
++++ b/src/libraries/Pool.sol
+@@ -310,7 +310,7 @@ library Pool {
+ 
+         bool exactInput = params.amountSpecified < 0;
+ 
+-        if (swapFee >= LPFeeLibrary.MAX_LP_FEE) {
++        if (swapFee == LPFeeLibrary.MAX_LP_FEE) {
+             if (!exactInput) {
+                 InvalidFeeForExactOut.selector.revertWith();
+             }

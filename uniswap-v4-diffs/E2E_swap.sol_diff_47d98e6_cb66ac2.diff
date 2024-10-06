@@ -1,0 +1,60 @@
+diff --git a/audits/tob/contracts/crytic/echidna/E2E_swap.sol b/audits/tob/contracts/crytic/echidna/E2E_swap.sol
+index 289ccb97..863c5ddf 100644
+--- a/audits/tob/contracts/crytic/echidna/E2E_swap.sol
++++ b/audits/tob/contracts/crytic/echidna/E2E_swap.sol
+@@ -360,8 +360,11 @@ contract E2E_swap {
+         uint160 sqrtPriceLimitX96 = get_random_zeroForOne_priceLimit(_amount);
+         // console.log('sqrtPriceLimitX96 = %s', sqrtPriceLimitX96);
+ 
+-        (UniswapSwapper.SwapperStats memory bfre, UniswapSwapper.SwapperStats memory aftr) =
+-            swapper.doSwap(true, _amountSpecified, sqrtPriceLimitX96);
++        (UniswapSwapper.SwapperStats memory bfre, UniswapSwapper.SwapperStats memory aftr) = swapper.doSwap(
++            true,
++            _amountSpecified,
++            sqrtPriceLimitX96
++        );
+ 
+         check_swap_invariants(
+             bfre.tick,
+@@ -394,8 +397,11 @@ contract E2E_swap {
+         uint160 sqrtPriceLimitX96 = get_random_oneForZero_priceLimit(_amount);
+         // console.log('sqrtPriceLimitX96 = %s', sqrtPriceLimitX96);
+ 
+-        (UniswapSwapper.SwapperStats memory bfre, UniswapSwapper.SwapperStats memory aftr) =
+-            swapper.doSwap(false, _amountSpecified, sqrtPriceLimitX96);
++        (UniswapSwapper.SwapperStats memory bfre, UniswapSwapper.SwapperStats memory aftr) = swapper.doSwap(
++            false,
++            _amountSpecified,
++            sqrtPriceLimitX96
++        );
+ 
+         check_swap_invariants(
+             bfre.tick,
+@@ -428,8 +434,11 @@ contract E2E_swap {
+         uint160 sqrtPriceLimitX96 = get_random_zeroForOne_priceLimit(_amount);
+         // console.log('sqrtPriceLimitX96 = %s', sqrtPriceLimitX96);
+ 
+-        (UniswapSwapper.SwapperStats memory bfre, UniswapSwapper.SwapperStats memory aftr) =
+-            swapper.doSwap(true, _amountSpecified, sqrtPriceLimitX96);
++        (UniswapSwapper.SwapperStats memory bfre, UniswapSwapper.SwapperStats memory aftr) = swapper.doSwap(
++            true,
++            _amountSpecified,
++            sqrtPriceLimitX96
++        );
+ 
+         check_swap_invariants(
+             bfre.tick,
+@@ -462,8 +471,11 @@ contract E2E_swap {
+         uint160 sqrtPriceLimitX96 = get_random_oneForZero_priceLimit(_amount);
+         // console.log('sqrtPriceLimitX96 = %s', sqrtPriceLimitX96);
+ 
+-        (UniswapSwapper.SwapperStats memory bfre, UniswapSwapper.SwapperStats memory aftr) =
+-            swapper.doSwap(false, _amountSpecified, sqrtPriceLimitX96);
++        (UniswapSwapper.SwapperStats memory bfre, UniswapSwapper.SwapperStats memory aftr) = swapper.doSwap(
++            false,
++            _amountSpecified,
++            sqrtPriceLimitX96
++        );
+ 
+         check_swap_invariants(
+             bfre.tick,

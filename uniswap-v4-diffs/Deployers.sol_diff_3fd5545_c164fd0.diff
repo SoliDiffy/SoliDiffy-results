@@ -1,0 +1,55 @@
+diff --git a/test/utils/Deployers.sol b/test/utils/Deployers.sol
+index adccc966..25c4e785 100644
+--- a/test/utils/Deployers.sol
++++ b/test/utils/Deployers.sol
+@@ -98,16 +98,7 @@ contract Deployers {
+     // You must have first initialised the routers with deployFreshManagerAndRouters
+     // If you only need the currencies (and not approvals) call deployAndMint2Currencies
+     function deployMintAndApprove2Currencies() internal returns (Currency, Currency) {
+-        Currency _currencyA = deployMintAndApproveCurrency();
+-        Currency _currencyB = deployMintAndApproveCurrency();
+-
+-        (currency0, currency1) =
+-            SortTokens.sort(MockERC20(Currency.unwrap(_currencyA)), MockERC20(Currency.unwrap(_currencyB)));
+-        return (currency0, currency1);
+-    }
+-
+-    function deployMintAndApproveCurrency() internal returns (Currency currency) {
+-        MockERC20 token = deployTokens(1, 2 ** 255)[0];
++        MockERC20[] memory tokens = deployTokens(2, 2 ** 255);
+ 
+         address[6] memory toApprove = [
+             address(swapRouter),
+@@ -119,10 +110,12 @@ contract Deployers {
+         ];
+ 
+         for (uint256 i = 0; i < toApprove.length; i++) {
+-            token.approve(toApprove[i], Constants.MAX_UINT256);
++            tokens[0].approve(toApprove[i], Constants.MAX_UINT256);
++            tokens[1].approve(toApprove[i], Constants.MAX_UINT256);
+         }
+ 
+-        return Currency.wrap(address(token));
++        (currency0, currency1) = SortTokens.sort(tokens[0], tokens[1]);
++        return (currency0, currency1);
+     }
+ 
+     function deployAndMint2Currencies() internal returns (Currency, Currency) {
+@@ -210,7 +203,7 @@ contract Deployers {
+                 amountSpecified: amountSpecified,
+                 sqrtPriceLimitX96: zeroForOne ? MIN_PRICE_LIMIT : MAX_PRICE_LIMIT
+             }),
+-            PoolSwapTest.TestSettings({takeClaims: false, settleUsingBurn: false}),
++            PoolSwapTest.TestSettings({takeClaims: false, settleUsingBurn: false, currencyAlreadySent: false}),
+             hookData
+         );
+     }
+@@ -233,7 +226,7 @@ contract Deployers {
+                 amountSpecified: amountSpecified,
+                 sqrtPriceLimitX96: zeroForOne ? MIN_PRICE_LIMIT : MAX_PRICE_LIMIT
+             }),
+-            PoolSwapTest.TestSettings({takeClaims: false, settleUsingBurn: false}),
++            PoolSwapTest.TestSettings({takeClaims: false, settleUsingBurn: false, currencyAlreadySent: false}),
+             hookData
+         );
+     }

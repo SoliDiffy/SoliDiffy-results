@@ -1,0 +1,29 @@
+diff --git a/src/libraries/ProtocolFeeLibrary.sol b/src/libraries/ProtocolFeeLibrary.sol
+index aa8969b3..35cd19e0 100644
+--- a/src/libraries/ProtocolFeeLibrary.sol
++++ b/src/libraries/ProtocolFeeLibrary.sol
+@@ -1,5 +1,5 @@
+ // SPDX-License-Identifier: GPL-2.0-or-later
+-pragma solidity ^0.8.20;
++pragma solidity ^0.8.0;
+ 
+ library ProtocolFeeLibrary {
+     // Max protocol fee is 0.1% (1000 pips)
+@@ -22,7 +22,7 @@ library ProtocolFeeLibrary {
+ 
+     function isValidProtocolFee(uint24 self) internal pure returns (bool valid) {
+         // Equivalent to: getZeroForOneFee(self) <= MAX_PROTOCOL_FEE && getOneForZeroFee(self) <= MAX_PROTOCOL_FEE
+-        assembly ("memory-safe") {
++        assembly {
+             let isZeroForOneFeeOk := lt(and(self, 0xfff), FEE_0_THRESHOLD)
+             let isOneForZeroFeeOk := lt(self, FEE_1_THRESHOLD)
+             valid := and(isZeroForOneFeeOk, isOneForZeroFeeOk)
+@@ -34,7 +34,7 @@ library ProtocolFeeLibrary {
+     // Equivalent to protocolFee + lpFee(1_000_000 - protocolFee) / 1_000_000
+     function calculateSwapFee(uint24 self, uint24 lpFee) internal pure returns (uint24 swapFee) {
+         // protocolFee + lpFee - (protocolFee * lpFee / 1_000_000). Div rounds up to favor LPs over the protocol.
+-        assembly ("memory-safe") {
++        assembly {
+             let numerator := mul(self, lpFee)
+             let divRoundingUp := add(div(numerator, PIPS_DENOMINATOR), gt(mod(numerator, PIPS_DENOMINATOR), 0))
+             swapFee := sub(add(self, lpFee), divRoundingUp)

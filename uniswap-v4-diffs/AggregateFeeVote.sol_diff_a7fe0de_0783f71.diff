@@ -1,0 +1,20 @@
+diff --git a/contracts/libraries/AggregateFeeVote.sol b/contracts/libraries/AggregateFeeVote.sol
+index d9ac0cc3..898a3a5a 100644
+--- a/contracts/libraries/AggregateFeeVote.sol
++++ b/contracts/libraries/AggregateFeeVote.sol
+@@ -14,14 +14,7 @@ library AggregateFeeVote {
+         // freshman sum
+         return Aggregate({
+             numerator: x.numerator + y.numerator,
+-            denominator: x.denominator + y.denominator
+-        });
+-    }
+-
+-    function negate(Aggregate memory x) internal pure returns (Aggregate memory) {
+-        return Aggregate({
+-            numerator: -1 * x.numerator,
+-            denominator: -1 * x.denominator
++            denominator: y.denominator + y.denominator
+         });
+     }
+ 

@@ -1,0 +1,69 @@
+diff --git a/contracts/PoolManager.sol b/contracts/PoolManager.sol
+index 02d56c5e..753540a1 100644
+--- a/contracts/PoolManager.sol
++++ b/contracts/PoolManager.sol
+@@ -62,11 +62,25 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC1155, IERC1155Rec
+         external
+         view
+         override
+-        returns (uint160 sqrtPriceX96, int24 tick, uint24 protocolFees, uint24 hookFees)
++        returns (
++            uint160 sqrtPriceX96,
++            int24 tick,
++            uint8 protocolSwapFee,
++            uint8 protocolWithdrawFee,
++            uint8 hookSwapFee,
++            uint8 hookWithdrawFee
++        )
+     {
+         Pool.Slot0 memory slot0 = pools[id].slot0;
+ 
+-        return (slot0.sqrtPriceX96, slot0.tick, slot0.protocolFees, slot0.hookFees);
++        return (
++            slot0.sqrtPriceX96,
++            slot0.tick,
++            slot0.protocolSwapFee,
++            slot0.protocolWithdrawFee,
++            slot0.hookSwapFee,
++            slot0.hookWithdrawFee
++        );
+     }
+ 
+     /// @inheritdoc IPoolManager
+@@ -120,9 +134,9 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC1155, IERC1155Rec
+         }
+ 
+         PoolId id = key.toId();
+-        uint24 protocolFees = _fetchProtocolFees(key);
+-        uint24 hookFees = _fetchHookFees(key);
+-        tick = pools[id].initialize(sqrtPriceX96, protocolFees, hookFees);
++        (uint8 protocolSwapFee, uint8 protocolWithdrawFee) = _fetchProtocolFees(key);
++        (uint8 hookSwapFee, uint8 hookWithdrawFee) = _fetchHookFees(key);
++        tick = pools[id].initialize(sqrtPriceX96, protocolSwapFee, hookSwapFee, protocolWithdrawFee, hookWithdrawFee);
+ 
+         if (key.hooks.shouldCallAfterInitialize()) {
+             if (
+@@ -378,17 +392,17 @@ contract PoolManager is IPoolManager, Fees, NoDelegateCall, ERC1155, IERC1155Rec
+     }
+ 
+     function setProtocolFees(PoolKey memory key) external {
+-        uint24 newProtocolFees = _fetchProtocolFees(key);
++        (uint8 newProtocolSwapFee, uint8 newProtocolWithdrawFee) = _fetchProtocolFees(key);
+         PoolId id = key.toId();
+-        pools[id].setProtocolFees(newProtocolFees);
+-        emit ProtocolFeeUpdated(id, newProtocolFees);
++        pools[id].setProtocolFees(newProtocolSwapFee, newProtocolWithdrawFee);
++        emit ProtocolFeeUpdated(id, newProtocolSwapFee, newProtocolWithdrawFee);
+     }
+ 
+     function setHookFees(PoolKey memory key) external {
+-        uint24 newHookFees = _fetchHookFees(key);
++        (uint8 newHookSwapFee, uint8 newHookWithdrawFee) = _fetchHookFees(key);
+         PoolId id = key.toId();
+-        pools[id].setHookFees(newHookFees);
+-        emit HookFeeUpdated(id, newHookFees);
++        pools[id].setHookFees(newHookSwapFee, newHookWithdrawFee);
++        emit HookFeeUpdated(id, newHookSwapFee, newHookWithdrawFee);
+     }
+ 
+     function extsload(bytes32 slot) external view returns (bytes32 value) {

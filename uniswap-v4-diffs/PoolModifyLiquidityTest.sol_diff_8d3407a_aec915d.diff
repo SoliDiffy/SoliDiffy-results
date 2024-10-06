@@ -1,0 +1,18 @@
+diff --git a/src/test/PoolModifyLiquidityTest.sol b/src/test/PoolModifyLiquidityTest.sol
+index 12248a83..cda62cdc 100644
+--- a/src/test/PoolModifyLiquidityTest.sol
++++ b/src/test/PoolModifyLiquidityTest.sol
+@@ -66,10 +66,10 @@ contract PoolModifyLiquidityTest is Test, PoolTestBase {
+         (,,, int256 delta1) = _fetchBalances(data.key.currency1, data.sender, address(this));
+ 
+         if (data.params.liquidityDelta > 0) {
+-            assert(delta0 > 0 || delta1 > 0);
++            assert(delta0 > 0 || delta1 > 0 || data.key.hooks.hasPermission(Hooks.NO_OP_FLAG));
+             assert(!(delta0 < 0 || delta1 < 0));
+-        } else if (data.params.liquidityDelta < 0) {
+-            assert(delta0 < 0 || delta1 < 0);
++        } else {
++            assert(delta0 < 0 || delta1 < 0 || data.key.hooks.hasPermission(Hooks.NO_OP_FLAG));
+             assert(!(delta0 > 0 || delta1 > 0));
+         }
+ 

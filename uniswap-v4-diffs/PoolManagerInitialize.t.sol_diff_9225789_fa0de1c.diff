@@ -1,0 +1,14 @@
+diff --git a/test/PoolManagerInitialize.t.sol b/test/PoolManagerInitialize.t.sol
+index c5935bb0..afa60ea6 100644
+--- a/test/PoolManagerInitialize.t.sol
++++ b/test/PoolManagerInitialize.t.sol
+@@ -387,7 +387,8 @@ contract PoolManagerInitializeTest is Test, Deployers, GasSnapshot {
+     }
+ 
+     function test_initialize_gas() public {
++        snapStart("initialize");
+         manager.initialize(uninitializedKey, SQRT_RATIO_1_1, ZERO_BYTES);
+-        snapLastCall("initialize");
++        snapEnd();
+     }
+ }

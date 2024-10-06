@@ -1,0 +1,13 @@
+diff --git a/contracts/UniswapV3Pair.sol b/contracts/UniswapV3Pair.sol
+index 8da05694..2630f3a0 100644
+--- a/contracts/UniswapV3Pair.sol
++++ b/contracts/UniswapV3Pair.sol
+@@ -131,7 +131,7 @@ contract UniswapV3Pair is IUniswapV3Pair {
+         return uint32(block.timestamp); // truncation is desired
+     }
+ 
+-    function checkTicks(int24 tickLower, int24 tickUpper) private view {
++    function checkTicks(int24 tickLower, int24 tickUpper) internal view {
+         require(tickLower < tickUpper, 'TLU');
+         require(tickLower >= minTick, 'TLM');
+         require(tickUpper <= maxTick, 'TUM');

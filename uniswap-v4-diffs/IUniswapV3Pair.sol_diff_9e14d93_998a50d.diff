@@ -1,0 +1,39 @@
+diff --git a/contracts/interfaces/IUniswapV3Pair.sol b/contracts/interfaces/IUniswapV3Pair.sol
+index 385675cd..19562891 100644
+--- a/contracts/interfaces/IUniswapV3Pair.sol
++++ b/contracts/interfaces/IUniswapV3Pair.sol
+@@ -1,6 +1,6 @@
+ // SPDX-License-Identifier: GPL-3.0-or-later
+ pragma solidity >=0.5.0;
+-pragma abicoder v2;
++pragma experimental ABIEncoderV2;
+ 
+ interface IUniswapV3Pair {
+     event Initialized(uint160 sqrtPrice);
+@@ -8,19 +8,19 @@ interface IUniswapV3Pair {
+     // event PositionSet(address owner, int24 tickLower, int24 tickUpper, uint8 feeVote, int112 liquidityDelta);
+ 
+     // immutables
+-    function factory() external view returns (address);
++    function factory() external pure returns (address);
+ 
+-    function token0() external view returns (address);
++    function token0() external pure returns (address);
+ 
+-    function token1() external view returns (address);
++    function token1() external pure returns (address);
+ 
+-    function fee() external view returns (uint24);
++    function fee() external pure returns (uint24);
+ 
+-    function tickSpacing() external view returns (int24);
++    function tickSpacing() external pure returns (int24);
+ 
+-    function MIN_TICK() external view returns (int24);
++    function MIN_TICK() external pure returns (int24);
+ 
+-    function MAX_TICK() external view returns (int24);
++    function MAX_TICK() external pure returns (int24);
+ 
+     // variables/state
+     function feeTo() external view returns (address);

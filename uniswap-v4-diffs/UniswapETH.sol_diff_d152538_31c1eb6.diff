@@ -1,0 +1,150 @@
+diff --git a/contracts/UniswapETH.sol b/contracts/UniswapETH.sol
+index 19b5cfb9..f1232bd5 100644
+--- a/contracts/UniswapETH.sol
++++ b/contracts/UniswapETH.sol
+@@ -1,6 +1,9 @@
+ pragma solidity ^0.5.11;
+ import './ERC20.sol';
+ import './interfaces/IERC20.sol';
++import './interfaces/IUniswapETHFactory.sol';
++import './interfaces/IUniswapETH.sol';
++
+ 
+ contract UniswapETH is ERC20 {
+ 
+@@ -13,22 +16,22 @@ contract UniswapETH is ERC20 {
+   string public symbol;                 // UNI-V2
+   uint256 public decimals;              // 18
+   IERC20 token;                         // ERC20 token traded on this contract
+-  address public factory;               // factory that created this contract
++  IUniswapFactory factory;              // factory that created this contract
+ 
+-  bool private locked = false;
++  bool private rentrancyLock = false;
+ 
+ 
+-  // TODO: test this w/ respect to EIP2200 https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol#L20
+   modifier nonReentrant() {
+-    require(!locked);
+-    locked = true;
++    require(!rentrancyLock);
++    rentrancyLock = true;
+     _;
+-    locked = false;
++    rentrancyLock = false;
+   }
+ 
+ 
+   constructor(address tokenAddr) public {
+-    factory = msg.sender;
++    require(address(tokenAddr) != address(0), 'INVALID_ADDRESS');
++    factory = IUniswapFactory(msg.sender);
+     token = IERC20(tokenAddr);
+     name = 'Uniswap V2';
+     symbol = 'UNI-V2';
+@@ -48,22 +51,21 @@ contract UniswapETH is ERC20 {
+   }
+ 
+ 
+-  function ethToToken(address recipient) public payable nonReentrant returns (uint256) {
+-    require(msg.value > 0 && recipient != address(this) && recipient != address(0), 'INVALID_INPUT');
++  function ethToToken() public payable nonReentrant returns (uint256) {
++    require(msg.value > 0);
+     uint256 tokenReserve = token.balanceOf(address(this));
+     uint256 tokensBought = getInputPrice(msg.value, address(this).balance.sub(msg.value), tokenReserve);
+-    require(token.transfer(recipient, tokensBought));
++    require(token.transfer(msg.sender, tokensBought));
+     emit TokenPurchase(msg.sender, msg.value, tokensBought);
+     return tokensBought;
+   }
+ 
+ 
+-  function tokenToEth(address payable recipient, uint256 tokensSold) public nonReentrant returns (uint256) {
+-    require(tokensSold > 0 && recipient != address(this) && recipient != address(0), 'INVALID_INPUT');
++  function tokenToEth(uint256 tokensSold) public nonReentrant returns (uint256) {
++    require(tokensSold > 0);
+     uint256 tokenReserve = token.balanceOf(address(this));
+     uint256 ethBought = getInputPrice(tokensSold, tokenReserve, address(this).balance);
+-    (bool success, ) = recipient.call.value(ethBought)('');
+-    require(success);
++    msg.sender.transfer(ethBought);
+     require(token.transferFrom(msg.sender, address(this), tokensSold));
+     emit EthPurchase(msg.sender, tokensSold, ethBought);
+     return ethBought;
+@@ -75,7 +77,12 @@ contract UniswapETH is ERC20 {
+   }
+ 
+ 
+-  function addLiquidity(address recipient, uint256 initialTokens) public payable nonReentrant returns (uint256) {
++  function factoryAddress() public view returns (address) {
++    return address(factory);
++  }
++
++
++  function addLiquidity(uint256 initialTokens) public payable nonReentrant returns (uint256) {
+     uint256 _totalSupply = totalSupply;
+ 
+     if (_totalSupply > 0) {
+@@ -84,28 +91,27 @@ contract UniswapETH is ERC20 {
+       uint256 tokenReserve = token.balanceOf(address(this));
+       uint256 tokenAmount = (msg.value.mul(tokenReserve) / ethReserve).add(1);
+       uint256 liquidityMinted = msg.value.mul(_totalSupply) / ethReserve;
+-      balanceOf[recipient] = balanceOf[msg.sender].add(liquidityMinted);
++      balanceOf[msg.sender] = balanceOf[msg.sender].add(liquidityMinted);
+       totalSupply = _totalSupply.add(liquidityMinted);
+       require(token.transferFrom(msg.sender, address(this), tokenAmount));
+-      emit AddLiquidity(recipient, msg.value, tokenAmount);
++      emit AddLiquidity(msg.sender, msg.value, tokenAmount);
+       emit Transfer(address(0), msg.sender, liquidityMinted);
+       return liquidityMinted;
+ 
+     } else {
+-      // TODO: figure out initialLiquidity
+       require(initialTokens > 0 && msg.value >= 1000000000, 'INVALID_VALUE');
+       uint256 initialLiquidity = address(this).balance;
+       totalSupply = initialLiquidity;
+-      balanceOf[recipient] = initialLiquidity;
++      balanceOf[msg.sender] = initialLiquidity;
+       require(token.transferFrom(msg.sender, address(this), initialTokens));
+-      emit AddLiquidity(recipient, msg.value, initialTokens);
+-      emit Transfer(address(0), recipient, initialLiquidity);
++      emit AddLiquidity(msg.sender, msg.value, initialTokens);
++      emit Transfer(address(0), msg.sender, initialLiquidity);
+       return initialLiquidity;
+     }
+   }
+ 
+ 
+-  function removeLiquidity(address payable recipient, uint256 amount) public nonReentrant returns (uint256, uint256) {
++  function removeLiquidity(uint256 amount) public nonReentrant returns (uint256, uint256) {
+     uint256 _totalSupply = totalSupply;
+     require(amount > 0 && _totalSupply > 0);
+     uint256 tokenReserve = token.balanceOf(address(this));
+@@ -113,25 +119,10 @@ contract UniswapETH is ERC20 {
+     uint256 tokenAmount = amount.mul(tokenReserve) / _totalSupply;
+     balanceOf[msg.sender] = balanceOf[msg.sender].sub(amount);
+     totalSupply = _totalSupply.sub(amount);
+-    (bool success, ) = recipient.call.value(ethAmount)('');
+-    require(success);
+-    require(token.transfer(recipient, tokenAmount));
++    msg.sender.transfer(ethAmount);
++    require(token.transfer(msg.sender, tokenAmount));
+     emit RemoveLiquidity(msg.sender, ethAmount, tokenAmount);
+     emit Transfer(msg.sender, address(0), amount);
+     return (ethAmount, tokenAmount);
+   }
+-
+-
+-  function unsafeRemoveOnlyETH(address payable recipient, uint256 amount) public nonReentrant returns (uint256) {
+-    uint256 _totalSupply = totalSupply;
+-    require(amount > 0 && _totalSupply > 0);
+-    uint256 ethAmount = amount.mul(address(this).balance) / _totalSupply;
+-    balanceOf[msg.sender] = balanceOf[msg.sender].sub(amount);
+-    totalSupply = _totalSupply.sub(amount);
+-    (bool success, ) = recipient.call.value(ethAmount)('');
+-    require(success);
+-    emit RemoveLiquidity(msg.sender, ethAmount, 0);
+-    emit Transfer(msg.sender, address(0), amount);
+-    return (ethAmount);
+-  }
+ }

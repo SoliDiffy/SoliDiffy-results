@@ -1,0 +1,18 @@
+diff --git a/contracts/NoDelegateCall.sol b/contracts/NoDelegateCall.sol
+index 2f4db8ac..65da3777 100644
+--- a/contracts/NoDelegateCall.sol
++++ b/contracts/NoDelegateCall.sol
+@@ -8,8 +8,12 @@ contract NoDelegateCall {
+         original = address(this);
+     }
+ 
++    function checkNotDelegateCall() private view {
++        require(address(this) == original);
++    }
++
+     modifier noDelegateCall() {
+-        assert(address(this) == original);
++        checkNotDelegateCall();
+         _;
+     }
+ }

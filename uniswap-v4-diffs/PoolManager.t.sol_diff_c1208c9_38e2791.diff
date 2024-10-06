@@ -1,0 +1,11 @@
+diff --git a/test/foundry-tests/PoolManager.t.sol b/test/foundry-tests/PoolManager.t.sol
+index 2c875fcd..d9dae8e4 100644
+--- a/test/foundry-tests/PoolManager.t.sol
++++ b/test/foundry-tests/PoolManager.t.sol
+@@ -208,5 +208,5 @@ contract PoolManagerTest is Test, Deployers, TokenFixture, GasSnapshot {
+         lockTest.lock();
+     }
+ 
+-    receive() external payable {}
++    fallback() external payable {}
+ }

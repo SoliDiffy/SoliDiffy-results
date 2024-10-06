@@ -1,0 +1,42 @@
+diff --git a/test/utils/Deployers.sol b/test/utils/Deployers.sol
+index ab1283f2..695a28a9 100644
+--- a/test/utils/Deployers.sol
++++ b/test/utils/Deployers.sol
+@@ -17,7 +17,6 @@ import {PoolSwapTest} from "../../src/test/PoolSwapTest.sol";
+ import {PoolInitializeTest} from "../../src/test/PoolInitializeTest.sol";
+ import {PoolDonateTest} from "../../src/test/PoolDonateTest.sol";
+ import {PoolTakeTest} from "../../src/test/PoolTakeTest.sol";
+-import {PoolClaimsTest} from "../../src/test/PoolClaimsTest.sol";
+ import {
+     ProtocolFeeControllerTest,
+     OutOfBoundsProtocolFeeControllerTest,
+@@ -51,7 +50,6 @@ contract Deployers {
+     PoolSwapTest swapRouter;
+     PoolDonateTest donateRouter;
+     PoolTakeTest takeRouter;
+-    PoolClaimsTest claimsRouter;
+     PoolInitializeTest initializeRouter;
+     ProtocolFeeControllerTest feeController;
+     RevertingProtocolFeeControllerTest revertingFeeController;
+@@ -74,7 +72,6 @@ contract Deployers {
+         modifyLiquidityRouter = new PoolModifyLiquidityTest(manager);
+         donateRouter = new PoolDonateTest(manager);
+         takeRouter = new PoolTakeTest(manager);
+-        claimsRouter = new PoolClaimsTest(manager);
+         initializeRouter = new PoolInitializeTest(manager);
+         feeController = new ProtocolFeeControllerTest();
+         revertingFeeController = new RevertingProtocolFeeControllerTest();
+@@ -88,12 +85,11 @@ contract Deployers {
+     function deployMintAndApprove2Currencies() internal returns (Currency, Currency) {
+         MockERC20[] memory tokens = deployTokens(2, 2 ** 255);
+ 
+-        address[6] memory toApprove = [
++        address[5] memory toApprove = [
+             address(swapRouter),
+             address(modifyLiquidityRouter),
+             address(donateRouter),
+             address(takeRouter),
+-            address(claimsRouter),
+             address(initializeRouter)
+         ];
+ 

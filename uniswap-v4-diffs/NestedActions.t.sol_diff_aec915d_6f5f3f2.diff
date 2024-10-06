@@ -1,0 +1,30 @@
+diff --git a/test/NestedActions.t.sol b/test/NestedActions.t.sol
+index 63541f90..e2e8cd5f 100644
+--- a/test/NestedActions.t.sol
++++ b/test/NestedActions.t.sol
+@@ -18,21 +18,21 @@ contract NestedActions is Test, Deployers, GasSnapshot {
+ 
+     function test_nestedSwap() public {
+         actions = [Action.SWAP_AND_SETTLE];
+-        nestedActionRouter.lock(abi.encode(actions));
++        manager.lock(address(nestedActionRouter), abi.encode(actions));
+     }
+ 
+     function test_nestedAddLiquidity() public {
+         actions = [Action.ADD_LIQ_AND_SETTLE];
+-        nestedActionRouter.lock(abi.encode(actions));
++        manager.lock(address(nestedActionRouter), abi.encode(actions));
+     }
+ 
+     function test_nestedRemoveLiquidity() public {
+         actions = [Action.ADD_LIQ_AND_SETTLE, Action.REMOVE_LIQ_AND_SETTLE];
+-        nestedActionRouter.lock(abi.encode(actions));
++        manager.lock(address(nestedActionRouter), abi.encode(actions));
+     }
+ 
+     function test_nestedDonate() public {
+         actions = [Action.DONATE_AND_SETTLE];
+-        nestedActionRouter.lock(abi.encode(actions));
++        manager.lock(address(nestedActionRouter), abi.encode(actions));
+     }
+ }

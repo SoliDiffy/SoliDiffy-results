@@ -1,0 +1,19 @@
+diff --git a/src/test/PoolInitializeTest.sol b/src/test/PoolInitializeTest.sol
+index 71e13ef5..b7bf28c8 100644
+--- a/src/test/PoolInitializeTest.sol
++++ b/src/test/PoolInitializeTest.sol
+@@ -28,10 +28,12 @@ contract PoolInitializeTest is Test, PoolTestBase {
+         external
+         returns (int24 tick)
+     {
+-        tick = abi.decode(manager.lock(abi.encode(CallbackData(msg.sender, key, sqrtPriceX96, hookData))), (int24));
++        tick = abi.decode(
++            manager.lock(address(this), abi.encode(CallbackData(msg.sender, key, sqrtPriceX96, hookData))), (int24)
++        );
+     }
+ 
+-    function lockAcquired(bytes calldata rawData) external returns (bytes memory) {
++    function lockAcquired(address, bytes calldata rawData) external returns (bytes memory) {
+         require(msg.sender == address(manager));
+ 
+         CallbackData memory data = abi.decode(rawData, (CallbackData));

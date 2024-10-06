@@ -1,0 +1,12 @@
+diff --git a/contracts/libraries/SafeMath.sol b/contracts/libraries/SafeMath.sol
+index f152bf97..fe808ff2 100644
+--- a/contracts/libraries/SafeMath.sol
++++ b/contracts/libraries/SafeMath.sol
+@@ -94,6 +94,6 @@ library SafeMath {
+     }
+ 
+     function isAddSafe(uint256 x, uint256 y) internal pure returns (bool) {
+-        return x <= uint256(-1) - y;
++        return x <= type(uint256).max - y;
+     }
+ }

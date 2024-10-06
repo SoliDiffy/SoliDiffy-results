@@ -1,0 +1,19 @@
+diff --git a/src/test/ProtocolFeeControllerTest.sol b/src/test/ProtocolFeeControllerTest.sol
+index 13813083..47f1b602 100644
+--- a/src/test/ProtocolFeeControllerTest.sol
++++ b/src/test/ProtocolFeeControllerTest.sol
+@@ -50,12 +50,12 @@ contract OverflowProtocolFeeControllerTest is IProtocolFeeController {
+ /// @notice Returns data that is larger than a word
+ contract InvalidReturnSizeProtocolFeeControllerTest is IProtocolFeeController {
+     function protocolFeeForPool(PoolKey memory /* key */ ) external view returns (uint24) {
+-        address a = address(this);
++        address a = address(1);
+         assembly {
+             let ptr := mload(0x40)
+             mstore(ptr, a)
+             mstore(add(ptr, 0x20), a)
+-            return(ptr, 0x20)
++            return(ptr, 0x40)
+         }
+     }
+ }

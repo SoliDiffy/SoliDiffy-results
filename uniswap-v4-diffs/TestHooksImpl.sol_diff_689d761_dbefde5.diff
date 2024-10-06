@@ -1,0 +1,14 @@
+diff --git a/contracts/test/TestHooksImpl.sol b/contracts/test/TestHooksImpl.sol
+index 23dcc21b..3070dd9e 100644
+--- a/contracts/test/TestHooksImpl.sol
++++ b/contracts/test/TestHooksImpl.sol
+@@ -43,8 +43,7 @@ contract EmptyTestHooks is IHooks {
+     function afterModifyPosition(
+         address sender,
+         IPoolManager.PoolKey calldata key,
+-        IPoolManager.ModifyPositionParams calldata params,
+-        IPoolManager.BalanceDelta calldata delta
++        IPoolManager.ModifyPositionParams calldata params
+     ) external override {}
+ 
+     function beforeSwap(

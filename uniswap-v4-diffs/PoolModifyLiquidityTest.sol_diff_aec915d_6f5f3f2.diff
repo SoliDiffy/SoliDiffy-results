@@ -1,0 +1,21 @@
+diff --git a/src/test/PoolModifyLiquidityTest.sol b/src/test/PoolModifyLiquidityTest.sol
+index cda62cdc..3cf7a924 100644
+--- a/src/test/PoolModifyLiquidityTest.sol
++++ b/src/test/PoolModifyLiquidityTest.sol
+@@ -44,6 +44,7 @@ contract PoolModifyLiquidityTest is Test, PoolTestBase {
+     ) public payable returns (BalanceDelta delta) {
+         delta = abi.decode(
+             manager.lock(
++                address(this),
+                 abi.encode(CallbackData(msg.sender, key, params, hookData, settleUsingTransfer, withdrawTokens))
+             ),
+             (BalanceDelta)
+@@ -55,7 +56,7 @@ contract PoolModifyLiquidityTest is Test, PoolTestBase {
+         }
+     }
+ 
+-    function lockAcquired(bytes calldata rawData) external returns (bytes memory) {
++    function lockAcquired(address, bytes calldata rawData) external returns (bytes memory) {
+         require(msg.sender == address(manager));
+ 
+         CallbackData memory data = abi.decode(rawData, (CallbackData));

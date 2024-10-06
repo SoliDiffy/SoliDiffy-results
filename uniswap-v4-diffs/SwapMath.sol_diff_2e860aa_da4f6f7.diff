@@ -1,0 +1,64 @@
+diff --git a/contracts/libraries/SwapMath.sol b/contracts/libraries/SwapMath.sol
+index 736da837..4ef19099 100644
+--- a/contracts/libraries/SwapMath.sol
++++ b/contracts/libraries/SwapMath.sol
+@@ -4,6 +4,7 @@ pragma solidity >=0.5.0;
+ import './SafeMath.sol';
+ import './FullMath.sol';
+ 
++import './FixedPoint96.sol';
+ import './FixedPoint128.sol';
+ import './SqrtPriceMath.sol';
+ 
+@@ -12,8 +13,8 @@ library SwapMath {
+ 
+     // compute the state changes for the swap step
+     function computeSwapStep(
+-        uint160 sqrtP,
+-        uint160 sqrtPTarget,
++        FixedPoint96.uq64x96 memory sqrtP,
++        FixedPoint96.uq64x96 memory sqrtPTarget,
+         uint128 liquidity,
+         int256 amountRemaining,
+         uint24 feePips
+@@ -21,13 +22,13 @@ library SwapMath {
+         internal
+         pure
+         returns (
+-            uint160 sqrtQ,
++            FixedPoint96.uq64x96 memory sqrtQ,
+             uint256 amountIn,
+             uint256 amountOut,
+             uint256 feeAmount
+         )
+     {
+-        bool zeroForOne = sqrtP >= sqrtPTarget;
++        bool zeroForOne = sqrtP._x >= sqrtPTarget._x;
+         bool exactIn = amountRemaining >= 0;
+ 
+         if (exactIn) {
+@@ -40,13 +41,13 @@ library SwapMath {
+         // get the input/output amounts
+         if (zeroForOne) {
+             // if we've overshot the target, cap at the target
+-            if (sqrtQ < sqrtPTarget) sqrtQ = sqrtPTarget;
++            if (sqrtQ._x < sqrtPTarget._x) sqrtQ = sqrtPTarget;
+ 
+             amountIn = SqrtPriceMath.getAmount0Delta(sqrtP, sqrtQ, liquidity, true);
+             amountOut = SqrtPriceMath.getAmount1Delta(sqrtQ, sqrtP, liquidity, false);
+         } else {
+             // if we've overshot the target, cap at the target
+-            if (sqrtQ > sqrtPTarget) sqrtQ = sqrtPTarget;
++            if (sqrtQ._x > sqrtPTarget._x) sqrtQ = sqrtPTarget;
+ 
+             amountIn = SqrtPriceMath.getAmount1Delta(sqrtP, sqrtQ, liquidity, true);
+             amountOut = SqrtPriceMath.getAmount0Delta(sqrtQ, sqrtP, liquidity, false);
+@@ -57,7 +58,7 @@ library SwapMath {
+             amountOut = uint256(-amountRemaining);
+         }
+ 
+-        if (exactIn && sqrtQ != sqrtPTarget) {
++        if (exactIn && sqrtQ._x != sqrtPTarget._x) {
+             // we didn't reach the target, so take the remainder of the maximum input as fee
+             feeAmount = uint256(amountRemaining) - amountIn;
+         } else {

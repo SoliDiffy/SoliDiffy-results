@@ -1,0 +1,22 @@
+diff --git a/contracts/libraries/TokenNamer.sol b/contracts/libraries/TokenNamer.sol
+index 07680175..a23514bc 100644
+--- a/contracts/libraries/TokenNamer.sol
++++ b/contracts/libraries/TokenNamer.sol
+@@ -41,7 +41,7 @@ library TokenNamer {
+     }
+ 
+     // uses a heuristic to produce a token symbol from the address
+-    // the heuristic returns the first 6 hex of the address string in lower case
++    // the heuristic returns the first 6 hex
+     function addressToSymbol(address token) pure internal returns (string memory) {
+         return AddressUtil.toAsciiString(token, 6);
+     }
+@@ -66,7 +66,7 @@ library TokenNamer {
+ 
+ 
+     // uses a heuristic to produce a token symbol from the address
+-    // the heuristic returns the entire hex address as a string
++    // the heuristic returns the first 6 hex
+     function addressToName(address token) pure internal returns (string memory) {
+         return AddressUtil.toAsciiString(token, 40);
+     }

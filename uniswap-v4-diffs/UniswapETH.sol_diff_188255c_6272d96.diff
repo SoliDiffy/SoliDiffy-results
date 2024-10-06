@@ -1,0 +1,16 @@
+diff --git a/contracts/UniswapETH.sol b/contracts/UniswapETH.sol
+index 0da90ea6..8695931a 100644
+--- a/contracts/UniswapETH.sol
++++ b/contracts/UniswapETH.sol
+@@ -29,7 +29,10 @@ contract UniswapETH is ERC20 {
+ 
+ 
+   constructor(address tokenAddr) public {
+-    require(address(tokenAddr != address(0), 'INVALID_ADDRESS');
++    require(
++      address(factory) == address(0) && address(token) == address(0) && tokenAddr != address(0),
++      'INVALID_ADDRESS'
++    );
+     factory = IUniswapFactory(msg.sender);
+     token = IERC20(tokenAddr);
+     name = 'Uniswap V2';

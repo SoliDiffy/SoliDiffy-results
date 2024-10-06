@@ -1,0 +1,74 @@
+diff --git a/src/libraries/Pool.sol b/src/libraries/Pool.sol
+index 50e9e40e..dd0203ed 100644
+--- a/src/libraries/Pool.sol
++++ b/src/libraries/Pool.sol
+@@ -1,5 +1,5 @@
+ // SPDX-License-Identifier: BUSL-1.1
+-pragma solidity ^0.8.20;
++pragma solidity ^0.8.0;
+ 
+ import {SafeCast} from "./SafeCast.sol";
+ import {TickBitmap} from "./TickBitmap.sol";
+@@ -42,6 +42,10 @@ library Pool {
+     /// @notice For the tick spacing, the tick has too much liquidity
+     error TickLiquidityOverflow(int24 tick);
+ 
++    /// @notice Thrown when interacting with an uninitialized tick that must be initialized
++    /// @param tick The uninitialized tick
++    error TickNotInitialized(int24 tick);
++
+     /// @notice Thrown when trying to initialize an already initialized pool
+     error PoolAlreadyInitialized();
+ 
+@@ -363,13 +367,13 @@ library Pool {
+                 unchecked {
+                     state.amountSpecifiedRemaining -= step.amountOut.toInt256();
+                 }
+-                state.amountCalculated -= (step.amountIn + step.feeAmount).toInt256();
++                state.amountCalculated = state.amountCalculated - (step.amountIn + step.feeAmount).toInt256();
+             } else {
+                 // safe because we test that amountSpecified > amountIn + feeAmount in SwapMath
+                 unchecked {
+                     state.amountSpecifiedRemaining += (step.amountIn + step.feeAmount).toInt256();
+                 }
+-                state.amountCalculated += step.amountOut.toInt256();
++                state.amountCalculated = state.amountCalculated + step.amountOut.toInt256();
+             }
+ 
+             // if the protocol fee is on, calculate how much is owed, decrement feeAmount, and increment protocolFee
+@@ -413,7 +417,7 @@ library Pool {
+                 unchecked {
+                     // cannot cast a bool to an int24 in Solidity
+                     int24 _zeroForOne;
+-                    assembly ("memory-safe") {
++                    assembly {
+                         _zeroForOne := zeroForOne
+                     }
+                     state.tick = step.tickNext - _zeroForOne;
+@@ -513,7 +517,7 @@ library Pool {
+ 
+         uint128 liquidityGrossBefore;
+         int128 liquidityNetBefore;
+-        assembly ("memory-safe") {
++        assembly {
+             // load first slot of info which contains liquidityGross and liquidityNet packed
+             // where the top 128 bits are liquidityNet and the bottom 128 bits are liquidityGross
+             let liquidity := sload(info.slot)
+@@ -537,7 +541,7 @@ library Pool {
+ 
+         // when the lower (upper) tick is crossed left to right (right to left), liquidity must be added (removed)
+         int128 liquidityNet = upper ? liquidityNetBefore - liquidityDelta : liquidityNetBefore + liquidityDelta;
+-        assembly ("memory-safe") {
++        assembly {
+             // liquidityGrossAfter and liquidityNet are packed in the first slot of `info`
+             // So we can store them with a single sstore by packing them ourselves first
+             sstore(
+@@ -567,7 +571,7 @@ library Pool {
+         int24 MAX_TICK = TickMath.MAX_TICK;
+         int24 MIN_TICK = TickMath.MIN_TICK;
+         // tick spacing will never be 0 since TickMath.MIN_TICK_SPACING is 1
+-        assembly ("memory-safe") {
++        assembly {
+             let minTick := mul(sdiv(MIN_TICK, tickSpacing), tickSpacing)
+             let maxTick := mul(sdiv(MAX_TICK, tickSpacing), tickSpacing)
+             let numTicks := add(sdiv(sub(maxTick, minTick), tickSpacing), 1)

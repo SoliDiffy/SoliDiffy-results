@@ -1,0 +1,13 @@
+diff --git a/contracts/test/SqrtPriceMathEchidnaTest.sol b/contracts/test/SqrtPriceMathEchidnaTest.sol
+index 0295fe96..74ef0b57 100644
+--- a/contracts/test/SqrtPriceMathEchidnaTest.sol
++++ b/contracts/test/SqrtPriceMathEchidnaTest.sol
+@@ -124,7 +124,7 @@ contract SqrtPriceMathEchidnaTest {
+     ) external pure {
+         require(sqrtP >= sqrtQ);
+         require(sqrtP > 0 && sqrtQ > 0);
+-        require((sqrtP * sqrtQ) / sqrtP == sqrtQ);
++        require(SafeMath.isMulSafe(sqrtP, sqrtQ));
+ 
+         uint256 numerator1 = uint256(liquidity) << FixedPoint96.RESOLUTION;
+         uint256 numerator2 = sqrtP - sqrtQ;

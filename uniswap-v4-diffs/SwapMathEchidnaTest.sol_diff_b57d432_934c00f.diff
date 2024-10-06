@@ -1,0 +1,54 @@
+diff --git a/contracts/test/SwapMathEchidnaTest.sol b/contracts/test/SwapMathEchidnaTest.sol
+index 49cd1725..80ea5bc4 100644
+--- a/contracts/test/SwapMathEchidnaTest.sol
++++ b/contracts/test/SwapMathEchidnaTest.sol
+@@ -1,8 +1,6 @@
+ // SPDX-License-Identifier: GPL-3.0-or-later
+ pragma solidity =0.6.12;
+ 
+-import '@uniswap/lib/contracts/libraries/Babylonian.sol';
+-
+ import '../libraries/FixedPoint128.sol';
+ import '../libraries/TickMath.sol';
+ import '../libraries/SwapMath.sol';
+@@ -18,13 +16,22 @@ contract SwapMathEchidnaTest {
+         uint256 priceTargetRaw,
+         uint128 liquidity,
+         uint256 amountInMax,
+-        uint24 feePips
++        uint24 feePips,
++        bool zeroForOne
+     ) external pure {
+         requirePriceWithinBounds(priceRaw);
+         requirePriceWithinBounds(priceTargetRaw);
+         require(feePips < 1e6);
+ 
+-        bool zeroForOne = priceRaw >= priceTargetRaw;
++        if (zeroForOne) {
++            if (priceRaw < priceTargetRaw) {
++                (priceTargetRaw, priceRaw) = (priceRaw, priceTargetRaw);
++            }
++        } else {
++            if (priceRaw > priceTargetRaw) {
++                (priceTargetRaw, priceRaw) = (priceRaw, priceTargetRaw);
++            }
++        }
+ 
+         require(amountInMax > 0);
+ 
+@@ -43,11 +50,11 @@ contract SwapMathEchidnaTest {
+         );
+ 
+         if (zeroForOne) {
+-            assert(Babylonian.sqrt(priceAfter._x) <= Babylonian.sqrt(priceRaw));
+-            assert(Babylonian.sqrt(priceAfter._x) >= Babylonian.sqrt(priceTargetRaw));
++            assert(priceAfter._x <= priceRaw);
++            assert(priceAfter._x >= priceTargetRaw);
+         } else {
+-            assert(Babylonian.sqrt(priceAfter._x) >= Babylonian.sqrt(priceRaw));
+-            assert(Babylonian.sqrt(priceAfter._x) <= Babylonian.sqrt(priceTargetRaw));
++            assert(priceAfter._x >= priceRaw);
++            assert(priceAfter._x <= priceTargetRaw);
+         }
+ 
+         assert(amountIn + feeAmount <= amountInMax);

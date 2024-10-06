@@ -1,0 +1,12 @@
+diff --git a/contracts/test/PriceMathTest.sol b/contracts/test/PriceMathTest.sol
+index 52f831fa..9250dd5e 100644
+--- a/contracts/test/PriceMathTest.sol
++++ b/contracts/test/PriceMathTest.sol
+@@ -10,6 +10,6 @@ contract PriceMathTest {
+     function getTradeToRatio(
+         uint112 reserveIn, uint112 reserveOut, uint16 lpFee, FixedPoint.uq112x112 memory inOutRatio
+     ) public pure returns (uint112 amountIn) {
+-        return PriceMath.getTradeToRatio(reserveIn, reserveOut, lpFee, inOutRatio);
++        return PriceMath.getInputToRatio(reserveIn, reserveOut, lpFee, inOutRatio);
+     }
+ }

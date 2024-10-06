@@ -1,0 +1,24 @@
+diff --git a/contracts/UniswapERC20.sol b/contracts/UniswapERC20.sol
+index aadb2ad7..1a8d264a 100644
+--- a/contracts/UniswapERC20.sol
++++ b/contracts/UniswapERC20.sol
+@@ -37,7 +37,7 @@ contract UniswapERC20 is ERC20 {
+   bool private reentrancyLock = false;
+ 
+   modifier nonReentrant() {
+-    require(!reentrancyLock, "REENTRANCY_FORBIDDEN");
++    require(!reentrancyLock);
+     reentrancyLock = true;
+     _;
+     reentrancyLock = false;
+@@ -167,8 +167,8 @@ contract UniswapERC20 is ERC20 {
+     uint256 amountB = amount.mul(reserveB) / _totalSupply;
+     balanceOf[msg.sender] = balanceOf[msg.sender].sub(amount);
+     totalSupply = _totalSupply.sub(amount);
+-    require(IERC20(_tokenA).transfer(recipient, amountA), "TRANSFER_FAILED");
+-    require(IERC20(_tokenB).transfer(recipient, amountB), "TRANSFER_FAILED");
++    require(IERC20(_tokenA).transfer(recipient, amountA));
++    require(IERC20(_tokenB).transfer(recipient, amountB));
+ 
+     updateData(_tokenA, _tokenB, tokenAData, tokenBData, uint128(reserveA - amountA), uint128(reserveB - amountB));
+ 
